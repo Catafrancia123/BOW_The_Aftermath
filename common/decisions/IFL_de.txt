@@ -1,7 +1,7 @@
 IFL_decisions = {
 	# Demand Dalmatia and Zara
 	IFL_ITA_new_demand_dalmatia = {
-		icon = GFX_decision_ITA_claim_yugo_4
+		icon = GFX_decision_ITA_claim_yugo_1
 		cost = 50
 		days_remove = 7
 		fire_only_once = yes
@@ -46,6 +46,34 @@ IFL_decisions = {
 			news_event = {
 				id = ITA_news_events.3
 				days = 1
+			}
+		}
+	}
+
+	IFL_ITA_demand_corfu = {
+		icon = GFX_decision_ITA_claim_yugo_2
+		cost = 50
+		days_remove = 7
+		fire_only_once = yes
+		visible = { TAG = ITA }
+		available = { 
+			ITA = { has_completed_focus = focus_ITA_politics_greece_oppress_communists }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 103
+				state = 163
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		remove_effect = {
+			CRO = { 
+				country_event = {
+					id = ITA_events.1
+					days = 1
+				}
 			}
 		}
 	}
