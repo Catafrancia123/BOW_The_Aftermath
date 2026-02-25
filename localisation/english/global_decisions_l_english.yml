@@ -1,0 +1,10 @@
+﻿l_english: 
+  # test decision
+  mod_play_song: "Play Song"
+  mod_test_event: "Test Event (country event)"
+  mod_test_event_news: "Test Event (news event)"
+  mod_test_event_mission: "Test Event Mission"
+  mod_super_event_test: "Super Event Test (not real superevent but prototype)"
+
+  # MTG Naval Treaties
+  MTG_renew_third_treaty: "Third London Naval Treaty"

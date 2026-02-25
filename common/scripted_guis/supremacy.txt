@@ -1,0 +1,28 @@
+scripted_gui = {
+	supremacy_button = {
+		context_type = player_context
+		window_name = "supremacy_button_view"
+		parent_window_token = politics_tab
+		effects = {
+			supremacy_button_click = {
+				if = { 
+					limit = { has_global_flag = supremacy_gui_mode }
+					clr_global_flag = supremacy_gui_mode
+				} else = {
+					set_global_flag = supremacy_gui_mode
+				}
+			}
+		}
+	}
+	supremacy_main = {
+		context_type = player_context
+		window_name = "supremacy_view"
+		parent_window_token = politics_tab
+		effects = {
+			supremacy_close_button_click = {
+				clr_global_flag = supremacy_gui_mode
+			}
+		}
+		visible = { has_global_flag = supremacy_gui_mode }
+	}
+}

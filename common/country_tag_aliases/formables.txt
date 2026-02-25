@@ -1,0 +1,5 @@
+UAR = {
+	original_tag = SYR
+	has_country_flag = united_arab_republic
+	fallback = SYR
+}

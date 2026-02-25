@@ -1,0 +1,5 @@
+mod_debug_decisions = {
+	icon = GFX_decision_category_generic
+	allowed = { has_dlc = "Man the Guns" }
+	visible = {	always = yes }
+}

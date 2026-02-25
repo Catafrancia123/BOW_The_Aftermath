@@ -1,0 +1,24 @@
+ENG_support_egypt = {
+	allowed = { tag = ENG }
+	enable = { EGY = { has_war = yes } }
+	abort = { 
+		EGY = { 
+			OR = { 
+				exists = no 
+				NOT = { has_government = neutrality }
+			}
+		} 
+	}
+	abort_when_not_enabled = no
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = EGY
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = EGY
+		value = 50
+	}
+}

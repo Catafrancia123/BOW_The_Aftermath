@@ -1,0 +1,124 @@
+add_namespace = country_news_events
+
+news_event = {
+	# Balkan Communist Uprising
+	id = country_news_events.1
+	title = country_news_events.1.t
+	desc = country_news_events.1.d
+	picture = GFX_news_event_greek_civil_war
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = country_news_events.1.op1
+		
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_country = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = SOV_start_balkan_uprising
+				}
+			}
+		}
+
+		hidden_effect = {
+			every_country = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = SOV_start_balkan_uprising
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	# Egyptian Civil War
+	id = country_news_events.2
+	title = country_news_events.2.t
+	desc = country_news_events.2.d
+	picture = GFX_news_event_generic_anglo_iraqi_war_1
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = country_news_events.2.op1
+
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_other_country = {
+				if = {
+					limit = { NOT = { is_in_faction_with = ITA } }
+					add_opinion_modifier = {
+						target = ITA
+						modifier = ITA_egyptian_civil_war
+					}
+
+				}
+			}
+		}
+
+		hidden_effect = {
+			every_other_country = {
+				if = {
+					limit = { NOT = { is_in_faction_with = ITA } }
+					add_opinion_modifier = {
+						target = ITA
+						modifier = ITA_egyptian_civil_war
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	# Third London Naval Treaty
+	id = country_news_events.3
+	title = country_news_events.3.t
+	desc = country_news_events.3.d
+	picture = GFX_news_event_generic_naval_treaty
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = country_news_events.3.op1
+
+		# array for treaty members
+		add_to_array = { members_third_naval_treaty = ENG }
+		add_to_array = { members_third_naval_treaty = FRA }
+		add_to_array = { members_third_naval_treaty = ITA }
+		add_to_array = { members_third_naval_treaty = SPR }
+		add_to_array = { members_third_naval_treaty = USA }
+		add_to_array = { members_third_naval_treaty = CHI }
+
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_other_country = {
+				for_each_loop = {
+					array = members_third_naval_treaty
+					value = val
+					break = break
+					
+					add_opinion_modifier = {
+						target = val
+						modifier = member_of_third_naval_treaty
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			every_other_country = {
+				for_each_loop = {
+					array = members_third_naval_treaty
+					value = val
+					break = break
+					
+					add_opinion_modifier = {
+						target = val
+						modifier = member_of_third_naval_treaty
+					}
+				}
+			}
+		}
+	}
+}

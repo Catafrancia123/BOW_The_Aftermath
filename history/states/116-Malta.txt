@@ -1,0 +1,26 @@
+state = {
+	id=116
+	name="STATE_116"
+	manpower = 241621
+	state_category = strategic_island
+	history= {
+		owner = ITA
+		add_core_of = ITA
+		add_core_of = MAL
+		victory_points = {
+			12003 5 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 5
+			radar_station = 1
+			12003 = {
+				naval_base = 7
+				coastal_bunker = 2
+			}
+		}
+	}
+	provinces= { 12003 }
+
+	local_supplies=0.0 
+}

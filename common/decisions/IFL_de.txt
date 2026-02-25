@@ -1,0 +1,84 @@
+IFL_decisions = {
+	# Demand Dalmatia and Zara
+	IFL_ITA_new_demand_dalmatia = {
+		icon = GFX_decision_ITA_claim_yugo_4
+		cost = 50
+		days_remove = 7
+		fire_only_once = yes
+		visible = { TAG = ITA }
+		available = { 
+			CRO = { is_in_faction_with = ITA }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 103
+				state = 163
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		remove_effect = {
+			CRO = { 
+				country_event = {
+					id = ITA_events.1
+					days = 1
+				}
+			}
+		}
+	}
+
+	# Release Croatia
+	IFL_ITA_release_croatia = {
+		icon = GFX_decision_generic_decision
+		cost = 100
+		fire_only_once = yes
+		visible = { TAG = ITA }
+		available = { 
+			CRO = { is_subject_of = ITA }
+		}
+
+		complete_effect = {
+			set_temp_variable = { CRO_puppet_years = global.year }
+			subtract_from_temp_variable = { CRO_puppet_years = 1938 }
+
+			end_puppet = CRO
+			news_event = {
+				id = ITA_news_events.3
+				days = 1
+			}
+		}
+	}
+
+	# Make the UAR
+	IFL_unite_syria_lebanon = {
+		icon = GFX_decision_faction_tur_traditionalist
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			is_in_faction_with = ITA
+			is_major = yes
+		}
+		available = { 
+			SYR = { 
+				has_government = fascism 
+				is_in_faction_with = ITA
+			}
+			LEB = { 
+				has_government = fascism 
+				is_in_faction_with = ITA
+			}
+		}
+
+		complete_effect = {
+			SYR = { 
+				annex_country = {
+					target = LEB
+					transfer_troops = yes
+				}
+				set_cosmetic_tag = ITA_UAR
+				set_country_flag = united_arab_republic
+			}
+		}
+	}
+}

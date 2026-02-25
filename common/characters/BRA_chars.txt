@@ -1,0 +1,17 @@
+characters = {
+	# Add more leaders to political powers
+	mod_BRA_leader_start = { # Jair Bolsonaro
+		gender = male
+		name = mod_BRA_leader_name_1
+		portraits = {
+			civilian = {
+				large = GFX_BRA_Jair_Bolsonaro_civilian
+			}
+		}
+
+		country_leader = {
+    		ideology = rexism
+			expire = 2023.01.01
+		}
+	}
+}

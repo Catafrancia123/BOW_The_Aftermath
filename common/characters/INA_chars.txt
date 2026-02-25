@@ -1,0 +1,17 @@
+characters = {
+	# Add more leaders to political powers
+	INA_sukarno = { # Ir. Sukarno
+		gender = male
+		name = "Sukarno"
+		portraits = {
+			civilian = {
+				large = GFX_INA_Sukarno_civilian
+			}
+		}
+
+		country_leader = {
+    		ideology = conservatism
+			expire = 1965.1.1
+		}
+	}
+}

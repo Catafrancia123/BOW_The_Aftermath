@@ -1,0 +1,34 @@
+characters = {
+	# Add more leaders to polital powers
+	mod_GER_leader_start = { # Angela Merkel 
+		gender = female
+		name = mod_GER_leader_name_1
+		portraits = {
+			civilian = {
+				large = GFX_GER_Angela_Merkel_civilian
+			}
+			army = {
+				large = GFX_GER_Angela_Merkel_army
+			}
+		}
+
+		country_leader = {
+    		ideology = conservatism
+			expire = 2021.12.08
+		}
+	}
+
+	mod_GER_leader_kaiser = { # Georg Friedrich
+		gender = male
+		name = mod_GER_leader_name_kaiser
+		portraits = {
+			civilian = {
+				large = GFX_GER_Georg_Friedrich_civilian
+			}
+		}
+
+		country_leader = {
+    		ideology = oligarchism
+		}
+	}
+}

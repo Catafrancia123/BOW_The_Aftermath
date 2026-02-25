@@ -1,0 +1,16 @@
+characters = {
+	# KPR (North Korea)
+	KPR_Kim_Il_Sung = { # Kim-Il-Sung
+		gender = male
+		name = "Kim Il Sung"
+		portraits = {
+			civilian = {
+				large = GFX_KPR_Kim_Il_Sung_civilian
+			}
+		}
+		country_leader = {
+    		ideology = stalinism
+			expire = 1994.7.8
+		}
+	}
+}

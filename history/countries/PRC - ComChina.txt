@@ -1,0 +1,153 @@
+capital = 1032 # Ya'an, Yulin State
+set_convoys = 30
+set_research_slots = 3
+set_major = no
+
+set_technology = {
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+	early_transport_plane = 1
+}
+#set_air_oob = "ITA_1939_air_legacy"
+
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	basic_depth_charges = 1
+	basic_torpedo = 1
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_light_battery = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	mtg_transport = 1
+	coastal_defense_ships = 1
+}
+#set_naval_oob = "ITA_1936_naval_mtg"
+
+set_technology = {
+	# Post-1945
+	radio = 1
+	basic_machine_tools = 1
+	advanced_machine_tools = 1
+	dispersed_industry = 1
+	dispersed_industry2 = 1
+	basic_light_tank = 1
+	mtg_transport = 1
+	marines = 1
+	support_weapons = 1
+	tech_field_hospital = 1
+	tech_recon = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	infantry_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+
+	#electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+
+	#industry
+	basic_machine_tools = 1
+	improved_machine_tools = 1
+	advanced_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	construction1 = 1
+	construction2 = 1
+	construction3 = 1
+	concentrated_industry = 1
+	concentrated_industry2 = 1
+	concentrated_industry3 = 1
+}
+set_oob = "PRC_1939"
+
+complete_special_project = sp:sp_air_radar
+set_grand_doctrine = mass_assault # Land
+set_sub_doctrine = peoples_war
+add_mastery = {
+    amount = 125
+    sub_doctrine = peoples_war
+}
+
+# Politics
+set_politics = {
+	ruling_party = communism
+	elections_allowed = no
+	last_election = 1946.1.1 # Date of the Republic Referendum
+}
+
+set_popularities = {
+	communism = 100 # well well well
+}
+
+# The Ideas
+add_ideas = {
+	# Laws
+	service_by_requirement # Military
+	limited_exports # Exports
+	war_economy # Economy
+	
+	# National Spirits
+	PRC_revolutionary_military_commission
+	PRC_low_popular_support_3
+	PRC_the_long_march_2
+	PRC_mobile_warfare
+	PRC_focus_on_china
+}
+
+# History
+add_political_power = 50
+add_command_power = 25
+army_experience = 50
+add_opinion_modifier = { 
+	target = CHI 
+	modifier = hostile_status 
+}
+declare_war_on = {
+	target = CHI
+	type = civil_war
+}
+
+# Characters
+recruit_character = PRC_mao_zedong
+recruit_character = PRC_zhu_de
+recruit_character = PRC_chen_yi
+recruit_character = PRC_peng_dehuai
+recruit_character = PRC_lin_biao
+recruit_character = PRC_kwong_hu
+recruit_character = PRC_luo_zhao
+recruit_character = PRC_liang_ma
+recruit_character = PRC_ziao_jingguang
+recruit_character = PRC_fang_zeyi
+recruit_character = PRC_ye_jianying
+recruit_character = PRC_chen_geng
+recruit_character = PRC_liu_bocheng
+recruit_character = PRC_otto_braun
+recruit_character = PRC_xu_xiangqian
+recruit_character = PRC_nie_rongzhen
+recruit_character = PRC_su_yu
+recruit_character = PRC_gao_gang
+recruit_character = PRC_zhou_enlai
+recruit_character = PRC_liu_shaoqi
+recruit_character = PRC_dong_biwu
+recruit_character = PRC_deng_xiaoping
+recruit_character = PRC_kang_sheng
+# what the sigma

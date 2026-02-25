@@ -1,0 +1,10 @@
+ideas = {
+    country = {
+        mod_GER_denazification = {
+            picture = generic_fascism_banned
+            modifier = {
+                fascism_drift = -0.01
+            }
+        }
+    }
+}

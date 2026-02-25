@@ -1,0 +1,13 @@
+﻿l_english:
+  # Events
+  country_news_events.1.t: "Communist Uprising in the Balkans"
+  country_news_events.1.d: "Communist movements in the Balkans have rebelled against the [SER.GetName] and [GRE.GetName], Consisting of [PRY.GetName] and [GRC.GetName]. These movements were rumored to be backed up by the Soviet Union; As one of Stalin's missions is to spread communism amongst eastern European states, especially Greece. Many democratic and even Italy have sent support and volunteers to these nations to protect their strategic positions from the expansion of communism."
+  country_news_events.1.op1: "Europe is at war, once again..."
+
+  country_news_events.2.t: "Egyptian Civil War"
+  country_news_events.2.d: "The newly established Kingdom of Egypt is facing a civil war after fascist activists attempted to overthrow the monarchy and establish a new republic with help from Italian political groups and military. Their goal is to seize power over the Suez Canal and to use it as a economic weapon. The Kingdom is trying to get international support to crush the rebellion and maintain control over the canal, which is vital for global trade. The United Kingdom, which liberated them and promised to protect them from any threats, is considering sending volunteers to help the monarchy."
+  country_news_events.2.op1: "Another playground for the major powers..."
+
+  country_news_events.3.t: "The Third London Naval Treaty"
+  country_news_events.3.d: "The Third London Naval Treaty was signed today, at the 8th anniversary of the Second World War. The treaty signatories include: §R[ENG.GetName], [FRA.GetName], [ITA.GetName], [USA.GetName], [SPR.GetName], and [CHI.GetName]§!. §R[SOV.GetName] and [PRC.GetName]§! were invited but were declined due to politcal issues. The treaty marks a mutual armistice in naval power as the world slowly heals from the effects of the Second World War."
+  country_news_events.3.op1: "Let's see if the treaties will last..."

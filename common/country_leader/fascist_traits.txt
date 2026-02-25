@@ -1,0 +1,19 @@
+leader_traits = {
+	ITA_lion_tamer = { # Already Added
+		random = no
+		party_popularity_stability_factor = 0.05
+		surrender_limit = 0.1
+		resistance_damage_to_garrison = -0.15
+		war_support_factor = 0.05
+		offensive_war_stability_factor = 0.1
+	}
+
+	ITA_lion_tamer_2 = { # Available after taking over Egypt and winning the Balkan Communist Uprising
+		random = no
+		party_popularity_stability_factor = 0.05
+		surrender_limit = 0.1
+		resistance_damage_to_garrison = -0.15
+		war_support_factor = 0.05
+		offensive_war_stability_factor = 0.1
+	}
+}

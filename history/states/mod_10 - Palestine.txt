@@ -1,0 +1,21 @@
+state = {
+	id = 1056
+	name = mod_state_10
+	manpower = 25000
+	buildings_max_level_factor = 1
+	state_category = town
+
+	history = {
+		victory_points = {
+			1 5 # West Bank
+		}
+		owner = PAL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = PAL
+		1948.5.14 = { add_claim_by = ISR }	
+	}
+	provinces = { 1 7107 }
+}

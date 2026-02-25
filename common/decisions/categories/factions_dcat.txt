@@ -1,0 +1,12 @@
+IFL_decisions = {
+	icon = GFX_decision_category_ITA_colonial_management
+	allowed = { is_in_faction_with = ITA }
+	visible = {	always = yes }
+	priority = {
+		base = 2
+		modifier = {
+			add = 5
+			is_major = yes
+		}
+	}
+}

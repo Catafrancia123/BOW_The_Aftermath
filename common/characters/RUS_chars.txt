@@ -1,0 +1,11 @@
+characters = {
+	# Add more leaders to political powers
+	mod_RUS_leader = { # Vladimir Putin
+		gender = male
+		name = mod_RUS_leader_name
+		portraits = {
+			civilian = { large = GFX_RUS_Vladimir_Putin_civilian }
+		}
+		country_leader = { ideology = conservatism }
+	}
+}

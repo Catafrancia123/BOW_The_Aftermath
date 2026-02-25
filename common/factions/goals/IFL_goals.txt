@@ -1,0 +1,110 @@
+# Spread fascism worldwide
+faction_goal_IFL_worldwide_fascism = {
+    name = faction_goal_IFL_worldwide_fascism_name
+    description = faction_goal_IFL_worldwide_fascism_desc
+    category = long_term
+    group = FILTER_IFL_WORLDWIDE_FASCISM
+
+    allowed = { is_major = yes } # only major nations can pursue this goal
+    visible = { always = yes }
+    available = { always = yes }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            tag = ITA
+            factor = 10
+        }
+        modifier = {
+            tag = SPR
+            factor = 5
+        }
+    }
+
+    completed = { # die goal
+        FRA = { has_government = fascism }
+        GER = { has_government = fascism }
+        ENG = { has_government = fascism }
+        RAJ = { has_government = fascism }
+        BRA = { has_government = fascism }
+        MEX = { has_government = fascism }
+        OR = {
+            INA = { has_government = fascism }
+            SIA = { has_government = fascism }
+            JAP = { has_government = fascism }
+            CHI = { has_government = fascism }
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 1000
+        add_faction_initiative = 1
+        every_faction_member = {
+            add_stability = 0.25
+            add_war_support = 0.10
+            add_political_power = 200
+        }
+        # set up superevent here
+    }
+
+    cancel = { ITA = { is_faction_leader = no } }
+}
+
+# Spread fascism in the mediterranean
+faction_goal_IFL_mediterranean_fascism = {
+    name = faction_goal_IFL_mediterranean_fascism_name
+    description = faction_goal_IFL_mediterranean_fascism_desc
+    category = medium_term
+    group = FILTER_IFL_MEDITERRANEAN_FASCISM
+
+    allowed = { is_in_faction_with = ITA } # all members of the IFL
+    visible = { always = yes }
+    ai_will_do = {
+        base = 5
+        modifier = {
+            tag = ITA
+            factor = 10
+        }
+        modifier = {
+            tag = SPR
+            factor = 5
+        }
+        modifier = {
+            OR = {
+                tag = SER
+                tag = CRO
+            }
+            factor = 2
+        }
+    }
+
+    completed = { # die goal
+        EGY = { has_government = fascism }
+        OR = {
+            UAR = { exists = yes }
+            AND = {
+                SYR = { has_government = fascism }
+                LEB = { has_government = fascism }
+            }
+        }
+        GRE = {
+            OR = {
+                exists = no
+                has_government = fascism
+            }
+        }
+        TUR = {
+            has_government = fascism
+        }
+    }
+    complete_effect = {
+        add_faction_power_projection = 1000
+        add_faction_initiative = 1
+        every_faction_member = {
+            add_stability = 0.25
+            add_war_support = 0.10
+            add_political_power = 200
+        }
+        # set up superevent here
+    }
+
+    cancel = { ITA = { is_faction_leader = no } }
+}

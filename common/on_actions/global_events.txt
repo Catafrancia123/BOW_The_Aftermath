@@ -1,0 +1,115 @@
+# This is for global events (the news).
+on_actions = {
+	on_startup = {
+		effect = {
+			set_variable = { months_passed = 0 }
+		}
+	}
+	on_monthly = {
+		effect = {
+			add_to_variable = { months_passed = 1 }
+		}
+	}
+
+	# GLOBAL EVENTS
+	on_monthly_GRE = { # Greek Civil War Trigger
+		effect = {
+			if = {
+				limit = { 
+					communism > 0.3 # KPD has 30% popularity
+					check_variable = { 
+						var = months_passed 
+						value = 7
+						comparison = greater_than_or_equals
+					}
+					NOT = { has_country_flag = GRE_civil_war }
+					OR = {
+						BUL = { has_government = communism }
+						ROM = { has_government = communism }
+					}
+				}
+				
+				set_country_flag = GRE_civil_war
+				start_civil_war = {
+					ideology = communism
+					ruling_party = neutrality
+					states = { 184 731 1052 }
+					capital = 731
+					keep_political_leader = yes
+
+					# For the Provisional Democratic Government
+					set_country_flag = GRE_civil_war_communist # TAG = GRC
+					set_cosmetic_tag = GRE_movement
+				}
+
+				YUG = {
+					start_civil_war = {
+						ideology = communism
+						ruling_party = fascism
+						states = { 106 970 803 }
+						capital = 108
+						keep_political_leader = yes
+
+						# For the Yugoslavian People's Republic
+						set_country_flag = YUG_civil_war_communist # TAG = PRY
+						set_cosmetic_tag = YUG_movement
+						promote_character = YUG_josip_broz_tito
+						declare_war_on = {
+							target = CRO
+							type = take_core_state
+						}
+					}
+				}
+				
+				add_named_threat = {
+					threat = 7.5
+					name = country_news_events.1.t
+				}
+				news_event = {
+					id = country_news_events.1
+					days = 1
+				}
+			}
+		}
+	}
+
+	on_daily_EGY = { # Egyptian Civil War Trigger
+		effect = {
+			if = {
+				limit = { 
+					fascism > neutrality
+					check_variable = { 
+						var = months_passed 
+						value = 12
+						comparison = greater_than_or_equals
+					}
+					NOT = { has_country_flag = EGY_civil_war }
+					ITA = { has_completed_focus = focus_ITA_politics_egypt_influence }
+				}
+
+				set_country_flag = EGY_civil_war
+				start_civil_war = {
+					ideology = fascism
+					ruling_party = neutrality
+					states = { 452 447 446 453 }
+					capital = 447
+					keep_political_leader = yes
+
+					# For the Fascist State
+					add_ideas = mod_ITA_trained_militias 
+					set_country_flag = EGY_civil_war_fascist # TAG = IEG
+					set_cosmetic_tag = EGY_italy
+					news_event = {
+						id = country_news_events.2
+						days = 1
+					}
+					ITA = { country_event = ITA_missiolinis_events.1_egypt }
+					add_named_threat = {
+						threat = 5
+						name = country_news_events.2.t
+					}
+				}
+			}
+		}
+	}
+}

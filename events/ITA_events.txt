@@ -1,0 +1,490 @@
+# The entirety of Italy, the Italian League events are stored here.
+add_namespace = ITA_events
+add_namespace = ITA_missiolinis_events
+add_namespace = ITA_generic_events
+add_namespace = ITA_news_events
+country_event = {
+	# Italy Demands Dalmatia
+	id = ITA_events.1
+	title = ITA_events.1.t
+	desc = ITA_events.1.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	timeout_days = 7
+	# ROOT = CRO
+	option = {
+		name = ITA_events.1.op1
+		add_to_array = {
+			ITA_given_states = 103
+		}
+		add_to_array = {
+			ITA_given_states = 163
+		}
+		ITA = {
+			country_event = ITA_generic_events.1
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				# Greek Civil War
+				has_war_with = PRY
+				factor = 0.1
+			}
+		}
+	}
+	option = {
+		name = ITA_events.1.op2
+		trigger = {
+			ROOT = {
+				compare_autonomy_state < autonomy_reichsprotectorate
+			}
+		}
+		add_to_array = {
+			ITA_given_states = 103
+		}
+		add_to_array = {
+			ITA_given_states = 163
+		}
+		ITA = {
+			country_event = ITA_generic_events.2
+		}
+		ai_chance = {
+			base = 7.5
+			modifier = {
+				# Greek Civil War
+				has_war_with = PRY
+				factor = -0.2
+			}
+		}
+	}
+	option = {
+		name = ITA_events.1.op3
+		trigger = {
+			ROOT = {
+				compare_autonomy_state > autonomy_reichsprotectorate				# and has researched something
+			}
+		}
+		ITA = {
+			country_event = ITA_generic_events.3
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				# Croatian National Identity
+				compare_autonomy_state > autonomy_satellite
+				add = 5
+			}
+		}
+	}
+	after = {
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	# Italy demands control of the Suez Canal
+	id = ITA_events.2
+	title = ITA_events.2.t
+	desc = ITA_events.2.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	timeout_days = 14
+	option = {
+		name = ITA_events.2.op1
+		EGY = {
+			ITA = {
+				transfer_state = 446
+			}
+		}
+		ai_chance = {
+			base = 4
+			modifier = {
+				# Egypt is puppet
+				is_subject_of = ITA
+				add = 6
+			}
+		}
+	}
+	option = {
+		name = ITA_events.2.op2
+		EGY = {
+			ITA = {
+				set_state_controller = 446
+			}
+		}
+		ai_chance = {
+			base = 6
+		}
+	}
+	after = {
+		add_stability = -0.05
+	}
+}
+
+# MISSIOLINIS
+country_event = {
+	# Successful Egyptian fascist influence
+	id = ITA_missiolinis_events.1_egypt
+	title = ITA_missiolinis_events.1_egypt.t
+	desc = ITA_missiolinis_events.1_egypt.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	option = {
+		name = ITA_missiolinis_events.1_egypt.op1
+		send_equipment = {
+			type = infantry_equipment
+			amount = 2500
+			target = IEG
+		}
+		activate_mission = ITA_missiolini_conquer_egypt
+	}
+}
+
+country_event = {
+	# Fascist Egypt gets the upperhand
+	id = ITA_missiolinis_events.2_egypt
+	title = ITA_missiolinis_events.2_egypt.t
+	desc = ITA_missiolinis_events.2_egypt.d
+	picture = GFX_report_event_generic_italian_celebration
+	is_triggered_only = yes
+	option = {
+		name = ITA_missiolinis_events.2_egypt.op1
+		hidden_effect = {
+			# variable gaming
+			set_variable = {
+				war_winner = IEG
+			}
+			set_variable = {
+				war_loser = EGY
+			}
+			IEG = {
+				set_variable = {
+					remaining_states = EGY.num_owned_states
+				}
+			}
+		}
+		custom_effect_tooltip = ITA_missiolinis_events.2_egypt.tt
+		effect_tooltip = {
+			recall_volunteers_from = IEG
+			add_to_faction = IEG
+			IEG = {
+				annex_country = {
+					target = EGY
+					transfer_troops = yes
+				}
+				white_peace = {
+					tag = EGY
+					message = mod_peace_annex
+				}
+			}
+			clr_country_flag = EGY_civil_war_fascist			# After this, IEG is invalid, use EGY.
+		}
+	}
+}
+
+country_event = {
+	# Fascist Egypt is struggling
+	id = ITA_missiolinis_events.3_egypt
+	title = ITA_missiolinis_events.3_egypt.t
+	desc = ITA_missiolinis_events.3_egypt.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	option = {
+		name = ITA_missiolinis_events.3_egypt.op1
+		custom_effect_tooltip = ITA_missiolinis_events.3_egypt.tt
+		effect_tooltip = {
+			recall_volunteers_from = IEG
+			create_wargoal = {
+				type = topple_government
+				target = EGY
+				expire = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	# Industrial Expansion Program
+	id = ITA_missiolinis_events.1_industry
+	title = mod_ITA_miltary_industrialization
+	desc = mod_ITA_miltary_industrialization_desc
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	option = {
+		name = BBA_italy_missiolinis.31.a
+		activate_mission = ITA_missiolini_military_factories
+	}
+}
+
+# Generic Events
+country_event = {
+	# Generic event where a country accepts italian state demands (full)
+	id = ITA_generic_events.1
+	title = ITA_generic_events.1.t
+	desc = ITA_generic_events.1.d
+	picture = GFX_report_event_generic_italian_celebration
+	is_triggered_only = yes
+	option = {
+		name = ITA_generic_events.1.op1
+		# use array
+		FROM = {
+			ROOT = {
+				for_each_loop = {
+					array = ITA_given_states
+					value = v
+					break = break
+					transfer_state = v
+				}
+			}
+		}
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_demands_granted
+			}
+		}
+	}
+}
+
+country_event = {
+	# Generic event where a country accepts italian state demands (partially)
+	id = ITA_generic_events.2
+	title = ITA_generic_events.2.t
+	desc = ITA_generic_events.2.d
+	picture = GFX_report_event_generic_italian_celebration
+	is_triggered_only = yes
+	option = {
+		name = ITA_generic_events.2.op1
+		# use array
+		FROM = {
+			ROOT = {
+				for_each_loop = {
+					array = ITA_given_states
+					value = v
+					break = break
+					set_state_controller = v
+				}
+			}
+		}
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_demands_granted
+			}
+		}
+	}
+}
+
+country_event = {
+	# Generic event where a country rejects italian state demands
+	id = ITA_generic_events.3
+	title = ITA_generic_events.3.t
+	desc = ITA_generic_events.3.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	option = {
+		name = ITA_generic_events.3.op1
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_demands_declined
+			}
+		}
+	}
+}
+
+# NEWS EVENTS
+news_event = {
+	# Italy focuses on Italian Irredentism
+	id = ITA_news_events.1
+	title = ITA_news_events.1.t
+	desc = ITA_news_events.1.d
+	picture = GFX_news_event_filov_with_mussolini
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = ITA_news_events.1.op1
+		trigger = {
+			TAG = ITA
+		}
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_other_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_italian_irredentism_fascism
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_italian_irredentism_else
+				}
+			}
+		}
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_italian_irredentism_fascism
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_italian_irredentism_else
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	# Italy focuses on Fascist Supremacy
+	id = ITA_news_events.2
+	title = ITA_news_events.2.t
+	desc = ITA_news_events.2.d
+	picture = GFX_news_event_ITA_grand_council
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = ITA_news_events.2.op1
+		trigger = {
+			TAG = ITA
+		}
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_other_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_fascist_supremacy_fascism
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_fascist_supremacy_else
+				}
+			}
+		}
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_fascist_supremacy_fascism
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+					OR = {
+						is_major = yes
+						num_of_factories > 30
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_priority_fascist_supremacy_else
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	# Italy Releases Croatia
+	id = ITA_news_events.3
+	title = ITA_news_events.3.t
+	desc = ITA_news_events.3.d
+	picture = GFX_news_event_banovina_croatia
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ITA_news_events.3.op1
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unstable_alliance
+				}
+			}
+		}
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unstable_alliance
+				}
+			}
+		}
+	}
+}

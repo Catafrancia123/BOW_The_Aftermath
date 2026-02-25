@@ -1,0 +1,27 @@
+ideas = {
+    country = {
+        mod_INA_communism_banned = {
+            picture = generic_communism_banned
+            modifier = {
+				communism_drift = -0.01
+				communism_acceptance = 0
+            }
+        }
+
+        mod_INA_civilian_national_defense = {
+            picture = YUG_federal_defense_council
+		    modifier = {
+                conscription = 0.0025
+                army_defence_factor = 0.1
+                army_core_defence_factor = 0.25
+                dig_in_speed_factor = 0.25
+                army_org_factor = -0.1
+            }
+            on_add = { add_war_support = 0.2 }
+            on_remove = { add_war_support = -0.1 }
+            cancel = {
+                INA = { has_war = no }
+            }
+	    }
+	}
+}

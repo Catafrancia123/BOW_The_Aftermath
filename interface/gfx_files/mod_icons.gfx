@@ -1,0 +1,21 @@
+spriteTypes = {
+	# National Focus
+	spriteType = {
+		name = "GFX_focus_generic_befriend_egypt"
+		textureFile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
+	}
+}
+
+spriteTypes = {
+	# Ideas
+	spriteType = {
+		name = "GFX_idea_ITA_military_industrialization"
+		textureFile = "gfx/interface/ideas/ITA_military_industrialization.tga"
+	}
+
+	# Ideology Icons
+	spriteType = {
+		name = "GFX_ideology_italian_fascism"
+		textureFile = "gfx/interface/ideologies/italian_fascism_group.tga"
+	}
+}

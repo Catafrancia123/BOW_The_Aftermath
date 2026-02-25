@@ -1,0 +1,17 @@
+characters = {
+	# Add more leaders to political powers
+	BUL_valko_chervenkov_leader = { # Valko Chervenkov
+		gender = male
+		name = "Valko Chervenkov"
+		portraits = {
+			civilian = {
+				large = GFX_BUL_Valko_Chervenkov_civilian
+			}
+		}
+
+		country_leader = {
+    		ideology = marxist_leninism
+			expire = 1965.1.1
+		}
+	}
+}

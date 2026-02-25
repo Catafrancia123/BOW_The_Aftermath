@@ -1,0 +1,20 @@
+﻿l_english:
+  # International Fascist League
+  faction_IFL: "International Fascist League"
+
+  faction_goal_IFL_worldwide_fascism_name: "Spread Fascism Worldwide"
+  faction_goal_IFL_worldwide_fascism_desc: "Fascism has fallen in these years, many countries have rejected its influence or ban it entirely. Our many allies worldwide can unite together to rebuild what is lost and spread our ideology to every corner of the globe, even if it means using force."
+
+  faction_goal_IFL_mediterranean_fascism_name: "Control the Mediterranean"
+  faction_goal_IFL_mediterranean_fascism_name: "The Mediterranean Sea is the hub for our currently small faction, controlling it means controlling trade, military movement, and influence over three continents. By establishing naval and air superiority in this region, we can ensure our dominance and protect our interests from rival powers."
+
+  IFL_target_countries_mediterranean_name: "IFL Target Countries - Mediterranean"
+
+  IFL_decisions: "International Fascist League Decisions"
+  IFL_decisions_desc: "Fascism is declining, and this faction will be the sanctuary of fascist countries worldwide and a journey to rebuild fascist dominance once again."
+  IFL_ITA_new_demand_dalmatia: "Demand Dalmatia"
+  IFL_ITA_new_demand_dalmatia_desc: "As the focus of the Duce about all state in the Adriatic Sea must be under Italian control, demanding Dalmatia will guarantee that. Dalmatia is a key state to expand according to the vision of Greater Italy."
+
+  # The Warsaw Pact
+  faction_TWP: "The Warsaw Pact"
+  

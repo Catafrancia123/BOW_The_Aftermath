@@ -1,0 +1,191 @@
+﻿l_english:
+  # Basics (overwrite)
+  ITA: "Italy"
+  ITA_DEF: "Italy"
+  ITA_ADJ: "Italian"
+
+  # Special Names
+  ITA_fascism: "Italian Social Republic"
+  ITA_fascism_DEF: "the Italian Social Republic"
+  CRO_fascism: "Croatia"
+  CRO_fascism_DEF: "Croatia"
+  YUG_ITA_fascism_subject: "State of Serbia and Montenegro"
+  YUG_ITA_fascism_subject_DEF: "the State of Serbia and Montenegro"
+  EGY_italy: "Republic of Egypt"
+  YUG_movement: "Yugoslavian People's Republic"
+  SYR_unity: "United Arab Republic"
+
+  # Country Political Parties
+  mod_ITA_democratic_party: "DC"
+  mod_ITA_democratic_party_long: "Democrazia Cristiana" 
+  mod_ITA_fascist_party: "PFR"
+  mod_ITA_fascist_party_long: "Partito Fascista Repubblicano"
+  mod_ITA_communism_party: "PCI"
+  mod_ITA_communism_party_long: "Partito Comunista Italiano"
+  mod_ITA_neutrality_party: "Non-Aligned"
+  mod_ITA_neutrality_party_long: "Non-Aligned"
+
+  # Leader Descriptions (add later)
+  ITA_lion_tamer: "$lion_tamer$"
+  ITA_lion_tamer_2: "$lion_tamer$"
+
+  # Ideas
+  # Scenario Ideas
+  mod_ITA_strenghtened_nationalism: "Strengthened Nationalism"
+  mod_ITA_strenghtened_nationalism_desc: "The rise of Fascism in Italy has brought a new sense of nationalism and pride to the Italian people. The government has implemented policies to promote national unity and pride, which has led to increased support for the regime and its goals."
+  mod_ITA_motivated_soldiers: "Motivated Soldiers"
+  mod_ITA_motivated_soldiers_desc: "The Italian soldiers are highly motivated and dedicated to their cause. They believe in the ideals of Fascism and are willing to fight and die for their country's future. This motivation has led to increased morale and effectiveness on the battlefield."
+  mod_ITA_miltary_industrialization: "Italian Military Industrialization Program"
+  mod_ITA_miltary_industrialization_desc: "The Duce has ordered a massive military and infrastructure industrialization program to ensure that Italy is powerful in economics and industry. This program will focus on increasing the production of military equipment and modernizing our armed forces; Aswell as increasing the infrastructure of our cities and transportation systems."
+
+  mod_ITA_colonial_motivation: "Colonial Work Movement"
+  mod_ITA_colonial_motivation_desc: "Under our new modernization plan, the colonies will work hard for the future of Italy. We must ensure that our colonies are well taken care of and treat them equally. This will ensure that our colonies will be loyal to us and will work hard for the greatness of Italy."
+  mod_ITA_fascist_influence: "Italian Fascist Influence"
+  mod_ITA_fascist_influence_desc: "Fasicsm from Italian origins have been appealing to our people. Their leader is trying to spread fascism again across the world and make them their allies."
+
+  # National Focus
+  mod_ITA_focus: "$ITA_ADJ$ National Focus"
+  mod_ITA_interventionist_leaders: "Only available for the following leaders:\n      - Benito Mussolini\n      - Italo Balbo\n      - Galeazzo Ciano"
+  mod_ITA_diplomatic_leaders: "Only available for the following leaders:\n      - Benito Mussolini\n      - Dino Grandi"
+
+  # Political
+  focus_ITA_politics_start: "Another Revolution for Fascism"
+  focus_ITA_politics_start_desc: "After the fall of Germany and the Axis powers, Fascism is at a all time low and certain nations are being targeted by the victors, especially Italy. We must rise again and spread fascism across the Mediterranean and the Balkans, as well as modernizing our colonies to be equal to us."
+  focus_ITA_politics_irredentism: "Irredentismo Italiano"
+  focus_ITA_politics_irredentism_desc: "After the end of WW1, Italy was promised many territories in the Balkans and the Mediterranean, but they were not given to us. We will demand these territories back diplomatically or by force. The world will know that Italy is a powerful nation that cannot be ignored."
+  focus_ITA_politics_supremacy: "Supremazia Fascista"
+  focus_ITA_politics_supremacy_desc: "After the bombing of Hiroshima and Nagasaki, the world knew that their fate in order to achive their dreams could be extinguised by a nuclear weapon. Italy can't fight for glory with force, but instead with diplomacy and influence. We will spread our influence across the world and make them our allies, and we will show them that fascism is the only way to live."
+
+  focus_ITA_politics_puppets: "To Live as a Greater Lion"
+  focus_ITA_politics_puppets_desc: "The Italian people have faced victory in the Balkans as well as in Africa, not only as a consumer of the victory, but as a producer for it. With a world filled with communists and democrats, we will stand tall as one strategic league. Remember that its better to live a single day as a lion than a century as a sheep."
+
+  # Mediterranean sub-branch
+  focus_ITA_politics_mediterranean_focus: "Mare Nostrum"
+  focus_ITA_politics_mediterranean_focus_desc: "The vision of the Duce is to have control of the entirety of the Mediterranean sea, and with the recent diplomatic conquests in Africa and the Balkans, we are one step closer to achieving that goal. With our powerful navy and airforce, we will dominate the seas and skies of the Mediterranean."
+
+  focus_ITA_politics_egypt_influence: "Influence Egypt"
+  focus_ITA_politics_egypt_influence_desc: "Egypt is a key strategic location in the Mediterranean, and with our new and growing fascist influence there, we can control the Suez Canal and the trade routes that pass through it. Fascism will spread and be the living way of the people in Egypt, and soon enough, they will be our allies in the Mediterranean."
+  focus_ITA_politics_egypt_take_suez: "Take Control of the Suez Canal"
+  focus_ITA_politics_egypt_take_suez_desc: "We have succeeded in the Egyptian intervention and expansion, now we must take over the Suez Canal in order to make Italy have full control in trade and military in the Mediterranean. The world will know that fascism will prevail in Europe and Africa."
+
+  focus_ITA_politics_greece_oppress_communists: "Oppress Communism"
+  focus_ITA_politics_greece_oppress_communists_desc: "Many major communist movements have been rising in our balkan states, and they are a threat to our supremacy in the Balkans. The Eastern bloc is supporting these movements and we must crush them before they grow any stronger. We will show them that fascism is the only way to live."
+  focus_ITA_politics_greece_befriend: "Diplomatic Talks with Greece"
+  focus_ITA_politics_greece_befriend_desc: "After succesfully defeating communism in Serbia and Greece, we can make Greece as our ally to prevent further intervention from the Eastern bloc."
+  focus_ITA_politics_greece_attack: "Get Our Claimed Terriories"
+  focus_ITA_politics_greece_attack_desc: "We have some terriotries in Greece that we claim, we must take it by force!"
+
+  focus_ITA_politics_mideast_lebanon: "Expand Influence in Lebanon"
+  focus_ITA_politics_mideast_lebanon_desc: "Lebanon is a newly independent country after the pro-independence movements forced a treaty to abolish the mandate. Now, the country is in political and economical turmoil as many parties from the outside world are trying to take their place in Syria. We can use this opportunity to expand our influence in the Middle East and unite the Lebanese and the Syrians."
+  focus_ITA_politics_mideast_syria: "Expand Influence in Syria"
+  focus_ITA_politics_mideast_syria_desc: "The First Syrian Republic is a newly independent country after the mandate was dissolved, and they need help standing for themselves. We can use this opportunity to expand our influence in the Middle East."
+  focus_ITA_politics_mideast_palestine: "Intervene in the Arab-Israeli War"
+  focus_ITA_politics_mideast_palestine_desc: "The Arab-Israeli War is ongoing after the British Mandate was dissolved, we need to intervene to make peace talks and even spread fascism throughout the holy land."
+
+  # Balkan sub-branch
+  focus_ITA_politics_balkan_focus: "The Balkan Campaign"
+  focus_ITA_politics_balkan_focus_desc: "After the fall of the communist movements in the Balkans, we must ensure that our influence is strong and that we can control the region. The Balkans are a key strategic location in Europe, and with our influence there, we can control the trade routes and military movements in the region."
+
+  # Leader sub-branch
+  focus_ITA_politics_leader: "The Future of Italy"
+  focus_ITA_politics_leader_desc: "The Duce has been the leader of Italy for a long time; but as he gets older, we need to think about the future of Italy and who will lead us next. We have many potential leaders that can take over the leadership of Italy, and we must choose wisely to ensure that Italy continues to thrive under fascism."
+
+  focus_ITA_politics_leader_mussolini: "Continue with Benito Mussolini"
+  focus_ITA_politics_leader_mussolini_desc: "Benito Mussolini has been the leader of Italy for a long time, and he has brought Italy to greatness. And so, we need to consecrate his leadership and make him leader for life."
+
+  focus_ITA_politics_leader_successor: "The Next Duce"
+  focus_ITA_politics_leader_successor_desc: "Benito Mussolini is getting older, and we need to think about the future of Italy and who will lead us next. The fascist party has many potential leaders that are suitable to be the successor of Mussolini."
+  focus_ITA_politics_leader_dino_grandi: "Dino Grandi"
+  focus_ITA_politics_leader_dino_grandi_desc: "Dino Grandi was the Italian foreign minister and the current foreign minister for the United Kingdom. He has diplomatic skills and is well respected to make good terms amongst countries. His way of fascism is to spread it with diplomacy and influence, he will support fascist revolutionary groups in other countries and make them our probable allies."
+  focus_ITA_politics_leader_italo_balbo: "Italo Balbo"
+  focus_ITA_politics_leader_italo_balbo_desc: "Italo Balbo is the current leader of the Italian Air Force and is well known for his military skills and his charisma. He although wants to continue Mussolini's ideas and using the military and by creating new technologies to continue Italian Irredentism."
+  focus_ITA_politics_leader_galeazzo_ciano: "Galeazzo Ciano"
+  focus_ITA_politics_leader_galeazzo_ciano_desc: "Galeazzo Ciano is the current Italian foreign minister and is a believer of 'spazio vitale' and wants Italy to be a strong player in world politics. He wants Italy to be more active in global conflicts."
+
+  focus_ITA_politics_leader_council: "The Grand Council of Fascism"
+  focus_ITA_politics_leader_council_desc: "The Grand Council of Fascism is the main constitutional body of Italy. It is made up of the most important members of the fascist party and the government, and they are responsible for making important decisions for the country. With this, Italy becomes more of a collective leadership."
+
+
+  # Industry
+  focus_ITA_industry: "The War-Prepared Industry Project"
+  focus_ITA_industry_desc: "Italy is preparing for a major war; And to ensure that we can win, we must improve and temper our industry to be prepared for war and keep producing for the army. Mass projects of factories, infrastructure and supply hubs will commence and be ready to support our war efforts."
+  focus_ITA_industry_colonial_support: "Colonial Production Support"
+  focus_ITA_industry_colonial_support_desc: "Our colonies are free land to develop infrastructure, factories and more, we must take every chance that we have to support the main industrial cause in the mainland. A project will be done to split the factories between mainland and colonies to speed up production and to build backup military factories in case there is an accident."
+
+  # Events
+  ITA_events.1.t: "Italy Demands Dalmatia"
+  ITA_events.1.d: "Italy proposes that all coastal states in the Adriatic must be under Italian control, and now it demands Dalmatia. There is no way to refuse this offer, as it has to be done diplomatically or with forced annexation."
+  ITA_events.1.op1: "We don't really care about it."
+  ITA_events.1.op2: "We'll give partial ownership."
+  ITA_events.1.op3: "Never! Dalmatia is pure Croatian territory!"
+
+  ITA_events.2.t: "Italy Demands the Suez Canal"
+  ITA_events.2.d: "Italy has a mission to dominate and spread fascism across the Mediterranean sea. In order to fufill the dream, it demands the full or partial Italian control over the Suez Canal. The reason is to control the trade routes and can cripple the enemies that oppose us."
+  ITA_events.2.op1: "We don't really care about it."
+  ITA_events.2.op2: "We'll give partial ownership."
+
+  # Decisions
+  # Misiolinis
+  ITA_missiolini_conquer_egypt:0 "Conquer Egypt"
+  ITA_missiolini_conquer_egypt_desc:0 "We have successfully did a fascist coup in Egypt. Now, lets move to win and control the Suez Canal!"
+  ITA_missiolinis_events.1_industry.tt:0 "$TRIGGER_NUM_OF_CIVILIAN_FACTORIES_MORE_THAN$§Y[?ITA_missiolinis_military_factories]§!. (Currently §[GetColorNumOfCivsMissiolinis][?ROOT.num_of_civilian_factories]§!.)"
+  
+  ITA_missiolinis.1_egypt.tt: "Help the [IEG.GetName] to capture these states:\n- Cairo\n- Luxor\nWhile also defending these states:\n- Suez"
+  ITA_missiolinis_events.1_egypt.t: "Successful Intervention in Egyptian Politics"
+  ITA_missiolinis_events.1_egypt.d: "Our intervention efforts in expanding fascism in Egypt has succeeded and has triggered a civil war. To make Egypt our key ally in controlling the Suez Canal, we must send support with equipment and volunteers. Our expansion will be victorious!"
+  ITA_missiolinis_events.1_egypt.op1: "For the Duce!"
+
+  ITA_missiolinis_events.2_egypt.t: "Success in Egypt"
+  ITA_missiolinis_events.2_egypt.d: "Our backed-up fascist government in Egypt has taken over Cairo and has won the civil war. Egypt is now a fascist country, and we are one step closer to achiveing the entirety of the Mediterranean sea."
+  ITA_missiolinis_events.2_egypt.op1: "Glory to Italy!"
+  ITA_missiolinis_events.2_egypt.tt: "Establish the fascist government in Egypt as our ally:"
+
+  ITA_missiolinis_events.3_egypt.t: "Struggle in Egypt"
+  ITA_missiolinis_events.3_egypt.d: "Our backed-up fascist government in Egypt hasn't been able to fufill our demands and take over Cairo yet, and the civil war is still ongoing. The only way to ensure victory is to declare war on Egypt; We must not fail our mission to control the Mediterranean sea."
+  ITA_missiolinis_events.3_egypt.op1: "Desperate times call for desperate measures."
+  ITA_missiolinis_events.3_egypt.tt: "Declare war on Egypt to help the fascist revolution:"
+
+  # Non-Misiolinis
+  ITA_consecrate_the_leadership: "Consecrate the Leadership"
+  ITA_consecrate_the_leadership_desc: "We have won 2 proxy wars in Egypt and Greece. And since our influence in the Mediterranean is growing stronger, we need to change how our leadership works. Benito Mussolini will be the eternal leader of Italy; And the exiled king, Vittorio Emanuele III, will be ruling Ethiopia and Egypt. This will ensure that mainland Italy stays controlled by the Duce, while also giving leverage to the king."
+
+  # Generic Events
+  ITA_generic_events.1.t: "[FROM.GetName] Accepts"
+  ITA_generic_events.1.d: "[FROM.GetName] accepts the demand and has given us full ownership of the proposed states. Another step closer towards a Greater Italy!"
+  ITA_generic_events.1.op1: "Another Victory."
+
+  ITA_generic_events.2.t: "[FROM.GetName] Gives only Partial Control"
+  ITA_generic_events.2.d: "[FROM.GetName] accepts the demand but only gives us partial ownership of the proposed states. This means we will have control of the state, but the state is owned buy [FROM.GetName]. Another \"half\" step closer towards a Greater Italy!"
+  ITA_generic_events.2.op1: "A Partial Victory."
+
+  ITA_generic_events.3.t: "[FROM.GetName] Declines"
+  ITA_generic_events.3.d: "[FROM.GetName] has rejected the demand and has given us a warning to not take them as they are core territory. We either have to take it by force or talk it again for something in return."
+  ITA_generic_events.3.op1: "We shall return stronger."
+
+  # News Events
+  ITA_news_events.1.t: "Italy continues on for Italian Irredentism"
+  ITA_news_events.1.d: "Fascist leader Benito Mussolini said today during a speech: §R\"We will continue our planned ways to expand Italy and take what was taken from us!\"§!. This has led to speculation of Italy continuing the political movement of Italian Irredentism, which is to annex territories around Italy that they claim to be \"truly italian\". Many countries that are targets of these have tried to respond by issuing diplomatic affairs before to even out the tensions, but the Italian spirit lives on."
+  ITA_news_events.1.op1: "It returns..."
+
+  ITA_news_events.2.t: "Italy Issues Diplomatic Efforts"
+  ITA_news_events.2.d: "After a brutal war and witnessing the atomic bombing of Hiroshima and Nagasaki, fascist leader Benito Mussolini said: §R\"I'd like to stay peaceful now, as were not like those Americans.\"§!. This points to the new movement: Supremazia Fascista, which is a new way to spread fascism; Not by force, but by diplomatic actions and influence. Italy already has potential targets in and out of Europe. And they just need to proceed and hope the best out of it."
+  ITA_news_events.2.op1: "Italy is going on a more peaceful route..."
+
+  ITA_news_events.3.t: "Italy Releases Croatia"
+  ITA_news_events.3.d: "Italy has released Croatia as a free country after [?CRO_puppet_years]. Poglavnik Ante Pavelić and fascist leader Benito Mussolini were seen today at the independence ceremony. Ante Pavelić expressed his concerns and assured the country would live on independently, but still be inside the International Fascist League sphere. This also has led to international concern, as the persecution of Serbians were halted back in 1943; and now, who knows if it will continue again?"
+  ITA_news_events.3.op1: "Another country free from control..."
+
+
+
+  # Equipment
+  ITA_infantry_equipment_0: "Fucile Armaguerra Mod. 39"
+  ITA_infantry_equipment_0_short: "Armaguerra Mod. 39"
+  #ITA_infantry_equipment_1: "Carcano M38"
+  #ITA_infantry_equipment_1_short: "Carcano M38"
+  #ITA_infantry_equipment_2: "MAB-38"
+  #ITA_infantry_equipment_2_short: "MAB-38"
+  #ITA_infantry_equipment_3: "FNAB-43"
+  #ITA_infantry_equipment_3_short: "FNAB-43"
+
+  # Opinion Modifiers
+  ITA_opinion_modifiers.1: "Italian Influence"

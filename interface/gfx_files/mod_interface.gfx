@@ -1,0 +1,27 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_select_date_1947"
+		textureFile = "gfx/interface/select_date_1947.tga"
+	}
+
+	spriteType = {
+		name = "GFX_generic_text_bg_480"
+		textureFile = "gfx/interface/GUI/generic_text_bg_480.tga"
+	}
+
+	spriteType = {
+		name = "GFX_border_tiled_country"
+		textureFile = "gfx/interface/GUI/border_tiled_country.tga"
+	}
+
+	spriteType = {
+		name = "GFX_album_BOW"
+		textureFile = "gfx/interface/GUI/bow_album.tga"
+		noOfFrames = 2
+	}
+
+	pieChartType = {
+		name = "GFX_supremacy_chart"
+		size = 108
+	}
+}

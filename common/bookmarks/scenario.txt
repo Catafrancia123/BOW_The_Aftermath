@@ -1,0 +1,170 @@
+bookmarks = {
+    bookmark = {
+        name = aftermath
+        desc = aftermath_desc
+        date = 1947.1.1.12
+        picture = GFX_select_date_1947
+        default = yes
+        default_country = ITA
+
+        # Majors
+        USA = {
+            history = aftermath_usa
+            ideology = democratic
+        }
+        ENG = {
+            history = aftermath_uk
+            ideology = democratic
+            ideas = { mod_member_of_colonial_agreement }
+        }
+        FRA = {
+            history = aftermath_france
+            ideology = democratic
+            ideas = { mod_member_of_colonial_agreement }
+        }
+        ITA = {
+            history = aftermath_italy
+            ideology = fascism
+            ideas = { mod_ITA_strenghtened_nationalism mod_ITA_miltary_industrialization mod_ITA_motivated_soldiers }
+            focuses = { focus_ITA_politics_start focus_ITA_politics_greece_oppress_communists focus_ITA_politics_balkan_focus }
+        }
+        SPR = {
+            history = aftermath_other
+            ideology = fascism
+            ideas = { mod_member_of_colonial_agreement }
+        }
+        SOV = {
+            history = aftermath_russia
+            ideology = communism
+        }
+        PRC = {
+            history = aftermath_other #aftermath_china_prc
+            ideology = communism
+        }
+        "---" = {
+        history = aftermath_other
+        }
+
+        # Minors
+	    GER = {
+            history = aftermath_germany
+            ideology = democratic
+            minor = yes
+        }
+	    HOL = {
+            history = aftermath_other
+            ideology = democratic
+            minor = yes
+        }
+        BEL = {
+            history = aftermath_other
+            ideology = democratic
+            minor = yes
+        }
+	    LUX = {
+            history = aftermath_other
+            ideology = democratic
+            minor = yes
+        }
+	    CRO = {
+            history = aftermath_other
+            ideology = fascism
+            minor = yes
+        }
+        SER = {
+            history = aftermath_other
+            ideology = fascism
+            minor = yes
+        }
+	    AOI = {
+            history = aftermath_other
+            ideology = fascism
+            minor = yes
+            ideas = { vittorio_emanuele_emperor_of_ethiopia AOI_africa_orientale_italiana_idea }
+        }
+        GDR = {
+            history = aftermath_other #aftermath_east_germany
+            ideology = communism
+            minor = yes
+        }
+        BUL = {
+            history = aftermath_other
+            ideology = communism
+            minor = yes
+        }
+	    EGY = {
+            history = aftermath_other
+            ideology = neutrality
+            minor = yes
+        }
+		
+
+        effect = {
+            randomize_weather = 12345
+        }
+    }
+
+    bookmark = {
+        name = aftermath
+        desc = aftermath_desc
+        date = 1947.1.1.12
+        picture = GFX_select_date_2020
+        default = yes
+        default_country = ITA
+
+        USA = {
+            history = aftermath_usa
+            ideology = democratic
+        }
+        ENG = {
+            history = aftermath_uk
+            ideology = democratic
+            ideas = { 
+                mod_member_of_colonial_agreement 
+            }
+        }
+        GER = {
+            history = aftermath_germany
+            ideology = democratic
+        }
+        ITA = {
+            history = aftermath_italy
+            ideology = fascism
+        }
+        GDR = {
+            history = aftermath_other #aftermath_east_germany
+            ideology = communism
+        }
+        SOV = {
+            history = aftermath_russia
+            ideology = communism
+        }
+        PRC = {
+            history = aftermath_china
+            ideology = communism
+        }
+        FRA = {
+            history = aftermath_france
+            ideology = democratic
+            minor = yes
+            ideas = { 
+                mod_member_of_colonial_agreement 
+            }
+        }
+        INA = {
+            history = aftermath_indonesia
+            ideology = democratic
+            minor = yes
+            ideas = { 
+                mod_INA_civilian_national_defense 
+            }
+        }
+        "---" = {
+        history = aftermath_other
+        }
+
+        effect = {
+            randomize_weather = 12345
+        }
+    }
+}

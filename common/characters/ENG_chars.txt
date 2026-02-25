@@ -1,0 +1,63 @@
+characters = {
+	ENG_clement_attlee_new = {
+		name = "Clement Attlee"
+		portraits = {
+			civilian = { large = "GFX_ENG_Clement_Attlee_civilian" }
+			army = { small = "GFX_idea_clement_attlee" }
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = clement_attlee_new
+			available = {
+				NOT = {
+					has_completed_focus = ENG_a_change_in_course
+					has_autonomy_state = autonomy_supervised_state
+					has_country_leader = {
+						character = ENG_clement_attlee_new
+						ruling_only = yes
+					}
+				}
+			}
+			allowed  = { original_tag = ENG }
+			traits  = { democratic_reformer }
+			do_effect  = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do  = {
+				base = 0
+			}
+		}		
+		country_leader = { 
+			ideology = socialism
+			expire = 1965.1.1
+			traits  = { democratic_reformer }
+		}	
+	}
+	ENG_anthony_eden = {
+		name = "Anthony Eden"
+		portraits = {
+			civilian = { large = "GFX_ENG_Anthony_Eden_civilian" }
+		}
+
+		country_leader = { 
+			ideology = conservatism
+			expire = 1965.1.1
+			traits  = { democratic_reformer }
+		}
+	}
+	ENG_harold_macmillan = {
+		name = "Harold Macmillan"
+		portraits = {
+			civilian = { large = "GFX_ENG_Harold_Macmillan_civilian" }
+		}
+
+		country_leader = { 
+			ideology = conservatism
+			expire = 1965.1.1
+			traits  = { democratic_reformer }
+		}
+	}
+}

@@ -1,0 +1,11 @@
+ideas = {
+    country = {
+        mod_GRE_uprising = {
+            picture = generic_communism_drift_bonus
+            modifier = {
+				resistance_activity = 0.1
+				communism_drift = 0.1
+            }
+        }
+	}
+}

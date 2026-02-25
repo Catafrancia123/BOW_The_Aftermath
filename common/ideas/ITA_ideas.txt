@@ -1,0 +1,95 @@
+ideas = {
+    country = {
+        # Italians hate communists
+        mod_ITA_strenghtened_nationalism = {
+            picture = ITA_shadow_of_mussolini
+            modifier = {
+                surrender_limit = 0.85
+                stability_factor = 0.15
+                drift_defence_factor = 0.1
+                communism_acceptance = -30
+				democratic_acceptance = -10
+				fascism_acceptance = 20
+				ai_focus_aggressive_factor = 0.25
+				justify_war_goal_time = -0.1
+            }
+        }
+
+        # Italians love fighting
+        mod_ITA_motivated_soldiers = {
+            picture = ITA_regio_esercito_3
+            modifier = {
+                war_stability_factor = 0.05
+                war_support_factor = 0.2
+                max_dig_in_factor = 0.1
+		        land_doctrine_cost_factor = 0.15
+		        army_org_factor = -0.05
+                army_morale_factor = 0.05
+            }
+        }
+
+        # The War-Prepared Industry Project
+        mod_ITA_miltary_industrialization = {
+            picture = ITA_military_industrialization
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                production_speed_infrastructure_factor = 0.2
+                production_cost_infrastructure_factor = -0.1
+                conversion_cost_civ_to_mil_factor = -0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+        # Mussolini for life
+        mod_ITA_mussolini_for_life = {
+            picture = HUN_hungarian_monarchy_fascism
+            modifier = {
+                stability_factor = 0.05
+                war_support_factor = 0.1
+                political_power_factor = 0.1
+            }
+        }
+
+        # Colonial Production Support
+        mod_ITA_colonial_industry_support = {
+            picture = ETH_joint_african_development_program
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.1
+                production_factory_max_efficiency_factor = 0.15
+                production_factory_start_efficiency_factor = 0.05
+            }
+        }
+
+        # Fascist expansion
+        mod_ITA_fascist_influence = {
+            picture = generic_fascism_drift_bonus
+            modifier = {
+                fascism_drift = 0.25
+                fascism_acceptance = 40
+                stability_factor = -0.1
+            }
+        }
+
+        # Backed-up military for civil war
+        mod_ITA_trained_militias = {
+            picture = MEX_politicised_army
+            modifier = {
+                army_core_attack_factor	= 0.15
+                army_attack_factor = 0.1
+                army_defence_factor = 0.05
+                army_strength_factor = 0.1
+                army_morale_factor = 0.05
+            }
+        }
+
+        # Communist oppression policy
+        mod_ITA_oppress_communism = {
+            picture = generic_fascism_drift_bonus
+            modifier = {
+                communism_drift = -0.1
+                communism_acceptance = -20
+                stability_factor = 0.1
+            }
+        }
+	}
+}

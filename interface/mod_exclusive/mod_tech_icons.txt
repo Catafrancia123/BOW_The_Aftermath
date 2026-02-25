@@ -1,0 +1,10 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_mod_GER_tech_infantry_gun_1_medium"
+		textureFile = "gfx/interface/technologies/GER/GER_infantry_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_mod_GER_guns_medium"
+		textureFile = "gfx/interface/technologies/GER/GER_infantry_1.tga"
+	}
+}

@@ -1,0 +1,12 @@
+characters = {
+	# Add more leaders to political powers
+	mod_FRA_leader = { # Emmanuel Macron
+		gender = male
+		name = mod_FRA_leader_name
+
+		portraits = {
+			civilian = { large = GFX_FRA_Emmanuel_Macron_civilian }
+		}
+		country_leader = { ideology = liberalism }
+	}
+}

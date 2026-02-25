@@ -1,0 +1,4 @@
+IFL_target_countries_mediterranean = {
+	input = constant:country_groups.IFL_target_countries_mediterranean_group
+	name = IFL_target_countries_mediterranean_name
+}

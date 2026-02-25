@@ -1,0 +1,99 @@
+﻿l_english:
+  # Country Basic Names (overwrite)
+  BUL: "Bulgaria"
+  BUL_DEF: "Bulgaria"
+  BUL_ADJ: "Bulgarian"
+
+  # Country Names
+  # none for now
+
+  # Country Political Parties
+  mod_BUL_democratic_party: "DC"
+  mod_BUL_democratic_party_long: "Democrazia Cristiana" 
+  mod_BUL_fascist_party: "PFR"
+  mod_BUL_fascist_party_long: "Partito Fascista Repubblicano"
+  mod_BUL_neutrality_party: "Non-Aligned"
+  mod_BUL_neutrality_party_long: "Non-Aligned"
+
+  # Leader Names (add later)
+  #mod_BUL_leader_name_1: "Benito Mussolini"
+  #mod_BUL_leader_name_2: "Olaf Scholz"
+  #mod_BUL_leader_name_3: "Friedrich Merz"
+  #mod_BUL_leader_name_kaiser: "Georg Friedrich"
+
+  # Ideas
+  mod_BUL_republic: "New Italian Republic"
+  mod_BUL_republic_desc: "In 1946, 53% of the population of Italy chose to establish a republican state. Monarchies were exiled and replaced by the better fascist republic."
+  mod_BUL_colonial_motivation: "Colonial Work Movement"
+  mod_BUL_colonial_motivation_desc: "Under our new modernization plan, the colonies will work hard for the future of Italy. We must ensure that our colonies are well taken care of and treat them equally. This will ensure that our colonies will be loyal to us and will work hard for the greatness of Italy."
+  mod_BUL_fascist_influence: "Italian Fascist Influence"
+  mod_BUL_fascist_influence_desc: "Fasicsm from Italian origins have been appealing to our people. Their leader is trying to spread fascism again across the world and make them their allies."
+  mod_BUL_miltary_industrialization: "Italian Military Industrialization Program"
+  mod_BUL_miltary_industrialization_desc: "The Duce has ordered a massive military and infrastructure industrialization program to ensure that Italy is powerful in economics and industry. This program will focus on increasing the production of military equipment and modernizing our armed forces; Aswell as increasing the infrastructure of our cities and transportation systems."
+
+  # National Focus 
+  mod_BUL_focus: "$BUL_ADJ$ National Focus"
+
+  # Political
+  focus_BUL_politics_communism: "Strengthen Communism"
+  focus_BUL_politics_communism_desc: "Over the years, the monarchists and fascists have ruined our country to what it is now. Let us rebuild and live together as one united nation!"
+  focus_BUL_politics_nationalism: "The Second Bulgarian National Awakening"
+  focus_BUL_politics_nationalism_desc: "Communism is just propoganda to our weakened nation, the focus of the west is much more fitting for our country. To start a revolution against the socialist and stand tall!"
+
+  # Industry
+  focus_BUL_industry: "Colonial Modernization"
+  focus_BUL_industry_desc: "Our loyal colonies need to be treated the same as our ways, the future of Italy rests on the natural resources and manpower of our colonies. We must expand and modernize to be the first colonial power to introduce equal rights to our colonial subjects."
+
+  # Events
+  BUL_events.1.t: "Italy Demands Dalmatia"
+  BUL_events.1.d: "Italy proposes that all coastal states in the Adriatic must be under Italian control, and now it demands Dalmatia. There is no way to refuse this offer, as it has to be done diplomatically or with forced annexation."
+  BUL_events.1.op1: "We don't really care about it."
+  BUL_events.1.op2: "We'll give partial ownership."
+  BUL_events.1.op3: "Never! Dalmatia is pure Croatian territory!"
+
+  BUL_events.2.t: "Italy Demands the Suez Canal"
+  BUL_events.2.d: "Italy has a mission to dominate and spread fascism across the Mediterranean sea. In order to fufill the dream, it demands the full or partial Italian control over the Suez Canal. The reason is to control the trade routes and can cripple the enemies that oppose us."
+  BUL_events.2.op1: "We don't really care about it."
+  BUL_events.2.op2: "We'll give partial ownership."
+
+  # Misiolinis Events
+  BUL_missiolinis_events.1_egypt.t: "Successful Intervention in Egyptian Politics"
+  BUL_missiolinis_events.1_egypt.d: "Our intervention efforts in expanding fascism in Egypt has succeeded and has triggered a civil war. To make Egypt our key ally in controlling the Suez Canal, we must send support with equipment and volunteers. Our expansion will be victorious!"
+  BUL_missiolinis_events.1_egypt.op1: "For the Duce!"
+
+  BUL_missiolinis_events.2_egypt.t: "Success in Egypt"
+  BUL_missiolinis_events.2_egypt.d: "Our backed-up fascist government in Egypt has taken over Cairo and has won the civil war. Egypt is now a fascist country, and we are one step closer to achiveing the entirety of the Mediterranean sea."
+  BUL_missiolinis_events.2_egypt.op1: "Glory to Italy!"
+
+  BUL_missiolinis_events.3_egypt.t: "Struggle in Egypt"
+  BUL_missiolinis_events.3_egypt.d: "Our backed-up fascist government in Egypt hasn't been able to fufill our demands and take over Cairo yet, and the civil war is still ongoing. The only way to ensure victory is to declare war on Egypt; We must not fail our mission to control the Mediterranean sea."
+  BUL_missiolinis_events.3_egypt.op1: "Desperate times call for desperate measures."
+
+  # Generic Events
+  BUL_generic_events.1.t: "[FROM.GetName] Accepts"
+  BUL_generic_events.1.d: "[FROM.GetName] accepts the demand and has given us full ownership of the proposed states. Another step closer towards a Greater Italy!"
+  BUL_generic_events.1.op1: "Another Victory."
+
+  BUL_generic_events.2.t: "[FROM.GetName] Gives only Partial Control"
+  BUL_generic_events.2.d: "[FROM.GetName] accepts the demand but only gives us partial ownership of the proposed states. This means we will have control of the state, but the state is owned buy [FROM.GetName]. Another \"half\" step closer towards a Greater Italy!"
+  BUL_generic_events.2.op1: "A Partial Victory."
+
+  BUL_generic_events.3.t: "[FROM.GetName] Declines"
+  BUL_generic_events.3.d: "[FROM.GetName] has rejected the demand and has given us a warning to not take them as they are core territory. We either have to take it by force or talk it again for something in return."
+  BUL_generic_events.3.op1: "We shall return stronger."
+
+  # Decisions
+  BUL_faction_decisions: "International Fascist League Decisions"
+  BUL_faction_decisions_desc: "Fascism is declining, so this faction is used to reunite some (all) fascist countries to try and survive the post-Nazi era."
+  BUL_demand_dalmatia: "Demand Dalmatia"
+  BUL_demand_dalmatia_desc: "As the focus of the Duce about all state in the Adriatic Sea must be under Italian control, demanding Dalmatia will guarantee that. Dalmatia is a key state to expand according to the vision of Greater Italy."
+
+  # Equipment
+  BUL_infantry_equipment_0: "Fucile Armaguerra Mod. 39"
+  BUL_infantry_equipment_0_short: "Armaguerra Mod. 39"
+  #BUL_infantry_equipment_1: "Carcano M38"
+  #BUL_infantry_equipment_1_short: "Carcano M38"
+  #BUL_infantry_equipment_2: "MAB-38"
+  #BUL_infantry_equipment_2_short: "MAB-38"
+  #BUL_infantry_equipment_3: "FNAB-43"
+  #BUL_infantry_equipment_3_short: "FNAB-43"

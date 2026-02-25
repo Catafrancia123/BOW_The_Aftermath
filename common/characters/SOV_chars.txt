@@ -1,0 +1,123 @@
+characters = {
+	# Add more leaders to political powers
+	SOV_nikita_khrushchev = { # Nikita Khrushchev
+		gender = male
+		name = "Nikita Khrushchev"
+		portraits = {
+			civilian = {
+				large = GFX_SOV_Nikita_Khrushchev_civilian
+			}
+		}
+
+		country_leader = {
+    		ideology = leninism
+			expire = 1965.1.1
+		}
+	}
+
+	# Politcal Advisors
+	SOV_lavrenty_beriya_new = {
+		#LA RESISTANCE
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			allowed_civil_war = {
+				original_tag = SOV
+				has_government = communism
+				NOT = { tag = SOV }
+			}
+			name = SOV_lavrenty_beriya
+			portraits = {
+				civilian = {
+					large = "GFX_portrait_SOV_lavrenty_beriya"
+				}
+				army = {
+					small = "GFX_idea_SOV_lavrenty_beriya"
+				}
+			}
+
+			advisor = {
+				slot = political_advisor
+				idea_token = SOV_lavrenty_beriya_token_dlc
+				name = SOV_lavrenty_beriya
+				can_be_fired = no
+				allowed = {
+					original_tag = SOV
+				}
+				visible = {
+					NOT = {
+						has_character_flag = SOV_character_purged_flag 
+					}
+				}
+				available = {
+					NOT = { has_idea = SOV_nikolay_yezhov }
+					NOT = { has_idea = SOV_genrikh_yagoda }
+					NOT = { is_country_leader = yes }
+				}
+
+				traits = {
+					head_of_the_nkvd_beriya_initial
+				}
+				on_add = {
+					ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
+					SOV_paranoia_modifier_update_gui_tooltip = yes
+				}
+				on_remove = {
+					ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } }
+					SOV_paranoia_modifier_update_gui_tooltip = yes
+				}
+			}
+		}
+		#NO LA RESISTANCE
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			allowed_civil_war = {
+				original_tag = SOV
+				NOT = { tag = SOV }
+				has_government = communism
+			}
+			name = SOV_lavrenty_beriya
+			portraits = {
+				civilian = {
+					large = "GFX_portrait_SOV_lavrenty_beriya"
+				}
+				army = {
+					small = "GFX_idea_SOV_lavrenty_beriya"
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = SOV_lavrenty_beriya_token
+				name = SOV_lavrenty_beriya
+				can_be_fired = no
+				allowed = {
+					original_tag = SOV
+				}
+				visible = {
+					NOT = {
+						has_character_flag = SOV_character_purged_flag 
+					}
+				}
+				available = {
+					NOT = { has_idea = SOV_nikolay_yezhov }
+					NOT = { has_idea = SOV_genrikh_yagoda }
+				}
+
+				traits = {
+					head_of_the_nkvd_beriya_initial
+				}
+				on_add = {
+					ROOT = { add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 3 } }
+					SOV_paranoia_modifier_update_gui_tooltip = yes
+				}
+				on_remove = {
+					ROOT = { subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 3 } }
+					SOV_paranoia_modifier_update_gui_tooltip = yes
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+bitmapfonts = {
+    bitmapfont = {
+        name = "titillium_web_22"
+        fontfiles = { "gfx/fonts/titillium_web_22" }
+        color = 0xff000000
+
+        textcolors = {
+			G = { 86 172 91 }
+			R = { 238 0 0 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+    }
+    
+    bitmapfont = {
+        name = "tomorrow_map_font"
+        fontfiles = { "gfx/fonts/hoi_mapfont4"}
+        color = 0xff000000
+    }
+}

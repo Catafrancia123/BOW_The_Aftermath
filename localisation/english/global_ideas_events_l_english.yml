@@ -1,0 +1,17 @@
+﻿l_english:
+
+  # Ideas
+  lockdown_outer: "Export Shortages"
+  lockdown_outer_desc: "A nationwide lockdown has happened because of the Covid-19 virus in some countries, leading to less items that are exported around the world. This caused an internal item shortage for the people who needed those items."
+  lockdown_inner: "Nationwide Lockdown"
+  lockdown_inner_desc: "Due to the spread of Covid-19 in our country, The government has issued a nationwide lockdown for all civillians and activity is reduced. This has led to a worsening economy due to unemployment and less economic activity in the country."
+  mod_member_of_colonial_agreement: "Member of the Bordeaux Colonial Agreement"
+  mod_member_of_colonial_agreement_desc: "As a member of the Bordeaux Colonial Agreement, we can trade and find ways to make our colonies are treated equally and fairly. This has led to less resistance growth in our occupied states as our colonial subjects are happy with the way we treat them."
+
+  # Events (max 2 paragraphs)
+  non_war_events.1.t: "[ROOT.GetName] Issues a Nationwide Lockdown"
+  non_war_events.1.d: "The Covid-19 Virus has caused [ROOT.GetName] to issue a nationwide lockdown at [GetDateText]. With this, [ROOT.GetName] is closing it's borders to not spread the virus further and reducing civillian activity. This has lead to item shortages from products made in [ROOT.GetName] and the economy to go down.\n\n[ROOT.GetName] will reopen it's borders in 3 months from now and hopes that the virus doesn't worsen in the country and can continue economic activities."
+  non_war_events.1.op1: "This is interesting..."
+  non_war_events.2.t: "WHO Announces Public Health Emergency"
+  non_war_events.2.d: "Today, WHO (World Health Organization) has issued a international public health emergency of the new Covid-19 virus. This will remain until the disease's spreading is reduced and until a cure is found.\n\nThis has led to some countries to limit their exports to help limit the spreading of the disease. The global economy experienced a decrease of 7% and it will increase per month. Governments worldwide have planned to issue lockdowns and ban on travel for the time being until the disease is properly handled."
+  non_war_events.2.op1: "The virus rises..."

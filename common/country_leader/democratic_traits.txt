@@ -1,0 +1,7 @@
+leader_traits = {
+	USA_truman_doctrine = {
+		random = no
+		communism_acceptance = -40
+		fascism_acceptance = -15
+	}
+}

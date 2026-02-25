@@ -1,0 +1,60 @@
+division_template = {
+	name = "Infantry"
+	regiments = { 
+		infantry = {x=0 y=0}
+		infantry = {x=0 y=1}
+		infantry = {x=0 y=2}
+		infantry = {x=1 y=0}
+		infantry = {x=1 y=1}
+		infantry = {x=1 y=2}
+	}
+
+	support = {
+		logistics_company = {x=0 y=0}
+		recon = {x=0 y=1}
+	}
+}
+
+division_template = {
+	name = "Cavalry"
+	regiments = { 
+		camelry = {x=0 y=0}
+		camelry = {x=0 y=1}
+		camelry = {x=0 y=2}
+		camelry = {x=1 y=0}
+		camelry = {x=1 y=1}
+		camelry = {x=1 y=2}
+	}
+
+	support = {
+		logistics_company = {x=0 y=0}
+		recon = {x=0 y=1}
+	}
+}
+
+units = {
+	division= {	
+		name = "Cairo Force"
+		location = 7011
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Canal Brigade"
+		location = 1155
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "The Cavalry Brigade (Egypt)"
+		location = 4076
+		division_template = "Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}

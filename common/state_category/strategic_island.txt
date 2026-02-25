@@ -1,0 +1,11 @@
+state_categories = {
+	strategic_island = {
+		local_building_slots = 3
+	    
+	    buildings_max_level = {
+        	naval_base = 10
+        	air_base = 8
+    	}
+		color = { 160 200 80 }
+	}
+}

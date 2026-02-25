@@ -1,0 +1,140 @@
+﻿l_english:
+
+  # Mod Information
+  mod_version_local: "0.1.2"
+
+  # Music
+  bow_music_TITLE:0 "Brink of War: A HOI4 series"
+  debug_masters_toronto: "Valorant Masters Toronto"
+  ddr_anthem: "GDR Anthem"
+  maintheme: "Water Vapor"
+
+  # East vs West Music
+  evw_a_path_of_danger: "A Path of Danger"
+  evw_a_state_of_panic: "A State of Panic"
+  evw_allies_battle_1: "Allies Battle 1"
+  evw_allies_is_doing_well: "Allies Is Doing Well"
+  evw_allies_peace_1: "Allies Peace 1"
+  evw_allies_peace_2: "Allies Peace 2"
+  evw_an_uncertain_future: "An Uncertain Future"
+  evw_beacon: "Beacon"
+  ewv_communist_rebellion: "Non-Democratic Rebellion"
+  evw_delightful_poetry: "Delightful Poetry"
+  evw_democratic_rebellion: "Democratic Rebellion"
+  evw_desert_at_dusk: "Desert At Dusk"
+  evw_dilemma: "A Dilemma"
+  evw_diminishment: "Diminishment"
+  evw_float: "Float"
+  evw_general_battle_1: "General Battle 1"
+  evw_gradient: "Gradient"
+  evw_gridlock: "Gridlock"
+  evw_latin_battle: "Latin Battle"
+  evw_meo: "MEO"
+  evw_neutral_1: "Neutral 1 - Saved By Choppers"
+  evw_neutral_2: "Neutral 2"
+  evw_nonplus: "Nonplus"
+  evw_nuclear_bomb: "Nuclear Bomb"
+  evw_nuke_atmosphere: "Nuke Atmosphere"
+  evw_orient: "Orient"
+  evw_responsibilities: "Responsibilities"
+  evw_russia_battle_1: "Russia Battle 1"
+  evw_russia_battle_2: "Russia Battle 2"
+  evw_russia_peace_1: "Russia Peace 1"
+  evw_sand_struggle: "Sand Struggle"
+  evw_spanish_heart: "Spanish Heart"
+  evw_ties_are_broken: "Ties Are Broken"
+  evw_superpowers: "Superpowers"
+  evw_tranquillite: "Tranquillité"
+  evw_voices_through_lights: "Voices Through Lights"
+  evw_water_vapor: "Water Vapor"
+  evw_waveform: "Waveform"
+  evw_weary_situation: "Weary Situation"
+  evw_world_at_war: "World At War"
+  evw_ww3: "World War 3"
+
+  # Military
+  generic_oob_infantry: "Infantry"
+
+  # States
+  STATE_1029:0 "Gangwon"
+  STATE_1030:0 "Gyeongsang"
+  STATE_1031:0 "Chungcheong Jeolla"
+  STATE_1032:0 "Yanan"
+  STATE_1033:0 "Fangchenggang"
+  STATE_1034:0 "Suzhou"
+  STATE_1035:0 "Nanjing"
+  STATE_1036:0 "Wuhan"
+  STATE_1037:0 "Chongqing"
+  STATE_1038:0 "Jinan"
+  STATE_1039:0 "Hebei-Chahar"
+  STATE_1040:0 "Alxa"
+  STATE_1041:0 "Chengdu"
+  STATE_1042:0 "Khotan"
+  STATE_1043:0 "Palingmiao"
+  STATE_1044:0 "Wuwei"
+  STATE_1045:0 "Guyuan"
+  STATE_1046:0 "Yulin"
+
+  mod_state_1: "Nakhchivan"
+  mod_state_2: "Eswatini"
+  mod_state_3: "Lesotho"
+  mod_state_4: "Mayotte"
+  mod_state_5: "Brasilia"
+  mod_state_6: "Greek West Macedonia"
+  mod_state_7: "Wonsan"
+  mod_state_8: "Liaotung Peninsula"
+  mod_state_9: "Corfu"
+  mod_state_10: "Palestine"
+  mod_state_11: "Haifa"
+  mod_state_12: "Gaza"
+  mod_state_454: "Israel"
+
+  # State Categories
+  strategic_island: "Strategic Island"
+
+  # City Names
+  VICTORY_POINTS_13388:0 "New Trieste"
+  VICTORY_POINTS_7381:0 "Jakarta"
+
+  # GUI
+  GUI_supremacy_title: "Supremacy Progress"
+  GUI_supremacy_desc: "World Supremacy is the amount of power of an ideology has in the world. Major powers can increase this amount by starting proxy civil wars or revolutions to take over minor countries. To achive true World Supremacy, an ideology must be the government for atmost 85% of all countries and has defeated the 2 other ideology's major power(s)."
+  GUI_supremacy_desc2: "There are currently [?total_countries] countries in the world, with those being:\n- Democratic: §4[?democratic_countries]§! countries\n- Fascist: §g[?fascism_countries]§! countries\n- Communist: §R[?communism_countries]§! countries\n- Non-Alligned: §W[neutrality_countries]§! countries"
+  GUI_supremacy_button: "World Supremacy"
+
+  # National Focus
+  mod_placeholder_focus: "Placeholder Focus"
+  mod_nat_focus_generic: "No description yet, come back at a later version!"
+  mod_world_opinion_tt: "Opinion of The World:"
+
+  # Names
+  mod_neutrality_party: "Non-Aligned"
+
+  # Laws 
+  civilian_national_defense: "National Defense"
+  civilian_national_defense_desc: "All abiding citizens of such country must take part in defending the country in times of war."
+
+  # Events
+  non_war_events.3.t: "Warning!"
+  non_war_events.3.d: "Hello playtester, you are playing Brink of War: Modernization (v$mod_version_local$). This mod is in development and congratulations in being picked as a playtester, your job is to either suggest changes or report bugs to the developer (catamapp). If you are not a playtester, but a player reading this message, you might have installed the wrong version or the exclusive dev version.\nPlease be in mind that the game can crash or have broken features during playtime. I hope you can help me make this mod to be better. Thanks!"
+  non_war_events.3.op1: "Alright."
+
+  # Technologies
+  mod_infantry_weapons: "Modern Infantry Weapons"
+
+  # Peace Messages
+  mod_peace_annex: "§Y[?war_winner.GetFlag] [?war_winner.GetName]§! took [?war_winner.remaining_states|Y] states.\n§Y[?war_loser.GetFlag] [?war_loser.GetName]§! was annexed."
+
+  
+  # TEMPORARY - To be removed later
+  USA_truman_doctrine: "Truman Doctrine"
+
+  ENG_democratic_party_con: "Conservative"
+  ENG_democratic_party_lab: "Labour"
+  ENG_democratic_party_con_long: "Conservative Party"
+  ENG_democratic_party_lab_long: "Labour Party"
+
+  HUN_interval_democratic: "Second Hungarian Republic"
+  HUN_interval_democratic_DEF: "the Second Hungarian Republic"
+  ROM_interval_communism: "Kingdom of Romania" # yes.
+  ROM_interval_communism_DEF: "the Kingdom of Romania"

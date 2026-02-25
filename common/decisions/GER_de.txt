@@ -1,0 +1,11 @@
+GER_EU_decisions = {
+	EU_hold_rally = {
+		icon = GFX_decision_generic_political_address
+		cost = 25
+		days_remove = 14
+
+		remove_effect = {
+			
+		}
+	}
+}

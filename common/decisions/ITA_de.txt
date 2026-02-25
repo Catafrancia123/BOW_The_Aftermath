@@ -1,0 +1,192 @@
+# Add new missiolinis
+ITA_missiolinis = {
+	ITA_missiolini_conquer_egypt = {
+		icon = GFX_decision_generic_operation
+		allowed = { tag = ITA }
+		visible = {
+			ITA_missiolinis_system_available = yes
+			has_completed_focus = focus_ITA_politics_egypt_influence
+			IEG = { exists = yes } # Fascist Egypt
+		}
+
+		cancel = { # GOAL
+			custom_trigger_tooltip = {
+				tooltip = ITA_missiolinis.1_egypt.tt
+				AND = {
+					IEG = { 
+						controls_province = 7011 
+						controls_province = 12071
+					} # Cairo and Luxor
+					446 = { is_controlled_by = IEG } # Suez State
+				}
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 907 # Cairo
+				state = 456 # Luxor
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no # Tooltip purposes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = ROOT.ITA_missiolinis_egypt_days
+
+		cancel_effect = {
+			if = { # Mission Success!!!
+				limit = {
+					IEG = { 
+						controls_province = 7011 
+						controls_province = 12071
+					} # Cairo and Luxor
+					446 = { is_controlled_by = IEG } # Suez State
+				}
+				country_event = { id = ITA_missiolinis_events.2_egypt hours = 1 }
+			}
+			else = { # Mission Failed, we'll get them next time.
+				# Prepare next mission
+				if = {
+					limit = { ITA_missiolinis_system_available = yes }
+					ITA_missiolinis_manage_next_mission = yes
+				}
+				country_event = { id = ITA_missiolinis_events.3_egypt hours = 1 } # declare war on egypt
+			}
+		}
+
+		timeout_effect = { # declare war!!
+			hidden_effect = {
+				#Prepare next mission
+				if = {
+					limit = {
+						ITA_missiolinis_system_available = yes
+					}
+					ITA_missiolinis_manage_next_mission = yes
+				}
+				country_event = { id = ITA_missiolinis_events.3_egypt hours = 1 }
+			}
+		}
+
+		complete_effect = { # Mission Success!!!
+			hidden_effect = {
+				#Prepare next mission
+				if = {
+					limit = {
+						ITA_missiolinis_system_available = yes
+					}
+					ITA_missiolinis_manage_next_mission = yes
+				}
+
+				country_event = { id = ITA_missiolinis_events.2_egypt hours = 1 }
+			}
+		}
+	}
+
+	# More Military Factories
+	ITA_missiolini_military_factories = {
+		icon = GFX_decision_generic_merge_plant_materiel
+		allowed = { tag = ITA }
+		visible = { ITA_missiolinis_system_available = yes }
+
+		available = { #GOAL
+			custom_trigger_tooltip = {
+				tooltip = ITA_missiolinis.1_industry.tt
+				check_variable = { ROOT.num_of_military_factories > ITA_missiolinis_military_factories }
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_if_not_visible = yes
+		is_good = yes #Tooltip purposes
+		selectable_mission = no
+		days_mission_timeout = ITA_missiolinis_default_days
+
+		timeout_effect = { #MISSION FAILS
+			effect_tooltip = {
+				ITA_missiolini_strengthen_heavy_industry_failure_effect = yes
+			}
+
+			hidden_effect = {
+				country_event = { id = BBA_italy_missiolinis.32 hours = 1 }
+			}
+		}
+
+		complete_effect = { #MISSION SUCCEEDS
+			effect_tooltip = {
+				ITA_missiolini_strengthen_heavy_industry_success_effect = yes
+			}
+
+			hidden_effect = {
+				country_event = { id = BBA_italy_missiolinis.33 hours = 1 }
+			}
+		}
+	}
+}
+
+propaganda_efforts = {
+	ITA_consecrate_the_leadership = { 
+		icon = GFX_decision_ITA_italian_east_africa
+		allowed = { tag = ITA }
+		visible = { always = yes }
+		available = {
+			ITA = { 
+				has_completed_focus = focus_ITA_politics_egypt_influence
+				has_completed_focus = focus_ITA_politics_greece_oppress_communists
+			}
+			EGY = { has_government = fascism }
+			GRE = { NOT = { has_government = communism } }
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 14
+
+		#priority = {
+		#	base = 10
+		#	modifier = {
+		#		has_idea = mod_ITA_strenghtened_nationalism
+		#		factor = 2
+		#	}
+		#}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				is_historical_focus_on = yes
+				add = 5
+			}
+			modifier = {
+				has_idea = mod_ITA_strenghtened_nationalism
+				factor = 2
+			}
+		}
+
+		complete_effect = {
+			ITA = { 
+				swap_ruler_traits = { 
+					remove = ITA_lion_tamer
+					add = ITA_lion_tamer_2
+				}
+			}
+		}
+		remove_effect = {
+			ITA = { add_ideas = mod_ITA_mussolini_for_life }
+			AOI = { 
+				swap_ideas = {
+					remove_idea = vittorio_emanuele_emperor_of_ethiopia
+					add_idea = vittorio_emanuele_albania_ethiopia
+				}
+			}
+			EGY = { add_ideas = vittorio_emanuele_albania_ethiopia }
+		}
+	}
+}

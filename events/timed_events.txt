@@ -1,0 +1,21 @@
+add_namespace = timed_events
+
+news_event = { # End of WHO emergency
+    id = timed_events.1
+    hidden = yes
+    is_triggered_only = yes
+    major = yes
+    fire_only_once = yes
+
+    option = {
+        if = {
+            limit = { date > 2023.05.03 }
+            every_country = {
+                remove_ideas = {
+                    lockdown_inner
+                    lockdown_outer
+                }
+            }
+        } 
+    }
+}

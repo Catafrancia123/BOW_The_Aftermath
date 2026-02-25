@@ -1,0 +1,9 @@
+country_groups = {
+	schema = {
+		any_key = yes
+		array = country
+	}
+
+	europe_1947 = { POR SPR FRA ENG SWI ITA LUX BEL HOL IRE GER GDR DEN NOR SWE FIN POL AUS CRO SER CZE HUN ROM BUL GRE } # For the scenario
+	IFL_target_countries_mediterranean_group = { EGY LEB GRE TUR SPR } # For the IFL manifest
+}

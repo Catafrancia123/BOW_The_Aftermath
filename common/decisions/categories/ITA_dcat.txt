@@ -1,0 +1,7 @@
+ITA_faction_decisions = {
+	icon = GFX_decision_category_ITA_colonial_management
+	allowed = { tag = ITA }
+	visible = {	
+		has_completed_focus = focus_ITA_politics_puppets
+	}
+}

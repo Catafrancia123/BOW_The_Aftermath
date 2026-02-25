@@ -1,0 +1,52 @@
+﻿l_english:
+  # Basics (overwrite)
+  INA: "Indonesia"
+  INA_DEF: "Indonesia"
+  INA_ADJ: "Indonesian"
+
+  # Country Names (overwrite)
+  INA_democratic: "Republic of Indonesia"
+  INA_democratic_DEF: "the Republic of Indonesia"
+  INA_communism: "Communist State of Indonesia"
+  INA_communism_DEF: "the Communist State of Indonesia"
+  INA_fascist: "Fascist Republic of Indonesia"
+  INA_fascist_DEF: "the Fascist Republic of Indonesia"
+  INA_neutrality: "Islamic Republic of Indonesia"
+  INA_neutrality_DEF: "the Islamic Republic of Indonesia"
+
+  # Country Political Parties
+  mod_INA_democratic_party: "PDIP"
+  mod_INA_democratic_party_long: "Partai Demokrasi Indonesia Perjuangan"
+  mod_INA_communism_party: "PKI"
+  mod_INA_communism_party_long: "Partai Komunis Indonesia"
+  mod_INA_fascist_party: "Gerindra"
+  mod_INA_fascist_party_long: "Partai Gerakan Indonesia Raya"
+  mod_INA_neutrality_party: "PKB"
+  mod_INA_neutrality_party_long: "Partai Kebangkitan Bangsa"
+
+  # Leader Names
+  mod_INA_leader_name_1: "Joko Widodo" # starting
+  mod_INA_leader_name_2: "Prabowo Subianto" # after 2024
+  mod_INA_leader_name_3: "Megawati Sukarnoputri" # alternate PDIP
+
+  # Ideas
+  mod_INA_communism_banned: "Communism Banned"
+  mod_INA_communism_banned_desc: "Communism in Indonesia has been banned after the incident of G30SPKI, which is a event where 7 generals were killed by pro-communist members in order to overthrow the government. The coup failed and caused a permanent ban on communism."
+  mod_INA_civilian_national_defense: "Civilian National Defense"
+  mod_INA_civilian_national_defense_desc: "Under the constitution of Indonesia, every citizen of Indonesia must take part in defending the country. Conscription is increased, but organization between armies are a concern as untrained civilians are part of the war."
+
+  # National Focus 
+
+  # Political
+  mod_INA_focus: "$INA_ADJ$ National Focus"
+  mod_INA_politics_democrat: "Towards a Better Federal Republic"
+  mod_INA_politics_democrat_desc: "Democracy is the key for a free and better country. Germany shall not be split over political parties and differences in infrastructure, but united under one banner and one party. Let Germany be the face of democracy to europe and beyond!"
+
+  # World Tension
+  mod_INA_oppose: "Democracy opposed"
+  mod_INA_return_empire: "Monarchist coup d'état"
+
+  # Events
+  mod_INA_events.1.t: "The German Civil War"
+  mod_INA_events.1.d: "Due to rising concerns of the government and the rise of anti-democratic riots and a worsening economy in Germany, The nation has chosen to start a civil war with the current government as to overthrow it and appoint a new leader for Germany. The new era for Germany starts here, and the world has mixed reactions.\n\nWorld tensions have increased and many countries have volunteered their army to either side, with the west helping the democrats and the east helping the monarchists. Similar monarchists movements in many countries have increased and pressuring democracy to the edge."
+  mod_INA_events.1.op1: "Politics need to be handled properly..."

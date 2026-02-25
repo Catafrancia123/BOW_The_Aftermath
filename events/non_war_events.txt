@@ -1,0 +1,51 @@
+add_namespace = non_war_events
+
+news_event = { # [COUNTRY] issues mod_lockdown
+    id = non_war_events.1
+    title = non_war_events.1.t
+    desc = non_war_events.1.d
+    picture = GFX_news_event_ast_parliament_house
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = non_war_events.1.op1
+        ROOT = {
+            remove_ideas = mod_lockdown_outer
+            add_timed_idea = {
+                idea = mod_lockdown_inner
+                months = 3
+            }
+        }
+    }
+}
+
+news_event = { # WHO announces emergency (global event)
+    id = non_war_events.2
+    title = non_war_events.2.t
+    desc = non_war_events.2.d
+    picture = GFX_news_event_009
+    is_triggered_only = yes
+    major = yes
+    fire_only_once = yes
+
+    option = {
+        name = non_war_events.2.op1
+        add_timed_idea = {
+            idea = mod_lockdown_outer
+            months = 38
+        }
+    }
+}
+
+country_event = { # Playtester warning
+    id = non_war_events.3
+    title = non_war_events.3.t
+    desc = non_war_events.3.d
+    picture = GFX_report_event_GER_himmler
+    is_triggered_only = yes
+
+    option = {
+        name = non_war_events.3.op1
+    }
+}

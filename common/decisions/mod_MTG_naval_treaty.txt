@@ -1,0 +1,25 @@
+MTG_naval_treaties = {
+	MTG_renew_third_treaty = {
+		icon = generic_naval	
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 243 # 1-9-1947 (8th year anniversary of WW2)
+		
+		activation = {
+			has_naval_treaty_trigger = yes
+			has_global_flag = MTG_third_london_conference
+		}
+		visible = {
+			has_naval_treaty_trigger = yes
+		}
+		timeout_effect = {
+			clr_global_flag = MTG_third_london_conference 
+		}
+		complete_effect = {
+			
+		}
+	}
+}

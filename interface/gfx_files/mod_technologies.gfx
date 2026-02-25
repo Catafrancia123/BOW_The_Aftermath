@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_support_weapons5_medium"
+		texturefile = "gfx/interface/technologies/support_weapons5.tga"
+	}
+}

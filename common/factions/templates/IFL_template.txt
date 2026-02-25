@@ -1,0 +1,14 @@
+faction_IFL = {
+    name = faction_IFL
+    icon = GFX_faction_logo_generic_fascist
+    
+    default_rules = {
+        joining_rule_fascist_only  
+        call_to_war_rule_major_only
+        faction_peace_take_claimed_focus 
+    }
+
+    goals = {
+        faction_goal_IFL_worldwide_fascism # Main Goal
+    }
+}

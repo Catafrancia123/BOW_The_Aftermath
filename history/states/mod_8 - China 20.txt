@@ -1,0 +1,22 @@
+state = {
+	id = 1054
+	name = mod_state_8
+	manpower = 75000
+	buildings_max_level_factor = 1
+	state_category = town
+
+	history = {
+		owner = CHI
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = CHI
+		add_core_of = PRC
+
+		victory_points = {
+			11771 3 
+		}	
+	}
+	provinces = { 846 987 9781 9835 11764 11771 11808 11815 }
+}

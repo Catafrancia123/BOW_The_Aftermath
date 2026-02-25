@@ -1,0 +1,6 @@
+test = {
+	icon = GFX_decision_category_SWI_absolute_neutrality
+	allowed = {
+		tag = ITA
+	}
+}

@@ -1,0 +1,28 @@
+focus_tree = {
+	# Notes: cost = 7*n days
+	id = mod_FRA_focus
+
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+
+	focus = { # The democrat path
+		id = mod_FRA_politics_democrat
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 2 
+		y = 0
+		cost = 10 # n * 7 days
+
+		#mutually_exclusive = { focus = mod_FRA_politics_oppose }
+		completion_reward = {
+			add_timed_idea = {
+				idea = mod_FRA_economic_appeal
+				months = 2
+			}
+		}
+	}
+}

@@ -1,0 +1,271 @@
+characters = {
+	# Italian Country Leaders
+	ITA_benito_mussolini_new = { # Benito Mussolini
+		gender = male
+		name = ITA_benito_mussolini
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_benito_mussolini
+			}
+		}
+
+		country_leader = {
+			ideology = italian_fascism
+			traits = { il_duce ITA_lion_tamer }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+			visible = {
+				has_completed_focus = ITA_capo_supremo
+			}
+		}
+	}
+
+	ITA_grand_council_new = { # The Grand Council of Fascism
+		name = ITA_grand_council
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_grand_council
+			}
+		}
+
+		country_leader = {
+			ideology = italian_fascism
+			traits = { the_grand_council }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	# Italian Advisors
+	ITA_gian_galeazzo_ciano_new = { # Galeazzo Ciano
+		name = ITA_gian_galeazzo_ciano
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_gian_galeazzo_ciano_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_gian_galeazzo_ciano_adv
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			visible = {
+				ITA = { NOT = { has_country_leader = ITA_gian_galeazzo_ciano_new } }
+			}
+			available = {
+				NOT = {
+					has_country_leader_with_trait = mussolini_minister_of_foreign_affairs
+				}
+				ITA_government_is_somewhat_fascist = yes
+			}
+			cost = 75
+			traits = {
+				hierarch_minister_of_foreign_affairs
+			}
+			on_add = {
+				owner = {
+					hidden_effect = {
+						ITA_bop_medium_decrease_effect = yes
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					hidden_effect = {
+						ITA_bop_medium_increase_effect = yes
+					}
+				}
+			}
+			ai_will_do = {
+				base = 0.3
+				modifier = {
+					factor = 0
+					OR = {
+						ITA_is_communist_ai = yes
+						ITA_is_socialist_ai = yes
+					}
+				}
+			}
+		}
+
+		country_leader = {
+			ideology = italian_fascism
+			expire = 1965.1.1
+			traits = { il_duce }
+		}
+	}
+
+	ITA_dino_grandi_new = { # Dino Grandi
+		name = ITA_dino_grandi
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_dino_grandi_small
+			}
+			civilian = {
+				large = GFX_ITA_Dino_Grandi_civilian
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_dino_grandi_adv
+			visible = {
+				ITA = { NOT = { has_country_leader = ITA_dino_grandi_new } }
+			}
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				NOT = {
+					has_country_leader_with_trait = mussolini_minister_of_justice
+				}
+				ITA_government_is_somewhat_fascist = yes
+				if =  {
+					limit = { 
+						has_dlc = "By Blood Alone"
+					}
+					ITA_is_advisor_available = yes
+				}
+			}
+			
+			cost = 75
+			traits = {
+				hierarch_minister_of_justice 
+			}
+			on_add = {
+				owner = {
+					hidden_effect = {
+						ITA_bop_medium_decrease_effect = yes
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					hidden_effect = {
+						ITA_bop_medium_increase_effect = yes
+					}
+				}
+			}
+			ai_will_do = {
+				base = 0.3
+				modifier = {
+					factor = 0
+					OR = {
+						ITA_is_communist_ai = yes
+						ITA_is_socialist_ai = yes
+					}
+				}
+			}
+		}
+
+		country_leader = {
+    		ideology = italian_fascism
+			expire = 1965.1.1
+			traits = { il_duce }
+		}
+	}
+
+	ITA_giacomo_acerbo_new = {
+		name = "Giacomo Acerbo - Minister of Finance"
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giacomo_acerbo_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_giacomo_acerbo_adv
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				ITA_government_is_really_fascist = yes
+			}
+			traits = {
+				war_industrialist 
+			}
+			ai_will_do = {
+				base = 3.000
+				modifier = {
+					factor = 0
+					OR = {
+						ITA_is_communist_ai = yes
+						ITA_is_socialist_ai = yes
+						ITA_is_monarchist_ai = yes
+						ITA_is_christian_democracy_ai = yes
+					}
+				}
+			}
+		}
+	}
+
+	ITA_italo_balbo_new = { 
+		name = ITA_italo_balbo
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_italo_balbo_small
+				large = GFX_portrait_ITA_italo_balbo
+			}
+			civilian = {
+				large = GFX_portrait_ITA_italo_balbo_civilian
+			}
+		}
+
+		country_leader = {
+			ideology = italian_fascism
+			expire = "1965.1.1.1"
+			traits = { il_duce }
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = italo_balbo
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				if =  {
+					limit = { 
+						has_dlc = "By Blood Alone"
+					}
+					ITA_is_advisor_available = yes
+				}
+				ITA = { NOT = { has_country_leader = ITA_italo_balbo_new } }
+			}
+			
+			traits = {
+				air_chief_all_weather_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+		
+		field_marshal = {
+			traits = { career_officer politically_connected trait_reckless media_personality }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+			visible = {
+				ITA_is_advisor_available = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+ideas = {
+	country = {
+		mod_member_of_colonial_agreement = {
+			picture = generic_org_of_african_unity
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.1
+			}
+		}
+	}
+}

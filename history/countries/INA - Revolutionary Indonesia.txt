@@ -1,0 +1,66 @@
+capital = 335 # Jakarta, Java State
+
+set_convoys = 50
+set_research_slots = 4
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_engineers = 1
+	basic_train = 1
+	transport = 1
+	tech_recon = 1
+	tech_support = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = 2019.04.17
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+# Real life party names
+set_party_name = {
+	ideology = democratic
+	long_name = mod_INA_democratic_party_long
+	name = mod_INA_democratic_party
+}
+set_party_name = {
+	ideology = communism
+	long_name = mod_INA_communism_party_long
+	name = mod_INA_communism_party
+}	
+set_party_name = {
+	ideology = fascism
+	long_name = mod_INA_fascist_party_long
+	name = mod_INA_fascist_party
+}
+set_party_name = {
+	ideology = neutrality
+	long_name = mod_INA_neutrality_party_long
+	name = mod_INA_neutrality_party
+}
+
+set_popularities = {
+	democratic = 45
+	fascism = 43
+	communism = 0
+	neutrality = 12
+}
+
+add_ideas = {
+	# Laws
+	volunteer_only # Military
+	export_focus # Exports
+	civilian_economy # Economy
+
+	# National Spirit
+	mod_INA_communism_banned
+}
+
+recruit_character = INA_sukarno
+#recruit_character = mod_INA_general
+#recruit_character = mod_INA_admiral
+#recruit_character = mod_INA_advisor_character

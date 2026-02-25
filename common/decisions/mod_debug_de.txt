@@ -1,0 +1,58 @@
+mod_debug_decisions = {
+	mod_play_song = {
+		icon = GFX_decision_BRA_integralism
+		visible = {
+			has_global_flag = show_debug_decisions_flag
+		}
+		cost = 0
+		days_re_enable = 10
+		complete_effect = {
+			play_song = "masters_toronto"
+		}
+	}
+	mod_test_event = {
+		icon = GFX_decision_BRA_integralism
+		visible = {
+			has_global_flag = show_debug_decisions_flag
+		}
+		cost = 0
+		days_re_enable = 0
+		complete_effect = {
+			country_event = non_war_events.3
+		}
+	}
+	mod_test_event_news = {
+		icon = GFX_decision_BRA_integralism
+		visible = {
+			has_global_flag = show_debug_decisions_flag
+		}
+		cost = 0
+		days_re_enable = 0
+		complete_effect = {
+			news_event = country_news_events.1
+		}
+	}
+	mod_test_event_mission = {
+		icon = GFX_decision_BRA_integralism
+		visible = {
+			has_global_flag = show_debug_decisions_flag
+		}
+		cost = 0
+		days_re_enable = 0
+		complete_effect = {
+			country_event = ITA_missiolinis_events.2_egypt
+		}
+	}
+	mod_super_event_test = {
+		icon = GFX_decision_BRA_integralism
+		visible = {
+			has_global_flag = show_debug_decisions_flag
+		}
+		cost = 0
+		days_re_enable = 0
+		complete_effect = {
+			country_event = non_war_events.3
+			play_song = "ddr_anthem"
+		}
+	}
+}

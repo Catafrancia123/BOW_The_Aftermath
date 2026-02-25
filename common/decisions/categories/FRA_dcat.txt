@@ -1,0 +1,5 @@
+FRA_economic_appeal = {
+	icon = GFX_decision_category_generic
+	allowed = { tag = FRA }
+	visible = { has_idea = mod_FRA_economic_appeal }
+}

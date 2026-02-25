@@ -1,0 +1,105 @@
+﻿l_english:
+  # Basics (overwrite)
+  GER: "Germany"
+  GER_DEF: "Germany"
+  GER_ADJ: "West German"
+  GDR: "East Germany"
+  DDR_DEF: "East Germany"
+  DDR_ADJ: "East German"
+
+  # Country Names (overwrite)
+  GER_occupied_democratic: "Allied-Occupied Germany"
+  GER_occupied_democratic_DEF: "Allied-Occupied Germany"
+  GER_occupied_communism: "Soviet-Occupied Germany"
+  GER_occupied_communism: "Soviet-Occupied Germany"
+
+  # West Germany
+  GER_democratic: "Federal Republic of Germany"
+  GER_democratic_DEF: "the Federal Republic of Germany"
+  GER_communism: "German Democratic Republic"
+  GER_communism_DEF: "the German Democratic Republic"
+  GER_fascist: "Fascist Germany"
+  GER_fascist_DEF: "Fascist Germany"
+  GER_neutrality: "German Empire"
+  GER_neutrality_DEF: "the German Empire"
+
+  # East Germany
+  DDR_communism: "German Democratic Republic"
+  DDR_communism_DEF: "the German Democratic Republic"
+
+  # Country Political Parties
+  mod_GER_democratic_party: "CDU/CSU"
+  mod_GER_democratic_party_long: "Unionsparteien von CDU/CSU"
+  mod_GER_communism_party: "LINKE"
+  mod_GER_communism_party_long: "Die Linke"
+  mod_GER_fascist_party: "AfD"
+  mod_GER_fascist_party_long: "Alternative für Deutschland"
+
+  # Leader Names
+  mod_GER_leader_name_1: "Angela Merkel"
+  mod_GER_leader_name_2: "Olaf Scholz"
+  mod_GER_leader_name_3: "Friedrich Merz"
+  mod_GER_leader_name_kaiser: "Georg Friedrich"
+
+  # Ideas
+  mod_GER_industrial_1: "New German Industrialization"
+  mod_GER_industrial_1_desc: "After thourough research in industry and technology, German factories were able to further boost production of products while keeping costs low. This has led to a economic boost of the country and it plans to further improve in the coming years through the 4 year plan."
+  mod_GER_abolished_conscription: "Conscription Abolished"
+  mod_GER_abolished_conscription_desc: "In 2011, A proposal by the government and the Ministry of Defense caused by some factors was made to abolish conscription. The Bundeswehr now aims to recruit more troops on the field for national guard and to protect it's allies from Russia."
+  mod_GER_split_country: "A Split Country"
+  mod_GER_split_country_desc: "Even after the fall of the Berlin Wall, Germany is still divided in politics, employment rates, general economy between the East and the West. This has led Germany to be considered \"split\" again."
+
+  # National Focus 
+
+  # Political
+  mod_GER_focus: "$GER_ADJ$ National Focus"
+  mod_GER_politics_democrat: "Towards a Better Federal Republic"
+  mod_GER_politics_democrat_desc: "Democracy is the key for a free and better country. Germany shall not be split over political parties and differences in infrastructure, but united under one banner and one party. Let Germany be the face of democracy to europe and beyond!"
+  mod_GER_politics_oppose: "The Alternative for Germany"
+  mod_GER_politics_oppose_desc: "Democracy is a fallacy that should be disregarded and a bad memory. Bring back the old days where we are not oppresed by the laws of democracy, but expand infinitely without any nation bothering us. We need an alternative for Germany."
+  mod_GER_politics_empire: "Return to Monarchism"
+  mod_GER_politics_empire_desc: "$mod_nat_focus_generic$"
+
+  # Industry
+  mod_GER_industry: "Expand, Efficiency, Export."
+  mod_GER_industry_desc: "$mod_nat_focus_generic$"
+  mod_GER_industry_factories: "Increase Military Spending"
+  mod_GER_industry_factories_desc: "$mod_nat_focus_generic$"
+  mod_GER_industry_mining: "Improve Mining in Upper Harz"
+  mod_GER_industry_mining_desc: "To improve our army and production of equipment, we need more resources. We can improve the efficiency of the Upper Harz mining industry to reduce imports and build around the area. Doing this will open opportunities for more mining technological improvements and aluminium production."
+
+  # Army
+  mod_GER_army_start: "Re-enable Conscription"
+  mod_GER_army_start_desc: "In 2011, conscription was put on a temporary suspension after a proposal by the Ministry of Defence at that time. But now, with a ambitious future and wanting to prepare for another european war, we must bring back conscription to prepare for the worst."
+
+  # World Tension
+  mod_GER_oppose: "Democracy opposed"
+  mod_GER_return_empire: "Monarchist coup d'état"
+
+  # Balance of Power
+  mod_GER_balance_of_power: "German Balance of Power"
+  mod_GER_bop_center: "Neutral"
+  mod_GER_bop_oppose: "Oppose Democracy"
+  mod_GER_bop_oppose_half: "Anti-Democracy Movements"
+  mod_GER_bop_oppose_full: "A New Government"
+  mod_GER_bop_democratic: "Strengthen Democracy"
+  mod_GER_bop_democratic_half: "Democratic Reforms"
+  mod_GER_bop_democratic_full: "A True Federal Republic"
+
+  # Events
+  mod_GER_events.1.t: "The German Civil War"
+  mod_GER_events.1.d: "Due to rising concerns of the government and the rise of anti-democratic riots and a worsening economy in Germany, The nation has chosen to start a civil war with the current government as to overthrow it and appoint a new leader for Germany. The new era for Germany starts here, and the world has mixed reactions.\n\nWorld tensions have increased and many countries have volunteered their army to either side, with the west helping the democrats and the east helping the monarchists. Similar monarchists movements in many countries have increased and pressuring democracy to the edge."
+  mod_GER_events.1.op1: "Politics need to be handled properly..."
+
+  # Technology
+  mod_GER_tech_infantry_gun_1: "Gewehr 36"
+  mod_GER_tech_infantry_gun_1_desc: "The Gewehr 36 is the current service rifle of Germany, created in 1996 and adopted as a service rifle by the Bundeswehr in 1997."
+
+  # Equipment
+
+  # Infantry Weapons
+  mod_GER_infantry_guns_0: "Gewehr 36"
+  mod_GER_infantry_guns_0_desc: "Cheap, reliable gun for mass production and as a service rifle."
+
+  # Units
+  mod_GER_modern_infantry: "Modern German Infantry"

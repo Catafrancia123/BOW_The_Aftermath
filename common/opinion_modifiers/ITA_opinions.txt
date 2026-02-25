@@ -1,0 +1,12 @@
+opinion_modifiers = {
+	ITA_start_mediterranean_conquest_fascism = { value = 15 }
+	ITA_start_mediterranean_conquest_else = { value = -20 }
+	ITA_priority_italian_irredentism_fascism = { value = 10 }
+	ITA_priority_italian_irredentism_else = { value = -10 }
+	ITA_priority_fascist_supremacy_fascism = { value = 20 }
+	ITA_priority_fascist_supremacy_else = { value = 5 }
+
+	ITA_demands_granted = { value = 10 }
+	ITA_demands_declined = { value = -10 }
+	ITA_egyptian_civil_war = { value = -15 }
+}

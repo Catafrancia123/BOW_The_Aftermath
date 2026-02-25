@@ -1,0 +1,83 @@
+﻿l_english:
+  # Basics (overwrite)
+  FRA: "France"
+  FRA_DEF: "France"
+  FRA_ADJ: "French"
+  FWA: "French West Africa"
+  FWA_DEF: "French West Africa"
+  FWA_ADJ: "French"
+  FEA: "French Equitorial Africa"
+  FEA_DEF: "French Equitorial Africa"
+  FEA_ADJ: "French"
+
+  # Country Names (overwrite)
+  FRA_democratic: "French Republic"
+  FRA_democratic_DEF: "the French Republic"
+  FRA_democratic_ADJ: "French"
+  FRA_fascist: "Vichy France"
+  FRA_fascist_DEF: "Vichy France"
+  FRA_fascist_ADJ: "French"
+
+  # Country Political Parties
+  mod_FRA_democratic_party: "RE"
+  mod_FRA_democratic_party_long: "Renaissance"
+  mod_FRA_communism_party: "LFI"
+  mod_FRA_communism_party_long: "La France Insoumise"
+  mod_FRA_fascist_party: "RN"
+  mod_FRA_fascist_party_long: "Rassemblement National"
+
+  # Leader Names
+  mod_FRA_leader_name: "Emmanuel Macron"
+
+  # Ideas
+  mod_FRA_protests: "Protests against Emmanuel Macron"
+  mod_FRA_protests_desc: "Since the start of his presidency, Emmanuel Macron has paved a way to French neoliberalism and globalisation, as well as revision of labor laws and high fuel taxes. Major unrest has been seen all across the country, leading to decrease in production of items and economic downturn."
+  mod_FRA_economic_appeal: "Labor Law Reforms"
+  mod_FRA_economic_appeal_desc: "Parliament has allowed us to change the current French labor laws under a time period of 2 months, decisions can be taken to revise old laws and pass laws that help the well-being of French citizens. This can be crucial for the economic and country stabilty of France."
+  mod_FRA_revise_el_khomri: "Revision of the El Khomri law"
+  mod_FRA_revise_el_khomri_desc: "An effect of the labor law reforms."
+
+  # National Focus 
+
+  # Political
+  mod_FRA_focus: "French National Focus"
+  mod_FRA_politics_democrat: "Economic Equality"
+  mod_FRA_politics_democrat_desc: "Economic reforms over Macron's administration have caused unrest due to inequality for the civilians. An appeal to parliament can change the reforms with the help of the French people. This strengthens Macron as a president and stabilises the country, however it can decrease the amount of money from taxes."
+  mod_FRA_politics_oppose: "Another Revolution"
+  mod_FRA_politics_oppose_desc: "Germany must live under a different way and must embrace the path it shall take. The culture and lifestyle in the new democratic Germany has made the nation in sorrow and despair. We must bring back the old Germany, the one that can rule us equally and improve the economy."
+  mod_FRA_politics_empire: "Overthrow Macron"
+  mod_FRA_politics_empire_desc: "In current years, democracy has weakened us all. From the lifestyle of germans to the economic business, it's all bad. But now we can oppose and elect a new Kaiser to rule Germany back to its old days. Either a peaceful change of power or a civil war, we will succeed!"
+
+  # Industry
+  mod_FRA_industry: "German Industrial Revolution"
+  mod_FRA_industry_desc: "The industry of Germany has been great, but it can be improved. Together, under the 4 year plan to improve in research, industrialization, technology, etc. Germany will improve in economics and decrease unemployment, open jobs and increase export altogether."
+  mod_FRA_industry_factories: "Factories in Rhineland"
+  mod_FRA_industry_factories_desc: "The Rhineland has been long forgotten. Ever since the reunification, Germany has focused in East Germany in development, infrastructure and more. To improve economics, we must remilitarize the factories in Rhineland."
+
+  # World Tension
+  mod_FRA_oppose: "Democracy opposed"
+  mod_FRA_return_empire: "Monarchist coup d'état"
+
+  # Balance of Power
+  mod_FRA_balance_of_power: "German Balance of Power"
+  mod_FRA_bop_center: "Neutral"
+  mod_FRA_bop_oppose: "Oppose Democracy"
+  mod_FRA_bop_oppose_half: "Anti-Democracy Movements"
+  mod_FRA_bop_oppose_full: "A New Government"
+  mod_FRA_bop_democratic: "Strengthen Democracy"
+  mod_FRA_bop_democratic_half: "Democratic Reforms"
+  mod_FRA_bop_democratic_full: "A True Federal Republic"
+
+  # Events
+  mod_FRA_events.1.t: "The German Civil War"
+  mod_FRA_events.1.d: "Due to rising concerns of the government and the rise of anti-democratic riots and a worsening economy in Germany, The nation has chosen to start a civil war with the current government as to overthrow it and appoint a new leader for Germany. The new era for Germany starts here, and the world has mixed reactions.\n\nWorld tensions have increased and many countries have volunteered their army to either side, with the west helping the democrats and the east helping the monarchists. Similar monarchists movements in many countries have increased and pressuring democracy to the edge."
+  mod_FRA_events.1.op1: "Politics need to be handled properly..."
+
+  # Technology
+  mod_FRA_tech_infantry_gun_1: "Gewehr 36"
+  mod_FRA_tech_infantry_gun_1_desc: "The Gewehr 36 is the current service rifle of Germany, created in 1990 and adapted by the Bundeswehr in 1997."
+  mod_FRA_infantry: "German Infantry"
+  mod_FRA_guns: "Infantry Weapons"
+  mod_FRA_guns_0: "Pre-2000 $mod_FRA_guns$"
+  mod_FRA_guns_0_desc: "Cheap, reliable gun for mass production and as a service rifle."
+  FRA_modern_infantry: "German Modern Infantry"

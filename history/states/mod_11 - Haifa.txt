@@ -1,0 +1,21 @@
+state = {
+	id = 1057
+	name = mod_state_11
+	manpower = 25000
+	buildings_max_level_factor = 1
+	state_category = town
+
+	history = {
+		victory_points = {
+			1065 3 # Haifa
+		}
+		owner = PAL
+		add_core_of = PAL
+		buildings = {
+			infrastructure = 1
+		}
+		1948.5.14 = { add_claim_by = UAR }	
+	}
+	provinces = { 1065 }
+	# state used for the claim by the UAR
+}

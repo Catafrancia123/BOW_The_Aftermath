@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_INA_Sukarno_civilian"
+		textureFile = "gfx/leaders/INA/Sukarno_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_FWA_Amadou_Lamine-Gueye_civilian"
+		textureFile = "gfx/leaders/FRA/Amadou_Lamine-Gueye_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_ENG_Clement_Attlee_civilian"
+		textureFile = "gfx/leaders/ENG/Clement_Attlee_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_ENG_Anthony_Eden_civilian"
+		textureFile = "gfx/leaders/ENG/Anthony_Eden_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_ENG_Harold_Macmillan_civilian"
+		textureFile = "gfx/leaders/ENG/Harold_Macmillan_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_KPR_Kim_Il_Sung_civilian"
+		textureFile = "gfx/leaders/Korea/Kim_Il_Sung_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_ITA_Dino_Grandi_civilian"
+		textureFile = "gfx/leaders/ITA/Dino_Grandi_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_BUL_Valko_Chervenkov_civilian"
+		textureFile = "gfx/leaders/BUL/Valko_Chervenkov_civilian.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_Nikita_Khrushchev_civilian"
+		textureFile = "gfx/leaders/SOV/Nikita_Khrushchev_civilian.tga"
+	}
+}

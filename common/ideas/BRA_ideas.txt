@@ -1,0 +1,18 @@
+ideas = {
+    country = {
+        mod_BRA_broken_country = {
+            picture = generic_democracy_banned
+            modifier = {
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				consumer_goods_factor = 0.1
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				industry_repair_factor = -0.05
+				fascism_drift = 0.005
+            }
+        }
+	}
+}

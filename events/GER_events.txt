@@ -1,0 +1,27 @@
+add_namespace = mod_GER_events
+
+news_event = { # German Civil War
+    id = mod_GER_events.1
+    title = mod_GER_events.1.t
+    desc = mod_GER_events.1.d
+    picture = GFX_news_event_057
+    is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+    option = { # Accept
+        name = mod_GER_events.1.op1
+		GER = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = democratic
+				size = 0.6
+				army_ratio = 0.65
+				ROOT = { add_war_support = 0.2 }
+			}
+		}
+    }
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 1058
+	name = mod_state_12
+	manpower = 10000
+	buildings_max_level_factor = 1
+	state_category = rural
+
+	history = {
+		owner = PAL
+        add_core_of = PAL
+        victory_points = {
+			13387 2 # West Bank
+		}
+		buildings = {
+			infrastructure = 1
+			13387 = { naval_base = 1 }
+		}
+		1948.5.14 = { add_claim_by = ISR }	
+	}
+	provinces = { 13387 }
+}

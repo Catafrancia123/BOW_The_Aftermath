@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_generic_befriend_egypt"
+		textureFile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
+	}
+}

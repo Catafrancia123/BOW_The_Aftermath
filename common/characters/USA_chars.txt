@@ -1,0 +1,15 @@
+characters = {
+	# Add more leaders to political powers
+	USA_harry_s_truman = { # Harry S. Truman
+		gender = male
+		name = "Harry S. Truman"
+		portraits = {
+			civilian = { large = GFX_portrait_Harry_S_Truman }
+		}
+		country_leader = { 
+			ideology = liberalism 
+			traits = { USA_truman_doctrine }
+			expire = 1965.1.1
+		}
+	}
+}
