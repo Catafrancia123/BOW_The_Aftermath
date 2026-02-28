@@ -12,6 +12,34 @@ bitmapfonts = {
 			T = { 255 255 255 }
 		}
     }
+
+    bitmapfont = {
+        name = "tinos_16"
+        fontfiles = { "gfx/fonts/tinos_16" }
+        color = 0xff000000
+
+        textcolors = {
+			G = { 86 172 91 }
+			R = { 238 0 0 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+    }
+
+    bitmapfont = {
+        name = "tinos_22"
+        fontfiles = { "gfx/fonts/tinos_22" }
+        color = 0xff000000
+
+        textcolors = {
+			G = { 86 172 91 }
+			R = { 238 0 0 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+    }
     
     bitmapfont = {
         name = "tomorrow_map_font"

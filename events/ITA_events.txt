@@ -488,3 +488,44 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	# Italy announces elections for the first time since 1922
+	id = ITA_news_events.4
+	title = ITA_news_events.4.t
+	desc = ITA_news_events.4.d
+	picture = GFX_news_event_banovina_croatia
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ITA_news_events.4.op1
+		custom_effect_tooltip = mod_world_opinion_tt
+		effect_tooltip = {
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unstable_alliance
+				}
+			}
+		}
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				add_opinion_modifier = {
+					target = CRO
+					modifier = unstable_alliance
+				}
+			}
+		}
+	}
+}

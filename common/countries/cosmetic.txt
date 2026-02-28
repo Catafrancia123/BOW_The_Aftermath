@@ -1,5 +1,5 @@
-DDR_new_color = { color = { 125 13 24 } color_ui = rgb { 255 255 155 } }
-GRE_movement = { color = { 230 55 55 } color_ui = rgb { 255 255 155 } }
-SER_movement = { color = { 79 27 27 } color_ui = rgb { 255 255 155 } }
-EGY_italy = { color = { 67 127 70 } color_ui = rgb { 255 255 155 } }
-YUG_ITA_puppet = { color = { 112 66 20 } color_ui = rgb { 255 255 155 } }
+DDR_new_color = { color = rgb { 125 13 24 } color_ui = rgb { 255 255 155 } }
+GRE_movement = { color = rgb { 230 55 55 } color_ui = rgb { 255 255 155 } }
+SER_movement = { color = rgb { 79 27 27 } color_ui = rgb { 255 255 155 } }
+EGY_italy = { color = rgb { 67 127 70 } color_ui = rgb { 255 255 155 } }
+YUG_ITA_puppet = { color = rgb { 156 86 30 } color_ui = rgb { 255 255 155 } }

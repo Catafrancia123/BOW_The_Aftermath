@@ -15,7 +15,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_politics_start
 		icon = GFX_focus_ITA_to_live_as_a_lion
-		x = 9
+		x = 10
 		y = 0
 		cost = 35
 		ai_will_do = {
@@ -27,7 +27,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
-			add_ideas = mod_ITA_strenghtened_nationalism
 			swap_ruler_traits = {
 				remove = lion_tamer
 				add = lion_tamer_2
@@ -164,7 +163,7 @@ focus_tree = {
 		icon = GFX_focus_generic_befriend_egypt
 		x = -3
 		y = 1
-		cost = 60
+		cost = 70
 		relative_position_id = focus_ITA_politics_mediterranean_focus
 		prerequisite = {
 			focus = focus_ITA_politics_mediterranean_focus
@@ -224,7 +223,7 @@ focus_tree = {
 		icon = GFX_focus_generic_the_suez
 		x = 0
 		y = 1
-		cost = 30
+		cost = 35
 		relative_position_id = focus_ITA_politics_egypt_influence
 		prerequisite = {
 			focus = focus_ITA_politics_egypt_influence
@@ -309,7 +308,7 @@ focus_tree = {
 		relative_position_id = focus_ITA_politics_greece_oppress_communists
 		x = -1
 		y = 1
-		cost = 30
+		cost = 35
 		prerequisite = {
 			focus = focus_ITA_politics_greece_oppress_communists
 		}
@@ -351,7 +350,7 @@ focus_tree = {
 		relative_position_id = focus_ITA_politics_greece_oppress_communists
 		x = 1
 		y = 1
-		cost = 30
+		cost = 70
 		prerequisite = {
 			focus = focus_ITA_politics_greece_oppress_communists
 		}
@@ -457,7 +456,7 @@ focus_tree = {
 		relative_position_id = focus_ITA_politics_mideast_lebanon
 		x = 0
 		y = 2
-		cost = 20
+		cost = 70
 		prerequisite = {
 			focus = focus_ITA_politics_mideast_syria
 		}
@@ -518,7 +517,7 @@ focus_tree = {
 		relative_position_id = focus_ITA_politics_start
 		x = 0
 		y = 2
-		cost = 30
+		cost = 35
 		prerequisite = {
 			focus = focus_ITA_politics_supremacy
 			focus = focus_ITA_politics_irredentism
@@ -531,7 +530,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 25
+			add_stability = 0.01
+			
 		}
 	}
 
@@ -586,7 +587,7 @@ focus_tree = {
 		id = focus_ITA_politics_leader_dino_grandi
 		icon = GFX_focus_ITA_dino_grandi
 		relative_position_id = focus_ITA_politics_leader_successor
-		x = -2
+		x = 2
 		y = 1
 		cost = 30
 		prerequisite = {
@@ -616,7 +617,7 @@ focus_tree = {
 		id = focus_ITA_politics_leader_galeazzo_ciano
 		icon = GFX_focus_GER_the_supreme_leader
 		relative_position_id = focus_ITA_politics_leader_successor
-		x = 2
+		x = -2
 		y = 1
 		cost = 30
 		prerequisite = {
@@ -647,20 +648,76 @@ focus_tree = {
 		}
 	}
 
-	# Italy focuses on the balkans (starting with rebellions to full size operations)
+	# collective leadership
 	focus = {
-		id = focus_ITA_politics_balkan_focus
-		icon = GFX_focus_generic_balkans_focus
-		relative_position_id = focus_ITA_politics_supremacy
-		x = 4
+		id = focus_ITA_politics_leader_collective
+		icon = GFX_focus_GER_the_supreme_leader
+		relative_position_id = focus_ITA_politics_leader_council
+		x = 0
+		y = 2
+		cost = 45
+		prerequisite = {
+			focus = focus_ITA_politics_leader_council
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# iron fist
+	focus = {
+		id = focus_ITA_politics_leader_iron_fist
+		icon = GFX_focus_GER_the_supreme_leader
+		relative_position_id = focus_ITA_politics_leader_mussolini
+		x = 0
+		y = 2
+		cost = 45
+		prerequisite = {
+			focus = focus_ITA_politics_leader_mussolini
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# And all of that merges here
+	focus = {
+		id = focus_ITA_politics_leader_plan
+		icon = GFX_focus_GER_the_supreme_leader
+		relative_position_id = focus_ITA_politics_leader_italo_balbo
+		x = 0
 		y = 1
 		cost = 35
 		prerequisite = {
-			focus = focus_ITA_politics_supremacy
+			focus = focus_ITA_politics_leader_iron_fist
+			focus = focus_ITA_politics_leader_dino_grandi
+			focus = focus_ITA_politics_leader_italo_balbo
+			focus = focus_ITA_politics_leader_galeazzo_ciano
+			focus = focus_ITA_politics_leader_collective
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# Fortify Borders sub-branch
+	focus = {
+		id = focus_ITA_politics_fortify_borders
+		icon = GFX_goal_fortify_the_westwall
+		relative_position_id = focus_ITA_politics_leader_mussolini
+		x = 0
+		y = 3
+		cost = 35
+		prerequisite = {
+			focus = focus_ITA_politics_leader_plan
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = mod_only_leaders_tt
+				tooltip = GRE_civil_war_req
+				GRE = { has_country_flag = GRE_civil_war }
+			}
+			custom_trigger_tooltip = {
+				tooltip = mod_ITA_interventionist_leaders
 				OR = {
 					has_country_leader = {
 						character = ITA_benito_mussolini_new
@@ -683,11 +740,71 @@ focus_tree = {
 		}
 	}
 
+	# Diplomatic Actions sub-branch
+	focus = {
+		id = focus_ITA_politics_diplomatic
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = focus_ITA_politics_leader_council
+		x = 0
+		y = 3
+		cost = 35
+		prerequisite = {
+			focus = focus_ITA_politics_leader_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_req
+				GRE = { has_country_flag = GRE_civil_war }
+			}
+			custom_trigger_tooltip = {
+				tooltip = mod_ITA_interventionist_leaders
+				OR = {
+					has_country_leader = {
+						character = ITA_benito_mussolini_new
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = ITA_italo_balbo_new
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = ITA_gian_galeazzo_ciano_new
+						ruling_only = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# Italy focuses on the balkans (starting with rebellions to full size operations)
+	focus = {
+		id = focus_ITA_politics_balkan_focus
+		icon = GFX_focus_generic_balkans_focus
+		relative_position_id = focus_ITA_politics_supremacy
+		x = 6
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = focus_ITA_politics_supremacy
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
 	# Italian Industry Branch (Italy focuses on building up its industry and infrastructure to prepare for the upcoming war)
 	focus = {
 		id = focus_ITA_industry
 		icon = GFX_goal_generic_construction
-		x = 20
+		x = 30
 		y = 0
 		cost = 35
 		ai_will_do = {

@@ -6,6 +6,13 @@ set_power_balance = { id = ITA_power_balance }
 
 # Flags
 set_global_flag = MTG_third_london_conference
+set_country_flag = ITA_leader_mussolini
+set_country_flag = ITA_missiolinis_level_flag
+
+if = {
+	limit = { is_ai = no }
+	set_global_flag = mod_debug
+}
 
 # Missiolinis
 set_variable = { ITA_missiolinis_number_of_missions_triggered = 0 }
@@ -13,7 +20,6 @@ set_variable = { ITA_missiolinis_number_of_missions_resolved = 0 }
 set_variable = { ITA_missiolinis_active_missions = 0 }
 set_variable = { ITA_missiolinis_successful_missions = 0 }
 set_variable = { ITA_missiolinis_failed_missions = 0 }
-set_country_flag = ITA_missiolinis_level_flag
 ITA_missiolinis_initialize_missiolinis_system = yes
 
 # Missiolinis Targets
@@ -196,6 +202,7 @@ add_ideas = {
 	mod_member_of_colonial_agreement
 	ITA_servizio_informazione_militare_ns_vanilla
 	MTG_naval_treaty_adherent_reduced
+	vittoria_mutilata
 }
 # Ministers
 activate_advisor = ITA_gian_galeazzo_ciano_adv # Minister of Foreign Affairs

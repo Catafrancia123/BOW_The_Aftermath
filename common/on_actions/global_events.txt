@@ -46,7 +46,7 @@ on_actions = {
 					start_civil_war = {
 						ideology = communism
 						ruling_party = fascism
-						states = { 106 970 803 }
+						states = { 106 970 803 802 }
 						capital = 108
 						keep_political_leader = yes
 

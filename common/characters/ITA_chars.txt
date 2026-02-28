@@ -62,7 +62,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			visible = {
-				ITA = { NOT = { has_country_leader = ITA_gian_galeazzo_ciano_new } }
+				ITA = { NOT = { has_country_flag = ITA_leader_ciano} }
 			}
 			available = {
 				NOT = {
@@ -114,7 +114,7 @@ characters = {
 				small = GFX_portrait_ITA_dino_grandi_small
 			}
 			civilian = {
-				large = GFX_ITA_Dino_Grandi_civilian
+				large = GFX_portrait_ITA_dino_grandi
 			}
 		}
 
@@ -122,7 +122,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ITA_dino_grandi_adv
 			visible = {
-				ITA = { NOT = { has_country_leader = ITA_dino_grandi_new } }
+				ITA = { NOT = { has_country_flag = ITA_leader_grandi } }
 			}
 			allowed = {
 				ITA_is_italian_tag = yes
@@ -236,6 +236,9 @@ characters = {
 			allowed = {
 				ITA_is_italian_tag = yes
 			}
+			visible = {
+				ITA = { NOT = { has_country_flag = ITA_leader_balbo } }
+			}
 			available = {
 				if =  {
 					limit = { 
@@ -243,7 +246,6 @@ characters = {
 					}
 					ITA_is_advisor_available = yes
 				}
-				ITA = { NOT = { has_country_leader = ITA_italo_balbo_new } }
 			}
 			
 			traits = {

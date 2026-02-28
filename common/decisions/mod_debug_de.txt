@@ -29,7 +29,7 @@ mod_debug_decisions = {
 		cost = 0
 		days_re_enable = 0
 		complete_effect = {
-			news_event = country_news_events.1
+			news_event = ITA_news_events.4
 		}
 	}
 	mod_test_event_mission = {

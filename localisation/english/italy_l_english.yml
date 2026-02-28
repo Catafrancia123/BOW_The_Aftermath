@@ -34,7 +34,7 @@
   mod_ITA_strenghtened_nationalism: "Strengthened Nationalism"
   mod_ITA_strenghtened_nationalism_desc: "The rise of Fascism in Italy has brought a new sense of nationalism and pride to the Italian people. The government has implemented policies to promote national unity and pride, which has led to increased support for the regime and its goals."
   mod_ITA_motivated_soldiers: "Motivated Soldiers"
-  mod_ITA_motivated_soldiers_desc: "The Italian soldiers are highly motivated and dedicated to their cause. They believe in the ideals of Fascism and are willing to fight and die for their country's future. This motivation has led to increased morale and effectiveness on the battlefield."
+  mod_ITA_motivated_soldiers_desc: "The Italian soldiers under Mussolini's ideals have been motivated enough to fight for its future. Men who are willing to die and reclaim what was trusted to Italy."
   mod_ITA_miltary_industrialization: "Italian Military Industrialization Program"
   mod_ITA_miltary_industrialization_desc: "The Duce has ordered a massive military and infrastructure industrialization program to ensure that Italy is powerful in economics and industry. This program will focus on increasing the production of military equipment and modernizing our armed forces; Aswell as increasing the infrastructure of our cities and transportation systems."
 
@@ -69,7 +69,7 @@
   focus_ITA_politics_egypt_take_suez_desc: "We have succeeded in the Egyptian intervention and expansion, now we must take over the Suez Canal in order to make Italy have full control in trade and military in the Mediterranean. The world will know that fascism will prevail in Europe and Africa."
 
   focus_ITA_politics_greece_oppress_communists: "Oppress Communism"
-  focus_ITA_politics_greece_oppress_communists_desc: "Many major communist movements have been rising in our balkan states, and they are a threat to our supremacy in the Balkans. The Eastern bloc is supporting these movements and we must crush them before they grow any stronger. We will show them that fascism is the only way to live."
+  focus_ITA_politics_greece_oppress_communists_desc: "There have been rumors of a suspected uprising in the Balkan area, especially Greece. And we must take every step of precaution to elimintate this threat before it comes to knock on our borders."
   focus_ITA_politics_greece_befriend: "Diplomatic Talks with Greece"
   focus_ITA_politics_greece_befriend_desc: "After succesfully defeating communism in Serbia and Greece, we can make Greece as our ally to prevent further intervention from the Eastern bloc."
   focus_ITA_politics_greece_attack: "Get Our Claimed Terriories"
@@ -174,6 +174,11 @@
   ITA_news_events.3.t: "Italy Releases Croatia"
   ITA_news_events.3.d: "Italy has released Croatia as a free country after [?CRO_puppet_years]. Poglavnik Ante Pavelić and fascist leader Benito Mussolini were seen today at the independence ceremony. Ante Pavelić expressed his concerns and assured the country would live on independently, but still be inside the International Fascist League sphere. This also has led to international concern, as the persecution of Serbians were halted back in 1943; and now, who knows if it will continue again?"
   ITA_news_events.3.op1: "Another country free from control..."
+
+  ITA_news_events.4.t: "Italy Announces Elections"
+  ITA_news_events.4.d: "Italy has announced elections for the first time since 1924. But, these elections aren't ordinary, because its purpose is for the people to choose who will be the next leader. Some candidates were: §RBenito Mussolini, Dino Grandi, Italo Balbo, Gian Galeazzo Ciano§!. Italy has allowed also 2 democratic parties to be present in the elections to prove a more \"liberal\" approach to fascism. Elections will be held in around 1-2 months."
+  ITA_news_events.4.op1: "Elections in a fascist state?"
+
 
 
 

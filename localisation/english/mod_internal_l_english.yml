@@ -138,3 +138,5 @@
   HUN_interval_democratic_DEF: "the Second Hungarian Republic"
   ROM_interval_communism: "Kingdom of Romania" # yes.
   ROM_interval_communism_DEF: "the Kingdom of Romania"
+
+  GRE_civil_war_req: "$country_news_events.1.t$ has happened."
