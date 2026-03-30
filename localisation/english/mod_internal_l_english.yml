@@ -106,6 +106,9 @@
   mod_placeholder_focus: "Placeholder Focus"
   mod_nat_focus_generic: "No description yet, come back at a later version!"
   mod_world_opinion_tt: "Opinion of The World:"
+  FOCUS_FILTER_NEUTRAL: "Neutral"
+  FOCUS_FILTER_DIPLOMATIC: "§4Diplomatic§!"
+  FOCUS_FILTER_INTERVENTIONIST: "§RInterventionist§!"
 
   # Names
   mod_neutrality_party: "Non-Aligned"
@@ -122,9 +125,14 @@
   # Technologies
   mod_infantry_weapons: "Modern Infantry Weapons"
 
-  # Peace Messages
-  mod_peace_annex: "§Y[?war_winner.GetFlag] [?war_winner.GetName]§! took [?war_winner.remaining_states|Y] states.\n§Y[?war_loser.GetFlag] [?war_loser.GetName]§! was annexed."
-
+  # Special Localisation Messages
+  mod_peace_annex: "§Y[?war_winner.GetFlag] [?war_winner.GetName]§! took §Y[?war_winner.remaining_states]§! states.\n§Y[?war_loser.GetFlag] [?war_loser.GetName]§! was annexed."
+  mod_prospect_trigger: "[ROOT.GetNameDef] or one of its subjects must own and control §Y[?prospect_state.GetName]§!"
+  MODIFIER_ARMY_ORG_REGAIN: "Organization Regain Speed"
+  MODIFIER_ARMY_PLANNING_SPEED: "Planning Speed"
+  MODIFIER_ARMY_INITIATIVE: "Taking Initiative Chance"
+  MODIFIERS_ARMY_ATTACK_SPEED: "Attack Speed"
+  MODIFIERS_ARMY_BREAKTHROUGH: "Breakthrough"
   
   # TEMPORARY - To be removed later
   USA_truman_doctrine: "Truman Doctrine"
@@ -139,4 +147,17 @@
   ROM_interval_communism: "Kingdom of Romania" # yes.
   ROM_interval_communism_DEF: "the Kingdom of Romania"
 
-  GRE_civil_war_req: "$country_news_events.1.t$ has happened."
+  GRE_civil_war_req: "$international_events.1.t$ has happened."
+
+  SOV_start_balkan_uprising: "Started the $international_events.1.t$"
+  member_of_third_naval_treaty: "Is part of $international_events.3.t$"
+
+  # Loading screen top bar
+  LOADING_GUI:0 "Preparing for total war..."
+  LOADING_HISTORY:0 "Creating History..."
+  EXECUTE_HISTORY:0 "Executing history..."
+  CREATING_CHKSUM:0 "Negotiating with the Soviets..."
+  GENERATING_GRADIENT_BORDERS:0 "Arming new recruits..."
+  LOAD_GFX:0 "Discussing with The Grand Council Of Fascism..."
+  LOAD_FLAGS:0 "Raising the Italian flag..."
+  PROC_FLAGS:0 "Processing Flags"

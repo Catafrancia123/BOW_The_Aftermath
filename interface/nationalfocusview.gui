@@ -722,28 +722,34 @@ guiTypes = {
 		}
 		iconType = {
 			name = "symbol"
-			position = { x = 42 y = 88 }
+			position = { x = 40 y = 100 }
 			spriteType = "GFX_goal_unknown"
 			alwaystransparent = yes
 		}
-		iconType = {
-			name = "prerequisites_bg"
-			position = { x = 205 y = 92 }
-			spriteType = "GFX_generic_bg_307x113"
-			alwaystransparent = yes
-		}		
+
+		containerWindowType = {
+			name = "prerequesites_window"
+			position = { x = 165 y = 90 }
+			size = { width = 350 height = 120 }
+
+			background = {
+				name = "prerequisites_bg"
+				#spriteType = "GFX_generic_bg_307x113"
+				spriteType = "GFX_tiled_paper_bg2"
+				alwaystransparent = yes
+			}		
+		}
 		instantTextboxType = {
 			name = "prerequisites"
-			position = { x = 215 y = 100 }
+			position = { x = 175 y = 100 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 287
+			maxWidth = 315
 			maxHeight = 100
 			scrollbarType = standardtext_slider
 		}
-
 
 		containerWindowType = {
 			name = "statsarea"
@@ -756,7 +762,7 @@ guiTypes = {
 			
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_paper_bg2"
+				quadTextureSprite = "GFX_tiled_paper_bg2"
 			}
 			
 		}
@@ -816,24 +822,53 @@ guiTypes = {
 		iconType = {
 			name = "research_progressbar"
 			spriteType = "GFX_prod_progress_bar3"
-			position = { x=209 y=59 }
+			position = { x=195 y=59 }
 		}
 
 		iconType = {
 			name = "research_progressbar_frame"
 			spriteType = "GFX_production_progressbar_frame2"
-			position = { x=205 y=57 }
+			position = { x=190 y=57 }
 		}		
 		
 		instantTextboxType = {
 			name = "status"
-			position = { x = 208 y = 60 }
+			position = { x = 193 y = 60 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 170
 			maxHeight = 13
 			format = center
+		}
+
+		containerWindowType = {
+			name = "type_focus"
+			position = { x = 20 y = 55 }
+			size = { width = 140 height = 36 }
+			clipping = no
+
+			background = {
+				name = "Background"
+				#quadTextureSprite = "GFX_tiled_paper_bg2"
+				quadTextureSprite = "GFX_tile_paper_bg2_small"
+			}
+			iconType = {
+				name = "research_progressbar_frame"
+				spriteType = "GFX_production_progressbar_frame3"
+				position = { x=-2 y=-1 }
+			}			
+
+			instantTextboxType = {
+				name = "type_text"
+				position = { x = 10 y = 9 }
+				borderSize = { x = 0 y = 0 }
+				format = center
+				text = "mod_GUI_focus_category"
+				font = "hoi_18mbs"
+				maxWidth = 120
+				maxHeight = 20
+			}
 		}
 	}
 	

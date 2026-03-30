@@ -1,3 +1,0 @@
-mod_covid = {
-	icon = GFX_decision_category_gre_paying_ifc_debt
-}

@@ -1,0 +1,61 @@
+unique_id = BOW_TA_achievements
+
+ITA_nuclear_achievement = { # get a nuke before mussolini dies
+    possible = {
+        difficulty > 2
+        has_start_date < 1947.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = ITA
+    }
+
+    happened = { # triggers to get
+        # mussolini must win (1947-1950) elections
+        custom_trigger_tooltip = {
+            tooltip = ITA_election_selected_mussolini_tt
+            has_country_flag = ITA_election_selected_mussolini
+        }
+        # mussolini aint dead
+        custom_trigger_tooltip = {
+            tooltip = ITA_nuclear_achievement_mussolini_tt
+            NOT = { has_country_flag = ITA_mussolini_dead }
+        }
+        custom_trigger_tooltip = generic_skip_one_line_tt
+
+        # atleast 1 nuke
+        custom_trigger_tooltip = {
+            tooltip = ITA_nuclear_achievement_tt
+            check_variable = { 
+                var = ITA.num_of_nukes
+                value = 1
+                compare = greater_than_or_equals
+            }
+        }
+    }
+}
+
+ITA_irredenta_march_on_rome = {
+    possible = {
+        difficulty > 2
+        has_start_date < 1947.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = ITA
+    }
+ 
+    happened = {
+        date < 1952.10.28
+        custom_trigger_tooltip = {
+            tooltip = ITA_irredenta_march_on_rome_tt
+            has_cosmetic_tag = greater_italy
+        }
+    }
+
+    ribbon = {
+        frames = { 1 1 }
+        colors = {
+            { 230 180 0 }
+            { 130 40 70 }
+        }
+    }
+}	

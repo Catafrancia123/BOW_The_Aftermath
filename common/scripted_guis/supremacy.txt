@@ -1,4 +1,5 @@
 scripted_gui = {
+	# Supremacy GUI
 	supremacy_button = {
 		context_type = player_context
 		window_name = "supremacy_button_view"

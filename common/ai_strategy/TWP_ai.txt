@@ -2,16 +2,25 @@ TWP_support_greek_civil_war = {
 	allowed = {
 		tag = BUL
 		tag = ROM
-		tag = SOV
+		original_tag = SOV
 	}
 	enable = { 
-		GRC = { 
-			exists = yes
-			has_civil_war = yes
+		OR = {
+			GRC = { 
+				exists = yes
+				has_civil_war = yes
+			}
+			PRY = { 
+				exists = yes
+				has_civil_war = yes
+			}
 		}
 	}
 	abort = { 
-		GRC = { exists = no }
+		AND = {
+			GRC = { exists = no }
+			PRY = { exists = no }
+		}
 	}
 	abort_when_not_enabled = yes
 	
@@ -21,8 +30,18 @@ TWP_support_greek_civil_war = {
 		value = 75
 	}
 	ai_strategy = {
+		type = send_volunteers_desire
+		id = PRY
+		value = 50
+	}
+	ai_strategy = {
 		type = send_lend_lease_desire
 		id = GRC
 		value = 25
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = GRC
+		value = 50
 	}
 }

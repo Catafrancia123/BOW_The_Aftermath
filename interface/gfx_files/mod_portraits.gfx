@@ -28,6 +28,10 @@ spriteTypes = {
 		textureFile = "gfx/leaders/ITA/Dino_Grandi_civilian.tga"
 	}
 	spriteType = {
+		name = "GFX_ITA_Galeazzo_Ciano_civilian"
+		textureFile = "gfx/leaders/ITA/Galeazzo_Ciano_civilian.tga"
+	}
+	spriteType = {
 		name = "GFX_BUL_Valko_Chervenkov_civilian"
 		textureFile = "gfx/leaders/BUL/Valko_Chervenkov_civilian.tga"
 	}

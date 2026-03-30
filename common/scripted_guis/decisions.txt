@@ -1,0 +1,14 @@
+scripted_gui = {
+	ITA_elections_decision_ui = {
+		context_type = decision_category
+		window_name = "ITA_elections_decisions_view"
+		dirty = bar_dirty
+
+		properties = {
+			bar_0 = { frame = bar_influence_0_frame }
+			bar_1 = { frame = bar_influence_1_frame }
+			bar_2 = { frame = bar_influence_2_frame }
+			bar_3 = { frame = bar_influence_3_frame }
+		}
+	}
+}

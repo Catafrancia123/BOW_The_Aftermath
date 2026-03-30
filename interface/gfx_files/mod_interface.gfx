@@ -24,4 +24,25 @@ spriteTypes = {
 		name = "GFX_supremacy_chart"
 		size = 108
 	}
+
+	# Tiles
+	spriteType = {
+		name = "GFX_tile_paper_bg2_small"
+		textureFile = "gfx/tiles/tiled_paper_bg2_140x36.tga"
+	}
+
+	spriteType = {
+		name = "GFX_production_progressbar_frame3"
+		textureFile = "gfx/interface/GUI/production_progressbar_frame3.tga"
+	}
+
+	# Loading Screens
+	spriteType = {
+		name = "GFX_loadingscreen_1"
+		textureFile = "gfx/interface/loadingscreens/mainmenu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_loadingscreen_1_small"
+		textureFile = "gfx/interface/loadingscreens/mainmenu_1_small.dds"
+	}
 }

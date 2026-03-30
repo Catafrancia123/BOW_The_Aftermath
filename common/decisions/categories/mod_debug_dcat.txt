@@ -2,4 +2,6 @@ mod_debug_decisions = {
 	icon = GFX_decision_category_generic
 	allowed = { is_debug = yes }
 	visible = {	always = yes }
+	priority = 20
+	visible_when_empty = yes
 }

@@ -1,0 +1,74 @@
+@SENATE_TEXT_X = 16
+@HOUSE_TEXT_X = 212
+@HEADERS_Y = 67
+@STATUS_Y = 52
+
+guiTypes = {
+	containerWindowType = {
+		name = "ITA_elections_decisions_view"
+		position = { x = 20 y = 10 }
+		size = { width = 100% height = 20 }
+
+		containerWindowType = {
+			name = "elections_bar"
+			size = { width = 100 height = 200 }
+			position = { x = 100 y = 100 }
+
+			iconType = {
+				name = "power_balance_value"
+				position = { x = 95 y = 125 }
+				# NOTE: The sprite name is set by the code!
+			}
+			iconType = {
+				name = "progressbar"
+				spriteType = "GFX_bop_bar_bg"
+				position = { x = 70 y = 5 }
+			}
+			iconType = {
+				name = "progressbar_frame"
+				spriteType = "GFX_bop_bar_frame"
+				position = { x = 66	y = 1 }	
+			}
+
+			# icons
+			iconType = {
+				name = "mussolini_icon"
+				spriteType = "GFX_bop_ITA_mussolini_side"
+				position = { x = 60	y = 1 }	
+			}
+			iconType = {
+				name = "ciano_icon"
+				spriteType = "GFX_bop_ITA_ciano_side"
+				position = { x = 70	y = 1 }	
+			}
+			iconType = {
+				name = "balbo_icon"
+				spriteType = "GFX_bop_ITA_balbo_side"
+				position = { x = 80	y = 1 }	
+			}
+			iconType = {
+				name = "grandi_icon"
+				spriteType = "GFX_bop_ITA_grandi_side"
+				position = { x = 90	y = 1 }	
+			}
+		}
+
+		instantTextBoxType = {
+			name = "elections_title"
+			position = { x = 10 y = -100 }
+			font = "hoi_24header"
+			text = "ITA_elections_decision_title"
+			format = center
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name = "elections_desc"
+			position = { x = @SENATE_TEXT_X y = @HEADERS_Y }
+			font = "hoi_18mbs"
+			text = "ITA_elections_decision_desc"
+			format = center
+			maxHeight = 24
+		}
+	}
+}

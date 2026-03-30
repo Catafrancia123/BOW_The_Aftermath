@@ -1,9 +1,18 @@
 ﻿l_english:
+  # DEMOCRACY
   authoritarian: "Authoritarian Democracy"
   authoritarian_desc: "An authoritarian democracy is a political system that combines elements of democracy with authoritarian governance. The ideology is the gateway to base fascism; While it isn't seen as a clear change in the ways of governing, it slowly seeps itself towards a more oppresive and nationalistic regime."
+
+  # COMMUNISM
   maoism: "Maoism"
   maoism_desc: "Another way of communism, mixing Marxist-Leninist principles with the ideas of Mao Zedong. It emphasizes the role of the peasantry in revolution. Maoism also stresses the importance of continuous revolution to prevent the emergence of a new ruling class."
   marxist_leninism: "Marxism-Leninism"
   marxist_leninism_desc: "A political ideology that combines the ideas of Karl Marx and Vladimir Lenin. It advocates for a proletarian revolution to overthrow capitalism and establish a social state where the means of production are owned and controlled by the working class through a vanguard party."
+
+  # FASCISM
   italian_fascism: "Italian Fascism"
   italian_fascism_desc: "Italian Fascism is a fascist ideology that emerged in Italy under Benito Mussolini. It emphasizes authoritarian nationalism, italian irredentism, an the supremacy of the state. Italian Fascism promotes the idea of a corporatist economy, where various sectors of society work together under state supervision to achieve national goals."
+  ultranationalism: "Ultranationalism"
+  ultranationalism_desc: "Ultranationalism is an extremist form of nationalism in which a country asserts or maintains hegemony, supremacy, or other forms of control over other nations (usually via violence) to pursue its goals. Ultranationalist entities have been associated with the engagement of political violence even during peacetime."
+  military_junta: "Military Junta"
+  military_junta_desc: "A military junta is a system of government led by a committee of military leaders. The term junta means \"meeting\" or \"committee\" and originated in the national and local junta organized by the Spanish resistance to Napoleon's invasion of Spain in 1808. The term is now used to refer to an authoritarian form of government characterized by a politically dominant group of military officers."

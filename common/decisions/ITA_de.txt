@@ -5,11 +5,11 @@ ITA_missiolinis = {
 		allowed = { tag = ITA }
 		visible = {
 			ITA_missiolinis_system_available = yes
-			has_completed_focus = focus_ITA_politics_egypt_influence
+			has_completed_focus = focus_ITA_mediterranean_egypt_influence
 			IEG = { exists = yes } # Fascist Egypt
 		}
 
-		cancel = { # GOAL
+		available { # GOAL
 			custom_trigger_tooltip = {
 				tooltip = ITA_missiolinis.1_egypt.tt
 				AND = {
@@ -41,24 +41,22 @@ ITA_missiolinis = {
 		selectable_mission = no
 		days_mission_timeout = ROOT.ITA_missiolinis_egypt_days
 
-		cancel_effect = {
-			if = { # Mission Success!!!
-				limit = {
-					IEG = { 
-						controls_province = 7011 
-						controls_province = 12071
-					} # Cairo and Luxor
-					446 = { is_controlled_by = IEG } # Suez State
-				}
+		cancel_effect = { # cancels for both sucess or fail 
+			if = { 
+				limit = { ITA_missiolinis_system_available = yes }
+
+				ITA_missiolinis_manage_next_mission = yes
 				country_event = { id = ITA_missiolinis_events.2_egypt hours = 1 }
+				set_country_flag = ITA_egypt_mission_sucess
 			}
-			else = { # Mission Failed, we'll get them next time.
+			else = { 
 				# Prepare next mission
 				if = {
 					limit = { ITA_missiolinis_system_available = yes }
+
 					ITA_missiolinis_manage_next_mission = yes
+					country_event = { id = ITA_missiolinis_events.3_egypt hours = 1 } # declare war on egypt
 				}
-				country_event = { id = ITA_missiolinis_events.3_egypt hours = 1 } # declare war on egypt
 			}
 		}
 
@@ -66,12 +64,11 @@ ITA_missiolinis = {
 			hidden_effect = {
 				#Prepare next mission
 				if = {
-					limit = {
-						ITA_missiolinis_system_available = yes
-					}
+					limit = { ITA_missiolinis_system_available = yes }
+
 					ITA_missiolinis_manage_next_mission = yes
+					country_event = { id = ITA_missiolinis_events.3_egypt hours = 1 }
 				}
-				country_event = { id = ITA_missiolinis_events.3_egypt hours = 1 }
 			}
 		}
 
@@ -79,13 +76,12 @@ ITA_missiolinis = {
 			hidden_effect = {
 				#Prepare next mission
 				if = {
-					limit = {
-						ITA_missiolinis_system_available = yes
-					}
-					ITA_missiolinis_manage_next_mission = yes
-				}
+					limit = { ITA_missiolinis_system_available = yes }
 
-				country_event = { id = ITA_missiolinis_events.2_egypt hours = 1 }
+					ITA_missiolinis_manage_next_mission = yes
+					country_event = { id = ITA_missiolinis_events.2_egypt hours = 1 }
+					set_country_flag = ITA_egypt_mission_sucess
+				}
 			}
 		}
 	}
@@ -96,7 +92,7 @@ ITA_missiolinis = {
 		allowed = { tag = ITA }
 		visible = { ITA_missiolinis_system_available = yes }
 
-		available = { #GOAL
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_missiolinis.1_industry.tt
 				check_variable = { ROOT.num_of_military_factories > ITA_missiolinis_military_factories }
@@ -132,61 +128,215 @@ ITA_missiolinis = {
 			}
 		}
 	}
+
+	# Operation Liberation Invasions - Stage 1
+	ITA_missiolini_operation_castle_front_invasion_stage_1 = {
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = { tag = ITA }
+		visible = { ITA_missiolinis_system_available = yes }
+		targets = { ITA_operation_castle_front_invade } # the icon
+
+		available = { # goal
+			ITA_operation_castle_front_invade = {
+				OR = {
+					has_government = fascism
+					is_subject_of = ITA
+				}
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_if_not_visible = yes
+		is_good = yes #Tooltip purposes
+		selectable_mission = no
+		days_mission_timeout = ITA_missiolinis_ol_days
+
+		timeout_effect = { #MISSION FAILS
+			country_event = { id = ITA_missiolinis_events.2_ol days = 1 }
+		}
+
+		complete_effect = { #MISSION SUCCEEDS
+			country_event = { id = ITA_missiolinis_events.3_ol days = 1 }
+		}
+	}
 }
 
-propaganda_efforts = {
-	ITA_consecrate_the_leadership = { 
-		icon = GFX_decision_ITA_italian_east_africa
-		allowed = { tag = ITA }
-		visible = { always = yes }
-		available = {
-			ITA = { 
-				has_completed_focus = focus_ITA_politics_egypt_influence
-				has_completed_focus = focus_ITA_politics_greece_oppress_communists
+ITA_election_decisions = {
+	ITA_election_countdown = {
+		icon = GFX_decision_eng_blackshirt_speech
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = IIA_elections_allowed_tt
+				NOT = { has_country_flag = ITA_elections_allowed }
 			}
-			EGY = { has_government = fascism }
-			GRE = { NOT = { has_government = communism } }
+		}
+		allowed = { always = no }
+		available = { 
+			hidden_trigger = { always = no }
+		}
+		is_good = yes
+		days_mission_timeout = ITA_elections_days
+
+		priority = 50
+
+		timeout_effect = { # time for elections!
+			if = {
+				limit = { has_country_flag = ITA_election_selected_mussolini }
+				set_variable = { ITA_elections_selected = ITA_benito_mussolini_new }
+				country_event = ITA_generic_events.3
+				news_event = {
+					id = ITA_news_events.elections.1
+					days = 1
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			set_variable = { ITA_election_reforms_factories = ITA.num_of_civilian_factories }
+			divide_variable = { ITA_election_reforms_factories = 5 }
+			add_timed_idea = {
+				idea = mod_ITA_reforms_election
+				years = 1
+			}
+
+			hidden_effect = {
+				set_variable = { ITA_years_since_last_election = 0 }
+				meta_effect = {
+					text = {
+						set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+							last_election = "[DATE]" 
+						}
+					}
+					DATE = "[GetDate]"
+				}
+				clr_country_flag = ITA_elections_allowed
+				set_country_flag = ITA_successor_elections_focus_done
+			}
+		}
+	}
+
+	ITA_election_select_council = {
+		icon = GFX_decision_category_SWI_federal_council
+		visible = { always = yes }
+		available = { 
+			has_completed_focus = focus_ITA_leader_council
+			custom_trigger_tooltip = {
+				tooltip = ITA_election_countdown_2
+				check_variable = { ITA_elections_days < 60 }
+			}
 		}
 		fire_only_once = yes
-		cost = 100
-		days_remove = 14
+		cost = 125
+		priority = 10
 
-		#priority = {
-		#	base = 10
-		#	modifier = {
-		#		has_idea = mod_ITA_strenghtened_nationalism
-		#		factor = 2
-		#	}
-		#}
 		ai_will_do = {
 			base = 5
 			modifier = {
-				is_historical_focus_on = yes
-				add = 5
-			}
-			modifier = {
-				has_idea = mod_ITA_strenghtened_nationalism
+				check_variable = { ITA_elections_days < 30 }
 				factor = 2
 			}
 		}
 
 		complete_effect = {
-			ITA = { 
-				swap_ruler_traits = { 
-					remove = ITA_lion_tamer
-					add = ITA_lion_tamer_2
+			add_power_balance_value = {
+				id = ITA_power_balance
+				value = -0.15
+			}
+		}
+	}
+}
+
+ITA_operation_castle_front = {
+	ITA_liberate_country_stage_1 = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = { always = yes }
+		available = { 
+			FROM = { NOT = { has_government = fascism } }
+			ROOT = { has_war = no }
+		}
+		fire_only_once = yes
+		cost = 100
+		priority = 20
+		# FROM = targets
+		# ROOT = ITA
+		targets = { BUL HUN ROM }
+
+		ai_will_do = {
+			base = 10
+		}
+
+		war_with_target_on_complete = yes
+		complete_effect = {
+			set_variable = { ITA_operation_castle_front_invade = FROM }
+
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = ROM
+					}
+				}
+				multiply_variable = { ITA_missiolinis_ol_days = 2 } # 240 days for romania, rest 120 days
+			}
+
+			ROOT = {
+				country_event = {
+					id = ITA_missiolinis_events.1_ol
+					days = 1
 				}
 			}
 		}
-		remove_effect = {
-			ITA = { add_ideas = mod_ITA_mussolini_for_life }
-			AOI = { 
-				swap_ideas = {
-					remove_idea = vittorio_emanuele_emperor_of_ethiopia
-					add_idea = vittorio_emanuele_albania_ethiopia
-				}
+	}
+}
+
+
+policies_decisions = {
+	ITA_hold_elections = {
+		icon = GFX_decision_eng_blackshirt_speech
+		allowed = { original_tag = ITA }
+		visible = { 
+			has_country_flag = ITA_successor_elections_focus_done # after the first one
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
 			}
-			EGY = { add_ideas = vittorio_emanuele_albania_ethiopia }
+			NOT = { has_country_flag = ITA_elections_allowed }
+		} 
+		available = {
+			has_completed_focus = focus_ITA_politics_leader
+			custom_trigger_tooltip = {
+				tooltip = ITA_elections_done_tt
+				has_country_flag = ITA_successor_elections_focus_done
+			}
+			custom_trigger_tooltip = generic_skip_one_line_tt
+
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
+			}
+		}
+		cost = 100
+		days_remove = 30
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				check_variable = { ITA.num_of_factories < 100 }
+				factor = 2
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = ITA_restructure_economy_flag
+			custom_effect_tooltip = ITA_restructure_economy_tt
+		}
+		timeout_effect = {
+			set_country_flag = ITA_elections_allowed
+			unlock_decision_category_tooltip = ITA_election_decisions
+			ITA_elections_init = yes # scripted effect
 		}
 	}
 }

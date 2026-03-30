@@ -1,9 +1,7 @@
 mod_debug_decisions = {
 	mod_play_song = {
 		icon = GFX_decision_BRA_integralism
-		visible = {
-			has_global_flag = show_debug_decisions_flag
-		}
+		visible = { always = yes }
 		cost = 0
 		days_re_enable = 10
 		complete_effect = {
@@ -12,9 +10,7 @@ mod_debug_decisions = {
 	}
 	mod_test_event = {
 		icon = GFX_decision_BRA_integralism
-		visible = {
-			has_global_flag = show_debug_decisions_flag
-		}
+		visible = { always = yes }
 		cost = 0
 		days_re_enable = 0
 		complete_effect = {
@@ -23,20 +19,16 @@ mod_debug_decisions = {
 	}
 	mod_test_event_news = {
 		icon = GFX_decision_BRA_integralism
-		visible = {
-			has_global_flag = show_debug_decisions_flag
-		}
+		visible = { always = yes }
 		cost = 0
 		days_re_enable = 0
 		complete_effect = {
-			news_event = ITA_news_events.4
+			news_event = ITA_news_events.5
 		}
 	}
 	mod_test_event_mission = {
 		icon = GFX_decision_BRA_integralism
-		visible = {
-			has_global_flag = show_debug_decisions_flag
-		}
+		visible = { always = yes }
 		cost = 0
 		days_re_enable = 0
 		complete_effect = {
@@ -45,14 +37,152 @@ mod_debug_decisions = {
 	}
 	mod_super_event_test = {
 		icon = GFX_decision_BRA_integralism
-		visible = {
-			has_global_flag = show_debug_decisions_flag
-		}
+		visible = { always = yes }
 		cost = 0
 		days_re_enable = 0
 		complete_effect = {
 			country_event = non_war_events.3
 			play_song = "ddr_anthem"
 		}
+	}
+
+	# Used to simulate the visions of countries
+	ITA_visioned_europe = {
+		icon = GFX_decision_ITA_claim_yugo_1
+		allowed = { tag = ITA }
+		visible = { always = yes }
+		cost = 0
+		days_re_enable = 0
+		complete_effect = {
+			GRE = {
+				ITA = {
+					transfer_state = 1055
+					transfer_state = 186
+					transfer_state = 182
+					transfer_state = 187
+				}
+
+				BUL = {
+					transfer_state = 731
+					transfer_state = 184
+				}
+
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+
+
+			BUL = {
+				ROM = { transfer_state = 77 }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+
+			HUN = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+
+			CZE = {
+				set_cosmetic_tag = CZE_operation_castle_front
+				HUN = { transfer_state = 664 }
+			}
+
+			SOV = {
+				HUN = { transfer_state = 975 }
+				ENG = { transfer_state = 4 }
+			}
+
+			GER = {
+				annex_country = {
+					target = GDR
+					transfer_troops = yes
+				}
+			}
+
+			EGY = {
+				ITA = { transfer_state = 446 }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+
+			SYR = {
+				annex_country = {
+					target = LEB
+					transfer_troops = yes
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+
+			PAL = {
+				SYR = { transfer_state = 1057 }
+			}
+
+			ITA = {
+				add_to_faction = BUL
+				add_to_faction = HUN
+				add_to_faction = EGY
+				add_to_faction = SYR
+				add_to_faction = GRE
+				set_autonomy = {
+					# Bulgaria
+					target = BUL
+					autonomous_state = autonomy_reichskommissariat
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					# Bulgaria
+					target = GRE
+					autonomous_state = autonomy_reichskommissariat
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					# Hungary
+					target = HUN
+					autonomous_state = autonomy_reichskommissariat
+					end_wars = yes
+					end_civil_wars = yes
+				}
+			}
+		}
+	}
+
+	ITA_test_greek_civil_war = {
+		icon = GFX_decision_ITA_claim_yugo_2
+		visible = { always = yes }
+		cost = 0
+		days_re_enable = 0
+		complete_effect = { mod_debug_GRE_civil_war = yes }
+	}
+
+	ITA_test_elections = {
+		icon = GFX_decision_ITA_claim_yugo_3
+		visible = { always = yes }
+		fire_only_once = yes
+		cost = 0
+		days_re_enable = 0
+		complete_effect = { ITA_elections_init = yes }
+	}
+
+	ITA_test_operation_castle_front = {
+		icon = GFX_decision_ITA_claim_yugo_3
+		visible = { always = yes }
+		fire_only_once = yes
+		cost = 0
+		days_re_enable = 0
+		complete_effect = { set_country_flag = ITA_operation_castle_front_flag }
 	}
 }

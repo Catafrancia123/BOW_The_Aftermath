@@ -1,0 +1,89 @@
+defined_text = { # italy requested states
+	name = ITA_requested_states_loc
+	text = {
+		localization_key = "ITA_requested_states_loc_[?ITA_requested_states^num]"
+	}
+}
+
+defined_text = { # italy requested states title
+	name = ITA_requested_states_loc_title
+	text = {
+		trigger = { check_variable = { ITA_requested_states^num > 1 } }
+		localization_key = ITA_requested_states_loc_mult
+	}
+	text = {
+		localization_key = ITA_requested_states_loc_1
+	}
+}
+
+defined_text = { # for elections gui
+	name = ITA_best_candidate
+	text = {
+		trigger = { 
+			check_variable = { ITA_mussolini_percentage > ITA_ciano_percentage }
+			check_variable = { ITA_mussolini_percentage > ITA_balbo_percentage }
+			check_variable = { ITA_mussolini_percentage > ITA_grandi_percentage }
+		}
+		localization_key = ITA_benito_mussolini
+	}
+	text = {
+		trigger = { 
+			check_variable = { ITA_ciano_percentage > ITA_mussolini_percentage }
+			check_variable = { ITA_ciano_percentage > ITA_balbo_percentage }
+			check_variable = { ITA_ciano_percentage > ITA_grandi_percentage }
+		}
+		localization_key = ITA_gian_galeazzo_ciano
+	}
+	text = {
+		trigger = { 
+			check_variable = { ITA_grandi_percentage > ITA_ciano_percentage }
+			check_variable = { ITA_grandi_percentage > ITA_balbo_percentage }
+			check_variable = { ITA_grandi_percentage > ITA_mussolini_percentage }
+		}
+		localization_key = ITA_dino_grandi
+	}
+	text = {
+		trigger = { 
+			check_variable = { ITA_balbo_percentage > ITA_ciano_percentage }
+			check_variable = { ITA_balbo_percentage > ITA_mussolini_percentage }
+			check_variable = { ITA_balbo_percentage > ITA_grandi_percentage }
+		}
+		localization_key = ITA_italo_balbo
+	}
+}
+
+efined_text = { # for elections gui
+	name = ITA_best_candidate_percentage
+	text = {
+		trigger = { 
+			check_variable = { ITA_mussolini_percentage > ITA_ciano_percentage }
+			check_variable = { ITA_mussolini_percentage > ITA_balbo_percentage }
+			check_variable = { ITA_mussolini_percentage > ITA_grandi_percentage }
+		}
+		localization_key = "[?ITA_mussolini_percentage]"
+	}
+	text = {
+		trigger = { 
+			check_variable = { ITA_ciano_percentage > ITA_mussolini_percentage }
+			check_variable = { ITA_ciano_percentage > ITA_balbo_percentage }
+			check_variable = { ITA_ciano_percentage > ITA_grandi_percentage }
+		}
+		localization_key = "[?ITA_ciano_percentage]"
+	}
+	text = {
+		trigger = { 
+			check_variable = { ITA_grandi_percentage > ITA_ciano_percentage }
+			check_variable = { ITA_grandi_percentage > ITA_balbo_percentage }
+			check_variable = { ITA_grandi_percentage > ITA_mussolini_percentage }
+		}
+		localization_key = "[?ITA_grandi_percentage]"
+	}
+	text = {
+		trigger = { 
+			check_variable = { ITA_balbo_percentage > ITA_ciano_percentage }
+			check_variable = { ITA_balbo_percentage > ITA_mussolini_percentage }
+			check_variable = { ITA_balbo_percentage > ITA_grandi_percentage }
+		}
+		localization_key = "[?ITA_balbo_percentage]"
+	}
+}

@@ -1,4 +1,4 @@
-MTG_naval_treaties = {
+MTG_naval_treaties = { # priority = 10
 	MTG_renew_third_treaty = {
 		icon = generic_naval	
 		available = {
@@ -10,16 +10,17 @@ MTG_naval_treaties = {
 		
 		activation = {
 			has_naval_treaty_trigger = yes
-			has_global_flag = MTG_third_london_conference
+			has_global_flag = MTG_naval_treaties_flag
 		}
 		visible = {
 			has_naval_treaty_trigger = yes
 		}
 		timeout_effect = {
-			clr_global_flag = MTG_third_london_conference 
-		}
-		complete_effect = {
-			
+			clr_global_flag = MTG_naval_treaties_flag 
+			news_event = {
+				id = international_events.3
+				days = 1
+			}
 		}
 	}
 }

@@ -3,121 +3,68 @@ add_namespace = ITA_events
 add_namespace = ITA_missiolinis_events
 add_namespace = ITA_generic_events
 add_namespace = ITA_news_events
+add_namespace = ITA_news_events.elections
+
 country_event = {
-	# Italy Demands Dalmatia
+	# Italy selects a corporation as the leader for the corporatist system
 	id = ITA_events.1
 	title = ITA_events.1.t
 	desc = ITA_events.1.d
-	picture = GFX_report_event_generic_mussolini
+	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-	timeout_days = 7
-	# ROOT = CRO
+	timeout_days = 20
 	option = {
 		name = ITA_events.1.op1
-		add_to_array = {
-			ITA_given_states = 103
-		}
-		add_to_array = {
-			ITA_given_states = 163
-		}
-		ITA = {
-			country_event = ITA_generic_events.1
-		}
-		ai_chance = {
-			base = 5
-			modifier = {
-				# Greek Civil War
-				has_war_with = PRY
-				factor = 0.1
-			}
-		}
+		ITA = { add_ideas = ITA_terni_industria_ed_elettricita_improved }
 	}
 	option = {
 		name = ITA_events.1.op2
-		trigger = {
-			ROOT = {
-				compare_autonomy_state < autonomy_reichsprotectorate
-			}
-		}
-		add_to_array = {
-			ITA_given_states = 103
-		}
-		add_to_array = {
-			ITA_given_states = 163
-		}
-		ITA = {
-			country_event = ITA_generic_events.2
-		}
-		ai_chance = {
-			base = 7.5
-			modifier = {
-				# Greek Civil War
-				has_war_with = PRY
-				factor = -0.2
-			}
-		}
+		ITA = { add_ideas = ITA_fiat_improved }
 	}
 	option = {
 		name = ITA_events.1.op3
-		trigger = {
-			ROOT = {
-				compare_autonomy_state > autonomy_reichsprotectorate				# and has researched something
-			}
-		}
-		ITA = {
-			country_event = ITA_generic_events.3
-		}
-		ai_chance = {
-			base = 2
-			modifier = {
-				# Croatian National Identity
-				compare_autonomy_state > autonomy_satellite
-				add = 5
-			}
-		}
+		ITA = { add_ideas = ITA_brescia_arsenal_improved }
 	}
-	after = {
-		add_stability = -0.05
+	option = {
+		name = ITA_events.1.op4
+		ITA = { add_ideas = ITA_astaldi_improved }
 	}
 }
 
 country_event = {
-	# Italy demands control of the Suez Canal
+	# MUSSOLINI DEAD (country)
 	id = ITA_events.2
 	title = ITA_events.2.t
 	desc = ITA_events.2.d
 	picture = GFX_report_event_generic_mussolini
 	is_triggered_only = yes
-	timeout_days = 14
+	timeout_days = 20
+
 	option = {
 		name = ITA_events.2.op1
-		EGY = {
-			ITA = {
-				transfer_state = 446
-			}
+		kill_country_leader = yes
+		set_country_flag = ITA_mussolini_dead
+		promote_character = ITA_gian_galeazzo_ciano_new #testing
+		if = {
+			limit = { has_completed_focus = focus_ITA_politics_supremacy }
+			promote_character = ITA_gian_galeazzo_ciano_new
 		}
-		ai_chance = {
-			base = 4
-			modifier = {
-				# Egypt is puppet
-				is_subject_of = ITA
-				add = 6
-			}
+		if = {
+			limit = { has_completed_focus = focus_ITA_politics_irredentism }
+			promote_character = ITA_gian_galeazzo_ciano_ultranationalist
 		}
-	}
-	option = {
-		name = ITA_events.2.op2
-		EGY = {
-			ITA = {
-				set_state_controller = 446
-			}
+		set_power_balance = {
+			id = ITA_power_balance
+			left_side = ITA_grand_council_side
+			right_side = ITA_ciano_side
+			set_value = 0.15
 		}
-		ai_chance = {
-			base = 6
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		news_event = {
+			id = ITA_news_events.6
+			days = 1
 		}
-	}
-	after = {
-		add_stability = -0.05
 	}
 }
 
@@ -164,21 +111,19 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = ITA_missiolinis_events.2_egypt.tt
-		effect_tooltip = {
-			recall_volunteers_from = IEG
-			add_to_faction = IEG
-			IEG = {
-				annex_country = {
-					target = EGY
-					transfer_troops = yes
-				}
-				white_peace = {
-					tag = EGY
-					message = mod_peace_annex
-				}
+		recall_volunteers_from = IEG
+		add_to_faction = IEG
+		IEG = {
+			annex_country = {
+				target = EGY
+				transfer_troops = yes
 			}
-			clr_country_flag = EGY_civil_war_fascist			# After this, IEG is invalid, use EGY.
+			white_peace = {
+				tag = EGY
+				message = mod_peace_annex
+			}
 		}
+		clr_country_flag = EGY_civil_war_fascist		# After this, IEG is invalid, use EGY.
 	}
 }
 
@@ -192,13 +137,11 @@ country_event = {
 	option = {
 		name = ITA_missiolinis_events.3_egypt.op1
 		custom_effect_tooltip = ITA_missiolinis_events.3_egypt.tt
-		effect_tooltip = {
-			recall_volunteers_from = IEG
-			create_wargoal = {
-				type = topple_government
-				target = EGY
-				expire = 100
-			}
+		recall_volunteers_from = IEG
+		create_wargoal = {
+			type = topple_government
+			target = EGY
+			expire = 100
 		}
 	}
 }
@@ -216,6 +159,49 @@ country_event = {
 	}
 }
 
+country_event = { # Generic event for invasion in operation liberation (activates mission)
+	id = ITA_missiolinis_events.1_ol
+	title = ITA_missiolinis_events.1_ol.t
+	desc = ITA_missiolinis_events.1_ol.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.1_ol.op1
+		activate_mission = ITA_missiolini_operation_castle_front_invasion_stage_1
+	}
+}
+
+country_event = { # Generic event for failed invasion in operation liberation (escalates war)
+	id = ITA_missiolinis_events.2_ol
+	title = ITA_missiolinis_events.2_ol.t
+	desc = ITA_missiolinis_events.2_ol.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.2_ol.op1
+		ITA_operation_castle_front_escalate = yes
+		add_war_support = -0.1
+		add_stability = -0.05
+	}
+}
+
+country_event = { # Generic event for failed invasion in operation liberation (escalates war)
+	id = ITA_missiolinis_events.3_ol
+	title = ITA_missiolinis_events.3_ol.t
+	desc = ITA_missiolinis_events.3_ol.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.3_ol.op1
+		activate_mission = ITA_missiolini_operation_castle_front_invasion_stage_1
+		add_war_support = 0.1
+		add_stability = 0.05
+	}
+}
+
 # Generic Events
 country_event = {
 	# Generic event where a country accepts italian state demands (full)
@@ -227,14 +213,18 @@ country_event = {
 	option = {
 		name = ITA_generic_events.1.op1
 		# use array
+		# FROM = the country that accepts
+		# ROOT = ITA
 		FROM = {
 			ROOT = {
 				for_each_loop = {
-					array = ITA_given_states
+					array = ITA_requested_states
 					value = v
 					break = break
 					transfer_state = v
 				}
+				clear_array = ITA_requested_states
+				set_variable = { ITA_requested_success = 1 }
 			}
 		}
 		ROOT = {
@@ -243,40 +233,39 @@ country_event = {
 				modifier = ITA_demands_granted
 			}
 		}
-	}
-}
 
-country_event = {
-	# Generic event where a country accepts italian state demands (partially)
-	id = ITA_generic_events.2
-	title = ITA_generic_events.2.t
-	desc = ITA_generic_events.2.d
-	picture = GFX_report_event_generic_italian_celebration
-	is_triggered_only = yes
-	option = {
-		name = ITA_generic_events.2.op1
-		# use array
-		FROM = {
-			ROOT = {
-				for_each_loop = {
-					array = ITA_given_states
-					value = v
-					break = break
-					set_state_controller = v
-				}
-			}
+		# flag thing
+		if = {
+			limit = { FROM = { tag = CRO } }
+			ROOT = { set_country_flag = ITA_demand_dalmatia_success }
 		}
-		ROOT = {
-			add_opinion_modifier = {
-				target = FROM
-				modifier = ITA_demands_granted
-			}
+		if = {
+			limit = { FROM = { tag = GRE } }
+			ROOT = { set_country_flag = ITA_demand_corfu_success }
 		}
 	}
 }
 
 country_event = {
 	# Generic event where a country rejects italian state demands
+	id = ITA_generic_events.2
+	title = ITA_generic_events.2.t
+	desc = ITA_generic_events.2.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	option = {
+		name = ITA_generic_events.2.op1
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_demands_declined
+			}
+		}
+	}
+}
+
+country_event = {
+	# Generic event for the (1947-1950 any year) election results.
 	id = ITA_generic_events.3
 	title = ITA_generic_events.3.t
 	desc = ITA_generic_events.3.d
@@ -284,10 +273,71 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ITA_generic_events.3.op1
-		ROOT = {
-			add_opinion_modifier = {
-				target = FROM
-				modifier = ITA_demands_declined
+		ITA = {
+			#retire_country_leader = yes
+			promote_character = ITA_elections_selected
+		}
+	}
+}
+
+country_event = {
+	# Generic event for requesting states claimed by Italy
+	id = ITA_generic_events.4
+	title = ITA_generic_events.4.t
+	desc = ITA_generic_events.4.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	option = {
+		name = ITA_generic_events.4.op1
+		effect_tooltip = {
+			tooltip = ITA_generic_events.4.tt_1
+			ROOT = {
+				ITA = {
+					for_each_loop = {
+						array = ITA_requested_states
+						value = v
+						break = break
+						transfer_state = v
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		ITA = {
+			country_event = {
+				id = ITA_generic_events.1
+				days = 1
+			}
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				is_subject_of = ITA
+				factor = 10
+			}
+			modifier = { # dalmatia!
+				original_tag = CRO
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = ITA_generic_events.4.op2
+		custom_effect_tooltip = ITA_generic_events.4.tt_2
+		ITA = {
+			country_event = {
+				id = ITA_generic_events.2
+				days = 1
+			}
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				NOT = { has_government = fascism }
+				factor = 2
 			}
 		}
 	}
@@ -308,64 +358,32 @@ news_event = {
 			TAG = ITA
 		}
 		custom_effect_tooltip = mod_world_opinion_tt
-		effect_tooltip = {
-			every_other_country = {
-				limit = {
-					has_government = fascism
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_italian_irredentism_fascism
+		every_other_country = {
+			limit = {
+				has_government = fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
 				}
 			}
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_italian_irredentism_else
-				}
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_priority_italian_irredentism_fascism
 			}
 		}
-		hidden_effect = {
-			every_other_country = {
-				limit = {
+		every_other_country = {
+			limit = {
+				NOT = {
 					has_government = fascism
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_italian_irredentism_fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
 				}
 			}
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_italian_irredentism_else
-				}
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_priority_italian_irredentism_else
 			}
 		}
 	}
@@ -385,64 +403,32 @@ news_event = {
 			TAG = ITA
 		}
 		custom_effect_tooltip = mod_world_opinion_tt
-		effect_tooltip = {
-			every_other_country = {
-				limit = {
-					has_government = fascism
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_fascist_supremacy_fascism
+		every_other_country = {
+			limit = {
+				has_government = fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
 				}
 			}
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_fascist_supremacy_else
-				}
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_priority_fascist_supremacy_fascism
 			}
 		}
-		hidden_effect = {
-			every_other_country = {
-				limit = {
+		every_other_country = {
+			limit = {
+				NOT = {
 					has_government = fascism
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_fascist_supremacy_fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
 				}
 			}
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-					OR = {
-						is_major = yes
-						num_of_factories > 30
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_priority_fascist_supremacy_else
-				}
+			add_opinion_modifier = {
+				target = FROM
+				modifier = ITA_priority_fascist_supremacy_else
 			}
 		}
 	}
@@ -456,36 +442,9 @@ news_event = {
 	picture = GFX_news_event_banovina_croatia
 	is_triggered_only = yes
 	major = yes
-	
 	option = {
 		name = ITA_news_events.3.op1
-		custom_effect_tooltip = mod_world_opinion_tt
-		effect_tooltip = {
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				add_opinion_modifier = {
-					target = CRO
-					modifier = unstable_alliance
-				}
-			}
-		}
-		hidden_effect = {
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				add_opinion_modifier = {
-					target = CRO
-					modifier = unstable_alliance
-				}
-			}
-		}
+		# NOTHING FOR NOW
 	}
 }
 
@@ -494,38 +453,247 @@ news_event = {
 	id = ITA_news_events.4
 	title = ITA_news_events.4.t
 	desc = ITA_news_events.4.d
-	picture = GFX_news_event_banovina_croatia
+	picture = GFX_news_event_election_vote
 	is_triggered_only = yes
 	major = yes
-	
 	option = {
 		name = ITA_news_events.4.op1
+		# NOTHING FOR NOW
+	}
+}
+
+news_event = {
+	# Italy and Spain declare mediterannean dominance over trade and access
+	id = ITA_news_events.5
+	title = ITA_news_events.5.t
+	desc = ITA_news_events.5.d
+	picture = GFX_news_event_generic_suez_canal
+	is_triggered_only = yes
+	major = yes
+	option = { # ENG only
+		name = ITA_news_events.5.op1
+		trigger = { original_tag = ENG }
 		custom_effect_tooltip = mod_world_opinion_tt
-		effect_tooltip = {
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				add_opinion_modifier = {
-					target = CRO
-					modifier = unstable_alliance
+		every_other_country = {
+			limit = {
+				has_government = fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
 				}
 			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_fascist
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_fascist
+			}
 		}
-		hidden_effect = {
-			every_other_country = {
-				limit = {
-					NOT = {
-						has_government = fascism
-					}
+		every_other_country = {
+			limit = {
+				NOT = {
+					has_government = fascism
 				}
-				add_opinion_modifier = {
-					target = CRO
-					modifier = unstable_alliance
+				OR = {
+					is_major = yes
+					num_of_factories > 30
 				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_fascist
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_fascist
+			}
+		}
+	}
+	option = { # any majors
+		name = ITA_news_events.5.op2
+		trigger = {
+			NOT = { original_tag = ENG }
+			OR = {
+				is_major = yes
+				num_of_factories > 30
+			}
+		}
+		custom_effect_tooltip = mod_world_opinion_tt
+		every_other_country = {
+			limit = {
+				has_government = fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_else
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_else
+			}
+		}
+		every_other_country = {
+			limit = {
+				NOT = {
+					has_government = fascism
+				}
+				OR = {
+					is_major = yes
+					num_of_factories > 30
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_else
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_else
+			}
+		}
+	}
+	option = { # any minors
+		name = ITA_news_events.5.op3
+		trigger = {
+			NOT = { original_tag = ENG }
+		}
+		custom_effect_tooltip = mod_world_opinion_tt
+		every_other_country = {
+			limit = {
+				has_government = fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_else
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_else
+			}
+		}
+		every_other_country = {
+			limit = {
+				NOT = {
+					has_government = fascism
+				}
+				OR = {
+					is_major = yes
+					num_of_factories > 30
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_else
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_else
+			}
+		}
+	}
+	option = { # ITA and SPR only
+		name = ITA_news_events.5.op4
+		trigger = {
+			original_tag = ITA
+			original_tag = SPR
+		}
+		custom_effect_tooltip = mod_world_opinion_tt
+		every_other_country = {
+			limit = {
+				has_government = fascism
+				OR = {
+					is_major = yes
+					num_of_factories > 30
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_fascist
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_fascist
+			}
+		}
+		every_other_country = {
+			limit = {
+				NOT = {
+					has_government = fascism
+				}
+				OR = {
+					is_major = yes
+					num_of_factories > 30
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = IFL_control_world_trade_fascist
+			}
+			add_opinion_modifier = {
+				target = SPR
+				modifier = IFL_control_world_trade_fascist
 			}
 		}
 	}
 }
+
+news_event = {
+	# MUSSOLINI DEAD (news)
+	id = ITA_news_events.6
+	title = ITA_news_events.6.t
+	desc = ITA_news_events.6.d
+	picture = GFX_news_event_generic_funeral
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = ITA_news_events.6.op1
+		trigger = { 
+			has_government = fascism 
+		}
+
+		effect_tooltip = {
+			kill_country_leader = yes
+			promote_character = ITA_gian_galeazzo_ciano_new
+		}
+	}
+	option = {
+		name = ITA_news_events.6.op2
+		trigger = { 
+			NOT = { 
+				original_tag = ITA
+				has_government = fascism
+			} 
+		}
+
+		effect_tooltip = {
+			kill_country_leader = yes
+			promote_character = ITA_gian_galeazzo_ciano_new
+		}
+	}
+}
+
+#TODO: This and many others!
+news_event = {
+	id = ITA_news_events.elections.1
+	title = ITA_news_events.elections.1.t
+	desc = ITA_news_events.elections.1.d
+	picture = GFX_news_event_mussolini_reelected
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = ITA_news_events.elections.1.op1
+		# nothing since mussolini was the leader after all :)
+	}
+}
+
+#EOF

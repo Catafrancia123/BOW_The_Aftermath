@@ -4,24 +4,38 @@ IFL_decisions = {
 		icon = GFX_decision_ITA_claim_yugo_1
 		cost = 50
 		days_remove = 7
-		fire_only_once = yes
-		visible = { TAG = ITA }
-		available = { 
-			CRO = { is_in_faction_with = ITA }
+		days_re_enable = 60
+		allowed = { original_tag = ITA }
+		visible = { NOT = { has_country_flag = ITA_demand_dalmatia_success } }
+		available = {
+			CRO = {
+				OR = {
+					is_in_faction_with = ITA
+					is_subject_of = ITA
+				}
+			}
 		}
-
 		highlight_states = {
 			highlight_state_targets = {
 				state = 103
 				state = 163
+				state = 853
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
+		targeted_modifier = {
+			CRO = { stability_factor = -0.1 }
+		}
+		complete_effect = {
+			add_to_array = { ITA_requested_states = 103 }
+			add_to_array = { ITA_requested_states = 853 }
+			add_to_array = { ITA_requested_states = 163 }
+		}
 		remove_effect = {
-			CRO = { 
+			CRO = {
 				country_event = {
-					id = ITA_events.1
+					id = ITA_generic_events.4
 					days = 1
 				}
 			}
@@ -33,15 +47,20 @@ IFL_decisions = {
 		icon = GFX_decision_generic_decision
 		cost = 100
 		fire_only_once = yes
-		visible = { TAG = ITA }
-		available = { 
-			CRO = { is_subject_of = ITA }
+		allowed = { tag = ITA }
+		visible = { always = yes }
+		available = {
+			CRO = {
+				is_subject_of = ITA
+			}
 		}
-
 		complete_effect = {
-			set_temp_variable = { CRO_puppet_years = global.year }
-			subtract_from_temp_variable = { CRO_puppet_years = 1938 }
-
+			set_temp_variable = {
+				CRO_puppet_years = global.year
+			}
+			subtract_from_temp_variable = {
+				CRO_puppet_years = 1938
+			}
 			end_puppet = CRO
 			news_event = {
 				id = ITA_news_events.3
@@ -50,62 +69,172 @@ IFL_decisions = {
 		}
 	}
 
+	# Demand Corfu
 	IFL_ITA_demand_corfu = {
 		icon = GFX_decision_ITA_claim_yugo_2
 		cost = 50
 		days_remove = 7
 		fire_only_once = yes
-		visible = { TAG = ITA }
-		available = { 
-			ITA = { has_completed_focus = focus_ITA_politics_greece_oppress_communists }
+		allowed = { original_tag = ITA }
+		visible = {	
+			NOT = { 
+				has_completed_focus = focus_ITA_mediterranean_greece_attack # you're gonna kill em anyway
+				has_country_flag = ITA_demand_corfu_success
+			}
+			has_country_flag = ITA_demand_dalmatia_success 
 		}
-
+		available = {
+			ITA = { has_completed_focus = focus_ITA_mediterranean_greece_oppress_communists }
+		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 103
-				state = 163
+				state = 1055
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
 		}
+		targeted_modifier = {
+			GRE = { stability_factor = -0.1 }
+		}
+		complete_effect = {
+			add_to_array = { ITA_requested_states = 1055 }
+		}
 		remove_effect = {
-			CRO = { 
+			GRE = {
 				country_event = {
-					id = ITA_events.1
+					id = ITA_generic_events.4
 					days = 1
 				}
 			}
 		}
 	}
-
+	
 	# Make the UAR
 	IFL_unite_syria_lebanon = {
 		icon = GFX_decision_faction_tur_traditionalist
 		cost = 25
 		fire_only_once = yes
-		visible = {
+		allowed = {
 			is_in_faction_with = ITA
 			is_major = yes
 		}
-		available = { 
-			SYR = { 
-				has_government = fascism 
+		visible = {
+			ITA = {
+				has_completed_focus = focus_ITA_mediterranean_mideast_lebanon
+			}
+			SPR = {
+				always = yes
+			}
+		}
+		available = {
+			SYR = {
+				has_government = fascism
 				is_in_faction_with = ITA
 			}
-			LEB = { 
-				has_government = fascism 
+			LEB = {
+				has_government = fascism
 				is_in_faction_with = ITA
 			}
 		}
-
 		complete_effect = {
-			SYR = { 
+			SYR = {
 				annex_country = {
 					target = LEB
 					transfer_troops = yes
 				}
 				set_cosmetic_tag = ITA_UAR
 				set_country_flag = united_arab_republic
+			}
+		}
+	}
+
+	# Italy and spain control 3 important straits to the mediterranean
+	ITA_control_world_trade = {
+		icon = GFX_decision_generic_construction
+		allowed = {
+			tag = ITA
+			tag = SPR
+		}
+		visible = {
+			ITA = {
+				EGY = {
+					has_global_flag = EGY_civil_war
+				}
+			}
+			SPR = {
+				has_completed_focus = infrastructure_effort
+			}
+		}
+		available = {
+			ITA = {
+				AND = {
+					has_completed_focus = focus_ITA_mediterranean_total_control
+					has_completed_focus = focus_ITA_mediterranean_turkey
+				}
+				EGY = {
+					OR = {
+						has_government = fascism
+						is_in_faction_with = ITA
+						is_subject_of = ITA
+					}
+				}
+				# check if EGY or ITA has the suez canal
+				OR = {
+					EGY = {
+						controls_state = 446
+					}
+					ITA = {
+						controls_state = 446
+					}
+				}
+				controls_state = 797
+			}
+			SPR = {
+				controls_state = 290
+				controls_state = 169
+				if = {
+					limit = {
+						has_country_flag = SPR_has_gibraltar
+					}
+					controls_state = 118
+				}
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 446
+				state = 290
+				state = 169
+				state = 797
+				if = {
+					limit = { SPR = { has_country_flag = SPR_has_gibraltar } }
+					state = 118
+				}
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1.5
+				GRE = {
+					has_global_flag = GRE_civil_war
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		
+		complete_effect = {
+			news_event = {
+				id = ITA_news_events.5
+				days = 1
+			}
+			hidden_effect = {
+				set_global_flag = suez_canal_under_IFL
+				set_global_flag = gibraltar_strait_under_IFL
 			}
 		}
 	}

@@ -45,7 +45,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "supremacy_desc"
 					position = { x = 10 y = 10 }
-					font = "hoi4_18"
+					font = "hoi_18"
 					borderSize = { x = 0 y = 0 }
 					text = "GUI_supremacy_desc"
 					maxHeight = 20
@@ -57,7 +57,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "supremacy_desc2"
 				position = { x = 35 y = 150 }
-				font = "hoi4_18"
+				font = "hoi_18"
 				borderSize = { x = 0 y = 0 }
 				text = "GUI_supremacy_desc2"
 				maxHeight = 20
@@ -99,7 +99,7 @@ guiTypes = {
 			}
 		}
 
-		iconType ={
+		iconType = {
 			name ="manage_occupied_header_bg"
 			spriteType = "GFX_header_bg"
 			position = { x= 7 y = 5 }

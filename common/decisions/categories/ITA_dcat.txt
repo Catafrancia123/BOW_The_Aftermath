@@ -1,7 +1,45 @@
-ITA_faction_decisions = {
-	icon = GFX_decision_category_ITA_colonial_management
+ITA_election_decisions = {
+	icon = GFX_decision_category_generic
 	allowed = { tag = ITA }
-	visible = {	
-		has_completed_focus = focus_ITA_politics_start
+	visible = {
+		OR = {
+			has_completed_focus = focus_ITA_politics_leader
+			has_country_flag = ITA_elections_allowed
+		}
+	}
+	priority = {
+		base = 20
+		modifier = {
+			check_variable = { ITA_elections_days < 20 }
+			factor = 2
+		}
+	}
+	scripted_gui = ITA_elections_decision_ui
+}
+
+ITA_operation_castle_front = {
+	icon = GFX_decision_category_usa_intervention_mandate
+	allowed = { original_tag = ITA }
+	visible = {
+		OR = {
+			has_completed_focus = focus_ITA_europe_operation_castle_front
+			has_country_flag = ITA_operation_castle_front_flag
+		}
+	}
+	priority = 20
+	scripted_gui = war_escalation_decision_ui
+}
+
+ITA_missiolinis = { 
+	icon = decision_category_ITA_missiolinis
+	picture = GFX_decision_cat_picture_ITA_missiolinis
+	
+	allowed = { original_tag = ITA }
+	priority = 100
+	visible_when_empty = yes
+	
+	visible = { # any il duce can do it!
+		has_country_leader_with_trait = il_duce 
+		has_country_flag = ITA_missiolinis_system_active_flag
 	}
 }

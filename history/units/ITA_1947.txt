@@ -15,8 +15,8 @@ division_template = {
 	}
 	support = {
 		engineer = { x = 0 y = 0 } 
-		armored_car_recon = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 1 }
+		recon = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
 	}
 }
 division_template = {
@@ -130,7 +130,7 @@ division_template = { #Blackshirts
 	template_counter = 68
 	is_locked = yes
 	force_allow_recruiting = yes
-	division_cap = 12 #WARNING THIS VALUE NEEDS TOP MATCH THE value in var ITA_militias_cap set in history file
+	division_cap = var:ITA_militia_cap #WARNING THIS VALUE NEEDS TOP MATCH THE value in var ITA_militias_cap set in history file
 
 	# Represents nearly all infantry divisions
 	# In later years, CC.NN. Brigade added to INF Division (1x2 MIL/INF regiments)
@@ -455,7 +455,6 @@ units = {
 		division_template = "Divisione di Fanteria"	
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
-
 	}
 	
 	### 4a Armata (CO: Guzzoni) ###

@@ -1,0 +1,43 @@
+spriteTypes = {
+	# Mussolini's bar
+	progressBarType = {
+		name = "GFX_ITA_elections_bar_mussolini"
+		textureFile1 = "gfx/interface/bop/bop_ITA_mussolini_bar.tga"
+		textureFile2 = "gfx/interface/absolute_nothing.dds"
+		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress_minmax.lua"
+	}
+
+	# Ciano's bar
+	progressBarType = {
+		name = "GFX_ITA_elections_bar_ciano"
+		textureFile1 = "gfx/interface/bop/bop_ITA_ciano_bar.tga"
+		textureFile2 = "gfx/interface/absolute_nothing.dds"
+		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress_minmax.lua"
+	}
+
+	# Balbo's bar
+	progressBarType = {
+		name = "GFX_ITA_elections_bar_balbo"
+		textureFile1 = "gfx/interface/bop/bop_ITA_balbo_bar.tga"
+		textureFile2 = "gfx/interface/absolute_nothing.dds"
+		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress_minmax.lua"
+	}
+
+	# Grandi's bar
+	progressBarType = {
+		name = "GFX_ITA_elections_bar_grandi"
+		textureFile1 = "gfx/interface/bop/bop_ITA_grandi_bar.tga"
+		textureFile2 = "gfx/interface/absolute_nothing.dds"
+		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress_minmax.lua"
+	}
+
+	# Ciano's icon
+	spriteType = {
+		name = "GFX_bop_ITA_ciano_side"
+		textureFile = "gfx/interface/bop/bop_ITA_galeazzo_ciano_side.tga"
+	}
+}

@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_event_generic_suez_canal"
+		textureFile = "gfx/event_pictures/generic_suez_canal.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_mussolini_reelected"
+		textureFile = "gfx/event_pictures/mussolini_reelected.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_dino_grandi_elected"
+		textureFile = "gfx/event_pictures/dino_grandi_elected.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_italo_balbo_elected"
+		textureFile = "gfx/event_pictures/italo_balbo_elected.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_galeazzo_ciano_elected"
+		textureFile = "gfx/event_pictures/galeazzo_ciano_elected.tga"
+	}
+}

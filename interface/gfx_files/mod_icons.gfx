@@ -4,6 +4,11 @@ spriteTypes = {
 		name = "GFX_focus_generic_befriend_egypt"
 		textureFile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
 	}
+
+	spriteType = {
+		name = "GFX_ITA_focus_military_industrialization"
+		textureFile = "gfx/interface/nat_focus/ITA/ITA_focus_military_industrialization.tga"
+	}
 }
 
 spriteTypes = {
@@ -17,5 +22,36 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_italian_fascism"
 		textureFile = "gfx/interface/ideologies/italian_fascism_group.tga"
+	}
+
+	# Focus View
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_INTERVENTIONIST"
+		textureFile = "gfx/interface/focusview/mod_interventionist_view.tga"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_DIPLOMATIC"
+		textureFile = "gfx/interface/focusview/mod_diplomatic_view.tga"
+	}
+}
+
+spriteTypes = {
+	# News Headers
+	spriteType = {
+		name = "GFX_event_news_bg"
+		textureFile = "gfx/interface/GUI/event_news_bg.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_ITA_news_header"
+		textureFile = "gfx/interface/GUI/ITA_news_header.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_generic_news_header"
+		textureFile = "gfx/interface/GUI/generic_news_header.tga"
+		legacy_lazy_load = no
 	}
 }

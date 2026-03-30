@@ -11,7 +11,8 @@ characters = {
 
 		country_leader = {
 			ideology = italian_fascism
-			traits = { il_duce ITA_lion_tamer }
+			traits = { il_duce ITA_lion_tamer capo_supremo }
+			desc = ITA_mussolini_desc
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -46,12 +47,30 @@ characters = {
 		}
 	}
 
+	ITA_gian_galeazzo_ciano_ultranationalist = {
+		name = ITA_gian_galeazzo_ciano
+		portraits = {
+			civilian = {
+				large = GFX_ITA_Galeazzo_Ciano_civilian
+			}
+		}
+
+		country_leader = {
+			ideology = ultranationalism
+			expire = 1965.1.1
+			traits = { il_duce modernizer_and_diplomat }
+		}
+	}
+
 	# Italian Advisors
 	ITA_gian_galeazzo_ciano_new = { # Galeazzo Ciano
 		name = ITA_gian_galeazzo_ciano
 		portraits = {
 			army = {
 				small = GFX_portrait_ITA_gian_galeazzo_ciano_small
+			}
+			civilian = {
+				large = GFX_ITA_Galeazzo_Ciano_civilian
 			}
 		}
 
@@ -103,7 +122,7 @@ characters = {
 		country_leader = {
 			ideology = italian_fascism
 			expire = 1965.1.1
-			traits = { il_duce }
+			traits = { il_duce modernizer_and_diplomat }
 		}
 	}
 
@@ -173,7 +192,7 @@ characters = {
 		country_leader = {
     		ideology = italian_fascism
 			expire = 1965.1.1
-			traits = { il_duce }
+			traits = { il_duce skillful_diplomat }
 		}
 	}
 
@@ -225,9 +244,9 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = italian_fascism
+			ideology = ultranationalism # read the lore document then!
 			expire = "1965.1.1.1"
-			traits = { il_duce }
+			traits = { il_duce military_modernizer }
 		}
 
 		advisor = {
@@ -257,6 +276,38 @@ characters = {
 			}
 		}
 		
+		field_marshal = {
+			traits = { career_officer politically_connected trait_reckless media_personality }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+			visible = {
+				ITA_is_advisor_available = yes
+			}
+		}
+	}
+
+	ITA_italo_balbo_military = {
+		name = ITA_italo_balbo
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_italo_balbo_small
+				large = GFX_portrait_ITA_italo_balbo
+			}
+			civilian = {
+				large = GFX_portrait_ITA_italo_balbo_civilian
+			}
+		}
+
+		country_leader = {
+			ideology = military_junta
+			expire = 1965.1.1
+			traits = { il_duce modernizer_and_diplomat }
+		}
+
 		field_marshal = {
 			traits = { career_officer politically_connected trait_reckless media_personality }
 			skill = 1

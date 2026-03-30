@@ -1,0 +1,186 @@
+division_template = {
+	name = "Revolucionarna pešadijska divizija"
+	regiments = { 
+		infantry = {x=0 y=0}
+		infantry = {x=0 y=1}
+		infantry = {x=1 y=0}
+		infantry = {x=1 y=1}
+	}
+
+	support = {
+		artillery = {x=0 y=0}
+		recon = {x=0 y=1}
+		engineer = {x=0 y=2}
+	}
+}
+
+division_template = {
+	name = "Chetniks"
+	regiments = { 
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 1 y = 1 }
+		irregular_infantry = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = {x=0 y=0}
+		recon = {x=0 y=1}
+	}
+}
+
+units = {
+	# CHETNIKS
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3882
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9849
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6953
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9890
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 9602
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 9602
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 9602
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 630
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 630
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 3882
+		division_template = "Chetniks"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+
+	# INFANTRY
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3882
+		division_template = "Revolucionarna pešadijska divizija"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6940
+		division_template = "Revolucionarna pešadijska divizija"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9849
+		division_template = "Revolucionarna pešadijska divizija"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6953
+		division_template = "Revolucionarna pešadijska divizija"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 9890
+		division_template = "Revolucionarna pešadijska divizija"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+}

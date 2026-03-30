@@ -10,6 +10,11 @@ on_actions = {
 			add_to_variable = { months_passed = 1 }
 		}
 	}
+	on_yearly = {
+		effect = {
+			add_to_variable = { ITA_years_since_last_election = 1 }
+		}
+	}
 
 	# GLOBAL EVENTS
 	on_monthly_GRE = { # Greek Civil War Trigger
@@ -22,14 +27,14 @@ on_actions = {
 						value = 7
 						comparison = greater_than_or_equals
 					}
-					NOT = { has_country_flag = GRE_civil_war }
+					NOT = { has_global_flag = GRE_civil_war } # one time only
 					OR = {
 						BUL = { has_government = communism }
 						ROM = { has_government = communism }
 					}
 				}
 				
-				set_country_flag = GRE_civil_war
+				set_global_flag = GRE_civil_war
 				start_civil_war = {
 					ideology = communism
 					ruling_party = neutrality
@@ -38,35 +43,36 @@ on_actions = {
 					keep_political_leader = yes
 
 					# For the Provisional Democratic Government
-					set_country_flag = GRE_civil_war_communist # TAG = GRC
-					set_cosmetic_tag = GRE_movement
+					set_cosmetic_tag = GRE_movement	# TAG = GRC
+					load_oob = "GRC_uprising_1947"
 				}
 
 				YUG = {
 					start_civil_war = {
 						ideology = communism
 						ruling_party = fascism
-						states = { 106 970 803 802 }
-						capital = 108
-						keep_political_leader = yes
+						states = { 106 970 803 802 108 }
+						capital = 106
+						keep_political_leader = no
 
 						# For the Yugoslavian People's Republic
-						set_country_flag = YUG_civil_war_communist # TAG = PRY
-						set_cosmetic_tag = YUG_movement
+						set_cosmetic_tag = YUG_movement	# TAG = PRY
+						retire_country_leader = yes
 						promote_character = YUG_josip_broz_tito
 						declare_war_on = {
 							target = CRO
 							type = take_core_state
 						}
+						load_oob = "PRY_uprising_1947"
 					}
 				}
 				
 				add_named_threat = {
-					threat = 7.5
-					name = country_news_events.1.t
+					threat = 5
+					name = international_events.1.t
 				}
 				news_event = {
-					id = country_news_events.1
+					id = international_events.1
 					days = 1
 				}
 			}
@@ -83,11 +89,11 @@ on_actions = {
 						value = 12
 						comparison = greater_than_or_equals
 					}
-					NOT = { has_country_flag = EGY_civil_war }
-					ITA = { has_completed_focus = focus_ITA_politics_egypt_influence }
+					NOT = { has_global_flag = EGY_civil_war }
+					ITA = { has_completed_focus = focus_ITA_mediterranean_egypt_influence }
 				}
 
-				set_country_flag = EGY_civil_war
+				set_global_flag = EGY_civil_war
 				start_civil_war = {
 					ideology = fascism
 					ruling_party = neutrality
@@ -96,18 +102,32 @@ on_actions = {
 					keep_political_leader = yes
 
 					# For the Fascist State
-					add_ideas = mod_ITA_trained_militias 
-					set_country_flag = EGY_civil_war_fascist # TAG = IEG
-					set_cosmetic_tag = EGY_italy
+					add_ideas = mod_ITA_trained_militias  
+					set_cosmetic_tag = EGY_italy # TAG = IEG
 					news_event = {
-						id = country_news_events.2
+						id = international_events.2
 						days = 1
 					}
 					ITA = { country_event = ITA_missiolinis_events.1_egypt }
 					add_named_threat = {
-						threat = 5
-						name = country_news_events.2.t
+						threat = 3
+						name = international_events.2.t
 					}
+				}
+			}
+		}
+	}
+
+	on_daily_ITA = {
+		effect = {
+			if = {
+				limit = {
+					date > 1956.5.1
+				}
+
+				country_event = { # Mussolini Dead
+					id = ITA_events.2
+					random_days = 360
 				}
 			}
 		}

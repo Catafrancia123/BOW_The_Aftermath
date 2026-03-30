@@ -1,0 +1,10 @@
+defined_text = { # get news header
+    name = GetNewsHeader
+    text = { # il popolo d'italia
+        trigger = { original_tag = ITA }
+        localization_key = ITA_news_header
+    }
+	text = { # generic
+		localization_key = generic_news_header
+	}
+}

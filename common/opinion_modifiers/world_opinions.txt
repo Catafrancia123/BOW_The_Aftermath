@@ -1,5 +1,6 @@
 opinion_modifiers = {
 	SOV_start_balkan_uprising = { value = -20 }
-
 	member_of_third_naval_treaty = { value = 5 }
+	IFL_control_world_trade_fascist = { value = 10 }
+	IFL_control_world_trade_else = { value = -25 }
 }

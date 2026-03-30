@@ -1,5 +1,5 @@
 ﻿capital = 361 # Washington DC
-set_global_flag = MTG_third_london_conference
+set_global_flag = MTG_naval_treaties_flag
 
 oob = "USA_1936"
 

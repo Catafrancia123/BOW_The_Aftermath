@@ -45,7 +45,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "world_opinion_desc"
 					position = { x = 10 y = 10 }
-					font = "hoi4_18"
+					font = "hoi_18"
 					borderSize = { x = 0 y = 0 }
 					text = "GUI_world_opinion_desc"
 					maxHeight = 20
@@ -57,7 +57,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "world_opinion_desc2"
 				position = { x = 35 y = 150 }
-				font = "hoi4_18"
+				font = "hoi_18"
 				borderSize = { x = 0 y = 0 }
 				text = "GUI_world_opinion_desc2"
 				maxHeight = 20

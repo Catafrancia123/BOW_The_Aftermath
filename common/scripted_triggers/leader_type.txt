@@ -1,0 +1,35 @@
+ITA_leader_interventionist = {
+	custom_trigger_tooltip = {
+		tooltip = mod_ITA_interventionist_leaders
+		OR = {
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
+			}
+			has_country_leader = {
+				character = ITA_italo_balbo_new
+				ruling_only = yes
+			}
+			has_country_leader = {
+				character = ITA_gian_galeazzo_ciano_new
+				ruling_only = yes
+			}
+		}
+	}
+}
+
+ITA_leader_diplomatic = {
+	custom_trigger_tooltip = {
+		tooltip = mod_ITA_diplomatic_leaders
+		OR = {
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
+			}
+			has_country_leader = {
+				character = ITA_dino_grandi_new
+				ruling_only = yes
+			}
+		}
+	}
+}

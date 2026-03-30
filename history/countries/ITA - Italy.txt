@@ -2,12 +2,24 @@ capital = 2 # Rome, Lazio State
 set_convoys = 50
 set_research_slots = 5
 set_major = yes
+
+# Power of balance: Grand Council of Fascism vs Il Duce
 set_power_balance = { id = ITA_power_balance }
+add_power_balance_value = {
+	id = ITA_power_balance
+	value = 0.25 
+}
 
 # Flags
-set_global_flag = MTG_third_london_conference
-set_country_flag = ITA_leader_mussolini
+set_global_flag = MTG_naval_treaties_flag
 set_country_flag = ITA_missiolinis_level_flag
+ITA_missiolinis_initialize_missiolinis_system = yes # makes the missions active
+
+# Puppet flags
+set_global_flag = italian_east_africa_flag
+set_country_flag = ITA_AOI_puppet
+set_country_flag = ITA_CRO_puppet
+set_country_flag = ITA_YUG_puppet
 
 if = {
 	limit = { is_ai = no }
@@ -20,7 +32,6 @@ set_variable = { ITA_missiolinis_number_of_missions_resolved = 0 }
 set_variable = { ITA_missiolinis_active_missions = 0 }
 set_variable = { ITA_missiolinis_successful_missions = 0 }
 set_variable = { ITA_missiolinis_failed_missions = 0 }
-ITA_missiolinis_initialize_missiolinis_system = yes
 
 # Missiolinis Targets
 set_variable = { ITA_missiolinis_military_factories = 110 }
@@ -28,6 +39,9 @@ set_variable = { ITA_missiolinis_military_factories = 110 }
 # Missiolinis Target Days
 set_variable = { ITA_missiolinis_default_days = 365 }
 set_variable = { ITA_missiolinis_egypt_days = 100 }
+set_variable = { ITA_elections_days = 75 }
+set_variable = { ITA_years_since_last_election = 23 }
+set_variable = { ITA_elections_selected = ITA_benito_mussolini_new }
 
 # Balance of Power
 set_variable = { ITA_bop_take_over_ministry_cost = 50 }
@@ -36,6 +50,28 @@ set_variable = { ITA_bop_liturgical_reforms_cd = 365 }
 set_variable = { ITA_bop_concesions_to_the_bourgeoisie_cost = 100 }
 set_variable = { ITA_bop_concesions_to_the_bourgeoisie_days = 180 }
 set_variable = { ITA_bop_generic_council_cost = 25 }
+
+# Operation Liberation
+set_variable = { ITA_missiolinis_ol_days = 120 }
+set_variable = { ITA_operation_castle_front_escalation = 1 }
+
+# The Militia | Camicie Nere
+set_variable = { ITA_militia_cap = 12 }
+
+# Esercito Nazionale Italia
+set_variable = { ITA_eni_attack = -0.1 }
+set_variable = { ITA_eni_strength = -0.15 }
+set_variable = { ITA_eni_entrenchment = -0.05 }
+set_variable = { ITA_eni_initiative = -0.025 }
+
+set_variable = { ITA_eni_morale = 0.05 }
+set_variable = { ITA_eni_org_factor = 0.1 }
+set_variable = { ITA_eni_org_regain = 0.05 }
+set_variable = { ITA_eni_planning_speed = 0.1 }
+set_variable = { ITA_eni_org_moving = 0.1 }
+
+set_variable = { ITA_eni_attack_speed = 0 }
+set_variable = { ITA_eni_breakthrough = 0 }
 
 set_technology = {
 	# Fighters
@@ -155,7 +191,25 @@ set_technology = {
 }
 set_oob = "ITA_1947"
 
+# Special Projects
 complete_special_project = sp:sp_air_radar
+add_breakthrough_points = {
+  specialization = specialization_land
+  value = 3
+}
+add_breakthrough_points = {
+  specialization = specialization_air
+  value = 2
+}
+add_breakthrough_points = {
+  specialization = specialization_naval
+  value = 3
+}
+add_breakthrough_points = {
+  specialization = specialization_nuclear
+  value = 1
+}
+
 set_grand_doctrine = grand_battleplan # Land
 set_grand_doctrine = new_fleet_in_being # Navy
 set_grand_doctrine = new_strategic_destruction # Air
@@ -184,10 +238,10 @@ set_party_name = {
 }
 
 set_popularities = {
-	democratic = 21	# Allowed after the Republic Referendum in 1946
-	fascism = 75
-	communism = 4	# Heavily suppressed, still allowed
-	neutrality = 0	# No parties after the Republic Referendum in 1946
+	democratic = 15	# Allowed after the Republic Referendum in 1946
+	fascism = 75	# DUCE! DUCE! DUCE!
+	communism = 4	# Heavily suppressed, banned sooner
+	neutrality = 6	# Still some monarchists
 }
 
 # The Ideas
@@ -198,12 +252,16 @@ add_ideas = {
 	low_economic_mobilisation # Economy
 	
 	# National Spirits
-	mod_ITA_motivated_soldiers
+	mod_ITA_navy
+	mod_ITA_airforce
 	mod_member_of_colonial_agreement
 	ITA_servizio_informazione_militare_ns_vanilla
 	MTG_naval_treaty_adherent_reduced
 	vittoria_mutilata
 }
+# Military Dynamic Modifiers
+add_dynamic_modifier = { modifier = mod_ITA_army }
+
 # Ministers
 activate_advisor = ITA_gian_galeazzo_ciano_adv # Minister of Foreign Affairs
 activate_advisor = ITA_dino_grandi_adv # Parlimentary Speaker and Minister of Justice
@@ -216,6 +274,15 @@ army_experience = 50
 navy_experience = 100
 air_experience = 25
 
+# Diplomacy and stuff
+if = {
+	limit = {
+		has_start_date < 1947.01.02
+	}
+	give_guarantee = YUG
+}
+
+# Puppets
 set_autonomy = {
 	# Croatia
 	target = CRO
@@ -238,7 +305,6 @@ set_autonomy = {
 	end_civil_wars = no
 }
 
-set_global_flag = italian_east_africa_flag
 AOI = {
 	add_ideas = {
 		vittorio_emanuele_emperor_of_ethiopia
@@ -293,11 +359,6 @@ set_variable = {
 
 # Characters
 recruit_character = ITA_benito_mussolini_new
-1956.2.23 = {
-	kill_country_leader = yes
-	promote_character = ITA_dino_grandi_new
-}
-
 recruit_character = ITA_grand_council_new
 recruit_character = ITA_ferruccio_parri
 recruit_character = ITA_palmiro_togliatti
@@ -309,6 +370,7 @@ recruit_character = ITA_giovanni_messe
 recruit_character = ITA_sebastiano_visconti_prasca
 recruit_character = ITA_ubaldo_soddu
 recruit_character = ITA_italo_balbo_new
+recruit_character = ITA_italo_balbo_military
 recruit_character = ITA_ettore_bastico
 recruit_character = ITA_italo_gariboldi
 recruit_character = ITA_pietro_pintor
@@ -370,6 +432,7 @@ recruit_character = ITA_paolo_thaon_di_revel
 recruit_character = ITA_dino_grandi_new
 recruit_character = ITA_carlo_scorza
 recruit_character = ITA_gian_galeazzo_ciano_new
+recruit_character = ITA_gian_galeazzo_ciano_ultranationalist
 recruit_character = ITA_alberto_pariani
 recruit_character = ITA_romeo_bernotti
 recruit_character = ITA_aldo_pellegrini

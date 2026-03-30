@@ -1,16 +1,35 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_ITA_MISSIOLINI}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
 focus_tree = {
 	id = mod_ITA_focus
+	shared_focus = focus_IFL_mediterranean_total_control
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
-			tag = ITA
+			add = 20
+			original_tag = ITA
 		}
 	}
 	continuous_focus_position = {
-		x = 0
+		x = 2000
 		y = 1000
 	}
+
+# POLITICA DELL'ITALIA
+# POLITICS OF ITALY
 
 	focus = {
 		id = focus_ITA_politics_start
@@ -18,22 +37,27 @@ focus_tree = {
 		x = 10
 		y = 0
 		cost = 35
+		search_filters = {
+			FOCUS_FILTER_NEUTRAL
+			FOCUS_FILTER_POLITICAL
+		}
 		ai_will_do = {
-			base = 10
+			base = 20
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 3
+				factor = 5
 			}
 		}
 		completion_reward = {
 			add_political_power = 50
+			add_ideas = mod_ITA_strenghtened_nationalism
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ruler_traits = {
 				remove = lion_tamer
 				add = lion_tamer_2
 			}
 		}
 	}
-
 	# Italy focuses on Italian Irredentism
 	focus = {
 		id = focus_ITA_politics_irredentism
@@ -41,7 +65,11 @@ focus_tree = {
 		relative_position_id = focus_ITA_politics_start
 		x = -4
 		y = 1
-		cost = 30
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
 			focus = focus_ITA_politics_start
 		}
@@ -57,13 +85,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = mod_ITA_irredentism_bonus
+			custom_effect_tooltip = generic_skip_one_line_tt
 			news_event = {
 				id = ITA_news_events.1
 				days = 1
 			}
 		}
 	}
-
 	# Italy instead focuses on fascist supremacy (in the world)
 	focus = {
 		id = focus_ITA_politics_supremacy
@@ -71,7 +101,11 @@ focus_tree = {
 		relative_position_id = focus_ITA_politics_start
 		x = 4
 		y = 1
-		cost = 30
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_DIPLOMATIC
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
 			focus = focus_ITA_politics_start
 		}
@@ -87,6 +121,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			news_event = {
 				id = ITA_news_events.2
 				days = 1
@@ -94,13 +129,20 @@ focus_tree = {
 		}
 	}
 
+# MARE NOSTRUM: IL MEDITERRANEO
+# OUR SEA: THE MEDITERRANEAN
+
 	# Mare Nostrum branch (Italy locks key mediterranean countries under its influence
 	focus = {
-		id = focus_ITA_politics_mediterranean_focus
+		id = focus_ITA_mediterranean
 		icon = GFX_focus_generic_mediterranean_sea_focus
 		x = -6
 		y = 1
 		cost = 35
+		search_filters = {
+			FOCUS_FILTER_NEUTRAL
+			FOCUS_FILTER_POLITICAL
+		}
 		relative_position_id = focus_ITA_politics_irredentism
 		prerequisite = {
 			focus = focus_ITA_politics_irredentism
@@ -111,7 +153,7 @@ focus_tree = {
 			modifier = {
 				GRE = {
 					NOT = {
-						has_country_flag = GRE_civil_war
+						has_global_flag = GRE_civil_war
 					}
 				}
 				factor = 2
@@ -123,72 +165,61 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = mod_world_opinion_tt
-			effect_tooltip = {
-				every_other_country = {
-					limit = {
-						has_government = fascism
-						OR = {
-							is_major = yes
-							num_of_factories > 30
-						}
-					}
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ITA_start_mediterranean_conquest_fascism
+			every_other_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						is_major = yes
+						num_of_factories > 30
 					}
 				}
-				every_other_country = {
-					limit = {
-						NOT = {
-							has_government = fascism
-						}
-						OR = {
-							is_major = yes
-							num_of_factories > 30
-						}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_start_mediterranean_conquest_fascism
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
 					}
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ITA_start_mediterranean_conquest_else
+					OR = {
+						is_major = yes
+						num_of_factories > 30
 					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ITA_start_mediterranean_conquest_else
 				}
 			}
 		}
 	}
-
 	# Egyptian sub-branch (Italy wants the suez canal)
 	focus = {
-		id = focus_ITA_politics_egypt_influence
+		id = focus_ITA_mediterranean_egypt_influence
 		icon = GFX_focus_generic_befriend_egypt
 		x = -3
 		y = 1
 		cost = 70
-		relative_position_id = focus_ITA_politics_mediterranean_focus
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ITA_MISSIOLINI
+		}
+		relative_position_id = focus_ITA_mediterranean
 		prerequisite = {
-			focus = focus_ITA_politics_mediterranean_focus
+			focus = focus_ITA_mediterranean
 		}
 		bypass = {
-			EGY = { has_government = fascism }
+			EGY = {
+				has_government = fascism
+			}
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = mod_ITA_interventionist_leaders
-				OR = {
-					has_country_leader = {
-						character = ITA_benito_mussolini_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_italo_balbo_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_gian_galeazzo_ciano_new
-						ruling_only = yes
-					}
-				}
-			}
+			ITA_leader_interventionist = yes
 			EGY = {
 				NOT = {
 					has_government = fascism
@@ -200,7 +231,7 @@ focus_tree = {
 			modifier = {
 				EGY = {
 					NOT = {
-						has_country_flag = EGY_civil_war
+						has_global_flag = EGY_civil_war
 					}
 				}
 				factor = 2
@@ -219,14 +250,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = focus_ITA_politics_egypt_take_suez
+		id = focus_ITA_mediterranean_egypt_take_suez
 		icon = GFX_focus_generic_the_suez
 		x = 0
 		y = 1
 		cost = 35
-		relative_position_id = focus_ITA_politics_egypt_influence
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		relative_position_id = focus_ITA_mediterranean_egypt_influence
 		prerequisite = {
-			focus = focus_ITA_politics_egypt_influence
+			focus = focus_ITA_mediterranean_egypt_influence
 		}
 		available = {
 			EGY = {
@@ -250,17 +285,20 @@ focus_tree = {
 			}
 		}
 	}
-
 	# Greek sub-branch (Italy wants the key islands of greece and the Ionian sea)
 	focus = {
-		id = focus_ITA_politics_greece_oppress_communists
+		id = focus_ITA_mediterranean_greece_oppress_communists
 		icon = GFX_focus_GER_end_european_communism
-		relative_position_id = focus_ITA_politics_mediterranean_focus
+		relative_position_id = focus_ITA_mediterranean
 		x = 0
 		y = 1
 		cost = 70
+		search_filters = {
+			FOCUS_FILTER_NEUTRAL
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
-			focus = focus_ITA_politics_mediterranean_focus
+			focus = focus_ITA_mediterranean
 		}
 		available = {
 			OR = {
@@ -277,7 +315,7 @@ focus_tree = {
 			modifier = {
 				GRE = {
 					NOT = {
-						has_country_flag = GRE_civil_war
+						has_global_flag = GRE_civil_war
 					}
 				}
 				factor = 2
@@ -287,12 +325,32 @@ focus_tree = {
 				add = 5
 			}
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_req
+				GRE = {
+					has_global_flag = GRE_civil_war
+				}
+			}
+		}
+		bypass_effect = {
+			custom_effect_tooltip = focus_ITA_mediterranean_greece_oppress_communists_tt
+			add_ideas = mod_ITA_oppress_communism
+			every_country = {
+				limit = {
+					is_in_faction_with = ITA
+				}
+				add_ideas = mod_ITA_oppress_communism
+			}
+		}
 		completion_reward = {
 			give_guarantee = GRE
 			add_opinion_modifier = {
 				target = GRE
 				modifier = anti_comintern_pact_opinion
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = focus_ITA_mediterranean_greece_oppress_communists_tt
 			add_ideas = mod_ITA_oppress_communism
 			every_country = {
 				limit = {
@@ -303,32 +361,24 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = focus_ITA_politics_greece_befriend
+		id = focus_ITA_mediterranean_greece_befriend
 		icon = GFX_focus_generic_befriend_greece
-		relative_position_id = focus_ITA_politics_greece_oppress_communists
+		relative_position_id = focus_ITA_mediterranean_greece_oppress_communists
 		x = -1
 		y = 1
 		cost = 35
+		search_filters = {
+			FOCUS_FILTER_DIPLOMATIC
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
-			focus = focus_ITA_politics_greece_oppress_communists
+			focus = focus_ITA_mediterranean_greece_oppress_communists
 		}
 		mutually_exclusive = {
-			focus = focus_ITA_politics_greece_attack
+			focus = focus_ITA_mediterranean_greece_attack
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = mod_ITA_diplomatic_leaders
-				OR = {
-					has_country_leader = {
-						character = ITA_benito_mussolini_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_dino_grandi_new
-						ruling_only = yes
-					}
-				}
-			}
+			ITA_leader_diplomatic = yes
 			PRY = {
 				exists = no
 			}
@@ -345,36 +395,24 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = focus_ITA_politics_greece_attack
+		id = focus_ITA_mediterranean_greece_attack
 		icon = GFX_focus_generic_attack_greece
-		relative_position_id = focus_ITA_politics_greece_oppress_communists
+		relative_position_id = focus_ITA_mediterranean_greece_oppress_communists
 		x = 1
 		y = 1
 		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
-			focus = focus_ITA_politics_greece_oppress_communists
+			focus = focus_ITA_mediterranean_greece_oppress_communists
 		}
 		mutually_exclusive = {
-			focus = focus_ITA_politics_greece_befriend
+			focus = focus_ITA_mediterranean_greece_befriend
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = mod_ITA_interventionist_leaders
-				OR = {
-					has_country_leader = {
-						character = ITA_benito_mussolini_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_italo_balbo_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_gian_galeazzo_ciano_new
-						ruling_only = yes
-					}
-				}
-			}
+			ITA_leader_interventionist = yes
 			PRY = {
 				exists = no
 			}
@@ -396,89 +434,126 @@ focus_tree = {
 			}
 		}
 	}
-
-	# Middle East sub-branch (Italy wants coastal newly independent middle-eastern countries before moving on to the bigger ones)
 	focus = {
-		id = focus_ITA_politics_mideast_lebanon
-		icon = GFX_focus_generic_attack_lebanon
-		relative_position_id = focus_ITA_politics_mediterranean_focus
-		x = 3
-		y = 1
-		cost = 40
-		prerequisite = {
-			focus = focus_ITA_politics_mediterranean_focus
-		}
-		available = {
-			LEB = {
-				NOT = {
-					is_subject_of = FRA
-					has_government = fascism
-				}
-			}
-		}
-		completion_reward = {
-			LEB = {
-				add_ideas = {
-					mod_ITA_fascist_influence
-				}
-			}
-		}
-	}
-	focus = {
-		id = focus_ITA_politics_mideast_syria
-		icon = GFX_focus_IRQ_IRQ_demand_syria_hashemite
-		relative_position_id = focus_ITA_politics_mideast_lebanon
-		x = 0
-		y = 1
-		cost = 50
-		prerequisite = {
-			focus = focus_ITA_politics_mideast_lebanon
-		}
-		available = {
-			SYR = {
-				NOT = {
-					is_subject_of = FRA
-					has_government = fascism
-				}
-			}
-		}
-		completion_reward = {
-			SYR = {
-				add_ideas = {
-					mod_ITA_fascist_influence
-				}
-			}
-		}
-	}
-	focus = {
-		id = focus_ITA_politics_mideast_palestine
-		icon = GFX_focus_IRQ_demand_palestine
-		relative_position_id = focus_ITA_politics_mideast_lebanon
+		# Demand the bosphorus strait
+		id = focus_ITA_mediterranean_turkey
+		icon = GFX_focus_generic_attack_turkey
+		relative_position_id = focus_ITA_mediterranean_greece_oppress_communists
 		x = 0
 		y = 2
 		cost = 70
-		prerequisite = {
-			focus = focus_ITA_politics_mideast_syria
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = {
+			focus = focus_ITA_mediterranean_greece_attack
+			focus = focus_ITA_mediterranean_greece_befriend
+		}
+		modifier = { TUR = { stability_factor = -0.1 } }
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = mod_ITA_interventionist_leaders
-				OR = {
-					has_country_leader = {
-						character = ITA_benito_mussolini_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_italo_balbo_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_gian_galeazzo_ciano_new
-						ruling_only = yes
-					}
+			ITA_leader_interventionist = yes
+		}
+		completion_reward = {
+			add_to_array = { ITA_requested_states = 797 }
+			TUR = {
+				country_event = {
+					id = ITA_generic_events.4
+					days = 1
 				}
 			}
-			
+		}
+	}
+	# Middle East sub-branch (Italy wants coastal newly independent middle-eastern countries before moving on to the bigger ones)
+	focus = {
+		id = focus_ITA_mediterranean_mideast_lebanon
+		icon = GFX_focus_generic_attack_lebanon
+		relative_position_id = focus_ITA_mediterranean
+		x = 3
+		y = 1
+		cost = 40
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_mediterranean
+		}
+		available = {
+			LEB = {
+				NOT = {
+					is_subject_of = FRA
+					has_government = fascism
+				}
+			}
+		}
+		bypass = {
+			LEB = {
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			LEB = {
+				add_ideas = {
+					mod_ITA_fascist_influence
+				}
+			}
+		}
+	}
+	focus = {
+		id = focus_ITA_mediterranean_mideast_syria
+		icon = GFX_focus_generic_attack_syria
+		relative_position_id = focus_ITA_mediterranean_mideast_lebanon
+		x = 0
+		y = 1
+		cost = 50
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_mediterranean_mideast_lebanon
+		}
+		available = {
+			SYR = {
+				NOT = {
+					is_subject_of = FRA
+					has_government = fascism
+				}
+			}
+		}
+		bypass = {
+			SYR = {
+				has_government = fascism
+			}
+		}
+		bypass_effect = {
+			complete_national_focus = focus_ITA_mediterranean_mideast_lebanon
+		}
+		completion_reward = {
+			SYR = {
+				add_ideas = {
+					mod_ITA_fascist_influence
+				}
+			}
+		}
+	}
+	focus = {
+		id = focus_ITA_mediterranean_mideast_palestine
+		icon = GFX_focus_IRQ_demand_palestine
+		relative_position_id = focus_ITA_mediterranean_mideast_lebanon
+		x = 0
+		y = 2
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_mediterranean_mideast_syria
+		}
+		available = {
+			ITA_leader_interventionist = yes
 			OR = {
 				UAR = {
 					exists = yes
@@ -510,6 +585,9 @@ focus_tree = {
 			}
 		}
 	}
+
+# IL DUCE D'ITALIA & AFFARI INTERNI
+# THE DUCE OF ITALY & INTERNAL AFFAIRS
 	# Italy chooses the future of the holder of the 'Duce' title.
 	focus = {
 		id = focus_ITA_politics_leader
@@ -518,6 +596,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 35
+		search_filters = {
+			FOCUS_FILTER_NEUTRAL
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
 			focus = focus_ITA_politics_supremacy
 			focus = focus_ITA_politics_irredentism
@@ -529,25 +611,45 @@ focus_tree = {
 				factor = 2
 			}
 		}
+		available = {
+			date < 1951.1.1
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
+			}
+		}
+		bypass = {
+			date > 1951.1.1
+		}
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
-			
+			add_political_power = 75
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = focus_ITA_politics_leader_tt
+			unlock_decision_category_tooltip = ITA_election_decisions
+			ITA_elections_init = yes			# scripted effect
+			news_event = {
+				id = ITA_news_events.4
+				days = 1
+			}
 		}
 	}
-
 	# Mussolini sub-branch (Italy continues with Mussolini and consecerating him as leader for life)
 	focus = {
-		id = focus_ITA_politics_leader_mussolini
+		id = focus_ITA_leader_mussolini
 		icon = GFX_focus_ITA_culto_del_duce
 		relative_position_id = focus_ITA_politics_leader
 		mutually_exclusive = {
-			focus = focus_ITA_politics_leader_successor
-			focus = focus_ITA_politics_leader_council
+			focus = focus_ITA_leader_successor
+			focus = focus_ITA_leader_council
 		}
 		x = -4
 		y = 1
-		cost = 30
+		cost = 45
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
 			focus = focus_ITA_politics_leader
 		}
@@ -558,23 +660,40 @@ focus_tree = {
 				factor = 2
 			}
 		}
+		bypass = {
+			date < 1951.1.1
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
+			}
+		}
 		completion_reward = {
-			add_political_power = 50
+			add_power_balance_value = {
+				id = ITA_power_balance
+				value = 0.15
+			}
+			set_variable = {
+				ITA_elections_selected = ITA_benito_mussolini_new
+			}
+			set_country_flag = ITA_election_selected_mussolini
 		}
 	}
-
 	# Sucessor sub-brach (Mussolini replaces himself with a sucessor to lead next, as he is getting old)
 	focus = {
-		id = focus_ITA_politics_leader_successor
+		id = focus_ITA_leader_successor
 		icon = GFX_focus_generic_italy_first
 		relative_position_id = focus_ITA_politics_leader
 		mutually_exclusive = {
-			focus = focus_ITA_politics_leader_mussolini
-			focus = focus_ITA_politics_leader_council
+			focus = focus_ITA_leader_mussolini
+			focus = focus_ITA_leader_council
 		}
 		x = 0
 		y = 1
-		cost = 30
+		cost = 20
+		search_filters = {
+			FOCUS_FILTER_NEUTRAL
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
 			focus = focus_ITA_politics_leader
 		}
@@ -584,62 +703,91 @@ focus_tree = {
 	}
 	# Dino Grandi focuses on diplomatic relations and spreads fascism with influence while supporting fascist rebellions with proxy wars.
 	focus = {
-		id = focus_ITA_politics_leader_dino_grandi
+		id = focus_ITA_leader_dino_grandi
 		icon = GFX_focus_ITA_dino_grandi
-		relative_position_id = focus_ITA_politics_leader_successor
+		relative_position_id = focus_ITA_leader_successor
+		mutually_exclusive = {
+			focus = focus_ITA_leader_italo_balbo
+			focus = focus_ITA_leader_galeazzo_ciano
+		}
 		x = 2
 		y = 1
 		cost = 30
+		search_filters = {
+			FOCUS_FILTER_DIPLOMATIC
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
-			focus = focus_ITA_politics_leader_successor
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	# Italo Balbo focuses on the sucessfulness of Italian Irredentism, thus developing the military and technology to support it.
-	focus = {
-		id = focus_ITA_politics_leader_italo_balbo
-		icon = GFX_focus_ITA_italo_balbo
-		relative_position_id = focus_ITA_politics_leader_successor
-		x = 0
-		y = 1
-		cost = 30
-		prerequisite = {
-			focus = focus_ITA_politics_leader_successor
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	# Galeazzo Ciano focuses on the 'spazio vitale' of Italy, thus acting a more active role in global politics and conflicts.
-	focus = {
-		id = focus_ITA_politics_leader_galeazzo_ciano
-		icon = GFX_focus_GER_the_supreme_leader
-		relative_position_id = focus_ITA_politics_leader_successor
-		x = -2
-		y = 1
-		cost = 30
-		prerequisite = {
-			focus = focus_ITA_politics_leader_successor
+			focus = focus_ITA_leader_successor
 		}
 		completion_reward = {
 			add_political_power = 50
 		}
 	}
 
-	# Council sub-brach (Mussolini addresses leadership will be done with the Grand Council of Fascism)
+	# Italo Balbo focuses on the sucessfulness of Italian Irredentism, thus developing the military and technology to support it.
 	focus = {
-		id = focus_ITA_politics_leader_council
+		id = focus_ITA_leader_italo_balbo
+		icon = GFX_focus_ITA_italo_balbo
+		relative_position_id = focus_ITA_leader_successor
+		mutually_exclusive = {
+			focus = focus_ITA_leader_galeazzo_ciano
+			focus = focus_ITA_leader_dino_grandi
+		}
+		x = 0
+		y = 1
+		cost = 30
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_leader_successor
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# Galeazzo Ciano focuses on the 'spazio vitale' of Italy, thus acting a more active role in global politics and conflicts.
+	focus = {
+		id = focus_ITA_leader_galeazzo_ciano
+		icon = GFX_focus_GER_the_supreme_leader
+		relative_position_id = focus_ITA_leader_successor
+		mutually_exclusive = {
+			focus = focus_ITA_leader_italo_balbo
+			focus = focus_ITA_leader_dino_grandi
+		}
+		x = -2
+		y = 1
+		cost = 30
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_leader_successor
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# Council sub-branch (Mussolini addresses leadership will be done with the Grand Council of Fascism)
+	focus = {
+		id = focus_ITA_leader_council
 		icon = GFX_focus_BUL_form_a_regency_council
 		relative_position_id = focus_ITA_politics_leader
 		mutually_exclusive = {
-			focus = focus_ITA_politics_leader_mussolini
-			focus = focus_ITA_politics_leader_successor
+			focus = focus_ITA_leader_mussolini
+			focus = focus_ITA_leader_successor
 		}
 		x = 4
 		y = 1
-		cost = 30
+		cost = 45
+		search_filters = {
+			FOCUS_FILTER_DIPLOMATIC
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
 			focus = focus_ITA_politics_leader
 		}
@@ -647,94 +795,190 @@ focus_tree = {
 			add_political_power = 50
 		}
 	}
-
 	# collective leadership
 	focus = {
-		id = focus_ITA_politics_leader_collective
+		id = focus_ITA_leader_council_collective
 		icon = GFX_focus_GER_the_supreme_leader
-		relative_position_id = focus_ITA_politics_leader_council
+		relative_position_id = focus_ITA_leader_council
 		x = 0
 		y = 2
 		cost = 45
+		search_filters = {
+			FOCUS_FILTER_DIPLOMATIC
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
-			focus = focus_ITA_politics_leader_council
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# iron fist
-	focus = {
-		id = focus_ITA_politics_leader_iron_fist
-		icon = GFX_focus_GER_the_supreme_leader
-		relative_position_id = focus_ITA_politics_leader_mussolini
-		x = 0
-		y = 2
-		cost = 45
-		prerequisite = {
-			focus = focus_ITA_politics_leader_mussolini
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# And all of that merges here
-	focus = {
-		id = focus_ITA_politics_leader_plan
-		icon = GFX_focus_GER_the_supreme_leader
-		relative_position_id = focus_ITA_politics_leader_italo_balbo
-		x = 0
-		y = 1
-		cost = 35
-		prerequisite = {
-			focus = focus_ITA_politics_leader_iron_fist
-			focus = focus_ITA_politics_leader_dino_grandi
-			focus = focus_ITA_politics_leader_italo_balbo
-			focus = focus_ITA_politics_leader_galeazzo_ciano
-			focus = focus_ITA_politics_leader_collective
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# Fortify Borders sub-branch
-	focus = {
-		id = focus_ITA_politics_fortify_borders
-		icon = GFX_goal_fortify_the_westwall
-		relative_position_id = focus_ITA_politics_leader_mussolini
-		x = 0
-		y = 3
-		cost = 35
-		prerequisite = {
-			focus = focus_ITA_politics_leader_plan
+			focus = focus_ITA_leader_council
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = GRE_civil_war_req
-				GRE = { has_country_flag = GRE_civil_war }
+				tooltip = ITA_elections_done_tt
+				has_country_flag = ITA_successor_elections_focus_done
 			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# Consecrate mussolini's leadership
+	focus = {
+		id = focus_ITA_leader_mussolini_consecrate
+		icon = GFX_focus_ITA_capo_supremo
+		relative_position_id = focus_ITA_leader_mussolini
+		x = 0
+		y = 2
+		cost = 45
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_leader_mussolini
+		}
+		available = {
 			custom_trigger_tooltip = {
-				tooltip = mod_ITA_interventionist_leaders
-				OR = {
-					has_country_leader = {
-						character = ITA_benito_mussolini_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_italo_balbo_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_gian_galeazzo_ciano_new
-						ruling_only = yes
+				tooltip = ITA_elections_done_tt
+				has_country_flag = ITA_successor_elections_focus_done
+			}
+			ITA = {
+				has_completed_focus = focus_ITA_mediterranean_egypt_influence
+				has_completed_focus = focus_ITA_mediterranean_greece_oppress_communists
+			}
+			OR = {
+				EGY = {
+					has_government = fascism
+				}
+				GRE = {
+					NOT = {
+						has_government = communism
 					}
 				}
 			}
 		}
+		bypass = {
+			date < 1951.1.1
+			has_country_leader = {
+				character = ITA_benito_mussolini_new
+				ruling_only = yes
+			}
+		}
+		bypass_effect = {
+			completion_reward = {
+				ITA = {
+					add_ideas = mod_ITA_mussolini_for_life
+				}
+			}
+		}
+		completion_reward = {
+			ITA = {
+				add_ideas = mod_ITA_mussolini_for_life
+			}
+			AOI = {
+				swap_ideas = {
+					remove_idea = vittorio_emanuele_emperor_of_ethiopia
+					add_idea = vittorio_emanuele_albania_ethiopia
+				}
+			}
+			EGY = {
+				add_ideas = vittorio_emanuele_albania_ethiopia
+			}
+		}
+	}
+	# And all of that merges here (dummy focus??)
+	focus = {
+		id = focus_ITA_leader_plan
+		icon = GFX_focus_GER_the_supreme_leader
+		relative_position_id = focus_ITA_leader_italo_balbo
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = focus_ITA_leader_mussolini_consecrate
+			focus = focus_ITA_leader_dino_grandi
+			focus = focus_ITA_leader_italo_balbo
+			focus = focus_ITA_leader_galeazzo_ciano
+			focus = focus_ITA_leader_council_collective
+		}
+		bypass = {
+			date < 1951.1.1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_elections_done_tt
+				has_country_flag = ITA_successor_elections_focus_done
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
 
+	# Interventionist sub-branch
+	focus = {
+		id = focus_ITA_empower_blackshirts
+		icon = GFX_focus_ITA_blackshirts
+		relative_position_id = focus_ITA_leader_plan
+		x = 0
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_leader_plan
+		}
+
+		allow_branch = {
+			OR = {
+				has_completed_focus = focus_ITA_leader_mussolini
+				has_completed_focus = focus_ITA_leader_galeazzo_ciano
+			}
+			has_completed_focus = focus_ITA_leader_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_req
+				GRE = {
+					has_global_flag = GRE_civil_war
+				}
+			}
+			ITA_leader_interventionist = yes
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# Interventionist sub-branch (balbo)
+	focus = {
+		id = focus_ITA_empower_blackshirts_balbo
+		icon = GFX_focus_ITA_blackshirts
+		relative_position_id = focus_ITA_leader_plan
+		x = -2
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_leader_plan
+		}
+
+		allow_branch = {
+			has_completed_focus = focus_ITA_leader_italo_balbo
+			has_completed_focus = focus_ITA_leader_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_req
+				GRE = {
+					has_global_flag = GRE_civil_war
+				}
+			}
+			ITA_leader_interventionist = yes
+		}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -744,69 +988,260 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_politics_diplomatic
 		icon = GFX_goal_generic_dangerous_deal
-		relative_position_id = focus_ITA_politics_leader_council
+		relative_position_id = focus_ITA_leader_plan
 		x = 0
-		y = 3
+		y = 1
 		cost = 35
+		search_filters = {
+			FOCUS_FILTER_DIPLOMATIC
+			FOCUS_FILTER_POLITICAL
+		}
 		prerequisite = {
-			focus = focus_ITA_politics_leader_plan
+			focus = focus_ITA_leader_plan
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = focus_ITA_leader_council
+				has_completed_focus = focus_ITA_leader_dino_grandi
+			}
+		}
+		has_completed_focus = focus_ITA_leader_plan
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_req
+				GRE = {
+					has_global_flag = GRE_civil_war
+				}
+			}
+			ITA_leader_interventionist = yes
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# Military Government (only if balbo gets picked)
+	focus = {
+		id = focus_ITA_military_government
+		icon = GFX_focus_generic_military_dictatorship
+		relative_position_id = focus_ITA_leader_plan
+		x = 2
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_leader_plan
+		}
+		allow_branch = {
+			has_completed_focus = focus_ITA_leader_italo_balbo
+			has_completed_focus = focus_ITA_leader_plan
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GRE_civil_war_req
-				GRE = { has_country_flag = GRE_civil_war }
+				GRE = {
+					has_global_flag = GRE_civil_war
+				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = mod_ITA_interventionist_leaders
-				OR = {
-					has_country_leader = {
-						character = ITA_benito_mussolini_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_italo_balbo_new
-						ruling_only = yes
-					}
-					has_country_leader = {
-						character = ITA_gian_galeazzo_ciano_new
-						ruling_only = yes
-					}
+
+			has_country_leader = {
+				character = ITA_italo_balbo_new
+				ruling_only = yes
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_ITA_military_government_switch_tt
+			set_party_name = {
+				ideology = fascism
+				long_name = mod_ITA_fascist_military_party_long
+				name = mod_ITA_fascist_military_party
+			}
+			hidden_effect = { retire_country_leader = yes }
+			promote_country_leader = ITA_italo_balbo_military
+
+			custom_effect_tooltip = focus_ITA_military_government_dismantle_tt
+			remove_power_balance = ITA_power_balance
+		}
+	}
+
+# EUROPA ITALIANA IMMAGINATA
+# VISIONED ITALIAN EUROPE
+	# Italy focuses on the balkans (starting with rebellions to full size operations)
+	focus = {
+		id = focus_ITA_europe
+		icon = GFX_focus_usa_focus_on_europe
+		relative_position_id = focus_ITA_politics_supremacy
+		x = 7
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_politics_supremacy
+			focus = focus_ITA_politics_irredentism
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# The Ticino Problem sub-branch
+	focus = {
+		id = focus_ITA_europe_north_ticino
+		icon = GFX_focus_attack_switzerland
+		relative_position_id = focus_ITA_europe
+		x = -4
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_europe
+		}
+		completion_reward = {
+			SWI = {
+				country_event = {
+					id = BBA_italy_interaction_events.1
+					days = 2
+					random = 6
 				}
 			}
 		}
-
+	}
+	# Operation Castle Front (Operazione Fronte del Castello) sub-branch
+	focus = {
+		id = focus_ITA_europe_operation_castle_front
+		icon = GFX_focus_generic_balkans_focus
+		relative_position_id = focus_ITA_europe
+		x = 0
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_europe
+		}
 		completion_reward = {
 			add_political_power = 50
 		}
 	}
-
-	# Italy focuses on the balkans (starting with rebellions to full size operations)
+	# The Hungarian Revolution
 	focus = {
-		id = focus_ITA_politics_balkan_focus
-		icon = GFX_focus_generic_balkans_focus
-		relative_position_id = focus_ITA_politics_supremacy
-		x = 6
+		id = focus_ITA_liberation_hungarian_revolution
+		icon = GFX_focus_generic_befriend_hungary
+		relative_position_id = focus_ITA_europe_operation_castle_front
+		x = -2
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_europe_operation_castle_front
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# Italy invades Bulgaria
+	focus = {
+		id = focus_ITA_liberation_invade_bulgaria
+		icon = GFX_focus_generic_attack_bulgaria
+		relative_position_id = focus_ITA_europe_operation_castle_front
+		x = 0
 		y = 1
 		cost = 35
 		prerequisite = {
-			focus = focus_ITA_politics_supremacy
+			focus = focus_ITA_europe_operation_castle_front
 		}
-		available = {
-			
+		completion_reward = {
+			add_political_power = 50
 		}
-
+	}
+	# Assassinate Stalin
+	focus = {
+		id = focus_ITA_liberation_assassinate_stalin
+		icon = GFX_focus_fra_loyalty_stalin
+		relative_position_id = focus_ITA_europe_operation_castle_front
+		x = 2
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INTERVENTIONIST
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = focus_ITA_europe_operation_castle_front
+		}
 		completion_reward = {
 			add_political_power = 50
 		}
 	}
 
-	# Italian Industry Branch (Italy focuses on building up its industry and infrastructure to prepare for the upcoming war)
+# INDUSTRIA D'ITALIA
+# INDUSTRY OF ITALY
+
+	# Italian Industry Branch (Implementing the new italian corporatist system)
 	focus = {
 		id = focus_ITA_industry
-		icon = GFX_goal_generic_construction
-		x = 30
+		icon = GFX_ITA_focus_military_industrialization
+		x = 40
 		y = 0
 		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_ITA_MISSIOLINI
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			# tooltip the law
+			effect_tooltip = {
+				tooltip = focus_ITA_industry_tt
+				add_ideas = italian_corporatism
+			}
+			# idea
+			add_timed_idea = {
+				idea = mod_ITA_miltary_industrialization				# dynamic idea linked with law????
+				years = 5
+			}
+			add_country_leader_trait = devoted_corporatist
+			# mission
+			country_event = {
+				id = ITA_missiolinis_events.1_industry
+				hours = 1
+			}
+		}
+	}
+	focus = {
+		# Colonial Development sub-branch
+		id = focus_ITA_industry_colonial
+		icon = GFX_focus_generic_africa_factory
+		relative_position_id = focus_ITA_industry
+		x = -4
+		y = 1
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = focus_ITA_industry
+		}
 		ai_will_do = {
 			base = 10
 			modifier = {
@@ -816,23 +1251,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = {
-                idea = mod_ITA_miltary_industrialization
-                years = 5
-            }
-			country_event = {
-				id = ITA_missiolinis_events.1_industry
-				hours = 1
+				idea = mod_ITA_colonial_industry_support
+				years = 2
 			}
 		}
 	}
 	focus = {
-		id = focus_ITA_industry_colonial_support
-		icon = GFX_focus_ITA_ministry_of_italian_africa
+		# Mainland sub-branch
+		id = focus_ITA_industry_mainland
+		icon = GFX_focus_generic_italy_first
 		relative_position_id = focus_ITA_industry
-		x = 0
+		x = 4
 		y = 1
 		cost = 70
-		prerequisite = { focus = focus_ITA_industry }
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = focus_ITA_industry
+		}
 		ai_will_do = {
 			base = 10
 			modifier = {
@@ -841,10 +1278,585 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-            add_timed_idea = {
-                idea = mod_ITA_colonial_industry_support
-                years = 2
-            }
+			add_political_power = 50
+		}
+	}
+	focus = {
+		# Northern Italy sub-branch
+		id = focus_ITA_mainland_north
+		icon = GFX_focus_ITA_northern_industry
+		relative_position_id = focus_ITA_industry_mainland
+		x = -2
+		y = 1
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = focus_ITA_industry_mainland
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		# The three main economic hubs of Northern Italy: Milan, Turin, and Venice
+		id = focus_ITA_mainland_north_economic_hubs
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = focus_ITA_mainland_north
+		x = 0
+		y = 1
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = focus_ITA_mainland_north
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		# Southern Italy sub-branch
+		id = focus_ITA_mainland_south
+		icon = GFX_focus_ITA_southern_industry
+		relative_position_id = focus_ITA_industry_mainland
+		x = 2
+		y = 1
+		cost = 70
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = focus_ITA_industry_mainland
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		# More Mils!
+		id = focus_ITA_south_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = focus_ITA_mainland_south
+		x = 0
+		y = 1
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = focus_ITA_mainland_south
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+# ESERCITO NAZIONALE ITALIA
+# ITALIAN NATIONAL ARMY
+	# The Army Branch
+	focus = {
+		id = focus_ITA_army
+		icon = GFX_focus_ITA_bersaglieri
+		x = 55
+		y = 0
+		cost = 35
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ITA_army_primacy_bba #land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	# The Grand Battleplan Sub-Branch
+	focus = {
+		id = focus_ITA_army_grand_battleplan
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = focus_ITA_army
+		x = -6
+		y = 1
+		cost = 35
+		mutually_exclusive = {
+			focus = focus_ITA_army_superior_firepower
+			focus = focus_ITA_army_mobile_warfare
+		}
+		prerequisite = {
+			focus = focus_ITA_army
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 2
+			}
+		}
+		completion_reward = {
+			# DO NOT CHANGE THE VARIABLES WITHOUT ADJUSTING THE LOC!
+			custom_effect_tooltip = ITA_eni_intro_tt
+			add_to_variable = { 
+				ITA_eni_entrenchment = 0.075 
+				tooltip = ITA_eni_entrenchment_tt
+				VALUE = "§G+7.50%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_org_regain = 0.025
+				tooltip = ITA_eni_org_regain_tt
+				VALUE = "§G+2.50%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_org_factor = 0.05 
+				tooltip = ITA_eni_org_factor_tt
+				VALUE = "§G+5.00%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_planning_speed = 0.025 
+				tooltip = ITA_eni_planning_speed_tt
+				VALUE = "§G+2.50%§!"
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery = {
+				amount = 150
+				folder = land
+				grand_doctrine = grand_battleplan
+			}
+		}
+	}
+
+	# The Mobile Warfare Sub-Branch
+	focus = {
+		id = focus_ITA_army_mobile_warfare
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = focus_ITA_army
+		x = 0
+		y = 1
+		cost = 50
+		prerequisite = {
+			focus = focus_ITA_army
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_army_grand_battleplan
+			focus = focus_ITA_army_superior_firepower
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			# DO NOT CHANGE THE VARIABLES WITHOUT ADJUSTING THE LOC!
+			custom_effect_tooltip = ITA_eni_intro_tt
+			add_to_variable = { 
+				ITA_eni_initiative = 0.075 
+				tooltip = ITA_eni_initiative_tt
+				VALUE = "§G+7.50%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_attack = 0.05 
+				tooltip = ITA_eni_attack_tt
+				VALUE = "§G+5.00%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_attack_speed = 0.075 
+				tooltip = ITA_eni_attack_speed_tt
+				VALUE = "§G+7.50%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_breakthrough = 0.05 
+				tooltip = ITA_eni_breakthrough_tt
+				VALUE = "§G+5.00%§!"
+			} 
+
+			# gotta go fast!
+			subtract_from_variable = { 
+				ITA_eni_planning_speed = 0.05
+				tooltip = ITA_eni_planning_speed_tt
+				VALUE = "§R-5.00%§!" 
+			}
+			subtract_from_variable = { 
+				ITA_eni_entrenchment = 0.05
+				tooltip = ITA_eni_entrenchment_tt
+				VALUE = "§R-5.00%§!"
+			}
+			add_to_variable = { 
+				ITA_eni_org_moving = 0.025 
+				tooltip = ITA_eni_org_moving_tt
+				VALUE = "§R+2.50%§!"
+			} 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery = {
+				amount = 150
+				folder = land
+				grand_doctrine = mobile_warfare
+			}
+		}
+	}
+	# The Superior Firepower Sub-Branch
+	focus = {
+		id = focus_ITA_army_superior_firepower
+		icon = GFX_focus_generic_tank_air_support
+		relative_position_id = focus_ITA_army
+		x = 6
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = focus_ITA_army
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_army_grand_battleplan
+			focus = focus_ITA_army_mobile_warfare
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			# DO NOT CHANGE THE VARIABLES WITHOUT ADJUSTING THE LOC!
+			custom_effect_tooltip = focus_ITA_army_mobile_warfare_tt
+			add_to_variable = { ITA_eni_initiative = 0.075 }
+			add_to_variable = { ITA_eni_attack = 0.05 }
+			add_to_variable = { ITA_eni_attack_speed = 0.075 }
+			add_to_variable = { ITA_eni_breakthrough_major = 0.05 } 
+
+			# more boom = more resources
+			subtract_from_variable = { ITA_eni_planning_speed = 0.05 }
+			subtract_from_variable = { ITA_eni_entrenchment = 0.05 }
+			add_to_variable = { ITA_eni_org_moving = 0.025 } 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery = {
+				amount = 150
+				folder = land
+				grand_doctrine = superior_firepower
+			}
+		}
+	}
+	# Reorganize the infantry (old -> modern templates)
+	focus = {
+		id = focus_ITA_army_reorganize_infantry
+		icon = GFX_focus_chi_army_reform
+		relative_position_id = focus_ITA_army_grand_battleplan
+		x = 3
+		y = 1
+		cost = 60
+		prerequisite = {
+			focus = focus_ITA_army_grand_battleplan
+			focus = focus_ITA_army_mobile_warfare
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# Gun companies invent and make italian weapons for the military (any branch)
+	focus = {
+		id = focus_ITA_army_national_arms
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = focus_ITA_army_mobile_warfare
+		x = 3
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = focus_ITA_army_grand_battleplan
+			focus = focus_ITA_army_mobile_warfare
+			focus = focus_ITA_army_superior_firepower
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# More efficient guns!
+	focus = {
+		id = focus_ITA_army_efficient_arms
+		icon = GFX_goal_generic_production
+		relative_position_id = focus_ITA_army_national_arms
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = focus_ITA_army_national_arms
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# Superior Artillery, and even railguns? (SF branch)
+	focus = {
+		id = focus_ITA_army_superior_artillery
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = focus_ITA_army_superior_firepower
+		x = 0
+		y = 2
+		cost = 60
+		prerequisite = {
+			focus = focus_ITA_army_superior_firepower
+		}
+		prerequisite = {
+			focus = focus_ITA_army_national_arms
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# Old leaders still kicking it! (GB branch)
+	focus = {
+		id = focus_ITA_army_old_leadership
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = focus_ITA_army_grand_battleplan
+		x = 0
+		y = 2
+		cost = 35
+		prerequisite = {
+			focus = focus_ITA_army_grand_battleplan
+		}
+		prerequisite = {
+			focus = focus_ITA_army_reorganize_infantry
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_army_new_leadership
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	# New younger leadership is better (any branch)
+	focus = {
+		id = focus_ITA_army_new_leadership
+		icon = GFX_focus_generic_advanced_military_studies
+		relative_position_id = focus_ITA_army_mobile_warfare
+		x = 0
+		y = 2
+		cost = 60
+		prerequisite = {
+			focus = focus_ITA_army_reorganize_infantry
+		}
+		prerequisite = {
+			focus = focus_ITA_army_superior_firepower
+			focus = focus_ITA_army_mobile_warfare
+			focus = focus_ITA_army_grand_battleplan
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_army_old_leadership
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		# Military over all!
+		id = focus_ITA_army_military_first
+		icon = GFX_focus_generic_full_social_mobilization
+		relative_position_id = focus_ITA_army_mobile_warfare
+		x = 0
+		y = 3
+		cost = 70
+		prerequisite = {
+			focus = focus_ITA_army_old_leadership
+			focus = focus_ITA_army_new_leadership
+			focus = focus_ITA_army_superior_artillery
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1.5
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+}
+
+# Joint focuses
+joint_focus = { # Total control of the mediterranean by the IFL
+	id = focus_IFL_mediterranean_total_control
+	icon = GFX_goal_generic_trade
+	x = 0
+	y = 1
+	cost = 35
+	search_filters = {
+		FOCUS_FILTER_INTERVENTIONIST
+		FOCUS_FILTER_POLITICAL
+	}
+	joint_trigger = {
+		original_tag = SPR
+		original_tag = ITA
+	}
+	bypass = {
+		has_global_flag = suez_canal_under_IFL
+	}
+	available = {
+		ITA = {
+			AND = {
+				has_completed_focus = focus_ITA_mediterranean_total_control
+				has_completed_focus = focus_ITA_mediterranean_turkey
+			}
+			EGY = {
+				OR = {
+					has_government = fascism
+					is_in_faction_with = ITA
+					is_subject_of = ITA
+				}
+			}
+			# check if EGY or ITA has the suez canal
+			OR = {
+				EGY = {
+					controls_state = 446
+				}
+				ITA = {
+					controls_state = 446
+				}
+			}
+			controls_state = 797
+		}
+		SPR = {
+			controls_state = 290
+			controls_state = 169
+			if = {
+				limit = {
+					has_country_flag = SPR_has_gibraltar
+				}
+				controls_state = 118
+			}
+		}
+	}
+	ai_will_do = {
+		base = 5
+		modifier = {
+			is_historical_focus_on = yes
+			add = 5
+		}
+	}
+	completion_reward = {
+		news_event = {
+			id = ITA_news_events.5
+			days = 1
+		}
+		hidden_effect = {
+			set_global_flag = suez_canal_under_IFL
+			set_global_flag = gibraltar_strait_under_IFL
 		}
 	}
 }

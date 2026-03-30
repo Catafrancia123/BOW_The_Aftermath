@@ -1,0 +1,49 @@
+mod_debug_GRE_civil_war = {
+	GRE = {
+		#set_global_flag = GRE_civil_war
+		# not real thing, just for testing oob
+		
+		start_civil_war = {
+			ideology = communism
+			ruling_party = neutrality
+			states = {
+				184
+				731
+				1052
+			}
+			capital = 731
+			keep_political_leader = yes
+			# For the Provisional Democratic Government
+			set_cosmetic_tag = GRE_movement # TAG = GRC
+			load_oob = "GRC_uprising_1947"
+		}
+
+		YUG = {
+			start_civil_war = {
+				ideology = communism
+				ruling_party = fascism
+				states = { 106 970 803 802 108 }
+				capital = 106
+				keep_political_leader = no
+				# For the Yugoslavian People's Republic
+				set_cosmetic_tag = YUG_movement	# TAG = PRY
+				retire_country_leader = yes
+				promote_character = YUG_josip_broz_tito
+				declare_war_on = {
+					target = CRO
+					type = take_core_state
+				}
+				load_oob = "PRY_uprising_1947"
+			}
+		}
+
+		add_named_threat = {
+			threat = 5
+			name = international_events.1.t
+		}
+		news_event = {
+			id = international_events.1
+			days = 1
+		}
+	}
+}

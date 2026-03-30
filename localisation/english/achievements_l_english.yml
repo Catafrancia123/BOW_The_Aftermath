@@ -1,0 +1,12 @@
+﻿l_english:
+  BOW_TA_achievements: "Brink of War: The Aftermath Achievements & Ribbons"
+  # Achievements
+  ITA_nuclear_achievement_NAME: "Duce's Finest Bomb"
+  ITA_nuclear_achievement_DESC: "Have atleast §Y1§! Nuclear Bomb as §YItaly§! before Mussolini's Death."
+  ITA_nuclear_achievement_tt: "Have atleast §Y1§! Nuclear Bomb."
+  ITA_nuclear_achievement_mussolini_tt: "Benito Mussolini: Not Dead"
+
+  # Ribbons
+  ITA_irredenta_march_on_rome_NAME: "The 30 Year Promise"
+  ITA_irredenta_march_on_rome_DESC: "To commemorate the 30th anniversary of The March on Rome, Achieve Italia Irredenta as §YItaly§! before 28 October 1952."
+  ITA_irredenta_march_on_rome_tt: "Achieve Italia Irredenta and form Greater Italy"

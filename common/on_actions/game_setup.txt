@@ -12,8 +12,7 @@ on_actions = {
 			set_variable = { fascism_countries = 0 }
 			set_variable = { communism_countries = 0 }
 			set_variable = { neutrality_countries = 0 }
-			every_other_country = {
-				limit = { exists = yes }
+			every_country = {
 				if = {
 					limit = { THIS = { has_government = democratic } }
 					add_to_variable = { democratic_countries = 1 }
@@ -29,8 +28,7 @@ on_actions = {
 				if = {
 					limit = { THIS = { has_government = neutrality } }
 					add_to_variable = { neutrality_countries = 1 }
-				}	
-				add_to_variable = { total_countries = 1 }
+				}
 			}
 		}
 		effect = { # Playtester warning

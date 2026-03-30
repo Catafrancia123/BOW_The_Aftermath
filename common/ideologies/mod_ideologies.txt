@@ -163,12 +163,17 @@ ideologies = {
 			rexism = {
 			}
 			emperor_fascism = {
-				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+				can_be_randomly_selected = no # re e ordine! (king and order!)
 			}
 			italian_fascism = {
 				can_be_randomly_selected = no # only for italy
 			}
-
+			ultranationalism = {
+				can_be_randomly_selected = no # for those schitzo people
+			}
+			military_junta = {
+				can_be_randomly_selected = no # balbo dont declare war on fr-*gets shot*
+			}
 		}
 
 		dynamic_faction_names = {
@@ -199,10 +204,10 @@ ideologies = {
 
 		modifiers = {
 			# base factors
-			stability_factor = 0.15 # strengthened nationalism
+			stability_factor = 0.1 # strengthened nationalism
 			offensive_war_stability_factor = 0.05
-			war_support_factor = 0.05
-			drift_defence_factor = 0.3 # nationalistic mentality
+			war_support_factor = 0.075
+			drift_defence_factor = 0.25 # nationalistic mentality
 			civilian_intel_to_others = 10.0 # actively secret
 			army_intel_to_others = 5.0
 			navy_intel_to_others = 7.5

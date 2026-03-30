@@ -1,5 +1,0 @@
-GER_EU_decisions = {
-	icon = GFX_decision_category_generic
-	allowed = { tag = GER }
-	visible = {	always = yes }
-}

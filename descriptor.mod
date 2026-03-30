@@ -1,6 +1,6 @@
 name="Brink of War: The Aftermath"
 picture="icon.png"
-version="0.1.2"
+version="0.2.1-dev2"
 tags={
 	"Alternate History"
 	"Gameplay"
@@ -10,4 +10,6 @@ tags={
 }
 replace_path="common/bookmarks"
 replace_path="common/ideologies"
-supported_version="1.17.*"
+replace_path="common/decisions/replace"
+supported_version="1.17.5.*"
+remote_file_id="3670268112"

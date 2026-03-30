@@ -1,17 +1,26 @@
 IEG = {
+	targets = { D01 D02 D03 } # three in case russian civil war
 	original_tag = EGY
-	has_country_flag = EGY_civil_war_fascist
 	fallback = EGY
+
+	# triggers
+	has_cosmetic_tag = EGY_italy
 }
 
 GRC = {
+	targets = { D01 D02 D03 }
 	original_tag = GRE
-	has_country_flag = GRE_civil_war_communist
 	fallback = GRE
+
+	# triggers
+	has_cosmetic_tag = GRE_movement
 }
 
 PRY = {
+	targets = { D01 D02 D03 }
 	original_tag = YUG
-	has_country_flag = YUG_civil_war_communist
 	fallback = YUG
+
+	# triggers
+	has_cosmetic_tag = YUG_movement
 }

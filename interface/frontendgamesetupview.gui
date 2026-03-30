@@ -594,7 +594,7 @@ guiTypes = {
 			maxHeight = 110
 			format = left
 			scrollbarType = "standardtext_slider"    
-            		smooth_scrolling = yes 
+            smooth_scrolling = yes 
 		}
 
 		ButtonType = {

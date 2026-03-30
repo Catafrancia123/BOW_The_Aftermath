@@ -1,0 +1,29 @@
+# Esercito Nazionale Italia
+mod_ITA_army = {
+	icon = ITA_regio_esercito_1
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		ITA = {
+			NOT = { has_government = fascism }
+		}
+	}
+
+	# the bad
+	army_attack_factor = ITA_eni_attack
+	army_strength_factor = ITA_eni_strength
+	max_dig_in_factor = ITA_eni_entrenchment
+	initiative_factor = ITA_eni_initiative
+
+	# the good
+	army_morale_factor = ITA_eni_morale
+	army_org_factor = ITA_eni_org_factor
+	army_org_regain = ITA_eni_org_regain
+	planning_speed = ITA_eni_planning_speed
+	org_loss_when_moving = ITA_eni_org_moving
+
+	# the nothing
+	army_attack_speed = ITA_eni_attack_speed
+	breakthrough_factor = ITA_eni_breakthrough
+}

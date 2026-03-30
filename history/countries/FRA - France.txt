@@ -2,7 +2,7 @@ capital = 16 # Paris, Paris State
 
 set_convoys = 30
 set_research_slots = 5
-set_global_flag = MTG_third_london_conference
+set_global_flag = MTG_naval_treaties_flag
 
 set_technology = {
 	infantry_weapons = 1

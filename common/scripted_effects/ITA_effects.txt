@@ -1,0 +1,117 @@
+ITA_elections_init = {
+	set_variable_to_random = {	# randomize election countdown days
+		var = ITA_elections_days
+		min = 50
+		max = 90
+		integer = yes
+	}
+	activate_mission = ITA_election_countdown
+
+	# set flags
+	set_country_flag = ITA_elections_allowed # does not mean elections are allowed for eternity
+
+	# base percentage vars for election
+	# MUST EQUAL 100!
+	set_variable = { ITA_mussolini_percentage = 45 }
+	set_variable = { ITA_ciano_percentage = 25 }
+	set_variable = { ITA_balbo_percentage = 15 }
+	set_variable = { ITA_grandi_percentage = 15 }
+}
+
+bar_update_frames = {
+    # bar_percentage_0_frame = bar_percentage^0
+    set_variable = { bar_percentage_0_frame = bar_percentage^0 }
+    
+    # bar_percentage_1_frame = bar_percentage^0 + bar_percentage^1
+    set_variable = { bar_percentage_1_frame = bar_percentage_0_frame }
+    add_to_variable = { bar_percentage_1_frame = bar_percentage^1 }
+    
+    # bar_percentage_2_frame = bar_percentage^0 + bar_percentage^1 + bar_percentage^2
+    set_variable = { bar_percentage_2_frame = bar_percentage_1_frame }
+    add_to_variable = { bar_percentage_2_frame = bar_percentage^2 }
+
+    # bar_percentage_2_frame = bar_percentage^0 + bar_percentage^1 + bar_percentage^2 + bar_percentage^3
+	set_variable = { bar_percentage_2_frame = bar_percentage_1_frame }
+    add_to_variable = { bar_percentage_2_frame = bar_percentage^2 }
+	add_to_variable = { bar_percentage_2_frame = bar_percentage^3 }
+
+    # dirty variable to update the gui
+    add_to_variable = { bar_dirty = 0.00001 }
+}
+
+ITA_elections_add_percentage = {
+    set_temp_variable = { old_size = 100 }
+    subtract_from_temp_variable = { old_size = bar_percentage^candidate }
+    add_to_variable = { bar_percentage^candidate = temp_amount }
+    clamp_variable = {
+        var = bar_percentage^candidate
+        max = 100
+        min = 0
+    }
+    set_temp_variable = { new_size = 100 }
+    subtract_from_temp_variable = { new_size = bar_percentage^candidate }
+    divide_temp_variable = { new_size = old_size }
+    
+    for_each_loop = {
+        array = bar_percentage
+        index = i
+        
+        if = {
+            limit = {
+                check_variable = { 
+                    var = i
+                    value = candidate
+                    compare = not_equals
+                }
+            }
+            multiply_variable = { bar_percentage^i = new_size }
+        }
+    }
+
+    bar_update_frames = yes
+}
+
+d_bar_add_percentage = {
+    set_temp_variable = { candidate = args^0 }
+    set_temp_variable = { temp_amount = args^1 }
+    bar_add_influence = yes
+}
+
+
+# Add Percentage
+# Adds x amount of percentage to a candidate
+# Args:
+	# 1. candidate = (1-4, depending on which one)
+		# Indexes
+		# 0 = Mussolini
+		# 1 = Ciano
+		# 2 = Balbo
+		# 3 = Grandi
+	# 2. amount
+	# Amount of percentage to add to the candidate
+
+# Example:
+	# set_temp_variable = { candidate = 1 }	
+	# set_temp_variable = { temp_amount = 10 }
+	# ITA_elections_add_percentage = yes
+	## This will change Ciano's (1) percentage by 10, deducting it from other candidates.
+
+# Other stuff
+
+ITA_operation_castle_front_escalate = {
+    custom_effect_tooltip = ITA_operation_castle_front_escalate_tt
+    add_to_variable = { ITA_operation_castle_front_escalation = 1 }
+    add_named_threat = {
+        threat = 2.5
+        name = ITA_operation_castle_front_escalate_threat_tt
+    }
+}
+
+ITA_operation_castle_front_deescalate = {
+    custom_effect_tooltip = ITA_operation_castle_front_deescalate_tt
+    subtract_from_variable = { ITA_operation_castle_front_escalation = 1 }
+    add_named_threat = {
+        threat = -1
+        name = ITA_operation_castle_front_deescalate_threat_tt
+    }
+}
