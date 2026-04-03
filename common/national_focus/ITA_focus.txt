@@ -1061,7 +1061,7 @@ focus_tree = {
 				name = mod_ITA_fascist_military_party
 			}
 			hidden_effect = { retire_country_leader = yes }
-			promote_country_leader = ITA_italo_balbo_military
+			promote_character = ITA_italo_balbo_military
 
 			custom_effect_tooltip = focus_ITA_military_government_dismantle_tt
 			remove_power_balance = ITA_power_balance

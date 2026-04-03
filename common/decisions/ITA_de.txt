@@ -2,14 +2,14 @@
 ITA_missiolinis = {
 	ITA_missiolini_conquer_egypt = {
 		icon = GFX_decision_generic_operation
-		allowed = { tag = ITA }
+		allowed = { always = no }
 		visible = {
 			ITA_missiolinis_system_available = yes
 			has_completed_focus = focus_ITA_mediterranean_egypt_influence
 			IEG = { exists = yes } # Fascist Egypt
 		}
 
-		available { # GOAL
+		available = { # GOAL
 			custom_trigger_tooltip = {
 				tooltip = ITA_missiolinis.1_egypt.tt
 				AND = {
@@ -89,7 +89,7 @@ ITA_missiolinis = {
 	# More Military Factories
 	ITA_missiolini_military_factories = {
 		icon = GFX_decision_generic_merge_plant_materiel
-		allowed = { tag = ITA }
+		allowed = { always = no }
 		visible = { ITA_missiolinis_system_available = yes }
 
 		available = {
@@ -129,15 +129,14 @@ ITA_missiolinis = {
 		}
 	}
 
-	# Operation Liberation Invasions - Stage 1
-	ITA_missiolini_operation_castle_front_invasion_stage_1 = {
+	# Operation Castle Front Invasions - Stage 1
+	ITA_missiolini_ocf_invasion_stage_1 = {
 		icon = GFX_decision_generic_prepare_civil_war
-		allowed = { tag = ITA }
+		allowed = { always = no }
 		visible = { ITA_missiolinis_system_available = yes }
-		targets = { ITA_operation_castle_front_invade } # the icon
 
 		available = { # goal
-			ITA_operation_castle_front_invade = {
+			HUN = {
 				OR = {
 					has_government = fascism
 					is_subject_of = ITA
@@ -152,21 +151,21 @@ ITA_missiolinis = {
 		cancel_if_not_visible = yes
 		is_good = yes #Tooltip purposes
 		selectable_mission = no
-		days_mission_timeout = ITA_missiolinis_ol_days
+		days_mission_timeout = ITA_missiolinis_ocf_days
 
 		timeout_effect = { #MISSION FAILS
-			country_event = { id = ITA_missiolinis_events.2_ol days = 1 }
+			country_event = { id = ITA_missiolinis_events.2_ocf days = 1 }
 		}
 
 		complete_effect = { #MISSION SUCCEEDS
-			country_event = { id = ITA_missiolinis_events.3_ol days = 1 }
+			country_event = { id = ITA_missiolinis_events.3_ocf days = 1 }
 		}
 	}
 }
 
 ITA_election_decisions = {
 	ITA_election_countdown = {
-		icon = GFX_decision_eng_blackshirt_speech
+		icon = GFX_decision_generic_speech
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = IIA_elections_allowed_tt
@@ -251,42 +250,349 @@ ITA_election_decisions = {
 }
 
 ITA_operation_castle_front = {
-	ITA_liberate_country_stage_1 = {
-		icon = GFX_decision_generic_prepare_civil_war
-		visible = { always = yes }
+	ITA_ocf_selection_stage_1 = {
+		icon = GFX_decision_generic_operation
+		visible = { has_country_flag = ITA_ocf_stage_one_flag }
 		available = { 
-			FROM = { NOT = { has_government = fascism } }
-			ROOT = { has_war = no }
+			FROM = { 
+				OR = {
+					NOT = { has_government = fascism }
+					is_in_faction_with = SOV
+				}
+			}
 		}
 		fire_only_once = yes
-		cost = 100
+		cost = 75
 		priority = 20
 		# FROM = targets
 		# ROOT = ITA
 		targets = { BUL HUN ROM }
 
+		complete_effect = {
+			ETH_escalate_the_war_effect = yes
+			custom_effect_tooltip = ITA_ocf_selection_stage_1_tt
+			if = {
+				limit = { 
+					FROM = { original_tag = ROM }
+				}
+				set_temp_variable = { country = ROM }
+				ITA_ocf_calculate_militia_actions = yes
+				multiply_variable = { ITA_missiolinis_ocf_days = 2 } # 240 days for romania, rest 120 days
+				set_country_flag = ITA_ocf_ROM_decisions
+			}
+			if = {
+				limit = { 
+					FROM = { original_tag = HUN }
+				}
+				unlock_decision_category_tooltip = ITA_operation_castle_front_HUN
+				set_temp_variable = { country = HUN }
+				set_country_flag = ITA_ocf_HUN_decisions
+				ITA_ocf_calculate_militia_actions = yes
+			} 
+			if = {
+				limit = { 
+					FROM = { original_tag = BUL }
+				}
+				set_temp_variable = { country = ROM }
+				ITA_ocf_calculate_militia_actions = yes
+				set_country_flag = ITA_ocf_BUL_decisions
+			}
+		}
+	}
+
+	ITA_ocf_selection_stage_2 = {
+		icon = GFX_decision_generic_operation
+		visible = { has_country_flag = ITA_ocf_stage_two_flag }
+		available = { 
+			FROM = { 
+				OR = {
+					NOT = { has_government = fascism }
+					is_in_faction_with = SOV
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 75
+		priority = 20
+		# FROM = targets
+		# ROOT = ITA
+		targets = { BUL HUN ROM }
+
+		complete_effect = {
+			ETH_escalate_the_war_effect = yes
+			custom_effect_tooltip = ITA_ocf_selection_stage_2_tt
+			if = {
+				limit = { 
+					FROM = { original_tag = ROM }
+				}
+				set_temp_variable = { country = ROM }
+				ITA_ocf_calculate_militia_actions = yes
+				multiply_variable = { ITA_missiolinis_ocf_days = 2 } # 240 days for romania, rest 120 days
+				set_country_flag = ITA_ocf_ROM_decisions
+			}
+			if = {
+				limit = { 
+					FROM = { original_tag = HUN }
+				}
+				unlock_decision_category_tooltip = ITA_operation_castle_front_HUN
+				set_temp_variable = { country = HUN }
+				set_country_flag = ITA_ocf_HUN_decisions
+				ITA_ocf_calculate_militia_actions = yes
+			} 
+			if = {
+				limit = { 
+					FROM = { original_tag = BUL }
+				}
+				set_temp_variable = { country = ROM }
+				ITA_ocf_calculate_militia_actions = yes
+				set_country_flag = ITA_ocf_BUL_decisions
+			}
+		}
+	}
+
+	ITA_ocf_end_operations = {
+		icon = GFX_decision_generic_decision
+		visible = { always = yes } # testing purposes, but set to if war escalation is 6
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = ITA_ocf_end_operations_trigger_tt
+				check_variable = { ITA_liberated_countries^num > 2 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_ocf_end_operations_trigger_2_tt
+				OR = {
+					has_country_flag = ITA_ocf_stage_two_flag
+					has_country_flag = ITA_ocf_stage_three_flag
+					has_country_flag = ITA_ocf_stage_four_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_ocf_war_escalation_more_tt
+				LEVEL = "5"
+				check_variable = {
+					var = ITA_ocf_escalation
+					value = 5
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = yes
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 99
+		}
+		custom_cost_text = decision_cost_CP_100_pp_50
+		priority = 50
+
+		complete_effect = {
+			custom_effect_tooltip = ITA_ocf_end_operations_tt
+			hidden_effect = {
+				add_command_power = -25
+				clr_country_flag = ITA_ocf_flag 
+				clr_country_flag = ITA_ocf_stage_one_flag
+			}
+		}
+	}
+
+	ITA_ocf_move_stage_two = {
+		icon = GFX_decision_generic_decision
+		visible = { always = yes } # testing purposes, but set to if war escalation is 6
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = ITA_ocf_move_stage_two_trigger_tt
+				count_triggers = {
+					amount = 2
+					is_in_array = { ITA_liberated_countries = HUN }
+					is_in_array = { ITA_liberated_countries = ROM }
+					is_in_array = { ITA_liberated_countries = BUL }
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		priority = 100
+
+		complete_effect = {
+			custom_effect_tooltip = ITA_ocf_move_stage_two_tt
+			unlock_decision_tooltip = ITA_ocf_selection_stage_2
+			set_temp_variable = { escalate_amount = 1 }
+			ITA_operation_castle_front_escalate = yes
+			hidden_effect = {
+				clr_country_flag = ITA_ocf_HUN_decisions 
+				clr_country_flag = ITA_ocf_ROM_decisions 
+				clr_country_flag = ITA_ocf_BUL_decisions 
+				clr_country_flag = ITA_ocf_stage_one_flag
+
+				set_country_flag = ITA_ocf_stage_two_flag
+			}
+		}
+	}
+}
+
+ITA_operation_castle_front_HUN = {
+	ITA_ocf_militia_action_HUN = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		visible = { 
+			always = yes
+		}
+		available = {
+			ITA = { 
+				has_equipment = { infantry_equipment_1 > 999 }
+				has_equipment = { support_equipment > 499 }
+			}
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = ITA_ocf_militia_action_done_tt
+					NOT = { has_state_flag = ITA_militia_actions_done }
+				}
+			}
+		}
+
+		fire_only_once = yes
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > FROM.ITA_militia_cost # state variable!
+		}
+		custom_cost_text = ITA_ocf_militia_action_cost_tt
+		priority = 20
+
+		state_target = yes
+		target_array = HUN.owned_controlled_states
+		on_map_mode = map_only
+
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = ITA_ocf_militia_action_tt
+				COUNTRY = HUN
+			}
+
+			random_list = {
+				10 = { # peace
+					country_event = { id = ITA_missiolinis_events.1_militia_ocf days = 1 }
+					effect_tooltip = {
+						add_stability = -0.02
+						add_popularity = { ideology = fascism popularity = 0.017 }
+					}
+				}
+				40 = { # intervention with local police
+					country_event = { id = ITA_missiolinis_events.2_militia_ocf days = 1 }
+					effect_tooltip = {
+						add_stability = -0.035
+						add_popularity = { ideology = fascism popularity = 0.017 }
+					}
+				}
+				30 = { # conflict with military, heavy losses
+					country_event = { id = ITA_missiolinis_events.3_militia_ocf days = 1 }
+					effect_tooltip = {
+						add_stability = -0.05
+						add_popularity = { ideology = fascism popularity = 0.017 }	
+					}
+				}
+				20 = { # conflict with military, and lose
+					# add modifier for bop
+					country_event = { id = ITA_missiolinis_events.4_militia_ocf days = 1 }
+					effect_tooltip = {
+						add_stability = -0.075
+						add_popularity = { ideology = fascism popularity = 0.017 }	
+					}
+				}
+			}
+			
+			hidden_effect = { 
+				# variables
+				set_variable = { ITA_militia_action_state = FROM }
+				add_command_power = -50 
+				set_temp_variable = { inverse_pp = FROM.ITA_militia_cost }
+				multiply_temp_variable = { inverse_pp = -1 }
+				add_political_power = inverse_pp
+
+				send_equipment = {
+					equipment = infantry_equipment_1
+					amount = 1000
+					tag = AOI # yes
+				}
+				send_equipment = {
+					equipment = support_equipment
+					amount = 500
+					tag = AOI
+				}
+				FROM = { set_state_flag = ITA_militia_actions_done }
+				set_country_flag = ITA_militia_actions_done_timer
+			}
+		}
+	}
+
+	ITA_ocf_entice_masses_HUN = {
+		icon = GFX_decision_generic_speech
+		visible = { 
+			always = yes
+			NOT = { FROM = { has_state_flag = ITA_entice_masses_done } }
+		}
+		available = { 
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = ITA_ocf_entice_masses_done_tt
+					NOT = { has_state_flag = ITA_entice_masses_done }
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 100
+		priority = 20
+
+		state_target = yes
+		target_array = HUN.owned_controlled_states
+		on_map_mode = map_only
+
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = ITA_ocf_militia_action_tt
+				COUNTRY = HUN
+			}
+			
+			hidden_effect = { 
+				FROM = { set_state_flag = ITA_entice_masses_done }
+				set_country_flag = ITA_entice_masses_done_timer
+
+				# add country BOP stuff
+			}
+		}
+	}
+
+	ITA_ocf_liberate_HUN = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = { 
+			always = yes
+		}
+		available = { 
+			ROOT = { 
+				has_war = no 
+				has_army_manpower = { size > 500000 } # 500k
+			}
+		}
+
+		fire_only_once = yes
+		cost = 100
+		priority = 20
+
 		ai_will_do = {
 			base = 10
 		}
 
-		war_with_target_on_complete = yes
+		modifier = { war_support_factor = 0.05 }
 		complete_effect = {
-			set_variable = { ITA_operation_castle_front_invade = FROM }
-
-			if = {
-				limit = { 
-					FROM = {
-						original_tag = ROM
-					}
-				}
-				multiply_variable = { ITA_missiolinis_ol_days = 2 } # 240 days for romania, rest 120 days
-			}
-
-			ROOT = {
-				country_event = {
-					id = ITA_missiolinis_events.1_ol
-					days = 1
-				}
+			set_temp_variable = { escalate_amount = 2 }
+			ITA_operation_castle_front_escalate = yes
+			declare_war_on = {
+				target = HUN
+				type = topple_government
 			}
 		}
 	}
@@ -295,7 +601,7 @@ ITA_operation_castle_front = {
 
 policies_decisions = {
 	ITA_hold_elections = {
-		icon = GFX_decision_eng_blackshirt_speech
+		icon = GFX_decision_generic_speech
 		allowed = { original_tag = ITA }
 		visible = { 
 			has_country_flag = ITA_successor_elections_focus_done # after the first one

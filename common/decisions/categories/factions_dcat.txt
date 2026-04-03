@@ -8,9 +8,9 @@ IFL_decisions = {
 	}
 	visible = {	always = yes }
 	priority = {
-		base = 2
+		base = 10
 		modifier = {
-			add = 5
+			factor = 5
 			is_major = yes
 		}
 	}

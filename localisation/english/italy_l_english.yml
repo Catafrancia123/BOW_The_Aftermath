@@ -124,8 +124,8 @@
   # Balkan sub-branch
   focus_ITA_politics_european_focus: "The Balkan Campaign"
   focus_ITA_politics_european_focus_desc: "After the fall of the communist movements in the Balkans, we must ensure that our influence is strong and that we can control the region. The Balkans are a key strategic location in Europe, and with our influence there, we can control the trade routes and military movements in the region."
-  focus_ITA_europe_operation_castle_front: "Operation Liberation"
-  focus_ITA_europe_operation_castle_front_desc: "Italy has created an anti-communist agenda since the inception of our fascist movements in 1921, which was expanded to a formal law in 1939 and 1947. Mussolini had ambitions to “liberate” Europe from communism as a way to fulfill their expansionist and supremacy policies as well as “repent them from a filthy sin”. Italy have had contact with separatists groups (especially right-winged ones) and supply them with Italian weapons and supplies to execute their missions."
+  focus_ITA_europe_operation_castle_front: "Operation Castle Front"
+  focus_ITA_europe_operation_castle_front_desc: "Operation Castle Front is an special military operation done by [ITA.GetName] to \"liberate\" the Eastern European countries from communism. The operation is divided into 4 stages, and each stage has its own objectives and requirements."
 
   # Internal Affairs sub-branch
   focus_ITA_politics_leader: "The Future of Italy"
@@ -181,17 +181,30 @@
 
   # Decisions
   # Misiolinis
-  ITA_missiolinis_events.1_ol.t: "Take over [?ITA_operation_castle_front_invade.GetName]"
-  ITA_missiolinis_events.1_ol.d: "We have declared war on [?ITA_operation_castle_front_invade.GetName] to help the fascist revolutionaries in their fight for freedom, and as our agenda of completing the operation fast, we must do it quickly before the war escalates and can trigger a major war. The future of Eastern Europe is in our hands, and we must not fail our mission."
-  ITA_missiolinis_events.1_ol.op1: "Adapt, Obey, Fight!"
+  ITA_missiolinis_events.1_ocf.t: "Take over [$COUNTRY$.GetName]"
+  ITA_missiolinis_events.1_ocf.d: "We have declared war on [$COUNTRY$.GetName] to help the fascist revolutionaries in their fight for freedom, and as our agenda of completing the operation fast, we must do it quickly before the war escalates and can trigger a major war. The future of Eastern Europe is in our hands, and we must not fail our mission."
+  ITA_missiolinis_events.1_ocf.op1: "Adapt, Obey, Fight!"
 
-  ITA_missiolinis_events.2_ol.t: "Invasion of [?ITA_operation_castle_front_invade.GetName] fails"
-  ITA_missiolinis_events.2_ol.d: "Our invasion of [?ITA_operation_castle_front_invade.GetName] has failed, and now the war has escalated. We will have to focus on de-escalating quickly to prevent a major war, and we must not fail next time."
-  ITA_missiolinis_events.2_ol.op1: "We will do better next time."
+  ITA_missiolinis_events.2_ocf.t: "Invasion of [$COUNTRY$.GetName] fails"
+  ITA_missiolinis_events.2_ocf.d: "Our invasion of [$COUNTRY$.GetName] has failed, and now the war has escalated. We will have to focus on de-escalating quickly to prevent a major war, and we must not fail next time."
+  ITA_missiolinis_events.2_ocf.op1: "We will do better next time."
 
-  ITA_missiolinis_events.3_ol.t: "Invasion of [?ITA_operation_castle_front_invade.GetName] succeeds"
-  ITA_missiolinis_events.3_ol.d: "Our invasion of [?ITA_operation_castle_front_invade.GetName] has succeeded, and we have liberated the country from communism. We will have to focus on consolidating our gains and preventing a major war, and we must continue to liberate."
-  ITA_missiolinis_events.3_ol.op1: "One off the books."
+  ITA_missiolinis_events.3_ocf.t: "Invasion of [$COUNTRY$.GetName] succeeds"
+  ITA_missiolinis_events.3_ocf.d: "Our invasion of [$COUNTRY$.GetName] has succeeded, and we have liberated the country from communism. We will have to focus on consolidating our gains and preventing a major war, and we must continue to liberate."
+  ITA_missiolinis_events.3_ocf.op1: "One off the books."
+
+  ITA_missiolinis_events.1_militia_ocf.t: "Militia Action in [?ITA_militia_action_state.GetName]"
+  ITA_missiolinis_events.1_militia_ocf.d: "Our support for militia action in [?ITA_militia_action_state.GetName] has succeeded, the control of the state was done peacefully. This marks [?ITA_militia_action_state.GetName] being controled by the revolutionaries, which is a step closer to liberating the country from communism."
+  ITA_missiolinis_events.1_militia_ocf.op1: "Another one saved."
+  ITA_missiolinis_events.2_militia_ocf.t: "$ITA_missiolinis_events.1_militia_ocf.t$"
+  ITA_missiolinis_events.2_militia_ocf.d: "Our support for militia action in [?ITA_militia_action_state.GetName] has succeeded; Although a few police divisions came along the way, it was still a success. This marks [?ITA_militia_action_state.GetName] being controled by the revolutionaries, which is a step closer to liberating the country from communism."
+  ITA_missiolinis_events.2_militia_ocf.op1: "$ITA_missiolinis_events.1_militia_ocf.op1$"
+  ITA_missiolinis_events.3_militia_ocf.t: "$ITA_missiolinis_events.1_militia_ocf.t$"
+  ITA_missiolinis_events.3_militia_ocf.d: "Our support for militia action in [?ITA_militia_action_state.GetName] has succeeded; Turns out the military was present and resulted in a bloddy conflict, but with our trained militia forces, we managed to defeat the military with heavy losses. This marks [?ITA_militia_action_state.GetName] being controled by the revolutionaries, which is a step closer to liberating the country from communism."
+  ITA_missiolinis_events.3_militia_ocf.op1: "Some losses are required for victory."
+  ITA_missiolinis_events.4_militia_ocf.t: "$ITA_missiolinis_events.1_militia_ocf.t$"
+  ITA_missiolinis_events.4_militia_ocf.d: "Our support for militia action in [?ITA_militia_action_state.GetName] has succeeded; Turns out the military was present and resulted in a bloddy conflict, but they had more superior military, which led to heavy losses and the retreat from the state. This marks the loss of [?ITA_militia_action_state.GetName] from liberation."
+  ITA_missiolinis_events.4_militia_ocf.op1: "We will come back stronger."
 
   ITA_missiolini_conquer_egypt:0 "Conquer Egypt"
   ITA_missiolini_conquer_egypt_desc:0 "We have successfully did a fascist coup in Egypt. Now, lets move to win and control the Suez Canal!"
@@ -211,11 +224,6 @@
   ITA_missiolinis_events.3_egypt.d: "Our backed-up fascist government in Egypt hasn't been able to fufill our demands and take over Cairo yet, and the civil war is still ongoing. The only way to ensure victory is to declare war on Egypt; We must not fail our mission to control the Mediterranean sea."
   ITA_missiolinis_events.3_egypt.op1: "Desperate times call for desperate measures."
   ITA_missiolinis_events.3_egypt.tt: "Declare war on Egypt to help the fascist revolution:"
-
-  ITA_operation_castle_front_escalate_tt: "$focus_ITA_europe_operation_castle_front$ will escalate by one level."
-  ITA_operation_castle_front_deescalate_tt: "$focus_ITA_europe_operation_castle_front$ will de-escalate by one level."
-  ITA_operation_castle_front_escalate_threat_tt: "$focus_ITA_europe_operation_castle_front$ Escalates"
-  ITA_operation_castle_front_deescalate_threat_tt: "$focus_ITA_europe_operation_castle_front$ De-escalates"
 
   # Non-Misiolinis
   ITA_consecrate_the_leadership: "Consecrate the Leadership"
@@ -244,6 +252,91 @@
 
   mod_ITA_reforms_election: "Country-wide Reforms"
   mod_ITA_reforms_election_desc: "[ITA.country_leader.GetName] has imposed reforms in political, economical, and military subjects across the nation. These reforms take some time to adjust to, and there will be reductions of productivity till the reforms are satisfied."
+
+  # Operation Castle Front
+  ITA_operation_castle_front: "$focus_ITA_europe_operation_castle_front$ - [ITA_ocf_stage]"
+  ITA_operation_castle_front_desc: "Operation Castle Front is an special military operation done by [ITA.GetName] to \"liberate\" the Eastern European countries from communism. The operation is divided into 4 stages, and each stage has its own objectives and requirements. For [ITA_ocf_stage], the target(s) are: §Y[ITA_ocf_targets]§!."
+
+  # OCF scripted loc
+  ITA_ocf_stage_1: "Stage 1"
+  ITA_ocf_targets_1: "[BUL.GetFlag] [BUL.GetName], [HUN.GetFlag] [HUN.GetName], and [ROM.GetFlag] [ROM.GetName]"
+  ITA_ocf_stage_2: "Stage 2"
+  ITA_ocf_targets_2: "[CZE.GetFlag] [CZE.GetName] and [GDR.GetFlag] [GDR.GetName]"
+  ITA_ocf_stage_3: "Stage 3"
+  ITA_ocf_targets_3: "[POL.GetFlag] [POL.GetName]"
+  ITA_ocf_stage_4: "Stage 4"
+  ITA_ocf_targets_4: "[SOV.GetFlag] [SOV.GetName]"
+
+  ITA_ocf_escalate_tt: "$focus_ITA_europe_operation_castle_front$ will escalate by [?escalate_amount|Y] level(s)."
+  ITA_ocf_deescalate_tt: "$focus_ITA_europe_operation_castle_front$ will de-escalate by [?deescalate_amount|Y] level(s)."
+  ITA_ocf_escalate_threat_tt: "$focus_ITA_europe_operation_castle_front$ Escalates"
+  ITA_ocf_deescalate_threat_tt: "$focus_ITA_europe_operation_castle_front$ De-escalates"
+
+  ITA_ocf_bop_side_left: "Local Government"
+  ITA_ocf_bop_side_right: "Fascist Revolutionaries"
+  ITA_ocf_bop_side_left_gui: "Local Government:"
+  ITA_ocf_bop_side_right_gui: "Fascist Revolutionaries:"
+
+  ITA_ocf_bop_title: "$ITA_ocf_bop_side_left$ vs $ITA_ocf_bop_side_right$"
+
+  # OCF Decisions
+  ITA_ocf_selection_stage_1: "Start Operations on [FROM.GetName]"
+  ITA_ocf_selection_stage_1_tt: "Unlocks operation decisions for §Y[FROM.GetName]§!"
+
+  ITA_ocf_end_operations: "End The Operation"
+  ITA_ocf_end_operations_desc: "The operation has been going on for a while, and we have achieved some of our goals in the first few stages. Now, with rising concerns from the Soviet Union, we could end the operation and focus on fortifying the liberated countries to not fall again."
+  ITA_ocf_end_operations_tt: "Ends $focus_ITA_europe_operation_castle_front$"
+  ITA_ocf_end_operations_trigger_tt: "Atleast 3 countries have been liberated"
+  ITA_ocf_end_operations_trigger_2_tt: "Operation is in the second stage or higher."
+
+  ITA_ocf_move_stage_two: "Stage 2"
+  ITA_ocf_move_stage_two_desc: "We have successfully liberated the first few countries, and we are one step closer to liberating the entirety of Eastern Europe. Now, we can move to stage 2 and start operations on the next set of countries."
+  ITA_ocf_move_stage_two_trigger_tt: "Atleast 2 of these countries have been liberated:\n§Y$ITA_ocf_targets_1$§!"
+  ITA_ocf_move_stage_two_tt: "Moves on to Stage 2 of $focus_ITA_europe_operation_castle_front$"
+
+  ITA_operation_castle_front_HUN: "Operation Castle Front - [HUN.GetName]"
+
+  ITA_ocf_militia_action_cost_tt: "£command_power  §Y50§!  £pol_power §Y[?FROM.ITA_militia_cost]§!"
+  ITA_ocf_militia_action_cost_tt_blocked: "£command_power  §R50§!  £pol_power §R[?FROM.ITA_militia_cost]§!"
+  ITA_ocf_militia_action_cost_tt_tooltip: "It costs £command_power  §Y50§! and £pol_power  §Y[?FROM.ITA_militia_cost]§! to take the decision"
+
+  ITA_ocf_liberate_stage_1: "Liberate [FROM.GetName]"
+  ITA_ocf_liberate_stage_1_desc: "By declaring war on [FROM.GetNameDef], we can quickly help the revolutionary fascists groups in their fight against communism. This will be a quick war, and we must not fail our mission to liberate [FROM.GetNameDef]."
+
+  ITA_ocf_militia_action_HUN: "Support [HUN.GetNameAdjectiveCap] Revolutionaries"
+  ITA_ocf_entice_masses_HUN: "Entice The [HUN.GetNameAdjectiveCap] People"
+  ITA_ocf_militia_action_ROM: "Support [ROM.GetNameAdjectiveCap] Revolutionaries"
+  ITA_ocf_entice_masses_ROM: "Entice The [ROM.GetNameAdjectiveCap] People"
+  ITA_ocf_militia_action_BUL: "Support [BUL.GetNameAdjectiveCap] Revolutionaries"
+  ITA_ocf_entice_masses_BUL: "Entice The [BUL.GetNameAdjectiveCap] People"
+  ITA_ocf_militia_action_CZE: "Support [CZE.GetNameAdjectiveCap] Revolutionaries"
+  ITA_ocf_entice_masses_CZE: "Entice The [CZE.GetNameAdjectiveCap] People"
+  ITA_ocf_militia_action_GDR: "Support [GDR.GetNameAdjectiveCap] Revolutionaries"
+  ITA_ocf_entice_masses_GDR: "Entice The [GDR.GetNameAdjectiveCap] People"
+  ITA_ocf_militia_action_POL: "Support [POL.GetNameAdjectiveCap] Revolutionaries"
+  ITA_ocf_entice_masses_POL: "Entice The [POL.GetNameAdjectiveCap] People"
+
+  ITA_ocf_militia_action_tt: "Sends 1000 of §Y$ITA_infantry_equipment_1$§! and 500 of §Y$support_equipment$§! to [$COUNTRY$.GetNameAdjectiveCap] revolutionary groups."
+  ITA_ocf_militia_action_done_tt: "The militia action has not been done"
+  ITA_ocf_entice_masses_done_tt: "The propaganda action has not been done"
+
+  ITA_missiolini_ocf_invasion_stage_1: "$ITA_ocf_liberate_stage_1$"
+  ITA_missiolini_ocf_invasion_stage_1_desc: "$ITA_ocf_liberate_stage_1_desc$"
+
+  # OCF Escalation
+  ITA_ocf_war_escalation_less_tt: "$focus_ITA_europe_operation_castle_front$'s war escalation is less than §Y$LEVEL$§!."
+  ITA_ocf_war_escalation_more_equal_tt: "$focus_ITA_europe_operation_castle_front$'s war escalation is greater than or equal to §Y$LEVEL$§!."
+  ITA_ocf_war_escalation_more_tt: "$focus_ITA_europe_operation_castle_front$'s war escalation is greater than §Y$LEVEL$§!."
+  ITA_ocf_war_escalation_1_tt: "Level 1\n No effects"
+  ITA_ocf_war_escalation_2_tt: "Level 2\n No effects"
+  ITA_ocf_war_escalation_3_tt: "Level 3\n No effects"
+  ITA_ocf_war_escalation_4_tt: "Level 4\n §YAny Eastern European Communist Country§!: Makes a frontline at §YItaly§!'s border.\n §YSoviet Union§!: Sends Volunteers in small amounts\n §YItaly§!: Unlocks decision: §YStage 2§!"
+  ITA_ocf_war_escalation_5_tt: "Level 5\n §YAny Eastern European Communist Country§!: Gains support in military from The Soviet Union\n §YItaly§!: §YEase tensions with The Soviet Union§! decision unlocked"
+  ITA_ocf_war_escalation_6_tt: "Level 6 \n §YThe Soviet Union§!: Sends Volunteers in major amounts\n §YItaly§!: Unlocks decisions: §YLimit the Bosphorus Strait's Access, End the Operation, Stage 3§!"
+  ITA_ocf_war_escalation_7_tt: "Level 7\n §YThe Federal Republic of Germany§!: May request support from §YItaly§! or/and §YThe United States§!"
+  ITA_ocf_war_escalation_8_tt: "Level 8\n §YThe Soviet Union§!: Unlocks focus: §YDefeat the Fascists§!\n §YItaly§!: Activates Mission: §YMaximum Deadline§!"
+  ITA_ocf_war_escalation_9_tt: "Level 9\n §YThe Federal Republic of Germany§!: May revoke access to §YItaly§!\n §YThe United States§!: Unlocks focus: §YPrepare for the worst§!\n §YItaly§!: Unlocks decision: §YStage 4§!"
+  ITA_ocf_war_escalation_10_tt: "Level 10\n §YThe Soviet Union§!: Declares war on §YItaly§!"
 
   # Generic Events
   ITA_generic_events.1.t: "[FROM.GetName] Accepts"

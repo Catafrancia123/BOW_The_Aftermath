@@ -38,8 +38,8 @@ units = {
 		}
 		location = 9837
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.75
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
 	}
 	division = {	
 		division_name = {
@@ -48,7 +48,7 @@ units = {
 		}
 		location = 9837
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -58,7 +58,7 @@ units = {
 		}
 		location = 11818
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -68,7 +68,7 @@ units = {
 		}
 		location = 3980
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -78,7 +78,7 @@ units = {
 		}
 		location = 3980
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -88,7 +88,7 @@ units = {
 		}
 		location = 966
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -98,7 +98,7 @@ units = {
 		}
 		location = 966
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -108,7 +108,7 @@ units = {
 		}
 		location = 3844
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -118,7 +118,7 @@ units = {
 		}
 		location = 966
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -128,7 +128,7 @@ units = {
 		}
 		location = 936
 		division_template = "Epanastatikí Politofylakí"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 
@@ -140,7 +140,7 @@ units = {
 		}
 		location = 11818
 		division_template = "Epanastatikó Pezikó"
-		start_experience_factor = 0.35
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -150,7 +150,7 @@ units = {
 		}
 		location = 3844
 		division_template = "Epanastatikó Pezikó"
-		start_experience_factor = 0.35
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -160,7 +160,7 @@ units = {
 		}
 		location = 9837
 		division_template = "Epanastatikó Pezikó"
-		start_experience_factor = 0.35
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -170,7 +170,7 @@ units = {
 		}
 		location = 966
 		division_template = "Epanastatikó Pezikó"
-		start_experience_factor = 0.35
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {	
@@ -180,7 +180,7 @@ units = {
 		}
 		location = 936
 		division_template = "Epanastatikó Pezikó"
-		start_experience_factor = 0.35
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 }

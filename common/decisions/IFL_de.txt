@@ -5,6 +5,7 @@ IFL_decisions = {
 		cost = 50
 		days_remove = 7
 		days_re_enable = 60
+		priority = 20
 		allowed = { original_tag = ITA }
 		visible = { NOT = { has_country_flag = ITA_demand_dalmatia_success } }
 		available = {
@@ -86,6 +87,7 @@ IFL_decisions = {
 		available = {
 			ITA = { has_completed_focus = focus_ITA_mediterranean_greece_oppress_communists }
 		}
+		priority = 20
 		highlight_states = {
 			highlight_state_targets = {
 				state = 1055

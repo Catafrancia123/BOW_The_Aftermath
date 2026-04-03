@@ -1,0 +1,51 @@
+characters = {
+	FRA_leon_blum_new = {
+		name = FRA_leon_blum
+		portraits = {
+			army = {
+				small = "GFX_idea_leon_blum"
+			}
+			civilian = {
+				large = "GFX_portrait_fra_leon_blum"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = 1965.1.1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = leon_blum
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = FRA_philippe_petain
+						ruling_only = FRA_leon_blum_new
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				democratic_reformer
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}

@@ -25,8 +25,8 @@ bookmarks = {
         ITA = {
             history = aftermath_italy
             ideology = fascism
-            ideas = { mod_ITA_strenghtened_nationalism mod_ITA_miltary_industrialization mod_ITA_motivated_soldiers }
-            focuses = { focus_ITA_politics_start focus_ITA_mediterranean_greece_oppress_communists focus_ITA_europe }
+            ideas = { mod_ITA_strenghtened_nationalism mod_ITA_miltary_industrialization mod_ITA_army }
+            focuses = { focus_ITA_politics_start focus_ITA_mediterranean_greece_oppress_communists focus_ITA_europe_operation_castle_front }
         }
         SPR = {
             history = aftermath_other

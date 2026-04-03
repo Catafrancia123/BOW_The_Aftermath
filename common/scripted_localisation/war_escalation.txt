@@ -1,0 +1,121 @@
+defined_text = {
+	name = sloc_war_escalation_1_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_1_tt
+	}
+	text = {
+		localization_key = war_escalation_1_tt
+	}
+}
+
+defined_text = {
+	name = sloc_war_escalation_2_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_2_tt
+	}
+	text = {
+		localization_key = war_escalation_2_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_3_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_3_tt
+	}
+	text = {
+		localization_key = war_escalation_3_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_4_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_4_tt
+	}
+	text = {
+		localization_key = war_escalation_4_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_5_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_5_tt
+	}
+	text = {
+		localization_key = war_escalation_5_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_6_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_6_tt
+	}
+	text = {
+		localization_key = war_escalation_6_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_7_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_7_tt
+	}
+	text = {
+		localization_key = war_escalation_7_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_8_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_8_tt
+	}
+	text = {
+		localization_key = war_escalation_8_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_9_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_9_tt
+	}
+	text = {
+		localization_key = war_escalation_9_tt
+	}
+}
+defined_text = {
+	name = sloc_war_escalation_10_tt
+	text = {
+		trigger = {
+			original_tag = ITA
+		}
+		localization_key = ITA_ocf_war_escalation_10_tt
+	}
+	text = {
+		localization_key = war_escalation_10_tt
+	}
+}

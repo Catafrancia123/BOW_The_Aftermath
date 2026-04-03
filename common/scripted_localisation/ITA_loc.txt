@@ -87,3 +87,17 @@ efined_text = { # for elections gui
 		localization_key = "[?ITA_balbo_percentage]"
 	}
 }
+
+defined_text = { # OCF stage
+	name = ITA_ocf_stage
+	text = {
+		localization_key = "ITA_ocf_stage_[?ITA_ocf_stage_loc]"
+	}
+}
+
+defined_text = { # OCF targets
+	name = ITA_ocf_targets
+	text = {
+		localization_key = "ITA_ocf_targets_[?ITA_ocf_stage_loc]"
+	}
+}

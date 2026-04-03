@@ -102,6 +102,12 @@
   GUI_supremacy_desc2: "There are currently [?total_countries] countries in the world, with those being:\n- Democratic: §4[?democratic_countries]§! countries\n- Fascist: §g[?fascism_countries]§! countries\n- Communist: §R[?communism_countries]§! countries\n- Non-Alligned: §W[neutrality_countries]§! countries"
   GUI_supremacy_button: "World Supremacy"
 
+  generic_bop_title: "Government Balance of Power"
+
+  decision_cost_CP_100_pp_50: "£command_power  §Y100§!  £pol_power §Y50§!"
+  decision_cost_CP_100_pp_50_blocked: "£command_power  §R100§!  £pol_power §R50§!"
+  decision_cost_CP_100_pp_50_tooltip: "It costs £command_power  §Y100§! and £pol_power  §Y50§! to take the decision"
+
   # National Focus
   mod_placeholder_focus: "Placeholder Focus"
   mod_nat_focus_generic: "No description yet, come back at a later version!"
@@ -151,13 +157,3 @@
 
   SOV_start_balkan_uprising: "Started the $international_events.1.t$"
   member_of_third_naval_treaty: "Is part of $international_events.3.t$"
-
-  # Loading screen top bar
-  LOADING_GUI:0 "Preparing for total war..."
-  LOADING_HISTORY:0 "Creating History..."
-  EXECUTE_HISTORY:0 "Executing history..."
-  CREATING_CHKSUM:0 "Negotiating with the Soviets..."
-  GENERATING_GRADIENT_BORDERS:0 "Arming new recruits..."
-  LOAD_GFX:0 "Discussing with The Grand Council Of Fascism..."
-  LOAD_FLAGS:0 "Raising the Italian flag..."
-  PROC_FLAGS:0 "Processing Flags"

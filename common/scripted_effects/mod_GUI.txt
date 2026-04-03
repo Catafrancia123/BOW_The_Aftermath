@@ -1,0 +1,69 @@
+decision_custom_bop_init = {
+	# base percentage vars for bop
+	# MUST EQUAL 100!
+	set_variable = { bop_amount_left = args^0 }
+    set_variable = { bop_amount_right = args^1 }
+    decision_custom_bop_update_frames = yes
+}
+
+decision_custom_bop_update_frames = {
+    # bar_left_frame = bar_percentage^0
+    set_variable = { bar_left_frame = bar_percentage^0 }
+    
+    # bar_right_frame = bar_percentage^0 + bar_percentage^1
+    set_variable = { bar_right_frame = bar_left_frame }
+    add_to_variable = { bar_right_frame = bar_percentage^1 }
+
+    # dirty variable to update the gui
+    add_to_variable = { decision_custom_bop_dirty = 0.00001 }
+}
+
+decision_custom_bop_add_func = {
+    set_temp_variable = { old_size = 100 }
+    subtract_from_temp_variable = { old_size = bar_percentage^side }
+    add_to_variable = { bar_percentage^side = amount }
+    clamp_variable = {
+        var = bar_percentage^side
+        max = 100
+        min = 0
+    }
+    set_temp_variable = { new_size = 100 }
+    subtract_from_temp_variable = { new_size = bar_percentage^side }
+    divide_temp_variable = { new_size = old_size }
+    
+    for_each_loop = {
+        array = bar_percentage
+        index = i
+        
+        if = {
+            limit = {
+                check_variable = { 
+                    var = i
+                    value = side
+                    compare = not_equals
+                }
+            }
+            multiply_variable = { bar_percentage^i = new_size }
+        }
+    }
+    decision_custom_bop_update_frames = yes
+}
+
+decision_custom_bop_add = {
+    set_temp_variable = { side = args^0 }
+    set_temp_variable = { amount = args^1 }
+    decision_custom_bop_add_func = yes
+}
+
+
+# Add Percentage
+# Adds x amount of percentage to a side
+# Args:
+	# 1. side (1 or 2, left or right)
+	# 2. amount (adds x amount)
+
+# Example:
+	# set_temp_variable = { side = 1 }	
+	# set_temp_variable = { amount = 10 }
+	# decision_custom_bop_add = yes
+	## This will change the left side's (1) percentage by 10, deducting it from other side.

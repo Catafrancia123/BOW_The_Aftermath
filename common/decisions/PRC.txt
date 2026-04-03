@@ -2,7 +2,7 @@
 
 debug_decisions = {
 	debug_DANNES_PRC_decisions = {
-		priority = -1
+		priority = 2
 		allowed = {
 			tag = PRC
 		}

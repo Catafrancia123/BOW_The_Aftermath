@@ -1,6 +1,6 @@
 ITA_election_decisions = {
 	icon = GFX_decision_category_generic
-	allowed = { tag = ITA }
+	allowed = { original_tag = ITA }
 	visible = {
 		OR = {
 			has_completed_focus = focus_ITA_politics_leader
@@ -23,23 +23,22 @@ ITA_operation_castle_front = {
 	visible = {
 		OR = {
 			has_completed_focus = focus_ITA_europe_operation_castle_front
-			has_country_flag = ITA_operation_castle_front_flag
+			has_country_flag = ITA_ocf_flag
 		}
 	}
-	priority = 20
+	visible_when_empty = yes
+	priority = 90
 	scripted_gui = war_escalation_decision_ui
 }
 
-ITA_missiolinis = { 
-	icon = decision_category_ITA_missiolinis
-	picture = GFX_decision_cat_picture_ITA_missiolinis
-	
+ITA_operation_castle_front_HUN = {
+	icon = GFX_decision_category_usa_intervention_mandate
 	allowed = { original_tag = ITA }
-	priority = 100
-	visible_when_empty = yes
-	
-	visible = { # any il duce can do it!
-		has_country_leader_with_trait = il_duce 
-		has_country_flag = ITA_missiolinis_system_active_flag
+	visible = {
+		has_country_flag = ITA_ocf_stage_one_flag
+		has_country_flag = ITA_ocf_HUN_decisions
 	}
+	visible_when_empty = yes
+	priority = 89
+	scripted_gui = mod_decision_custom_bop
 }

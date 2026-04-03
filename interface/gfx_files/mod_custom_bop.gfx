@@ -1,10 +1,20 @@
 spriteTypes = {
+	# custom bg for decisions bop	
+	spriteType = {
+		name = "GFX_custom_bop_bg"
+		textureFile = "gfx/interface/bop/custom_decision_bop_bar_bg.tga"
+	}
+	spriteType = {
+		name = "GFX_custom_bop_frame"
+		textureFile = "gfx/interface/bop/custom_decision_bop_frame.tga"
+	}
+
 	# Mussolini's bar
 	progressBarType = {
 		name = "GFX_ITA_elections_bar_mussolini"
 		textureFile1 = "gfx/interface/bop/bop_ITA_mussolini_bar.tga"
 		textureFile2 = "gfx/interface/absolute_nothing.dds"
-		size = { x = 360 y = 16 }
+		size = { x = 300 y = 16 }
 		effectFile = "gfx/FX/progress_minmax.lua"
 	}
 
@@ -32,6 +42,14 @@ spriteTypes = {
 		textureFile1 = "gfx/interface/bop/bop_ITA_grandi_bar.tga"
 		textureFile2 = "gfx/interface/absolute_nothing.dds"
 		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress_minmax.lua"
+	}
+
+	progressBarType = { # use mussolini's for fascist
+		name = "GFX_ITA_ocf_communist_side"
+		textureFile1 = "gfx/interface/bop/bop_ITA_ocf_communist_side.tga"
+		textureFile2 = "gfx/interface/absolute_nothing.dds"
+		size = { x = 300 y = 16 }
 		effectFile = "gfx/FX/progress_minmax.lua"
 	}
 

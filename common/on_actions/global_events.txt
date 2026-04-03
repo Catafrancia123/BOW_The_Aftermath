@@ -131,5 +131,14 @@ on_actions = {
 				}
 			}
 		}
+
+		effect = { # operation liberation
+			if = {
+				limit = {
+					check_variable = { ITA_ocf_escalation > 3 }
+				}
+				# eh
+			}
+		}
 	}
 }

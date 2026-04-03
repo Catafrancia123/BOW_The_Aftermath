@@ -1,0 +1,131 @@
+guiTypes = {
+	containerWindowType = {
+		name = "decision_custom_bop_view"
+		position = { x = 0 y = 10 }
+		size = { width = 100% height = 150 }
+
+		# COLLUMN AND ROWS
+		@row_1_y = 35
+		@row_2_y = 55
+		@row_3_y = 75
+		@row_4_y = 95
+		@row_5_y = 115
+
+		### COLUMN 1 - SIDE NAMES ###
+		@col_1_x = 0
+		
+		### COLUMN 2 - INFLUENCE AMOUNT ###
+		@col_2_x = 150
+		
+
+		containerWindowType = {
+			name = "elections_bar_group"
+			size = { width = 100 height = 200 }
+			position = { x = @col_1_x y = 0 }
+
+			iconType = {
+				name = "power_balance_value"
+				position = { x = 95 y = 0 }
+				# NOTE: The sprite name is set by the code!
+			}
+			iconType = {
+				name = "progressbar"
+				spriteType = "GFX_custom_bop_bg"
+				position = { x = 107 y = @row_1_y }
+			}
+			iconType = {
+				name = "progressbar_frame"
+				spriteType = "GFX_custom_bop_frame"
+				position = { x = 103 y = 31 }	
+			}
+
+			# the sides
+			iconType = {
+				name = "left_bar"
+				spriteType = "GFX_ITA_ocf_communist_side"
+				position = { x = 103 y = 34 }	
+			}
+			iconType = {
+				name = "right_bar"
+				spriteType = "GFX_ITA_elections_bar_mussolini"
+				position = { x = 258 y = 34 }	
+			}
+			iconType = {
+				name = "left_icon"
+				spriteType = "GFX_bop_ITA_communism_side"
+				position = { x = 20 y = 0 }
+			}
+			iconType = {
+				name = "right_icon"
+				spriteType = "GFX_bop_ITA_grand_council_side"
+				position = { x = 420 y = 0 }	
+			}
+		}
+
+		containerwindowtype = {
+			name = "text_container"
+			position = { x = 20 y = 5 }
+
+			InstantTextBoxType = {
+				name = "sides_title"
+				text = "ITA_ocf_bop_title" # change later if some other country uses it
+				font = "hoi_18mbs"
+				format = center
+				size = { width = 100% height = 36 }
+				maxwidth = 475
+				maxheight = 36
+			}
+			
+			# Content
+			InstantTextBoxType = {
+				name = "side_left_text"
+				position = { x = 100 y = @row_4_y }
+				text = "ITA_ocf_bop_side_left_gui"
+				font = "hoi_18mbs"
+				format = left
+				maxwidth = 300
+				maxheight = 36
+			}
+			InstantTextBoxType = {
+				name = "side_right_text"
+				position = { x = 100 y = @row_5_y }
+				text = "ITA_ocf_bop_side_right_gui"
+				font = "hoi_18mbs"
+				format = left
+				maxwidth = 300
+				maxheight = 36
+			}
+
+			InstantTextBoxType = {
+				name = "inf_amount_title"
+				position = { x = @col_1_x y = @row_3_y }
+				text = "Minimal 75% of dominance from either side required for results"
+				font = "hoi_18mbs"
+				format = center
+				maxwidth = 475
+				maxheight = 36
+			}
+
+			
+			# Content
+			InstantTextBoxType = {
+				name = "side_left_inf"
+				position = { x = 250 y = @row_4_y }
+				text = "[?bar_percentage^0|%%Y0]"
+				font = "hoi_18mbs"
+				format = center
+				maxwidth = 100
+				maxheight = 36
+			}
+			InstantTextBoxType = {
+				name = "side_right_inf"
+				position = { x = 250 y = @row_5_y }
+				text = "[?bar_percentage^1|%%Y0]"
+				font = "hoi_18mbs"
+				format = center
+				maxwidth = 100
+				maxheight = 36
+			}
+		}
+	}
+}

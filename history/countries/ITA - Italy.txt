@@ -51,9 +51,9 @@ set_variable = { ITA_bop_concesions_to_the_bourgeoisie_cost = 100 }
 set_variable = { ITA_bop_concesions_to_the_bourgeoisie_days = 180 }
 set_variable = { ITA_bop_generic_council_cost = 25 }
 
-# Operation Liberation
-set_variable = { ITA_missiolinis_ol_days = 120 }
-set_variable = { ITA_operation_castle_front_escalation = 1 }
+# Operation Castle Front
+set_variable = { ITA_missiolinis_ocf_days = 120 }
+set_variable = { ITA_ocf_escalation = ETH.ETH_war_escalation_level }
 
 # The Militia | Camicie Nere
 set_variable = { ITA_militia_cap = 12 }

@@ -11,4 +11,15 @@ scripted_gui = {
 			bar_3 = { frame = bar_influence_3_frame }
 		}
 	}
+
+	mod_decision_custom_bop = {
+		context_type = decision_category
+		window_name = "decision_custom_bop_view"
+		dirty = decision_custom_bop_dirty
+
+		properties = {
+			left_bar = { frame = bar_left_frame }
+			right_bar = { frame = bar_right_frame }
+		}
+	}
 }

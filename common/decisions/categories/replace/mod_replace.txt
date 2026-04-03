@@ -1,0 +1,30 @@
+ITA_missiolinis = { 
+	icon = decision_category_ITA_missiolinis
+	picture = GFX_decision_cat_picture_ITA_missiolinis
+	
+	allowed = { original_tag = ITA }
+	priority = 100
+	visible_when_empty = yes
+	
+	visible = { # any il duce can do it!
+		has_country_leader_with_trait = il_duce 
+		has_country_flag = ITA_missiolinis_system_active_flag
+	}
+}
+
+MTG_naval_treaties = {
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = {
+		has_dlc = "Man the Guns"
+	}
+	visible = {
+		OR = {
+			has_naval_treaty_trigger = yes
+			is_major = yes
+		}
+		any_owned_state = {
+			is_coastal = yes
+		}
+	}
+	priority = 95
+}

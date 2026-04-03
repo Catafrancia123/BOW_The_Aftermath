@@ -11,5 +11,7 @@ tags={
 replace_path="common/bookmarks"
 replace_path="common/ideologies"
 replace_path="common/decisions/replace"
+replace_path="common/decisions/categories/replace"
+replace_path="localisation/replace"
 supported_version="1.17.5.*"
 remote_file_id="3670268112"

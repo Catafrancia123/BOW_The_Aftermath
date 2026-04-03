@@ -25,15 +25,6 @@ bar_update_frames = {
     # bar_percentage_1_frame = bar_percentage^0 + bar_percentage^1
     set_variable = { bar_percentage_1_frame = bar_percentage_0_frame }
     add_to_variable = { bar_percentage_1_frame = bar_percentage^1 }
-    
-    # bar_percentage_2_frame = bar_percentage^0 + bar_percentage^1 + bar_percentage^2
-    set_variable = { bar_percentage_2_frame = bar_percentage_1_frame }
-    add_to_variable = { bar_percentage_2_frame = bar_percentage^2 }
-
-    # bar_percentage_2_frame = bar_percentage^0 + bar_percentage^1 + bar_percentage^2 + bar_percentage^3
-	set_variable = { bar_percentage_2_frame = bar_percentage_1_frame }
-    add_to_variable = { bar_percentage_2_frame = bar_percentage^2 }
-	add_to_variable = { bar_percentage_2_frame = bar_percentage^3 }
 
     # dirty variable to update the gui
     add_to_variable = { bar_dirty = 0.00001 }
@@ -74,7 +65,7 @@ ITA_elections_add_percentage = {
 d_bar_add_percentage = {
     set_temp_variable = { candidate = args^0 }
     set_temp_variable = { temp_amount = args^1 }
-    bar_add_influence = yes
+    ITA_elections_add_percentage = yes
 }
 
 
@@ -87,7 +78,7 @@ d_bar_add_percentage = {
 		# 1 = Ciano
 		# 2 = Balbo
 		# 3 = Grandi
-	# 2. amount
+	# 2. temp_amount
 	# Amount of percentage to add to the candidate
 
 # Example:
@@ -99,19 +90,67 @@ d_bar_add_percentage = {
 # Other stuff
 
 ITA_operation_castle_front_escalate = {
-    custom_effect_tooltip = ITA_operation_castle_front_escalate_tt
-    add_to_variable = { ITA_operation_castle_front_escalation = 1 }
-    add_named_threat = {
-        threat = 2.5
-        name = ITA_operation_castle_front_escalate_threat_tt
+    set_temp_variable = { escalate_amount = args^0 }
+    custom_effect_tooltip = ITA_ocf_escalate_tt
+    add_to_variable = { ITA_ocf_escalation = escalate_amount }
+    set_variable = { ETH.ETH_war_escalation_level = ITA_ocf_escalation }
+
+    # THREAT
+    set_temp_variable = { escalate_amount_threat = 2.5 }
+    multiply_temp_variable = { escalate_amount_threat = escalate_amount }
+    add_named_threat = { 
+        threat = escalate_amount_threat
+        name = ITA_ocf_escalate_threat_tt
     }
 }
 
 ITA_operation_castle_front_deescalate = {
-    custom_effect_tooltip = ITA_operation_castle_front_deescalate_tt
-    subtract_from_variable = { ITA_operation_castle_front_escalation = 1 }
+    set_temp_variable = { deescalate_amount = args^0 }
+    custom_effect_tooltip = ITA_ocf_deescalate_tt
+    subtract_from_variable = { ITA_ocf_escalation = deescalate_amount }
+    set_variable = { ETH.ETH_war_escalation_level = ITA_ocf_escalation }
+
+    # THREAT
+    set_temp_variable = { deescalate_amount_threat = -1 }
+    multiply_temp_variable = { deescalate_amount_threat = deescalate_amount }
     add_named_threat = {
         threat = -1
-        name = ITA_operation_castle_front_deescalate_threat_tt
+        name = ITA_ocf_deescalate_threat_tt
     }
+}
+
+ITA_ocf_calculate_militia_actions = {
+    set_temp_variable = { country = args^0 }
+    set_temp_variable = { cost_modifier = ITA_ocf_escalation }
+    divide_temp_variable = { cost_modifier = 2 }
+
+    for_each_loop = {
+		array = country.owned_controlled_states
+		value = v
+		break = break
+
+        # FORMULA: PP_REQ = (STATE_POP_K/10) * WAR_ESCALATION/2
+        # IF PP_REQ > 150, PP_REQ - 50
+        # IF PP_REQ > 200, PP_REQ - 100
+        # IF PP_REQ > 300, PP_REQ - 150
+		set_temp_variable = { state_pp_req = v.state_population_k } # DIVIDES ALREADY BY 1000
+        divide_temp_variable = { state_pp_req = 10 }
+        multiply_temp_variable = { state_pp_req = cost_modifier }
+        
+        # REDUCTIONS
+        if = {
+            limit = { check_variable = { state_pp_req > 150 } }
+            subtract_from_temp_variable = { state_pp_req = 50 }
+        }
+        else_if = {
+            limit = { check_variable = { state_pp_req > 200 } }
+            subtract_from_temp_variable = { state_pp_req = 100 }
+        }
+        else_if = {
+            limit = { check_variable = { state_pp_req > 300 } }
+            subtract_from_temp_variable = { state_pp_req = 150 }
+        }
+        round_temp_variable = state_pp_req
+        set_variable = { v.ITA_militia_cost = state_pp_req } 
+	}
 }

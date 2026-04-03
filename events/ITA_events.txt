@@ -159,46 +159,98 @@ country_event = {
 	}
 }
 
-country_event = { # Generic event for invasion in operation liberation (activates mission)
-	id = ITA_missiolinis_events.1_ol
-	title = ITA_missiolinis_events.1_ol.t
-	desc = ITA_missiolinis_events.1_ol.d
+country_event = { # Generic event for invasion in operation castle front (activates mission)
+	id = ITA_missiolinis_events.1_ocf
+	title = ITA_missiolinis_events.1_ocf.t
+	desc = ITA_missiolinis_events.1_ocf.d
 	picture = GFX_report_event_generic_mussolini
 	is_triggered_only = yes
 
 	option = {
-		name = ITA_missiolinis_events.1_ol.op1
-		activate_mission = ITA_missiolini_operation_castle_front_invasion_stage_1
+		name = ITA_missiolinis_events.1_ocf.op1
+		activate_mission = ITA_missiolini_ocf_invasion_stage_1
 	}
 }
 
-country_event = { # Generic event for failed invasion in operation liberation (escalates war)
-	id = ITA_missiolinis_events.2_ol
-	title = ITA_missiolinis_events.2_ol.t
-	desc = ITA_missiolinis_events.2_ol.d
+country_event = { # Generic event for failed invasion in operation castle front (escalates war)
+	id = ITA_missiolinis_events.2_ocf
+	title = ITA_missiolinis_events.2_ocf.t
+	desc = ITA_missiolinis_events.2_ocf.d
 	picture = GFX_report_event_generic_mussolini
 	is_triggered_only = yes
 
 	option = {
-		name = ITA_missiolinis_events.2_ol.op1
+		name = ITA_missiolinis_events.2_ocf.op1
 		ITA_operation_castle_front_escalate = yes
 		add_war_support = -0.1
 		add_stability = -0.05
 	}
 }
 
-country_event = { # Generic event for failed invasion in operation liberation (escalates war)
-	id = ITA_missiolinis_events.3_ol
-	title = ITA_missiolinis_events.3_ol.t
-	desc = ITA_missiolinis_events.3_ol.d
+country_event = { # Generic event for failed invasion in operation castle front (escalates war)
+	id = ITA_missiolinis_events.3_ocf
+	title = ITA_missiolinis_events.3_ocf.t
+	desc = ITA_missiolinis_events.3_ocf.d
 	picture = GFX_report_event_generic_mussolini
 	is_triggered_only = yes
 
 	option = {
-		name = ITA_missiolinis_events.3_ol.op1
+		name = ITA_missiolinis_events.3_ocf.op1
 		activate_mission = ITA_missiolini_operation_castle_front_invasion_stage_1
 		add_war_support = 0.1
 		add_stability = 0.05
+	}
+}
+
+country_event = { # Generic event for sucessful militia operation in operation castle front
+	id = ITA_missiolinis_events.1_militia_ocf
+	title = ITA_missiolinis_events.1_militia_ocf.t
+	desc = ITA_missiolinis_events.1_militia_ocf.d
+	picture = GFX_report_event_fascist_militia
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.1_ocf.op1
+		# add bop stuff
+	}
+}
+
+country_event = { # Generic event for sucessful militia operation (had police intervention) in operation castle front
+	id = ITA_missiolinis_events.2_militia_ocf
+	title = ITA_missiolinis_events.2_militia_ocf.t
+	desc = ITA_missiolinis_events.2_militia_ocf.d
+	picture = GFX_report_event_fascist_militia
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.2_ocf.op1
+		# add bop stuff
+	}
+}
+
+country_event = { # Generic event for sucessful militia operation (fought against military) in operation castle front
+	id = ITA_missiolinis_events.3_militia_ocf
+	title = ITA_missiolinis_events.3_militia_ocf.t
+	desc = ITA_missiolinis_events.3_militia_ocf.d
+	picture = GFX_report_event_fascist_militia
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.3_ocf.op1
+		# add bop stuff
+	}
+}
+
+country_event = { # Generic event for unsucessful militia operation in operation castle front
+	id = ITA_missiolinis_events.4_militia_ocf
+	title = ITA_missiolinis_events.4_militia_ocf.t
+	desc = ITA_missiolinis_events.4_militia_ocf.d
+	picture = GFX_report_event_fascist_militia
+	is_triggered_only = yes
+
+	option = {
+		name = ITA_missiolinis_events.4_ocf.op1
+		# add bop stuff
 	}
 }
 
