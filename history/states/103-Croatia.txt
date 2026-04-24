@@ -18,6 +18,9 @@ state={
 		victory_points = { #Fiume (Rijeka)
 			11564 1 
 		}
+		victory_points = { # Zadar/Zara
+			11901 3
+		}
 		buildings = {
 			infrastructure = 3
 			dockyard = 1
@@ -30,6 +33,9 @@ state={
 			}
 			11564 = {
 				naval_base = 5
+			}
+			11901 = {
+				naval_base = 3
 			}
 		}
 		add_core_of = CRO

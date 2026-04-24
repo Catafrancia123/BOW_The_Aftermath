@@ -1,8 +1,9 @@
 ﻿l_english:
   # Events
   international_events.1.t: "Communist Uprising in the Balkans"
-  international_events.1.d: "[THIS.GetNewsHeader]Communist movements in the Balkans have rebelled against the [SER.GetName] and [GRE.GetName], Consisting of [PRY.GetName] and [GRC.GetName]. These movements were rumored to be backed up by the Soviet Union; As one of Stalin's missions is to spread communism amongst eastern European states, especially Greece. Many democratic and even Italy have sent support and volunteers to these nations to protect their strategic positions from the expansion of communism."
-  international_events.1.op1: "Europe is at war, once again..."
+  international_events.1.d: "[THIS.GetNewsHeader]Communist movements in the Balkans have rebelled against the [SER.GetName] and [GRE.GetName], Consisting of [PRY.GetName] and [GRC.GetName]. The movements have been rising since the end of the Second World War, and have been mentioned to be supported by the Soviet Union. While they deny any accusations:, and blaming it on a nearby country: Bulgaria and Romania.\n\n§R\"Blame it on their neighbors!\"§!, says Foreign Minister Vyacheslav Molotov."
+  international_events.1.op1: "Is this the new threat for Europe?"
+
 
   international_events.2.t: "Egyptian Civil War"
   international_events.2.d: "[THIS.GetNewsHeader]The newly established Kingdom of Egypt is facing a civil war after fascist activists attempted to overthrow the monarchy and establish a new republic with help from Italian political groups and military. Their goal is to seize power over the Suez Canal and to use it as a economic weapon. The Kingdom is trying to get international support to crush the rebellion and maintain control over the canal, which is vital for global trade. The United Kingdom, which liberated them and promised to protect them from any threats, is considering sending volunteers to help the monarchy."
@@ -12,9 +13,18 @@
   international_events.3.d: "[THIS.GetNewsHeader]The Third London Naval Treaty was signed today, which marks the 8th anniversary of the Second World War. The treaty signatories include: §R[ENG.GetName], [FRA.GetName], [ITA.GetName], [USA.GetName], [SPR.GetName], and [CHI.GetName]§!. §R[SOV.GetName] and [PRC.GetName]§! were invited but were declined due to politcal issues. The treaty marks a mutual armistice in naval power as the world slowly heals from the effects of the Second World War, but experts believe that it will not last long like before, as Italy and The Soviet Union try and push their interventionist and expansionist policies."
   international_events.3.op1: "Let's see if the treaties will last..."
 
-  international_events.4.t: "The Games of the XIV Olympiad"
-  international_events.4.d: "[THIS.GetNewsHeader]The fourteenth Olympic Summer Games were recently held in London, United Kingdom. After a 8 year hiatus caused by the Second World War, the Olympic Summer Games returns in Britain. Named the \"Austerity Games\" because of the effects of the war and the rationing system in the United Kingdom. The United States won first with a staggering total amount of 84 medals and 38 gold medals, Sweden came second with a total of 46 medals and 17 gold medals, France came third with 32 medals and 11 gold medals. This year's torch relay was crossing multiple countries in Europe and nicknamed the \"relay of peace\"."
-  international_events.4.op1: "The Olympics finally returns!"
+  international_events.5.t: "The Truman Doctrine"
+  international_events.5.d: "[THIS.GetNewsHeader]U.S President Harry S. Truman has imposed something interesting, he has made a speech in Congress about The Truman Doctrine, A plan that is to impose the U.S will provide political, military and economic assistance to all democratic nations under threat from external or internal authoritarian forces.\n\nThis was made to counter the rising concern of the spread of Communism worldwide, Truman also has imposed plans to help European democratic countries that are recovering from war and defending them at all costs."
+  international_events.5.op1: "Finally something good for once..."
+  international_events.5.op2: "The U.S hates communism, what a win!"
+  international_events.5.op3: "We should review our international policies..."
+
+
+  greek_civil_war_events.1.t: "[FROM.GetName] Requests Divisons"
+  greek_civil_war_events.1.d: "[FROM.GetName] has requested divisions to help them fight in the $international_events.1.t$. As we are just volunteers of this war, we have an option to let them borrow the troops or decline their request. The fate of [FROM.GetName] could be in our hands."
+  greek_civil_war_events.1.op1: "We'll send a few!"
+  greek_civil_war_events.1.op2: "We don't care."
+  greek_civil_war_events_send: "Sends divisions to [FROM.GetName]"
 
   # News headers
   generic_news_header: "\n            £generic_news_header\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"

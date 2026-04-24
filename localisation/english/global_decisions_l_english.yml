@@ -11,3 +11,9 @@
 
   # Policies Decisions
   policies_decisions: "Policies"
+
+  # Greek Civil War Decisions
+  greek_civil_war_decisions: "$international_events.1.t$"
+  
+  PRY_request_divisions: "Request Divisions from [FROM.GetNameDefCap]"
+  GRE_civil_war_request_tt: "Not already requesting divisions"

@@ -8,14 +8,3 @@ defined_text = { # get news header
 		localization_key = generic_news_header
 	}
 }
-
-defined_text = {
-    name = GetFascistDesc
-    text = { # italy
-        trigger = { tag = ITA }
-        localization_key = italian_fascism_desc_mainmenu
-    }
-    text = { # generic
-        localization_key = fascism_desc_mainmenu
-    }
-}

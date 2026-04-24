@@ -92,7 +92,6 @@ set_technology = {
 	early_transport_plane = 1
 	improved_transport_plane = 1
 }
-set_air_oob = "ITA_1939_air_legacy"
 
 set_technology = {
 	# Ships
@@ -127,7 +126,6 @@ set_technology = {
 	basic_light_battery = 1
 	improved_light_battery = 1
 }
-set_naval_oob = "ITA_1936_naval_mtg"
 
 set_technology = {
 	# Infantry
@@ -189,7 +187,11 @@ set_technology = {
 	dispersed_industry3 = 1
 	atomic_research = 1
 }
+
+# OOB ORDER: LAND, AIR, NAVY
 set_oob = "ITA_1947"
+set_air_oob = "ITA_1939_air_legacy"
+set_naval_oob = "ITA_1936_naval_mtg"
 
 # Special Projects
 complete_special_project = sp:sp_air_radar

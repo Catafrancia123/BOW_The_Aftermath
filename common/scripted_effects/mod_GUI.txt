@@ -1,11 +1,3 @@
-decision_custom_bop_init = {
-	# base percentage vars for bop
-	# MUST EQUAL 100!
-	set_variable = { bop_amount_left = args^0 }
-    set_variable = { bop_amount_right = args^1 }
-    decision_custom_bop_update_frames = yes
-}
-
 decision_custom_bop_update_frames = {
     # bar_left_frame = bar_percentage^0
     set_variable = { bar_left_frame = bar_percentage^0 }
@@ -18,7 +10,7 @@ decision_custom_bop_update_frames = {
     add_to_variable = { decision_custom_bop_dirty = 0.00001 }
 }
 
-decision_custom_bop_add_func = {
+decision_custom_bop_add = {
     set_temp_variable = { old_size = 100 }
     subtract_from_temp_variable = { old_size = bar_percentage^side }
     add_to_variable = { bar_percentage^side = amount }
@@ -48,13 +40,6 @@ decision_custom_bop_add_func = {
     }
     decision_custom_bop_update_frames = yes
 }
-
-decision_custom_bop_add = {
-    set_temp_variable = { side = args^0 }
-    set_temp_variable = { amount = args^1 }
-    decision_custom_bop_add_func = yes
-}
-
 
 # Add Percentage
 # Adds x amount of percentage to a side

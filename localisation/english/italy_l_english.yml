@@ -7,10 +7,6 @@
   # Special Names
   ITA_fascism: "Italian Social Republic"
   ITA_fascism_DEF: "the Italian Social Republic"
-  CRO_fascism: "Croatia"
-  CRO_fascism_DEF: "Croatia"
-  YUG_ITA_fascism_subject: "State of Serbia and Montenegro"
-  YUG_ITA_fascism_subject_DEF: "the State of Serbia and Montenegro"
   EGY_italy: "Republic of Egypt"
   YUG_movement: "Yugoslavian People's Republic"
   SYR_unity: "United Arab Republic"
@@ -259,16 +255,16 @@
 
   # OCF scripted loc
   ITA_ocf_stage_1: "Stage 1"
-  ITA_ocf_targets_1: "[BUL.GetFlag] [BUL.GetName], [HUN.GetFlag] [HUN.GetName], and [ROM.GetFlag] [ROM.GetName]"
+  ITA_ocf_targets_1: "[BUL.GetNameWithFlag], [HUN.GetNameWithFlag], and [ROM.GetNameWithFlag]"
   ITA_ocf_stage_2: "Stage 2"
-  ITA_ocf_targets_2: "[CZE.GetFlag] [CZE.GetName] and [GDR.GetFlag] [GDR.GetName]"
+  ITA_ocf_targets_2: "[CZE.GetNameWithFlag] and [GDR.GetNameWithFlag]"
   ITA_ocf_stage_3: "Stage 3"
-  ITA_ocf_targets_3: "[POL.GetFlag] [POL.GetName]"
+  ITA_ocf_targets_3: "[POL.GetNameWithFlag]"
   ITA_ocf_stage_4: "Stage 4"
-  ITA_ocf_targets_4: "[SOV.GetFlag] [SOV.GetName]"
+  ITA_ocf_targets_4: "[SOV.GetNameWithFlag]"
 
-  ITA_ocf_escalate_tt: "$focus_ITA_europe_operation_castle_front$ will escalate by [?escalate_amount|Y] level(s)."
-  ITA_ocf_deescalate_tt: "$focus_ITA_europe_operation_castle_front$ will de-escalate by [?deescalate_amount|Y] level(s)."
+  ITA_ocf_escalate_tt: "$focus_ITA_europe_operation_castle_front$ will escalate by §R$LEVELS$§! level(s)."
+  ITA_ocf_deescalate_tt: "$focus_ITA_europe_operation_castle_front$ will de-escalate by §G$LEVELS$§! level(s)."
   ITA_ocf_escalate_threat_tt: "$focus_ITA_europe_operation_castle_front$ Escalates"
   ITA_ocf_deescalate_threat_tt: "$focus_ITA_europe_operation_castle_front$ De-escalates"
 
@@ -294,14 +290,13 @@
   ITA_ocf_move_stage_two_trigger_tt: "Atleast 2 of these countries have been liberated:\n§Y$ITA_ocf_targets_1$§!"
   ITA_ocf_move_stage_two_tt: "Moves on to Stage 2 of $focus_ITA_europe_operation_castle_front$"
 
-  ITA_operation_castle_front_HUN: "Operation Castle Front - [HUN.GetName]"
+  ITA_operation_castle_front_HUN: "Operation Castle Front - Hungary"
+  ITA_operation_castle_front_regional_decisions: "View available actions in Hungary"
+  ITA_ocf_liberate_HUN: "Liberate [HUN.GetNameDefCap]"
 
   ITA_ocf_militia_action_cost_tt: "£command_power  §Y50§!  £pol_power §Y[?FROM.ITA_militia_cost]§!"
   ITA_ocf_militia_action_cost_tt_blocked: "£command_power  §R50§!  £pol_power §R[?FROM.ITA_militia_cost]§!"
   ITA_ocf_militia_action_cost_tt_tooltip: "It costs £command_power  §Y50§! and £pol_power  §Y[?FROM.ITA_militia_cost]§! to take the decision"
-
-  ITA_ocf_liberate_stage_1: "Liberate [FROM.GetName]"
-  ITA_ocf_liberate_stage_1_desc: "By declaring war on [FROM.GetNameDef], we can quickly help the revolutionary fascists groups in their fight against communism. This will be a quick war, and we must not fail our mission to liberate [FROM.GetNameDef]."
 
   ITA_ocf_militia_action_HUN: "Support [HUN.GetNameAdjectiveCap] Revolutionaries"
   ITA_ocf_entice_masses_HUN: "Entice The [HUN.GetNameAdjectiveCap] People"
@@ -376,6 +371,13 @@
   ITA_events.2.t: "Benito Mussolini Dead"
   ITA_events.2.d: "Benito Mussolini has been reported dead in his house, the cause of death is natural causes. The country has declared Gian Galeazzo Ciano as his sucessor and has put a 30 day mourning period for him. His death marks the end of The first Duce era, may he rest in peace."
   ITA_events.2.op1: "Its time to move on."
+
+  ITA_events.3.t: "Croatia Appeals Economic System"
+  ITA_events.3.d: "[CRO.GetName] has asked us to appeal our current economic system in the country, calling it \"not authentic\" to the territory. As [CRO.GetName] is actively trying to gain independence, we have to review our current methods in autonomy."
+  ITA_events.3.op1.tt: "Allows [CRO.GetName] to have an independent economic system."
+  ITA_events.3.op1: "The economy should be decided by themselves."
+  ITA_events.3.op2: "Our methods are better."
+
 
   # News Events (REMEMBER TO INCLUDE [THIS.GetNewsHeader] AT THE START OF THE DESCRIPTION.)
   ITA_news_header: "\n             £ITA_news_header\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"

@@ -5,6 +5,7 @@ IEG = {
 
 	# triggers
 	has_cosmetic_tag = EGY_italy
+	exists = yes
 }
 
 GRC = {
@@ -14,6 +15,7 @@ GRC = {
 
 	# triggers
 	has_cosmetic_tag = GRE_movement
+	exists = yes
 }
 
 PRY = {
@@ -23,4 +25,5 @@ PRY = {
 
 	# triggers
 	has_cosmetic_tag = YUG_movement
+	exists = yes
 }

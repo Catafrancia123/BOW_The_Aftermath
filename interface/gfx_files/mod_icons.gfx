@@ -4,6 +4,11 @@ spriteTypes = {
 		name = "GFX_focus_generic_befriend_egypt"
 		textureFile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
 	}
+	
+	spriteType = {
+		name = "GFX_CRO_economic_reform"
+		textureFile = "gfx/interface/nat_focus/balkan_italy/CRO_economic_reform.tga"
+	}
 
 	spriteType = {
 		name = "GFX_ITA_focus_military_industrialization"
@@ -16,6 +21,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ITA_military_industrialization"
 		textureFile = "gfx/interface/ideas/ITA_military_industrialization.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_CRO_treaty_of_belgrade"
+		textureFile = "gfx/interface/ideas/CRO_treaty_of_belgrade.tga"
 	}
 
 	# Ideology Icons

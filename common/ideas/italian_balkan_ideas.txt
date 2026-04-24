@@ -1,0 +1,28 @@
+ideas = {
+    country = {
+        mod_CRO_serbian_oppression = {
+            picture = generic_purge
+            modifier = {
+				stability_factor = -0.2
+				resistance_activity = 0.2
+				resistance_decay_on_our_occupied_states = 0.1
+				autonomy_gain = -0.45 # you are getting too cruel!
+                monthly_population = -0.1
+            }
+        }
+
+        mod_treaty_of_belgrade = {
+            picture = CRO_treaty_of_belgrade
+            modifier = {
+		autonomy_manpower_share = 0.15
+                cic_to_overlord_factor = 0.1
+            }
+            rule = {
+				can_decline_call_to_war = no
+                can_not_declare_war = yes
+                can_send_volunteers = no
+                can_lower_tension = yes
+			}
+        }
+	}
+}

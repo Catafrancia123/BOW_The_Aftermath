@@ -19,4 +19,8 @@ spriteTypes = {
 		name = "GFX_news_event_galeazzo_ciano_elected"
 		textureFile = "gfx/event_pictures/galeazzo_ciano_elected.tga"
 	}
+	spriteType = {
+		name = "GFX_news_event_truman_speech"
+		textureFile = "gfx/event_pictures/truman_speech.tga"
+	}
 }

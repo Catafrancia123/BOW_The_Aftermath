@@ -87,6 +87,9 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		civilian_economy = {
+			available = {
+				NOT = { has_idea = controlled_economy } # mod thing
+			}
 			cost = 150
 			removal_cost = -1
 			modifier = {
@@ -104,6 +107,7 @@ ideas = {
 		}
 		low_economic_mobilisation = {
 			available = {
+				NOT = { has_idea = controlled_economy } # mod thing
 				has_war_support > 0.15
 				IF = {
 					limit = {
@@ -224,6 +228,7 @@ ideas = {
 		}
 		partial_economic_mobilisation = {
 			available = {
+				NOT = { has_idea = controlled_economy } # mod thing
 				has_war_support > 0.25
 				IF = {
 					limit = {
@@ -362,6 +367,7 @@ ideas = {
 		}
 		war_economy = {
 			available = {
+				NOT = { has_idea = controlled_economy } # mod thing
 				has_war_support > 0.5
 				OR = {
 					has_government = fascism
@@ -924,11 +930,14 @@ ideas = {
 			removal_cost = -1
 			#TODO: add bonuses when a certain company gets selected from the event above.
 			modifier = {
+				stability_factor = 0.05
 				consumer_goods_expected_value = 0.25
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.15
 				fuel_gain_factor = -0.1
 				factory_energy_consumption = -0.2
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.05
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -938,6 +947,35 @@ ideas = {
 					is_major = yes
 				}
 			}
+		}
+
+		controlled_economy = {
+			picture = ITA_military_industrialization
+			visible = {
+				is_subject = yes
+				overlord = {
+					has_government = fascism
+				}
+			}
+			cancel = {
+				is_subject = no
+			}
+			available = {
+				always = yes
+			}
+			cost = 0
+			removal_cost = -1
+			#TODO: add bonuses when a certain company gets selected from the event above.
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = 0.3
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.05
+				fuel_gain_factor = -0.2
+				factory_energy_consumption = 0.1
+				industrial_capacity_factory = 0.05
+			}
+			cancel_if_invalid = no
 		}
 	}
 	

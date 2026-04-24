@@ -4,12 +4,9 @@
   GRE_movement_DEF: "the Provisional Democratic Government"
   GRE_movement_ADJ: "Greek"
 
-
   # Ideas
   mod_GRE_uprising: "Communist Uprising"
   mod_GRE_uprising_desc: "Many communist movements have revolted against the country, this could be influence from our neighbor communist states."
 
   # Greek Civil War
-  gre_war_communist_movement: "Communist Movements"
-  gre_war_civil_war: "Macedonian Civil War"
-  gre_called: "Called to war"
+  

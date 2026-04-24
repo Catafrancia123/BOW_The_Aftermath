@@ -40,6 +40,20 @@ bitmapfonts = {
 			T = { 255 255 255 }
 		}
     }
+
+    bitmapfont = {
+        name = "ubuntu_24mbs"
+        fontfiles = { "gfx/fonts/ubuntu_24_mbs" }
+        color = 0xffffffff
+
+        textcolors = {
+			G = { 86 172 91 }
+			R = { 238 0 0 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+    }
     
     bitmapfont = {
         name = "tomorrow_map_font"

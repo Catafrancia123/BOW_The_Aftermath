@@ -380,6 +380,13 @@ if = {
 	}
 }
 
+1947.03.12 = {
+	news_event = {
+		id = international_events.5
+		days = 1
+	}
+}
+
 set_grand_doctrine = superior_firepower
 set_grand_doctrine = new_base_strike
 set_grand_doctrine = new_strategic_destruction

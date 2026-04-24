@@ -6,8 +6,7 @@ ITA_missiolinis = {
 	priority = 100
 	visible_when_empty = yes
 	
-	visible = { # any il duce can do it!
-		has_country_leader_with_trait = il_duce 
+	visible = { # any il duce can do it! 
 		has_country_flag = ITA_missiolinis_system_active_flag
 	}
 }

@@ -41,4 +41,9 @@ ITA_operation_castle_front_HUN = {
 	visible_when_empty = yes
 	priority = 89
 	scripted_gui = mod_decision_custom_bop
+	on_map_area = {
+		target_array = HUN.owned_controlled_states
+		name = ITA_operation_castle_front_regional_decisions
+		zoom = 200
+	}
 }

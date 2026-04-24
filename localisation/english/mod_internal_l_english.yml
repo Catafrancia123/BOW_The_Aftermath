@@ -92,9 +92,6 @@
   # State Categories
   strategic_island: "Strategic Island"
 
-  # City Names
-  VICTORY_POINTS_13388:0 "New Trieste"
-  VICTORY_POINTS_7381:0 "Jakarta"
 
   # GUI
   GUI_supremacy_title: "Supremacy Progress"
@@ -122,6 +119,9 @@
   # Laws 
   civilian_national_defense: "National Defense"
   civilian_national_defense_desc: "All abiding citizens of such country must take part in defending the country in times of war."
+
+  controlled_economy: "Controlled Economy"
+  controlled_economy_desc: "Since we are a subject to a foreign power, our economy has been forced to be under control of our overlord. We can't adjust our economical plans because of our low autonomy."
 
   # Events
   non_war_events.3.t: "Warning!"
@@ -154,6 +154,7 @@
   ROM_interval_communism_DEF: "the Kingdom of Romania"
 
   GRE_civil_war_req: "$international_events.1.t$ has happened."
+  GRE_civil_war_ongoing: "$international_events.1.t$ is ongoing."
 
   SOV_start_balkan_uprising: "Started the $international_events.1.t$"
   member_of_third_naval_treaty: "Is part of $international_events.3.t$"

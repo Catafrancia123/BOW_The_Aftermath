@@ -1131,7 +1131,10 @@ focus_tree = {
 			focus = focus_ITA_europe
 		}
 		completion_reward = {
-			add_political_power = 50
+			hidden_effect = {
+				ITA_ocf_init = yes
+			}
+			unlock_decision_category_tooltip = ITA_operation_castle_front
 		}
 	}
 	# The Hungarian Revolution

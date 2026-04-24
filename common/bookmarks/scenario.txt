@@ -46,12 +46,12 @@ bookmarks = {
         }
 
         # Minors
-	    GER = {
+	GER = {
             history = aftermath_germany
             ideology = democratic
             minor = yes
         }
-	    HOL = {
+	HOL = {
             history = aftermath_other
             ideology = democratic
             minor = yes
@@ -61,15 +61,16 @@ bookmarks = {
             ideology = democratic
             minor = yes
         }
-	    LUX = {
+	LUX = {
             history = aftermath_other
             ideology = democratic
             minor = yes
         }
-	    CRO = {
-            history = aftermath_other
+	CRO = {
+            history = aftermath_croatia
             ideology = fascism
             minor = yes
+            ideas = { mod_CRO_serbian_oppression mod_treaty_of_belgrade }
         }
         SER = {
             history = aftermath_other
@@ -83,7 +84,7 @@ bookmarks = {
             ideas = { vittorio_emanuele_emperor_of_ethiopia AOI_africa_orientale_italiana_idea }
         }
         GDR = {
-            history = aftermath_other #aftermath_east_germany
+            history = aftermath_germany
             ideology = communism
             minor = yes
         }
@@ -92,7 +93,7 @@ bookmarks = {
             ideology = communism
             minor = yes
         }
-	    EGY = {
+	EGY = {
             history = aftermath_other
             ideology = neutrality
             minor = yes

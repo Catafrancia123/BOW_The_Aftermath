@@ -1,4 +1,5 @@
 add_namespace = international_events
+add_namespace = greek_civil_war_events
 
 news_event = { # Balkan Communist Uprising
 	id = international_events.1
@@ -93,7 +94,6 @@ news_event = { # Third London Naval Treaty
 				for_each_loop = {
 					array = members_third_naval_treaty
 					value = v
-					break = break
 					
 					add_opinion_modifier = {
 						target = v
@@ -108,7 +108,6 @@ news_event = { # Third London Naval Treaty
 				for_each_loop = {
 					array = members_third_naval_treaty
 					value = v
-					break = break
 					
 					add_opinion_modifier = {
 						target = v
@@ -124,7 +123,7 @@ news_event = { # The 14th (XIV) Olympic Games
 	id = international_events.4
 	title = international_events.4.t
 	desc = international_events.4.d
-	picture = GFX_news_event_generic_naval_treaty
+	picture = GFX_news_event_olympics_1940
 	is_triggered_only = yes
 	major = yes
 
@@ -134,5 +133,55 @@ news_event = { # The 14th (XIV) Olympic Games
 
 	option = {
 		name = international_events.4.op1
+	}
+}
+
+news_event = { # The Truman Doctrine is proclaimed
+	id = international_events.5
+	title = international_events.5.t
+	desc = international_events.5.d
+	picture = GFX_news_event_truman_speech
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = international_events.5.op1
+		trigger = { 
+			has_government = democratic
+			capital_scope = {
+				is_on_continent = europe
+			}
+		}
+	}
+	option = {
+		name = international_events.5.op2
+		trigger = { 
+			has_government = fascism
+		}
+	}
+	option = {
+		trigger = { 
+			NOT = {
+				has_government = fascism
+				has_government = democratic
+				capital_scope = {
+					is_on_continent = europe
+				}
+			}
+		}
+		name = international_events.5.op3
+	}
+}
+
+country_event = { # PRY or GRC requests divisions from a country
+	id = greek_civil_war_events.1
+	title = greek_civil_war_events.1.t
+	desc = greek_civil_war_events.1.d
+	picture = GFX_report_event_NOR_quisling_troops
+	is_triggered_only = yes
+
+	option = { # send a few
+		name = greek_civil_war_events.1.op1
+		custom_effect_tooltip = greek_civil_war_events_send
 	}
 }

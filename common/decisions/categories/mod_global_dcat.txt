@@ -12,3 +12,13 @@ policies_decisions = {
 		}
 	}
 }
+
+greek_civil_war_decisions = {
+	allowed = {
+		tag = PRY
+		tag = GRC
+	}
+	visible = { always = yes }
+	priority = 50
+	visible_when_empty = yes
+}

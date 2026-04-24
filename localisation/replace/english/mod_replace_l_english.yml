@@ -22,16 +22,30 @@
   LOAD_GFX_PDXMAP_TREES:0 "Enforcing a military dictatorship..."
   LOAD_GFX_PDXMAP_RIVERS:0 "Building the Berlin Wall..."
   LOAD_GFX_PDXMAP_STATIC_OBJECTS:0 "Assassinating Stalin..."
-  PRECALC_NAVAL_DIST:0 "Adapt, Obey, Fight!"
+  PRECALC_NAVAL_DIST:0 "Inspecting troops..."
   
   FE_LOADING_HISTORY:0 "Setting the scene..."
   LOADING_MAIN_MENU:0 "Freed from warcrime charges."
   EXITING_TO_FRONTEND:0 "Dropping warcrime charges..."
 
-  MAP_LOADING_ERROR_INGAME: "§RERROR-01:§! Map Error"
-  MAP_LOADING_ERROR_INGAME_MITIGATION: "If you are a player and you encounter this message, please contact one of the developers (catamapp) with a screenshot of this message and your log file. If you are a developer, fix the goddamn game!!!"
+  MAP_LOADING_ERROR_INGAME:0 "§RERROR-01:§! Map Error"
+  MAP_LOADING_ERROR_INGAME_MITIGATION:0 "If you are a player and you encounter this message, please contact one of the developers (catamapp) with a screenshot of this message and your log file. If you are a developer, fix the goddamn game!!!"
 
-  # Ideologies
-  fascism_desc:0 "[GetFascistDesc]"
+  # description of countries in selection screen
+  fascism_desc:0 "Totalitarian Regime"
   communism_desc:0 "Communist Regime"
   democratic_desc:0 "Democratic State"
+
+  # Autonomy
+  autonomy_dominion:0 "Commonwealth Dominion"
+  autonomy_reichskommissariat:0 "Commissariat State"
+  autonomy_reichsprotectorate:0 "State Protectorate"
+  autonomy_satellite:0 "Satellite State"
+
+  # Victory Points
+  VICTORY_POINTS_3943:0 "Primosten"
+  VICTORY_POINTS_11901:0 "Zadar"
+  VICTORY_POINTS_13388:0 "Trieste"
+  INA_VICTORY_POINTS_7381:0 "Jakarta"
+  INS_VICTORY_POINTS_7381:0 "Batavia"
+  VICTORY_POINTS_6626:0 "Koper"

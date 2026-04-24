@@ -31,24 +31,24 @@ guiTypes = {
 			iconType = {
 				name = "progressbar"
 				spriteType = "GFX_custom_bop_bg"
-				position = { x = 107 y = @row_1_y }
+				position = { x = 107 y = 45 }
 			}
 			iconType = {
 				name = "progressbar_frame"
 				spriteType = "GFX_custom_bop_frame"
-				position = { x = 103 y = 31 }	
+				position = { x = 103 y = 41 }	
 			}
 
 			# the sides
 			iconType = {
 				name = "left_bar"
 				spriteType = "GFX_ITA_ocf_communist_side"
-				position = { x = 103 y = 34 }	
+				position = { x = 103 y = 44 }	
 			}
 			iconType = {
 				name = "right_bar"
 				spriteType = "GFX_ITA_elections_bar_mussolini"
-				position = { x = 258 y = 34 }	
+				position = { x = 258 y = 44 }	
 			}
 			iconType = {
 				name = "left_icon"
@@ -69,10 +69,32 @@ guiTypes = {
 			InstantTextBoxType = {
 				name = "sides_title"
 				text = "ITA_ocf_bop_title" # change later if some other country uses it
+				font = "hoi_24header"
+				format = center
+				size = { width = 100% height = 36 }
+				position { x = 0 y = -20 }
+				maxwidth = 475
+				maxheight = 36
+			}
+			
+			InstantTextBoxType = {
+				name = "sides_desc"
+				text = "Balance of Power:"
 				font = "hoi_18mbs"
 				format = center
 				size = { width = 100% height = 36 }
+				position = { x = 0 y = 15 }
 				maxwidth = 475
+				maxheight = 36
+			}
+			
+			InstantTextBoxType = {
+				name = "side_left_text"
+				position = { x = 100 y = @row_4_y }
+				text = "ITA_ocf_bop_side_left_gui"
+				font = "hoi_18mbs"
+				format = left
+				maxwidth = 300
 				maxheight = 36
 			}
 			

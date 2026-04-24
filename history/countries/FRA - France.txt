@@ -150,6 +150,7 @@ set_autonomy = {
 }
 
 recruit_character = FRA_leon_blum_new
+promote_character = FRA_leon_blum_new
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_maurice_thorez
 recruit_character = FRA_pierre_laval

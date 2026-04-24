@@ -62,12 +62,6 @@ ITA_elections_add_percentage = {
     bar_update_frames = yes
 }
 
-d_bar_add_percentage = {
-    set_temp_variable = { candidate = args^0 }
-    set_temp_variable = { temp_amount = args^1 }
-    ITA_elections_add_percentage = yes
-}
-
 
 # Add Percentage
 # Adds x amount of percentage to a candidate
@@ -90,8 +84,10 @@ d_bar_add_percentage = {
 # Other stuff
 
 ITA_operation_castle_front_escalate = {
-    set_temp_variable = { escalate_amount = args^0 }
-    custom_effect_tooltip = ITA_ocf_escalate_tt
+    custom_effect_tooltip = {
+        tooltip = ITA_ocf_escalate_tt
+        LEVELS = escalate_amount
+    }
     add_to_variable = { ITA_ocf_escalation = escalate_amount }
     set_variable = { ETH.ETH_war_escalation_level = ITA_ocf_escalation }
 
@@ -104,9 +100,11 @@ ITA_operation_castle_front_escalate = {
     }
 }
 
-ITA_operation_castle_front_deescalate = {
-    set_temp_variable = { deescalate_amount = args^0 }
-    custom_effect_tooltip = ITA_ocf_deescalate_tt
+ITA_operation_castle_front_deescalate_func = {
+    custom_effect_tooltip = {
+        tooltip = ITA_ocf_escalate_tt
+        LEVELS = deescalate_amount
+    }
     subtract_from_variable = { ITA_ocf_escalation = deescalate_amount }
     set_variable = { ETH.ETH_war_escalation_level = ITA_ocf_escalation }
 
@@ -114,20 +112,18 @@ ITA_operation_castle_front_deescalate = {
     set_temp_variable = { deescalate_amount_threat = -1 }
     multiply_temp_variable = { deescalate_amount_threat = deescalate_amount }
     add_named_threat = {
-        threat = -1
+        threat = deescalate_amount_threat
         name = ITA_ocf_deescalate_threat_tt
     }
 }
 
 ITA_ocf_calculate_militia_actions = {
-    set_temp_variable = { country = args^0 }
     set_temp_variable = { cost_modifier = ITA_ocf_escalation }
     divide_temp_variable = { cost_modifier = 2 }
 
     for_each_loop = {
 		array = country.owned_controlled_states
 		value = v
-		break = break
 
         # FORMULA: PP_REQ = (STATE_POP_K/10) * WAR_ESCALATION/2
         # IF PP_REQ > 150, PP_REQ - 50
@@ -152,5 +148,26 @@ ITA_ocf_calculate_militia_actions = {
         }
         round_temp_variable = state_pp_req
         set_variable = { v.ITA_militia_cost = state_pp_req } 
+	}
+}
+
+ITA_ocf_init = {
+    set_country_flag = ITA_ocf_flag 
+	set_country_flag = ITA_ocf_stage_one_flag
+	set_variable = { ITA_ocf_stage_loc = 1 }
+
+    add_to_temp_array = { ITA_calculate_states_countries = HUN }
+	add_to_temp_array = { ITA_calculate_states_countries = BUL }
+	add_to_temp_array = { ITA_calculate_states_countries = ROM }
+	add_to_temp_array = { ITA_calculate_states_countries = CZE }
+	add_to_temp_array = { ITA_calculate_states_countries = GDR }
+	add_to_temp_array = { ITA_calculate_states_countries = POL }
+
+	for_each_loop = {
+		array = ITA_calculate_states_countries
+		value = v
+			
+		set_temp_variable = { country = v }
+		ITA_ocf_calculate_militia_actions = yes
 	}
 }

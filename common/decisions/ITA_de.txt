@@ -269,7 +269,8 @@ ITA_operation_castle_front = {
 		targets = { BUL HUN ROM }
 
 		complete_effect = {
-			ETH_escalate_the_war_effect = yes
+			set_temp_variable = { escalate_amount = 1 }
+			ITA_operation_castle_front_escalate = yes
 			custom_effect_tooltip = ITA_ocf_selection_stage_1_tt
 			if = {
 				limit = { 
@@ -327,6 +328,7 @@ ITA_operation_castle_front = {
 				}
 				set_temp_variable = { country = ROM }
 				ITA_ocf_calculate_militia_actions = yes
+
 				multiply_variable = { ITA_missiolinis_ocf_days = 2 } # 240 days for romania, rest 120 days
 				set_country_flag = ITA_ocf_ROM_decisions
 			}
@@ -334,17 +336,19 @@ ITA_operation_castle_front = {
 				limit = { 
 					FROM = { original_tag = HUN }
 				}
-				unlock_decision_category_tooltip = ITA_operation_castle_front_HUN
 				set_temp_variable = { country = HUN }
-				set_country_flag = ITA_ocf_HUN_decisions
 				ITA_ocf_calculate_militia_actions = yes
+
+				unlock_decision_category_tooltip = ITA_operation_castle_front_HUN
+				set_country_flag = ITA_ocf_HUN_decisions
 			} 
 			if = {
 				limit = { 
 					FROM = { original_tag = BUL }
 				}
-				set_temp_variable = { country = ROM }
+				set_temp_variable = { country = BUL }
 				ITA_ocf_calculate_militia_actions = yes
+
 				set_country_flag = ITA_ocf_BUL_decisions
 			}
 		}

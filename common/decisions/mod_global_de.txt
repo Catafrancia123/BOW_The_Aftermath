@@ -1,0 +1,35 @@
+greek_civil_war_decisions = {
+	PRY_request_divisions = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		visible = { 
+			tag = PRY # not original tag so that it doesnt use YUG
+			has_global_flag = GRE_civil_war 
+		}
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_ongoing
+				has_global_flag = GRE_civil_war
+			}
+			custom_trigger_tooltip = {
+				tooltip = GRE_civil_war_request_tt
+				NOT = { has_country_flag = GRE_civil_war_request }
+			}
+		}
+		cost = 50
+		days_re_enable = 30
+		priority = 20
+		# FROM = targets
+		# ROOT = PRY
+		targets = { BUL ROM SOV }
+
+		complete_effect = {
+			set_country_flag = GRE_civil_war_request
+			FROM = {
+				country_event = {
+					id = greek_civil_war_events.1
+					days = 1
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+focus_tree = {
+	id = mod_BUL_focus
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = CRO
+		}
+	}
+
+	# POLITICAL BRANCH #
+	focus = { # Push for Independence
+		id = focus_CRO_politics_independence
+		icon = GFX_focus_generic_support_the_left_right
+		x = 2 
+		y = 0
+		mutually_exclusive = { focus = focus_CRO_politics_loyal_ally }
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_country_leader_trait = CRO_prominent_independence_leader
+			add_political_power = 50
+		}
+	}
+
+	focus = { # National Identity
+		id = focus_CRO_politics_independence_identity
+		icon = GFX_focus_generic_support_the_left_right
+		x = -1
+		y = 1
+		relative_position_id = focus_CRO_politics_independence
+		prerequisite = { focus = focus_CRO_politics_independence }
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	focus = { # New Government
+		id = focus_CRO_politics_new_government
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 3
+		relative_position_id = focus_CRO_politics_independence
+		mutually_exclusive = { focus = focus_CRO_politics_old_government }
+		prerequisite = { 
+			focus = focus_CRO_politics_independence 
+			focus = focus_CRO_politics_loyal_ally
+		}
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	focus = { # Keep Pavelic
+		id = focus_CRO_politics_intergrating_bosnia
+		icon = GFX_focus_YUG_safeguard_bosnia
+		x = 3
+		y = 1
+		relative_position_id = focus_CRO_politics_independence
+		prerequisite = { 
+			focus = focus_CRO_politics_independence 
+			focus = focus_CRO_politics_loyal_ally
+		}
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	focus = { # A United Homeland
+		id = focus_CRO_politics_loyal_ally
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 8
+		y = 0
+		mutually_exclusive = { focus = focus_CRO_politics_independence }
+		cost = 35
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	focus = { # Keep Pavelic
+		id = focus_CRO_politics_old_government
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 3
+		relative_position_id = focus_CRO_politics_loyal_ally
+		mutually_exclusive = { focus = focus_CRO_politics_new_government }
+		prerequisite = { 
+			focus = focus_CRO_politics_independence 
+			focus = focus_CRO_politics_loyal_ally
+		}
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	# INDUSTRY BRANCH #
+	focus = { # Reform Economy
+		id = focus_CRO_industry_reform_economy
+		icon = GFX_CRO_economic_reform
+		x = 20
+		y = 0
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+}

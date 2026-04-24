@@ -68,6 +68,54 @@ country_event = {
 	}
 }
 
+country_event = {
+	# Croatia appeals economic system
+	id = ITA_events.3
+	title = ITA_events.3.t
+	desc = ITA_events.3.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	timeout_days = 20
+
+	option = {
+		name = ITA_events.3.op1
+		custom_effect_tooltip = ITA_events.3.op1.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+
+		news_event = {
+			id = ITA_news_events.6
+			days = 1
+		}
+	}
+	option = {
+		name = ITA_events.3.op2
+		kill_country_leader = yes
+		set_country_flag = ITA_mussolini_dead
+		promote_character = ITA_gian_galeazzo_ciano_new #testing
+		if = {
+			limit = { has_completed_focus = focus_ITA_politics_supremacy }
+			promote_character = ITA_gian_galeazzo_ciano_new
+		}
+		if = {
+			limit = { has_completed_focus = focus_ITA_politics_irredentism }
+			promote_character = ITA_gian_galeazzo_ciano_ultranationalist
+		}
+		set_power_balance = {
+			id = ITA_power_balance
+			left_side = ITA_grand_council_side
+			right_side = ITA_ciano_side
+			set_value = 0.15
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		news_event = {
+			id = ITA_news_events.6
+			days = 1
+		}
+	}
+}
+
 # MISSIOLINIS
 country_event = {
 	# Successful Egyptian fascist influence
@@ -272,7 +320,7 @@ country_event = {
 				for_each_loop = {
 					array = ITA_requested_states
 					value = v
-					break = break
+					
 					transfer_state = v
 				}
 				clear_array = ITA_requested_states
@@ -284,16 +332,16 @@ country_event = {
 				target = FROM
 				modifier = ITA_demands_granted
 			}
-		}
 
-		# flag thing
-		if = {
-			limit = { FROM = { tag = CRO } }
-			ROOT = { set_country_flag = ITA_demand_dalmatia_success }
-		}
-		if = {
-			limit = { FROM = { tag = GRE } }
-			ROOT = { set_country_flag = ITA_demand_corfu_success }
+			# flag thing
+			if = {
+				limit = { FROM = { tag = CRO } }
+				set_country_flag = ITA_demand_dalmatia_success
+			}
+			if = {
+				limit = { FROM = { tag = GRE } }
+				set_country_flag = ITA_demand_corfu_success 
+			}
 		}
 	}
 }
@@ -348,7 +396,7 @@ country_event = {
 					for_each_loop = {
 						array = ITA_requested_states
 						value = v
-						break = break
+						
 						transfer_state = v
 					}
 				}

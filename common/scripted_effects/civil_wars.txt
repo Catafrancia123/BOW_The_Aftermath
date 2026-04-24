@@ -1,0 +1,49 @@
+GRE_civil_war = {
+	GRE = {
+		start_civil_war = {
+			ideology = communism
+			ruling_party = neutrality
+			states = { 184 731 1052 }
+			capital = 731
+			keep_political_leader = no
+			air_ratio = 0.3
+			navy_ratio = 0.25
+
+			# For the Provisional Democratic Government
+			set_cosmetic_tag = GRE_movement	# TAG = GRC
+			retire_country_leader = yes
+			promote_country_leader = GRE_nikos_zachariadis
+			add_named_threat = {
+				threat = 5
+				name = international_events.1.t
+			}
+			load_oob = "GRC_uprising_1947"
+		}
+	}
+
+	YUG = {
+		start_civil_war = {
+			ideology = communism
+			ruling_party = fascism
+			states = { 106 970 803 802 108 }
+			capital = 106
+			keep_political_leader = no
+			air_ratio = 0.45
+
+			# For the Yugoslavian People's Republic
+			set_cosmetic_tag = YUG_movement	# TAG = PRY
+			retire_country_leader = yes
+			promote_character = YUG_josip_broz_tito
+			declare_war_on = {
+				target = CRO
+				type = take_core_state
+			}
+			load_oob = "PRY_uprising_1947"
+		}
+	}
+
+	news_event = {
+		id = international_events.1
+		days = 1
+	}
+}
