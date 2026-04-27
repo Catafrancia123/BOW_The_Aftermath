@@ -135,11 +135,17 @@ set_autonomy = {
 	end_wars = no
 	end_civil_wars = no
 }
-
 set_autonomy = {
-	# French West Africa
+	# French Equatorial Africa
 	target = FEA
 	autonomous_state = autonomy_integrated_puppet
+	end_wars = no
+	end_civil_wars = no
+}
+set_autonomy = {
+	# Saar Protectorate
+	target = SRA
+	autonomous_state = autonomy_supervised_state
 	end_wars = no
 	end_civil_wars = no
 }

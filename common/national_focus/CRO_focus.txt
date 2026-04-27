@@ -1,5 +1,5 @@
 focus_tree = {
-	id = mod_BUL_focus
+	id = mod_CRO_focus
 	country = {
 		base = 0
 		modifier = {
@@ -11,25 +11,55 @@ focus_tree = {
 	# POLITICAL BRANCH #
 	focus = { # Push for Independence
 		id = focus_CRO_politics_independence
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_CRO_push_for_independence
 		x = 2 
 		y = 0
-		mutually_exclusive = { focus = focus_CRO_politics_loyal_ally }
-		cost = 35 # 35 days now!!!!
+		cost = 1 # change this to 70 later
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				date > 1947.02.01
+				factor = 20
+			}
+		}
 
 		completion_reward = {
 			add_country_leader_trait = CRO_prominent_independence_leader
 			add_political_power = 50
+
+			custom_effect_tooltip = focus_CRO_politics_independence_tt
+			for_each_scope_loop = {
+				array = global.IFL_members
+				country_event = {
+					id = ITA_events.4
+					days = 1
+				}
+			}
 		}
 	}
 
-	focus = { # National Identity
+	focus = { # National Identity Branch
 		id = focus_CRO_politics_independence_identity
 		icon = GFX_focus_generic_support_the_left_right
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = focus_CRO_politics_independence
 		prerequisite = { focus = focus_CRO_politics_independence }
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	focus = { # Push Propaganda
+		id = focus_CRO_politics_identity_propaganda
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 1
+		relative_position_id = focus_CRO_politics_independence_identity
+		prerequisite = { focus = focus_CRO_politics_independence_identity }
 		cost = 35 # 35 days now!!!!
 
 		completion_reward = {
@@ -41,44 +71,14 @@ focus_tree = {
 		id = focus_CRO_politics_new_government
 		icon = GFX_focus_generic_support_the_left_right
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = focus_CRO_politics_independence
 		mutually_exclusive = { focus = focus_CRO_politics_old_government }
 		prerequisite = { 
 			focus = focus_CRO_politics_independence 
-			focus = focus_CRO_politics_loyal_ally
+			focus = focus_CRO_politics_independence
 		}
 		cost = 35 # 35 days now!!!!
-
-		completion_reward = {
-			add_political_power = 40
-		}
-	}
-
-	focus = { # Keep Pavelic
-		id = focus_CRO_politics_intergrating_bosnia
-		icon = GFX_focus_YUG_safeguard_bosnia
-		x = 3
-		y = 1
-		relative_position_id = focus_CRO_politics_independence
-		prerequisite = { 
-			focus = focus_CRO_politics_independence 
-			focus = focus_CRO_politics_loyal_ally
-		}
-		cost = 35 # 35 days now!!!!
-
-		completion_reward = {
-			add_political_power = 40
-		}
-	}
-
-	focus = { # A United Homeland
-		id = focus_CRO_politics_loyal_ally
-		icon = GFX_focus_ITA_generic_fascist_workers
-		x = 8
-		y = 0
-		mutually_exclusive = { focus = focus_CRO_politics_independence }
-		cost = 35
 
 		completion_reward = {
 			add_political_power = 40
@@ -88,13 +88,30 @@ focus_tree = {
 	focus = { # Keep Pavelic
 		id = focus_CRO_politics_old_government
 		icon = GFX_focus_generic_support_the_left_right
-		x = 0
-		y = 3
-		relative_position_id = focus_CRO_politics_loyal_ally
+		x = 3
+		y = 2
+		relative_position_id = focus_CRO_politics_independence
 		mutually_exclusive = { focus = focus_CRO_politics_new_government }
 		prerequisite = { 
 			focus = focus_CRO_politics_independence 
-			focus = focus_CRO_politics_loyal_ally
+			focus = focus_CRO_politics_independence
+		}
+		cost = 35 # 35 days now!!!!
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+	focus = { # integrate bosnia
+		id = focus_CRO_politics_intergrating_bosnia
+		icon = GFX_focus_YUG_safeguard_bosnia
+		x = 0
+		y = 1
+		relative_position_id = focus_CRO_politics_old_government
+		prerequisite = { 
+			focus = focus_CRO_politics_old_government 
+			focus = focus_CRO_politics_new_government
 		}
 		cost = 35 # 35 days now!!!!
 

@@ -11,13 +11,10 @@ state = {
 
 	history = {
 
-		owner = GER
+		owner = FRA
+		1949.05.23 = { owner = GER }
 		add_core_of = GER
 		add_core_of = WUR
-
-		victory_points = {
-			3530 10 #Karlsruhe
-		}
 
 		victory_points = {
 			11640 1 #Müllheim
@@ -35,7 +32,7 @@ state = {
 	}
 
 	provinces = {
-		3530 3679 3692 6542 6568 6712 11640
+		3679 3692 6542 6712 11640
 	}
 	
 	buildings_max_level_factor = 1.000

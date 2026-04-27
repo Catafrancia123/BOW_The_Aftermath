@@ -12,7 +12,8 @@ state = {
 
 	history = {
 
-		owner = GDR
+		owner = SOV
+		1949.10.07 = { owner = GDR }
 		add_core_of = GDR
 		add_core_of = GER
 		add_core_of = THU
@@ -20,7 +21,9 @@ state = {
 		victory_points = { 
 			425 1 # Weimar
 		}
-
+		victory_points = { 
+			3561 5 # Erfurt
+		}
 		victory_points = { 
 			538 2 # Jena
 		}
@@ -32,7 +35,7 @@ state = {
 	}
 
 	provinces = {
-		425 482 538 6501 6524 6582 9497 
+		425 482 538 3500 3561 6501 6524 6582 9497
 	}
 
 	local_supplies = 0.0 

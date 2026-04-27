@@ -1,0 +1,227 @@
+
+# MAIN THEME
+music = {
+	name = "World War III"
+	file = "evw/worldwar3.ogg"
+	volume = 1
+}
+music = {
+	name = "Allies Battle I"
+	file = "evw/alliesbattle1.ogg"
+	volume = 1
+}
+music = {
+	name = "Allies Peace I"
+	file = "evw/alliespeace1.ogg"
+	volume = 1
+}
+music = {
+	name = "Allies Peace II"
+	file = "evw/alliespeace2.ogg"
+	volume = 1
+}
+music = {
+	name = "Allies Peace III"
+	file = "evw/alliespeace3.ogg"
+	volume = 1
+}
+music = {
+	name = "An Uncertain Future"
+	file = "evw/anuncertainfuture.ogg"
+	volume = 1
+}
+music = {
+	name = "A Path of Danger"
+	file = "evw/apathofdanger.ogg"
+	volume = 1
+}
+music = {
+	name = "A State of Panic"
+	file = "evw/astateofpanic.ogg"
+	volume = 1
+}
+music = {
+	name = "Beacon"
+	file = "evw/beacon.ogg"
+	volume = 1
+}
+music = {
+	name = "Delightful Poetry"
+	file = "evw/delightfulpoetry.ogg"
+	volume = 1
+}
+music = {
+	name = "Democratic Rebellion"
+	file = "evw/democraticrebellion.ogg"
+	volume = 1
+}
+music = {
+	name = "Desert at Dusk"
+	file = "evw/desertatdusk.ogg"
+	volume = 1
+}
+music = {
+	name = "Dilemma"
+	file = "evw/dilemma.ogg"
+	volume = 1
+}
+music = {
+	name = "Diminishment"
+	file = "evw/diminishment.ogg"
+	volume = 1
+}
+music = {
+	name = "Float"
+	file = "evw/float.ogg"
+	volume = 1
+}
+music = {
+	name = "General Battle I"
+	file = "evw/generalbattle1.ogg"
+	volume = 1
+}
+music = {
+	name = "Gradient"
+	file = "evw/gradient.ogg"
+	volume = 1
+}
+music = {
+	name = "Gridlock"
+	file = "evw/gridlock.ogg"
+	volume = 1
+}
+music = {
+	name = "Latin Battle"
+	file = "evw/latinbattle.ogg"
+	volume = 1
+}
+music = {
+	name = "MEO"
+	file = "evw/meo.ogg"
+	volume = 1
+}
+music = {
+	name = "Neutral I - Saved By Choppers"
+	file = "evw/neutral1.ogg"
+	volume = 1
+}
+music = {
+	name = "Defcon 3 - Neutral II"
+	file = "evw/neutral2.ogg"
+	volume = 1
+}
+music = {
+	name = "Non-Democratic Rebellion"
+	file = "evw/nondemocraticrebellion.ogg"
+	volume = 1
+}
+music = {
+	name = "Nonplus"
+	file = "evw/nonplus.ogg"
+	volume = 1
+}
+music = {
+	name = "Defcon 1 - Nuclear Bomb"
+	file = "evw/nuclearbomb.ogg"
+	volume = 1
+}
+music = {
+	name = "Nuke Atmosphere"
+	file = "evw/nukeatmosphere.ogg"
+	volume = 1
+}
+music = {
+	name = "Orient"
+	file = "evw/orient.ogg"
+	volume = 1
+}
+music = {
+	name = "Panorama"
+	file = "evw/panorama.ogg"
+	volume = 1
+}
+music = {
+	name = "Responsibilities"
+	file = "evw/responsibilities.ogg"
+	volume = 1
+}
+music = {
+	name = "Russian Battle I"
+	file = "evw/russianbattle1.ogg"
+	volume = 1
+}
+music = {
+	name = "Russian Battle II"
+	file = "evw/russianbattle2.ogg"
+	volume = 1
+}
+music = {
+	name = "Russian Peace I"
+	file = "evw/russianpeace1.ogg"
+	volume = 1
+}
+music = {
+	name = "Russian Peace II"
+	file = "evw/russianpeace2.ogg"
+	volume = 1
+}
+music = {
+	name = "Russian Peace III"
+	file = "evw/russianpeace3.ogg"
+	volume = 1
+}
+music = {
+	name = "Sand Struggle"
+	file = "evw/sandstruggle.ogg"
+	volume = 1
+}
+music = {
+	name = "Spanish Heart"
+	file = "evw/spanishheart.ogg"
+	volume = 1
+}
+music = {
+	name = "Superpowers"
+	file = "evw/superpowers.ogg"
+	volume = 1
+}
+music = {
+	name = "Takeoff"
+	file = "evw/takeoff.ogg"
+	volume = 1
+}
+music = {
+	name = "Ties are Broken"
+	file = "evw/tiesarebroken.ogg"
+	volume = 1
+}
+music = {
+	name = "Tranquillite"
+	file = "evw/tranquillite.ogg"
+	volume = 1
+}
+music = {
+	name = "Voices Through Lights"
+	file = "evw/voicesthroughlights.ogg"
+	volume = 1
+}
+music = {
+	name = "Water Vapour"
+	file = "evw/watervapour.ogg"
+	volume = 1
+}
+music = {
+	name = "Waveform"
+	file = "evw/waveform.ogg"
+	volume = 1
+}
+music = {
+	name = "Defcon 2 - Weary Situation"
+	file = "evw/wearysituation.ogg"
+	volume = 1
+}
+music = {
+	name = "World At War"
+	file = "evw/worldatwar.ogg"
+	volume = 1
+}

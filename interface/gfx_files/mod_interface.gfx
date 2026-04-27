@@ -14,12 +14,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/GUI/border_tiled_country.tga"
 	}
 
-	spriteType = {
-		name = "GFX_album_BOW"
-		textureFile = "gfx/interface/GUI/bow_album.tga"
-		noOfFrames = 2
-	}
-
 	pieChartType = {
 		name = "GFX_supremacy_chart"
 		size = 108
@@ -44,5 +38,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_loadingscreen_1_small"
 		textureFile = "gfx/interface/loadingscreens/mainmenu_1_small.dds"
+	}
+	
+	# Music
+	spriteType = {
+		name = "GFX_album_EvW"
+		textureFile = "gfx/interface/GUI/evw.dds"
+		noOfFrames = 2
 	}
 }

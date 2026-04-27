@@ -4,8 +4,11 @@
   GER_DEF: "Germany"
   GER_ADJ: "West German"
   GDR: "East Germany"
-  DDR_DEF: "East Germany"
-  DDR_ADJ: "East German"
+  GDR_DEF: "East Germany"
+  GDR_ADJ: "East German"
+  SRA: "Saarland"
+  SRA_DEF: "Saarland"
+  SRA_ADJ: "Saarlander"
 
   # Country Names (overwrite)
   GER_occupied_democratic: "Allied-Occupied Germany"
@@ -26,6 +29,10 @@
   # East Germany
   DDR_communism: "German Democratic Republic"
   DDR_communism_DEF: "the German Democratic Republic"
+
+  # Saarland
+  SRA_democratic: "Saar Protectorate"
+  SRA_democratic_DEF: "the Saar Protectorate"
 
   # Country Political Parties
   mod_GER_democratic_party: "CDU/CSU"

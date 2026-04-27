@@ -1,0 +1,24 @@
+state = {
+	id = 1062
+	name = mod_state_16
+	manpower = 150000
+	state_category = metropolis
+	history = {
+		owner = FRA
+		1949.05.23 = { owner = GER }
+		add_core_of = GDR
+		add_core_of = GER
+		add_claim_by = SOV
+		add_claim_by = GDR
+		victory_points = {
+			13393 8 # West Berlin
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		13393
+	}
+	local_supplies = 0
+}

@@ -1,6 +1,13 @@
 capital = 126
 set_global_flag = MTG_naval_treaties_flag
 
+1948.08.14 = {
+	news_event = {
+		id = international_events.4
+		days = 10
+	}
+}
+
 if = {
 	limit = {
 		NOT = {

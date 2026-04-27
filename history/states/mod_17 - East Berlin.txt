@@ -1,0 +1,22 @@
+state = {
+	id = 1063
+	name = mod_state_17
+	manpower = 150000
+	state_category = metropolis
+	history = {
+		owner = SOV
+		1949.05.23 = { owner = GDR }
+		add_core_of = GDR
+		add_core_of = GER
+		victory_points = {
+			13392 25 # East Berlin
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		13392
+	}
+	local_supplies = 0
+}

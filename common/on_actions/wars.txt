@@ -1,0 +1,25 @@
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = PRY }
+				}
+				PRY = { 
+					drop_cosmetic_tag = yes
+					kill_country_leader = yes # tito executed
+				}
+				YUG = { 
+					add_ideas = mod_removing_the_communists 
+					news_event = {
+						id = international_events.6
+						days = 1
+					}
+				}
+				ITA = {
+					set_country_flag = IFL_won_serbian_civil_war # available to do intervene in greece
+				}
+			}
+		}
+	}
+}

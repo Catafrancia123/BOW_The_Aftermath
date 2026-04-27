@@ -39,4 +39,8 @@ spriteTypes = {
 		name = "GFX_SOV_Nikita_Khrushchev_civilian"
 		textureFile = "gfx/leaders/SOV/Nikita_Khrushchev_civilian.tga"
 	}
+	spriteType = {
+		name "GFX_SRA_Johannes_Hoffmann_civilian"
+		textureFile = "gfx/leaders/Germany/SRA_Johannes_Hoffmann_civilian.tga"
+	}
 }

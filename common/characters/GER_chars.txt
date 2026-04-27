@@ -1,0 +1,16 @@
+characters = {
+	# Saar Protectorate
+	SRA_johnannes_hoffman = { # Johannes Hoffman
+		gender = male
+		name = "Johannes Hoffman"
+		portraits = {
+			civilian = {
+				large = GFX_SRA_Johannes_Hoffmann_civilian
+			}
+		}
+		country_leader = {
+	    		ideology = conservatism
+			expire = 1965.1.1
+		}
+	}
+}

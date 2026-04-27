@@ -13384,11 +13384,19 @@
 # mod provinces
 13382;47;53;59;land;false;plains;1
 13383;106;095;049;land;true;plains;5
-13384;030;089;069;lake;false;lakes;5
-13385;088;114;070;land;false;desert;5
+13384;30;089;069;lake;false;lakes;5
+13385;88;114;070;land;false;desert;5
 13386;73;103;141;land;false;jungle;3
 13387;73;103;140;land;true;desert;7
 13388;73;103;139;land;true;plains;1
 13389;73;103;138;land;false;plains;1
 13390;73;103;97;land;false;plains;1
 13391;73;103;98;land;false;plains;6
+13392;73;103;99;land;false;plains;1
+13393;88;114;71;land;false;plains;1
+13394;30;90;70;land;false;plains;1
+13395;73;103;100;land;false;plains;1
+13396;0;0;0;land;false;unknown;0
+13397;71;66;0;land;false;unknown;0
+13398;0;115;82;land;false;unknown;0
+13399;2;0;0;land;false;unknown;0

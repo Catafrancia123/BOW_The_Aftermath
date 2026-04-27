@@ -18,13 +18,20 @@
   mod_CRO_serbian_oppression_desc: "We have a common hatred to the Serbs, as they are the race that oppressed us before. Previously, we have been banned of commiting a large-scale genocide on these Serbs, but now we are picking up the pace in secret, slowly and steadily. \n\n\"We'll kill a third of Serbs, another third we'll deport, and the final third we'll force them to be Roman Catholics.\"\n - Unknown"
   mod_treaty_of_belgrade: "The Treaty of Belgrade"
   mod_treaty_of_belgrade_desc: "After the signing of the Treaty of Belgrade, we were given independence with the requirement of full autonomy to Italy, this means our country is not really independent. We need to find a way to liberate ourselves and prove that Croatia can be a great country."
+  mod_removing_the_communists: "Communist Purge"
+  mod_removing_the_communists_desc: "After the $international_events.1.t$, our nation is heavily damaged. The communists are to blame, and removing them is the only ethical way. We should also rebuild and prove our capability in handling losses."
 
   # National Focus
   focus_CRO_politics_independence: "Push for Independence"
   focus_CRO_politics_independence_desc: "Our fight for independence has been victorious, but still under a term of a \"puppet state\". We must achieve ways to achieve true independence while still being under Italian defense and influence, as well as continuing our main objectives that we can't do under Italian control."
+  focus_CRO_politics_independence_tt: "§YThe International Fascist League§! will be alerted upon our country's independence request."
   focus_CRO_politics_loyal_ally: "A Loyal Ally"
   focus_CRO_politics_loyal_ally_desc: "Our independence is done, and as a token of gratitude, we can offer ourselves as a loyal ally. Being a loyal ally can grant us more freedom in our ways of living and assure the competency of a Croatian government."
 
   focus_CRO_industry_reform_economy: "New Economic System"
   focus_CRO_industry_reform_economy_desc: "To prove our independence to be real, we need a free economic system that we can implement according to our current needs. We must appeal to Italy for the abolishment of an Italian controlled economy in our territory!"
+
+  # Traits
+  CRO_prominent_independence_leader: "Prominent Independence Leader"
+
   

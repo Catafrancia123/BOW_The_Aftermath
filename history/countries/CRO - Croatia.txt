@@ -19,12 +19,26 @@ set_technology = {
 	# industry
 	basic_machine_tools = 1
 	improved_machine_tools = 1
-	advanced_machine_tools = 1
 	fuel_silos = 1
 	construction1 = 1
 	construction2 = 1
+	excavation1 = 1
 	dispersed_industry = 1
 	dispersed_industry2 = 1
+	oil_processing = 1
+	improved_oil_processing = 1
+	synth_oil_experiments = 1
+
+	# tanks, artillery
+	gwtank = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	basic_light_tank = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	artillery1 = 1
+	antiair1 = 1
 }
 set_grand_doctrine = grand_battleplan
 
@@ -36,16 +50,33 @@ set_technology = {
 	basic_torpedo = 1
 	mtg_transport = 1
 }
+set_grand_doctrine = new_fleet_in_being
 
+set_technology = {
+	# Fighters
+	early_fighter = 1
+	fighter1 = 1
+	fighter_equipment_0 = 1
+
+	# Bombers
+	early_bomber = 1
+	tactical_bomber1 = 1
+	CAS1 = 1
+	CAS2 = 1
+
+	# Transport Planes
+	early_transport_plane = 1
+	improved_transport_plane = 1
+}
+set_grand_doctrine = new_strategic_destruction
+
+# OOB
 set_oob = "CRO_1947"
 set_air_oob = "CRO_1947_air_legacy"
 
 complete_special_project = {
 	project = sp:sp_air_radar # thx italy
 }
-
-set_grand_doctrine = new_fleet_in_being
-set_grand_doctrine = new_strategic_destruction
 
 add_political_power = 150
 add_command_power = 100

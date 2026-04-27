@@ -7,7 +7,8 @@ state = {
 
 	history = {
 
-		owner = GER
+		owner = USA
+		1949.05.23 = { owner = GER }
 		add_core_of = GER
 		add_core_of = HES
 		add_core_of = PRE
@@ -25,10 +26,6 @@ state = {
 
 		victory_points = {
 			6488 20 # Frankfurt
-		}
-
-		victory_points = {
-			564 3 # Kassel
 		}
 
 		victory_points = {
@@ -50,7 +47,7 @@ state = {
 	}
 
 	provinces = {
-		564 589 3397 3524 3500 3574 6444 6488 6549 9486 9524 9547 11445 11533 11560 
+		589 3397 3524 3574 6444 6488 6549 9486 9547 11533 11560 11445 9524
 	}
 
 	local_supplies = 15.0 

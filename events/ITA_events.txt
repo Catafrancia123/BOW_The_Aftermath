@@ -90,29 +90,26 @@ country_event = {
 	}
 	option = {
 		name = ITA_events.3.op2
-		kill_country_leader = yes
-		set_country_flag = ITA_mussolini_dead
-		promote_character = ITA_gian_galeazzo_ciano_new #testing
-		if = {
-			limit = { has_completed_focus = focus_ITA_politics_supremacy }
-			promote_character = ITA_gian_galeazzo_ciano_new
-		}
-		if = {
-			limit = { has_completed_focus = focus_ITA_politics_irredentism }
-			promote_character = ITA_gian_galeazzo_ciano_ultranationalist
-		}
-		set_power_balance = {
-			id = ITA_power_balance
-			left_side = ITA_grand_council_side
-			right_side = ITA_ciano_side
-			set_value = 0.15
-		}
+		custom_effect_tooltip = ITA_events.3.op2.tt
 		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+}
 
-		news_event = {
-			id = ITA_news_events.6
-			days = 1
-		}
+country_event = {
+	# Croatia pushes for independence (for all IFL members)
+	id = ITA_events.4
+	title = ITA_events.4.t
+	desc = ITA_events.4.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	timeout_days = 20
+
+	option = {
+		name = ITA_events.4.op1
+		custom_effect_tooltip = ITA_events.4.op1.tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		unlock_decision_category_tooltip = IFL_decisions_CRO_independence
+		set_country_flag = IFL_CRO_independence_decision
 	}
 }
 
@@ -389,7 +386,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ITA_generic_events.4.op1
-		effect_tooltip = {
+		custom_effect_tooltip = {
 			tooltip = ITA_generic_events.4.tt_1
 			ROOT = {
 				ITA = {

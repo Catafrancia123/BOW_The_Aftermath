@@ -70,6 +70,7 @@ bookmarks = {
             history = aftermath_croatia
             ideology = fascism
             minor = yes
+            focuses = { focus_CRO_politics_independence }
             ideas = { mod_CRO_serbian_oppression mod_treaty_of_belgrade }
         }
         SER = {

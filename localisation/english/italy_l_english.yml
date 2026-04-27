@@ -3,6 +3,7 @@
   ITA: "Italy"
   ITA_DEF: "Italy"
   ITA_ADJ: "Italian"
+  ITA_short_name: "Italy"
 
   # Special Names
   ITA_fascism: "Italian Social Republic"
@@ -373,10 +374,16 @@
   ITA_events.2.op1: "Its time to move on."
 
   ITA_events.3.t: "Croatia Appeals Economic System"
-  ITA_events.3.d: "[CRO.GetName] has asked us to appeal our current economic system in the country, calling it \"not authentic\" to the territory. As [CRO.GetName] is actively trying to gain independence, we have to review our current methods in autonomy."
-  ITA_events.3.op1.tt: "Allows [CRO.GetName] to have an independent economic system."
+  ITA_events.3.d: "Croatia has asked us to appeal our current economic system in the country, calling it \"not authentic\" to the territory. As Croatia is actively trying to gain independence, we have to review our current methods in autonomy."
+  ITA_events.3.op1.tt: "Allows Croatia to have an independent economic system."
   ITA_events.3.op1: "The economy should be decided by themselves."
   ITA_events.3.op2: "Our methods are better."
+
+  ITA_events.4.t: "Croatia Pushes for Independence"
+  ITA_events.4.d: "Ante Pavelić, the leader of Croatia, has sent $ITA_short_name$ a letter regarding their state's autonomy. They demand that $ITA_short_name$ can end their puppet rule in Croatia as $ITA_short_name$ have promised them before. In order for Croatia to still be our ally, $ITA_short_name$ will guarentee their independence as long as they are in the International Fascist League.\n\nThe Treaty of Belgrade mentions the ability of a Croatian independence happening at any time Croatia requires, and guaranteeing its full existence if Croatia still is a member of the IFL after its independence."
+  ITA_events.4.op1: "We'll give them what they deserve."
+  ITA_events.4.op1.tt: "[ITA.GetNameWithFlag] starts preparing for Croatian independence:"
+
 
 
   # News Events (REMEMBER TO INCLUDE [THIS.GetNewsHeader] AT THE START OF THE DESCRIPTION.)

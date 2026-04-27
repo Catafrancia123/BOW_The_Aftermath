@@ -11,7 +11,8 @@ state = {
 
 	history = {
 
-		owner = GDR
+		owner = SOV
+		1949.10.07 = { owner = GDR }
 		add_core_of = GDR
 		add_core_of = GER
 		add_core_of = SAX

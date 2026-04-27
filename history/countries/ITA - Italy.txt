@@ -14,6 +14,7 @@ add_power_balance_value = {
 set_global_flag = MTG_naval_treaties_flag
 set_country_flag = ITA_missiolinis_level_flag
 ITA_missiolinis_initialize_missiolinis_system = yes # makes the missions active
+set_country_flag = ITA_missiolinis_system_active_flag
 
 # Puppet flags
 set_global_flag = italian_east_africa_flag
@@ -355,9 +356,13 @@ add_to_faction = SER
 add_to_faction = AOI
 add_to_faction = SPR
 # IFL Target Countries - Mediterranean
-set_variable = {
-	IFL_target_countries_mediterranean_completed = 1
-}
+set_variable = { global.IFL_target_countries_mediterranean_completed = 1 }
+# factions
+add_to_array = { global.IFL_members = ITA }
+add_to_array = { global.IFL_members = SPR }
+add_to_array = { global.IFL_members = CRO }
+add_to_array = { global.IFL_members = YUG }
+add_to_array = { global.IFL_members = AOI }
 
 # Characters
 recruit_character = ITA_benito_mussolini_new

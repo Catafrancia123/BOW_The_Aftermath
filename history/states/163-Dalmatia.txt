@@ -3,7 +3,7 @@ state = {
 	name = "STATE_163"
 	manpower = 18000
 	
-	state_category = enclave
+	state_category = town
 	
 	history = {
 		owner = CRO
@@ -12,6 +12,8 @@ state = {
 		}
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 2
+			arms_factory = 1
 			3943 = {
 				naval_base = 1
 			}

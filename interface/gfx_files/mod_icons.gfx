@@ -1,22 +1,147 @@
-spriteTypes = {
+spriteTypes = { # big icons
 	# National Focus
 	spriteType = {
 		name = "GFX_focus_generic_befriend_egypt"
 		textureFile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
+	}
+	spriteType = {
+		name = "GFX_focus_generic_befriend_egypt_shine"
+		textureFile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/ITA/focus_generic_befriend_egypt.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 	}
 	
 	spriteType = {
 		name = "GFX_CRO_economic_reform"
 		textureFile = "gfx/interface/nat_focus/balkan_italy/CRO_economic_reform.tga"
 	}
+	spriteType = {
+		name = "GFX_CRO_economic_reform_shine"
+		textureFile = "gfx/interface/nat_focus/balkan_italy/CRO_economic_reform.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/balkan_italy/CRO_economic_reform.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/balkan_italy/CRO_economic_reform.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	}
+
+	spriteType = {
+		name = "GFX_CRO_push_for_independence"
+		textureFile = "gfx/interface/nat_focus/balkan_italy/CRO_push_for_independence.tga"
+	}
+	spriteType = {
+		name = "GFX_CRO_push_for_independence_shine"
+		textureFile = "gfx/interface/nat_focus/balkan_italy/CRO_push_for_independence.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/balkan_italy/CRO_push_for_independence.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/balkan_italy/CRO_push_for_independence.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	}
 
 	spriteType = {
 		name = "GFX_ITA_focus_military_industrialization"
 		textureFile = "gfx/interface/nat_focus/ITA/ITA_focus_military_industrialization.tga"
 	}
+	spriteType = {
+		name = "GFX_ITA_focus_military_industrialization_shine"
+		textureFile = "gfx/interface/nat_focus/ITA/ITA_focus_military_industrialization.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/ITA/ITA_focus_military_industrialization.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/nat_focus/ITA/ITA_focus_military_industrialization.tga"
+			animationtexturefile = "gfx/interface/nat_focus/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	}
 }
 
-spriteTypes = {
+spriteTypes = { # small icons
 	# Ideas
 	spriteType = {
 		name = "GFX_idea_ITA_military_industrialization"
@@ -25,6 +150,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CRO_treaty_of_belgrade"
 		textureFile = "gfx/interface/ideas/CRO_treaty_of_belgrade.tga"
+	}
+
+	# Decisions
+	spriteType = {
+		name = "GFX_decision_category_IFL_decisions_CRO_independence"
+		textureFile = "gfx/interface/decisions/IFL_decisions_CRO_independence.tga"
 	}
 
 	# Ideology Icons

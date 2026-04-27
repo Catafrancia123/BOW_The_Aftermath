@@ -15,3 +15,15 @@ IFL_decisions = {
 		}
 	}
 }
+
+IFL_decisions_CRO_independence = {
+	icon = GFX_decision_category_IFL_decisions_CRO_independence
+	allowed = { 
+		OR = {
+			is_in_faction_with = ITA 
+			is_in_faction_with = SPR
+		}
+	}
+	visible = {	has_country_flag = IFL_CRO_independence_decision }
+	priority = 49
+}

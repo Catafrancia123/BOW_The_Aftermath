@@ -2,44 +2,42 @@
 on_actions = {
 	on_startup = {
 		effect = { # Setup variables 
-			set_variable = { covid_months = 1 }
-			set_variable = { mod_playtest = 1 } # Change this to 0 for published files.
-			set_variable = { faction_manifest_default = 100 }
-
 			# supremacy gui
-			set_variable = { total_countries = 0 }
-			set_variable = { democratic_countries = 0 }
-			set_variable = { fascism_countries = 0 }
-			set_variable = { communism_countries = 0 }
-			set_variable = { neutrality_countries = 0 }
+			set_variable = { global.total_countries = 0 }
+			set_variable = { global.democratic_countries = 0 }
+			set_variable = { global.fascism_countries = 0 }
+			set_variable = { global.communism_countries = 0 }
+			set_variable = { global.neutrality_countries = 0 }
 			every_country = {
 				if = {
 					limit = { THIS = { has_government = democratic } }
-					add_to_variable = { democratic_countries = 1 }
+					add_to_variable = { global.democratic_countries = 1 }
 				}	
 				if = {
 					limit = { THIS = { has_government = fascism } }
-					add_to_variable = { fascism_countries = 1 }
+					add_to_variable = { global.fascism_countries = 1 }
 				}	
 				if = {
 					limit = { THIS = { has_government = communism } }
-					add_to_variable = { communism_countries = 1 }
+					add_to_variable = { global.communism_countries = 1 }
 				}	
 				if = {
 					limit = { THIS = { has_government = neutrality } }
-					add_to_variable = { neutrality_countries = 1 }
+					add_to_variable = { global.neutrality_countries = 1 }
 				}
+				add_to_variable = { global.total_countries = 1 }
 			}
 		}
 		effect = { # Playtester warning
-			every_country = {
-				limit = { 
-					is_ai = no 
-					check_variable = { mod_playtest = 1 }
+			if = {
+				limit = {
+					is_debug = yes
 				}
-				country_event = {
-					id = non_war_events.3
-					days = 1
+				every_country = {
+					country_event = {
+						id = non_war_events.3
+						days = 1
+					}
 				}
 			}
 		}

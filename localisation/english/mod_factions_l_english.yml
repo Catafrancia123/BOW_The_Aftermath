@@ -10,8 +10,12 @@
 
   IFL_target_countries_mediterranean_name: "IFL Target Countries - Mediterranean"
 
-  IFL_decisions: "International Fascist League Decisions"
-  IFL_decisions_desc: "Fascism is declining, and this faction will be the sanctuary of fascist countries worldwide and a journey to rebuild fascist dominance once again."
+  IFL_decisions: "International Fascist League"
+  IFL_decisions_desc: "The International Fascist League serves as a faction to protect all of its fascist members from any external threat of collapse. With its 5 founding members, the faction is determined to redeem what was fascism before."
+  IFL_decisions_CRO_independence: "IFL - Croatian Independence"
+  IFL_decisions_CRO_independence_desc: "Croatia is trying to get its independence. The Treaty of Belgrade mentions the ability of a Croatian independence happening at any time Croatia requires, and guaranteeing its full existence if Croatia still is a member of the IFL after its independence. The Croatian government has asked for its independence, and now we prepare it for the future."
+  IFL_ITA_intervene_in_greece: "Intervene in Greece"
+  IFL_ITA_intervene_in_greece_desc: "As we have won in Serbia; To gather trust from the Greek government so that we can have a better chance to take over our claimed land, lets do them a favor and help them in the war."
   IFL_ITA_new_demand_dalmatia: "Demand Dalmatia"
   IFL_ITA_new_demand_dalmatia_desc: "As the focus of the Duce about all state in the Adriatic Sea must be under Italian control, demanding Dalmatia will guarantee that. Dalmatia is a key state to expand according to the vision of Greater Italy."
   IFL_ITA_demand_corfu: "Demand Corfu"

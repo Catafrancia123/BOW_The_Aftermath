@@ -10,16 +10,14 @@ state = {
 
 	history = {
 
-		owner = GER
+		owner = ENG
+		1949.05.23 = { owner = GER }
 		add_core_of = GER
 		add_core_of = HAN
 		add_core_of = PRE
 
 		victory_points = {
 			3326 5 # Bremen
-		}
-		victory_points = { 
-			3561 5 # Erfurt
 		}
 		victory_points = {
 			374 2 # Cuxhaven
@@ -48,7 +46,7 @@ state = {
 	}
 
 	provinces = {
-		374 526 3271 3326 3395 3561 6218 6263 6298 6325 6349 6377 6513 9238 9264 9375 11402 11468 11493 13389 13390
+		374 526 3271 3326 3395 6218 6263 6298 6325 6349 6377 6513 9238 9264 9375 11402 11493 11468
 	}
 
 	local_supplies = 0.0 

@@ -11,12 +11,17 @@ state = {
 
 	history = {
 
-		owner = GER
+		owner = USA
+		1949.05.23 = { owner = GER }
 		add_core_of = GER
 		add_core_of = WUR
 
 		victory_points = {
 			9517 20 #Stuttgart
+		}
+
+		victory_points = {
+			3530 10 #Karlsruhe
 		}
 
 		victory_points = {
@@ -33,7 +38,7 @@ state = {
 	}
 
 	provinces = {
-		519 694 3690 6555 6581 6934 9517 9545 9655 11486 11499 13126 
+		3530 6555 6581 6568 9517 9545 11499 
 	}
 	
 	buildings_max_level_factor = 1.000

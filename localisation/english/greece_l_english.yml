@@ -9,4 +9,8 @@
   mod_GRE_uprising_desc: "Many communist movements have revolted against the country, this could be influence from our neighbor communist states."
 
   # Greek Civil War
-  
+  # Events
+  greek_civil_war_events.2.t: "An Unexpected Ally"
+  greek_civil_war_events.2.d: "A letter came in this morning from an unexpected country, Italy. The letter, signed and sealed by Benito Mussolini himself, contains 2 requests:\n1. A request to help us fight against our communist equivalent\n2. In the case of the acceptance of the first request, we are obliged to give the state of [1055.GetName].\n\nThis letter was shocking to our leadership and our high command. As previously we are supposed to be a target of Italy's expansionist policies, but also in the letter: §R\"If you accept the requests, then I won't bother you anymore\"§!. Should we sacrifice territory for our survival? Or keep fighting alone?"
+  greek_civil_war_events.2.op1: "Survival by all methods nessecary!"
+  greek_civil_war_events.2.op2: "We can do this ourselves."

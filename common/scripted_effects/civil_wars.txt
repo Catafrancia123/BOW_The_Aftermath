@@ -12,12 +12,17 @@ GRE_civil_war = {
 			# For the Provisional Democratic Government
 			set_cosmetic_tag = GRE_movement	# TAG = GRC
 			retire_country_leader = yes
-			promote_country_leader = GRE_nikos_zachariadis
+			promote_character = GRE_nikos_zachariadis
 			add_named_threat = {
 				threat = 5
 				name = international_events.1.t
 			}
 			load_oob = "GRC_uprising_1947"
+		}
+
+		news_event = {
+			id = international_events.1
+			days = 1
 		}
 	}
 
@@ -40,10 +45,5 @@ GRE_civil_war = {
 			}
 			load_oob = "PRY_uprising_1947"
 		}
-	}
-
-	news_event = {
-		id = international_events.1
-		days = 1
 	}
 }

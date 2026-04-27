@@ -1,0 +1,1281 @@
+ 
+music_station = "evw"
+
+music = {
+	song = "World War III"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}
+		modifier = {
+			factor = 0
+
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "Allies Battle I"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = conservative
+				has_government = Liberal_Conservatism
+				has_government = Christian_Democratic
+				has_government = Social_Democratic
+				has_government = Social_Liberalism
+				has_government = democratic
+				has_government = centrist
+				has_government = liberal
+				has_government = national_conservative
+				has_government = liberal
+				has_government = new_democrat
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_government = conservative
+					has_government = Liberal_Conservatism
+					has_government = Christian_Democratic
+					has_government = Social_Democratic
+					has_government = Social_Liberalism
+					has_government = democratic
+					has_government = centrist
+					has_government = liberal
+					has_government = national_conservative
+					has_government = liberal
+					has_government = new_democrat
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Allies Peace I"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = conservative
+				has_government = Liberal_Conservatism
+				has_government = Christian_Democratic
+				has_government = Social_Democratic
+				has_government = Social_Liberalism
+				has_government = democratic
+				has_government = centrist
+				has_government = liberal
+				has_government = national_conservative
+				has_government = liberal
+				has_government = new_democrat
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_government = conservative
+					has_government = Liberal_Conservatism
+					has_government = Christian_Democratic
+					has_government = Social_Democratic
+					has_government = Social_Liberalism
+					has_government = democratic
+					has_government = centrist
+					has_government = liberal
+					has_government = national_conservative
+					has_government = liberal
+					has_government = new_democrat
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Allies Peace II"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = conservative
+				has_government = Liberal_Conservatism
+				has_government = Christian_Democratic
+				has_government = Social_Democratic
+				has_government = Social_Liberalism
+				has_government = democratic
+				has_government = centrist
+				has_government = liberal
+				has_government = national_conservative
+				has_government = liberal
+				has_government = new_democrat
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_government = conservative
+					has_government = Liberal_Conservatism
+					has_government = Christian_Democratic
+					has_government = Social_Democratic
+					has_government = Social_Liberalism
+					has_government = democratic
+					has_government = centrist
+					has_government = liberal
+					has_government = national_conservative
+					has_government = liberal
+					has_government = new_democrat
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Allies Peace III"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = conservative
+				has_government = Liberal_Conservatism
+				has_government = Christian_Democratic
+				has_government = Social_Democratic
+				has_government = Social_Liberalism
+				has_government = democratic
+				has_government = centrist
+				has_government = liberal
+				has_government = national_conservative
+				has_government = liberal
+				has_government = new_democrat
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_government = conservative
+					has_government = Liberal_Conservatism
+					has_government = Christian_Democratic
+					has_government = Social_Democratic
+					has_government = Social_Liberalism
+					has_government = democratic
+					has_government = centrist
+					has_government = liberal
+					has_government = national_conservative
+					has_government = liberal
+					has_government = new_democrat
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "An Uncertain Future"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+
+music = {
+	song = "A Path of Danger"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_stability < 0.6
+		}
+		modifier = {
+			factor = 0
+
+			has_stability > 0.6
+		}
+	}
+}
+
+music = {
+	song = "A State of Panic"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_stability < 0.5
+		}
+		modifier = {
+			factor = 0
+
+			has_stability > 0.5
+		}
+	}
+}
+
+music = {
+	song = "Beacon"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Delightful Poetry"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Democratic Rebellion"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = conservative
+				has_government = Liberal_Conservatism
+				has_government = Christian_Democratic
+				has_government = Social_Democratic
+				has_government = Social_Liberalism
+				has_government = democratic
+				has_government = centrist
+				has_government = liberal
+				has_government = national_conservative
+				has_government = liberal
+				has_government = new_democrat
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_government = conservative
+					has_government = Liberal_Conservatism
+					has_government = Christian_Democratic
+					has_government = Social_Democratic
+					has_government = Social_Liberalism
+					has_government = democratic
+					has_government = centrist
+					has_government = liberal
+					has_government = national_conservative
+					has_government = liberal
+					has_government = new_democrat
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Desert at Dusk"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = AFG
+				tag = ALW
+				tag = BHR
+				tag = CSA
+				tag = DRY
+				tag = EGY
+				tag = IRQ
+				tag = ISR
+				tag = JOR
+				tag = KRD
+				tag = KUW
+				tag = LEB
+				tag = OMA
+				tag = PAK
+				tag = PAL
+				tag = PER
+				tag = QAT
+				tag = SAU
+				tag = SMI
+				tag = SUD
+				tag = SYR
+				tag = UAE
+				tag = UAR
+				tag = YEM
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = AFG
+					tag = ALW
+					tag = BHR
+					tag = CSA
+					tag = DRY
+					tag = EGY
+					tag = IRQ
+					tag = ISR
+					tag = JOR
+					tag = KRD
+					tag = KUW
+					tag = LEB
+					tag = OMA
+					tag = PAK
+					tag = PAL
+					tag = PER
+					tag = QAT
+					tag = SAU
+					tag = SMI
+					tag = SUD
+					tag = SYR
+					tag = UAE
+					tag = UAR
+					tag = YEM
+				}
+			}
+		}	
+	}
+}
+
+music = {
+	song = "Dilemma"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_stability < 0.4
+		}
+		modifier = {
+			factor = 0
+
+			has_stability > 0.4
+		}
+	}
+}
+
+music = {
+	song = "Diminishment"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_stability < 0.3
+		}
+		modifier = {
+			factor = 0
+
+			has_stability > 0.3
+		}
+	}
+}
+
+music = {
+	song = "Float"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "General Battle I"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}
+		modifier = {
+			factor = 0
+
+			has_war = no
+		}	
+	}
+}
+
+music = {
+	song = "Gradient"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Gridlock"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			threat > 0.6
+		}
+		modifier = {
+			factor = 0
+
+			threat < 0.6
+		}
+	}
+}
+
+music = {
+	song = "Latin Battle"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = ARG
+				tag = BOL
+				tag = BRA
+				tag = CHL
+				tag = COS
+				tag = COL
+				tag = CUB
+				tag = DOM
+				tag = ECU
+				tag = ELS
+				tag = GUA
+				tag = HAI
+				tag = HON
+				tag = MEX
+				tag = NIC
+				tag = PAN
+				tag = PAR
+				tag = PRU
+				tag = PUE
+				tag = URG
+				tag = VEN
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = ARG
+					tag = BOL
+					tag = BRA
+					tag = CHL
+					tag = COS
+					tag = COL
+					tag = CUB
+					tag = DOM
+					tag = ECU
+					tag = ELS
+					tag = GUA
+					tag = HAI
+					tag = HON
+					tag = MEX
+					tag = NIC
+					tag = PAN
+					tag = PAR
+					tag = PRU
+					tag = PUE
+					tag = URG
+					tag = VEN
+				}
+			}
+		}		
+	}
+}
+
+music = {
+	song = "MEO"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Neutral I - Saved By Choppers"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}
+		modifier = {
+			factor = 0
+
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "Defcon 3 - Neutral II"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_war = yes
+				has_idea = defcon_system_3
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_war = yes
+					has_idea = defcon_system_3
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Non-Democratic Rebellion"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Nonplus"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			threat > 0.4
+		}
+		modifier = {
+			factor = 0
+
+			threat < 0.4
+		}
+	}
+}
+
+music = {
+	song = "Defcon 1 - Nuclear Bomb"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_war = yes
+				has_idea = defcon_system_1
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_war = yes
+					has_idea = defcon_system_1
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Nuke Atmosphere"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				threat > 0.8
+				has_war = yes
+				has_idea = defcon_system_1
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					threat > 0.8
+					has_war = yes
+					has_idea = defcon_system_1
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Orient"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = CAM
+				tag = CHI
+				tag = CMB
+				tag = FUL
+				tag = JAP
+				tag = KOR
+				tag = KMP
+				tag = KPA
+				tag = LAO
+				tag = LOS
+				tag = MON
+				tag = PRC
+				tag = PRK
+				tag = SIG
+				tag = TIB
+				tag = VIE
+				tag = VIN
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = CAM
+					tag = CHI
+					tag = CMB
+					tag = FUL
+					tag = JAP
+					tag = KOR
+					tag = KMP
+					tag = KPA
+					tag = LAO
+					tag = LOS
+					tag = MON
+					tag = PRC
+					tag = PRK
+					tag = SIG
+					tag = TIB
+					tag = VIE
+					tag = VIN
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Panorama"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Responsibilities"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Russian Battle I"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Russian Battle II"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Russian Peace I"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Russian Peace II"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Russian Peace III"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Sand Struggle"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = AFG
+				tag = ALW
+				tag = BHR
+				tag = CSA
+				tag = DRY
+				tag = EGY
+				tag = IRQ
+				tag = ISR
+				tag = JOR
+				tag = KRD
+				tag = KUW
+				tag = LEB
+				tag = OMA
+				tag = PAK
+				tag = PAL
+				tag = PER
+				tag = QAT
+				tag = SAU
+				tag = SMI
+				tag = SUD
+				tag = SYR
+				tag = UAE
+				tag = UAR
+				tag = YEM
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = AFG
+					tag = ALW
+					tag = BHR
+					tag = CSA
+					tag = DRY
+					tag = EGY
+					tag = IRQ
+					tag = ISR
+					tag = JOR
+					tag = KRD
+					tag = KUW
+					tag = LEB
+					tag = OMA
+					tag = PAK
+					tag = PAL
+					tag = PER
+					tag = QAT
+					tag = SAU
+					tag = SMI
+					tag = SUD
+					tag = SYR
+					tag = UAE
+					tag = UAR
+					tag = YEM
+				}
+			}
+		}	
+	}
+}
+
+music = {
+	song = "Spanish Heart"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = ARG
+				tag = BOL
+				tag = BRA
+				tag = CHL
+				tag = COS
+				tag = COL
+				tag = CUB
+				tag = DOM
+				tag = ECU
+				tag = ELS
+				tag = GUA
+				tag = HAI
+				tag = HON
+				tag = MEX
+				tag = NIC
+				tag = PAN
+				tag = PAR
+				tag = PRU
+				tag = PUE
+				tag = SPR
+				tag = URG
+				tag = VEN
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = ARG
+					tag = BOL
+					tag = BRA
+					tag = CHL
+					tag = COS
+					tag = COL
+					tag = CUB
+					tag = DOM
+					tag = ECU
+					tag = ELS
+					tag = GUA
+					tag = HAI
+					tag = HON
+					tag = MEX
+					tag = NIC
+					tag = PAN
+					tag = PAR
+					tag = PRU
+					tag = PUE
+					tag = SPR
+					tag = URG
+					tag = VEN
+				}
+			}
+		}		
+	}
+}
+
+music = {
+	song = "Superpowers"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			OR = {
+				is_puppet_of = SOV
+				tag = SOV
+				has_government = socialist
+				has_government = communism
+				has_government = trotskyism
+				has_government = maoism
+				has_government = national_bolshevik
+				has_government = moderate_socialist
+				has_government = revolutionary_socialist
+				has_government = communist
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					is_puppet_of = SOV
+					tag = SOV
+					has_government = socialist
+					has_government = communism
+					has_government = trotskyism
+					has_government = maoism
+					has_government = national_bolshevik
+					has_government = moderate_socialist
+					has_government = revolutionary_socialist
+					has_government = communist
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Takeoff"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Ties are Broken"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Tranquillite"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = FRA
+				tag = WAL
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = WAL
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Voices Through Lights"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Water Vapour"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				tag = CAM
+				tag = CHI
+				tag = CMB
+				tag = FUL
+				tag = JAP
+				tag = KOR
+				tag = KMP
+				tag = KPA
+				tag = LAO
+				tag = LOS
+				tag = MON
+				tag = PRC
+				tag = PRK
+				tag = SIG
+				tag = TIB
+				tag = VIE
+				tag = VIN
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					tag = CAM
+					tag = CHI
+					tag = CMB
+					tag = FUL
+					tag = JAP
+					tag = KOR
+					tag = KMP
+					tag = KPA
+					tag = LAO
+					tag = LOS
+					tag = MON
+					tag = PRC
+					tag = PRK
+					tag = SIG
+					tag = TIB
+					tag = VIE
+					tag = VIN
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "Waveform"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+
+music = {
+	song = "Defcon 2 - Weary Situation"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			OR = {
+				has_war = yes
+				has_idea = defcon_system_2
+			}
+		}
+		modifier = {
+			factor = 0
+
+			NOT = {
+				OR = {
+					has_war = yes
+					has_idea = defcon_system_2
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "World At War"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}
+		modifier = {
+			factor = 0
+
+			has_war = no
+		}	
+	}
+}

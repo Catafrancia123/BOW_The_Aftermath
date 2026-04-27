@@ -6,7 +6,8 @@ state = {
 	
 	history = {
 
-		owner = GER
+		owner = ENG
+		1949.05.23 = { owner = GER }
 		add_core_of = GER
 		add_core_of = SHL
 		add_core_of = PRE
