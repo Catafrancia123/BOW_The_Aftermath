@@ -237,14 +237,14 @@ set_party_name = {
 set_party_name = {
 	ideology = neutrality
 	name = mod_ITA_neutrality_party
-	long_name = mod_ITA_neutrality_party_long
+	long_name = mod_ITA_neutrality_party_long_savoy # main house of italy
 }
 
 set_popularities = {
-	democratic = 15	# Allowed after the Republic Referendum in 1946
-	fascism = 75	# DUCE! DUCE! DUCE!
-	communism = 4	# Heavily suppressed, banned sooner
-	neutrality = 6	# Still some monarchists
+	democratic = 16	# Allowed after the Republic Referendum in 1946
+	fascism = 77	# DUCE! DUCE! DUCE!
+	communism = 0	# Heavily suppressed, banned sooner
+	neutrality = 7	# Still some monarchists
 }
 
 # The Ideas

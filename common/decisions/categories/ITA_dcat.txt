@@ -14,6 +14,7 @@ ITA_election_decisions = {
 			factor = 2
 		}
 	}
+	visible_when_empty = yes
 	scripted_gui = ITA_elections_decision_ui
 }
 

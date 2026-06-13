@@ -14,7 +14,7 @@ focus_tree = {
 		icon = GFX_CRO_push_for_independence
 		x = 2 
 		y = 0
-		cost = 1 # change this to 70 later
+		cost = 35
 
 		ai_will_do = {
 			base = 1
@@ -39,31 +39,95 @@ focus_tree = {
 		}
 	}
 
-	focus = { # National Identity Branch
-		id = focus_CRO_politics_independence_identity
-		icon = GFX_focus_generic_support_the_left_right
+	focus = { # Removing italian influence branch
+		id = focus_CRO_politics_independence_remove_italian_influence
+		icon = GFX_CRO_remove_italian_influence
 		x = -2
 		y = 1
 		relative_position_id = focus_CRO_politics_independence
 		prerequisite = { focus = focus_CRO_politics_independence }
-		cost = 35 # 35 days now!!!!
+		cost = 100
 
 		completion_reward = {
-			add_political_power = 40
+			104 = { # Bosnia
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			103 = { # Dalmatia
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			163 = { # Zara
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			102 = { # North-East Slovenia
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			853 = { # Ljubljana
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
-	focus = { # Push Propaganda
-		id = focus_CRO_politics_identity_propaganda
-		icon = GFX_focus_generic_support_the_left_right
+	focus = { # Tomislav II did nothing!
+		id = focus_CRO_politics_independence_depose_italian_king
+		icon = GFX_focus_ITA_king_vittorio
 		x = 0
 		y = 1
-		relative_position_id = focus_CRO_politics_independence_identity
-		prerequisite = { focus = focus_CRO_politics_independence_identity }
+		relative_position_id = focus_CRO_politics_independence_remove_italian_influence
+		prerequisite = { focus = focus_CRO_politics_independence_remove_italian_influence }
 		cost = 35 # 35 days now!!!!
 
 		completion_reward = {
-			add_political_power = 40
+			retire_ideology_leader = neutrality
+			remove_ideas = mod_CRO_tomislav_ii
+			news_event = {
+				id = CRO_events.1
+				days = 1
+			}
 		}
 	}
 

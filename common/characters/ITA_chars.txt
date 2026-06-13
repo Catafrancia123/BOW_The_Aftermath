@@ -246,7 +246,7 @@ characters = {
 		country_leader = {
 			ideology = ultranationalism # read the lore document then!
 			expire = "1965.1.1.1"
-			traits = { il_duce military_modernizer }
+			traits = { il_duce military_modernizer militaristic }
 		}
 
 		advisor = {
@@ -305,7 +305,7 @@ characters = {
 		country_leader = {
 			ideology = military_junta
 			expire = 1965.1.1
-			traits = { il_duce modernizer_and_diplomat }
+			traits = { il_duce military_modernizer militaristic }
 		}
 
 		field_marshal = {
@@ -319,6 +319,81 @@ characters = {
 			visible = {
 				ITA_is_advisor_available = yes
 			}
+		}
+	}
+
+	## ITALIAN PUPPETS/COLONIES ##
+	CRO_tomislav_ii = {
+		name = ITA_prince_aimone
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_prince_aimone
+			}
+			navy = {
+				small = GFX_idea_prince_aimone
+				large = GFX_portrait_ITA_prince_aimone
+			}
+		}
+		 
+		country_leader = {
+			ideology = despotism
+			expire = 1965.1.1
+			traits = { } #none yet
+		}
+	}
+
+	CRO_slavko_kvaternik_new = {
+		name = CRO_slavko_kvaternik
+
+		portraits = {
+			army = {
+				large = GFX_portrait_CRO_slavko_kvaternik
+				small = GFX_portrait_CRO_slavko_kvaternik_small
+			}
+			civilian = {
+				large = GFX_portrait_CRO_slavko_kvaternik
+			}
+		}
+		
+		field_marshal = {
+			traits = { organizer aggressive_assaulter harsh_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+			#visible = {
+			#}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = CRO_slavko_kvaternik_new
+			ledger = army
+			allowed = {
+				original_tag = CRO
+			}
+			visible = {
+				NOT = { has_country_leader = CRO_slavko_kvaternik_new }
+			}
+
+			traits = {
+				army_regrouping_2
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 1.000
+			}
+
+		}
+		
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1.1.1965"
+			traits = { militaristic }
 		}
 	}
 }

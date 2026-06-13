@@ -4,6 +4,7 @@ add_namespace = ITA_missiolinis_events
 add_namespace = ITA_generic_events
 add_namespace = ITA_news_events
 add_namespace = ITA_news_events.elections
+add_namespace = CRO_events # loc in balkan_states_italy.yml
 
 country_event = {
 	# Italy selects a corporation as the leader for the corporatist system
@@ -100,7 +101,7 @@ country_event = {
 	id = ITA_events.4
 	title = ITA_events.4.t
 	desc = ITA_events.4.d
-	picture = GFX_report_event_generic_mussolini
+	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	timeout_days = 20
 
@@ -109,7 +110,21 @@ country_event = {
 		custom_effect_tooltip = ITA_events.4.op1.tt
 		custom_effect_tooltip = generic_skip_one_line_tt
 		unlock_decision_category_tooltip = IFL_decisions_CRO_independence
-		set_country_flag = IFL_CRO_independence_decision
+		set_country_flag = IFL_decisions_CRO_independence_flag
+	}
+}
+
+news_event = {
+	# Croatia deposes king Tomislav II
+	id = CRO_events.1
+	title = CRO_events.1.t
+	desc = CRO_events.1.d
+	picture = GFX_news_event_banovina_croatia
+	is_triggered_only = yes
+	timeout_days = 20
+
+	option = {
+		name = CRO_events.1.op1
 	}
 }
 
@@ -536,7 +551,7 @@ news_event = {
 	id = ITA_news_events.3
 	title = ITA_news_events.3.t
 	desc = ITA_news_events.3.d
-	picture = GFX_news_event_banovina_croatia
+	picture = GFX_news_event_mussolini_with_pavelic
 	is_triggered_only = yes
 	major = yes
 	option = {

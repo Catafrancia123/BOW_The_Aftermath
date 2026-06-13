@@ -89,26 +89,28 @@ add_ideas = {
 	controlled_economy # Economy
 	
 	# National Spirits
-	mod_CRO_serbian_oppression
 	mod_treaty_of_belgrade
+	mod_CRO_tomislav_ii
+	mod_CRO_serbian_oppression
 }
 
 set_politics = {
 	ruling_party = fascism
-	last_election = "1938.07.01"
+	last_election = "1938.07.01" # treaty of belgrade
 	elections_allowed = no
 }
 
-set_popularities = {
-	democratic = 8	# i allow it - mussolini
-	fascism = 82	# the best of them all
-	communism = 0	# illegal!
-	neutrality = 10	# we love the king!
+set_popularities = { # all other parties other than fascism is illegal
+	democratic = 0
+	fascism = 100
+	communism = 0	
+	neutrality = 0
 }
 
-recruit_character = CRO_ante_pavelic
-recruit_character = CRO_vladko_macek
-recruit_character = CRO_nikola_mandic
+recruit_character = CRO_ante_pavelic 	# fascist
+recruit_character = CRO_tomislav_ii 	# neutrality
+recruit_character = CRO_vladko_macek 	# democratic
+recruit_character = CRO_nikola_mandic 	# communism
 recruit_character = CRO_joseph_francis
 recruit_character = CRO_duro_jakcin
 recruit_character = CRO_slavko_kvaternik

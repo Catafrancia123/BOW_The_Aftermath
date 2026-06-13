@@ -1,6 +1,6 @@
 # Esercito Nazionale Italia
 mod_ITA_army = {
-	icon = ITA_regio_esercito_1
+	icon = GFX_idea_ITA_regio_esercito_1
 	enable = {
 		always = yes
 	}

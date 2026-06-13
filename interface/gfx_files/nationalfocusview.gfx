@@ -157,7 +157,7 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_focus_current"
-		texturefile = "gfx/interface/focusview/titlebar/focus_can_start_bg.dds"
+		texturefile = "gfx/interface/nat_focus/focus_in_progress.tga"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 #		effectFile = "gfx/FX/buttonstate.lua"		
 		animation = {

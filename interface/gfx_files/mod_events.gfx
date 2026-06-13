@@ -23,4 +23,8 @@ spriteTypes = {
 		name = "GFX_news_event_truman_speech"
 		textureFile = "gfx/event_pictures/truman_speech.tga"
 	}
+	spriteType = {
+		name = "GFX_news_event_mussolini_with_pavelic"
+		textureFile = "gfx/event_pictures/mussolini_with_pavelic.tga"
+	}
 }

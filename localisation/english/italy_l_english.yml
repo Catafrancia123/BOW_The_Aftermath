@@ -11,8 +11,8 @@
   EGY_italy: "Republic of Egypt"
   YUG_movement: "Yugoslavian People's Republic"
   SYR_unity: "United Arab Republic"
-  SPR_fascism: "Spanish State"
-  SPR_fascism_DEF: "the Spanish State"
+  SPR_fascism:0 "Spanish State"
+  SPR_fascism_DEF:0 "the Spanish State"
 
   BUL_ITA_fascism_subject: "Liberated Bulgaria"
   BUL_ITA_fascism_subject_DEF: "Liberated Bulgaria"
@@ -30,8 +30,8 @@
   mod_ITA_fascist_military_party_long: "Militare Nazionale Italia"
   mod_ITA_communism_party: "PCI"
   mod_ITA_communism_party_long: "Partito Comunista Italiano"
-  mod_ITA_neutrality_party: "Non-Aligned"
-  mod_ITA_neutrality_party_long: "Non-Aligned"
+  mod_ITA_neutrality_party: "Monarchists"
+  mod_ITA_neutrality_party_long_savoy: "House of Savoy"
 
   # Leader Descriptions (add later)
   ITA_lion_tamer: "$lion_tamer$"
@@ -380,7 +380,7 @@
   ITA_events.3.op2: "Our methods are better."
 
   ITA_events.4.t: "Croatia Pushes for Independence"
-  ITA_events.4.d: "Ante Pavelić, the leader of Croatia, has sent $ITA_short_name$ a letter regarding their state's autonomy. They demand that $ITA_short_name$ can end their puppet rule in Croatia as $ITA_short_name$ have promised them before. In order for Croatia to still be our ally, $ITA_short_name$ will guarentee their independence as long as they are in the International Fascist League.\n\nThe Treaty of Belgrade mentions the ability of a Croatian independence happening at any time Croatia requires, and guaranteeing its full existence if Croatia still is a member of the IFL after its independence."
+  ITA_events.4.d: "Ante Pavelić, the leader of Croatia, has sent $ITA_short_name$ a letter regarding their state's autonomy. They demand that $ITA_short_name$ can end their puppet rule in Croatia as $ITA_short_name$ have promised them before. In order for Croatia to still be our ally, $ITA_short_name$ will guarentee their independence as long as they are in the International Fascist League.\n\nThe Treaty of Belgrade mentions the ability of a Croatian independence happening at any time Croatia requires and must be given at the maximum a year since its request. While also guaranteeing its full existence if Croatia still is a member of the IFL after its independence."
   ITA_events.4.op1: "We'll give them what they deserve."
   ITA_events.4.op1.tt: "[ITA.GetNameWithFlag] starts preparing for Croatian independence:"
 
@@ -397,7 +397,7 @@
   ITA_news_events.2.op1: "Italy is going on a more peaceful route..."
 
   ITA_news_events.3.t: "Italy Releases Croatia"
-  ITA_news_events.3.d: "[THIS.GetNewsHeader]Italy has released Croatia as a free country after [?CRO_puppet_years]. Poglavnik Ante Pavelić and fascist leader Benito Mussolini were seen today at the independence ceremony. Ante Pavelić expressed his concerns and assured the country would live on independently, but still be inside the International Fascist League sphere. This also has led to international concern, as the persecution of Serbians were halted back in 1943; and now, who knows if it will continue again?"
+  ITA_news_events.3.d: "[THIS.GetNewsHeader]Italy has released Croatia as a free country after [?global.CRO_puppet_years]. Poglavnik Ante Pavelić and fascist leader Benito Mussolini were seen today at the independence ceremony. Ante Pavelić expressed his concerns and assured the country would live on independently, but still be inside the International Fascist League sphere. This also has led to international concern, as the persecution of Serbians were halted back in 1943; and now, who knows if it will continue again?"
   ITA_news_events.3.op1: "Another country free from control..."
 
   ITA_news_events.4.t: "Italy Announces Elections"

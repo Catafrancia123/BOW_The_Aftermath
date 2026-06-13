@@ -1,5 +1,21 @@
 ideas = {
     country = {
+        mod_CRO_tomislav_ii = {
+            picture = CRO_prince_aimone
+			allowed = { original_tag = CRO }
+			available = {
+				NOT = {
+					has_government = neutrality # remove if King in power
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+                war_support_factor -0.1
+			}
+		}
+
         mod_CRO_serbian_oppression = {
             picture = generic_purge
             modifier = {

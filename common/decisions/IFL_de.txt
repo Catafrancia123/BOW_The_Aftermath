@@ -200,6 +200,38 @@ IFL_decisions = {
 }
 
 IFL_decisions_CRO_independence = { # Croatian Independence
+	IFL_CRO_independence_countdown = {
+		icon = GFX_decision_generic_speech
+		cancel_trigger = {
+			CRO = { is_subject = no }
+		}
+		allowed = { always = no }
+		visible = { always = yes }
+		available = { 
+			hidden_trigger = { always = no }
+		}
+		is_good = yes
+		days_mission_timeout = 365
+
+		priority = 100
+
+		timeout_effect = { # maximun time for independence: 1 year
+			ITA = {
+				set_temp_variable = {
+					global.CRO_puppet_years = global.year
+				}
+				subtract_from_temp_variable = {
+					global.CRO_puppet_years = 1938
+				}
+				end_puppet = CRO
+				news_event = {
+					id = ITA_news_events.3
+					days = 1
+				}
+			}
+		}
+	}
+
 	# Demand Dalmatia and Zara
 	IFL_ITA_new_demand_dalmatia = {
 		icon = GFX_decision_ITA_claim_yugo_1
@@ -258,10 +290,10 @@ IFL_decisions_CRO_independence = { # Croatian Independence
 		}
 		complete_effect = {
 			set_temp_variable = {
-				CRO_puppet_years = global.year
+				global.CRO_puppet_years = global.year
 			}
 			subtract_from_temp_variable = {
-				CRO_puppet_years = 1938
+				global.CRO_puppet_years = 1938
 			}
 			end_puppet = CRO
 			news_event = {

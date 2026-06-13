@@ -20,18 +20,31 @@
   mod_treaty_of_belgrade_desc: "After the signing of the Treaty of Belgrade, we were given independence with the requirement of full autonomy to Italy, this means our country is not really independent. We need to find a way to liberate ourselves and prove that Croatia can be a great country."
   mod_removing_the_communists: "Communist Purge"
   mod_removing_the_communists_desc: "After the $international_events.1.t$, our nation is heavily damaged. The communists are to blame, and removing them is the only ethical way. We should also rebuild and prove our capability in handling losses."
+  mod_CRO_tomislav_ii: "Tomislav II"
+  mod_CRO_tomislav_ii: "Tomislav II, named Prince Aimone in Italy, is the formal king-designate of Italy. He was selected to rule our nation as a \"king\", but never had residency nor have made any major change in our country. He is also anti-war as he opposes the planned Italian Annexation of Dalmatia, which is the major reason he rejected the position in the first place."
 
   # National Focus
   focus_CRO_politics_independence: "Push for Independence"
   focus_CRO_politics_independence_desc: "Our fight for independence has been victorious, but still under a term of a \"puppet state\". We must achieve ways to achieve true independence while still being under Italian defense and influence, as well as continuing our main objectives that we can't do under Italian control."
   focus_CRO_politics_independence_tt: "§YThe International Fascist League§! will be alerted upon our country's independence request."
-  focus_CRO_politics_loyal_ally: "A Loyal Ally"
-  focus_CRO_politics_loyal_ally_desc: "Our independence is done, and as a token of gratitude, we can offer ourselves as a loyal ally. Being a loyal ally can grant us more freedom in our ways of living and assure the competency of a Croatian government."
+  focus_CRO_politics_independence_remove_italian_influence: "Remove Italian Influence"
+  focus_CRO_politics_independence_remove_italian_influence_desc: "Italian influence has influenced our country in all sorts of fields, whether its in the industry, the military, or even trade. In our current goal of acheieving independence, we must show that we are capable of creating, distributing and using local products that are vital to the country."
+  focus_CRO_politics_independence_depose_italian_king: "Depose Tomislav II"
+  focus_CRO_politics_independence_depose_italian_king_desc: "Our current king, Tomislav II has done nothing to our nation. He is considered a king-designate as he has never lived in Croatia nor had any major effect to our country. We can follow Italy's path of removing its king and have a true leadership under our Poglavnik."
+
+  focus_CRO_politics_new_government: "A New Government"
+  focus_CRO_politics_new_government_desc: "Our government consists of old people who were members that liberated Croatia and established it into what it is today. Now its time to hand the baton and let the new generation decide Croatia's future."
+  focus_CRO_politics_old_government: "Continue With The Poglavnik"
+  focus_CRO_politics_old_government_desc: "The Poglavnik Ante Pavelić has liberated, fought, and built the country to what it is. Keeping him will ensure further growth with the correct path in our future plans."
 
   focus_CRO_industry_reform_economy: "New Economic System"
   focus_CRO_industry_reform_economy_desc: "To prove our independence to be real, we need a free economic system that we can implement according to our current needs. We must appeal to Italy for the abolishment of an Italian controlled economy in our territory!"
 
+  # Events
+  CRO_events.1.t: "Tomislav II Deposed"
+  CRO_events.1.d: "[THIS.GetNewsHeader]Tomislav II has been deposed under orders from both his cousin Vittorio Emanuelle III, and Ante Pavelić. Tomislav II has been a \"king-designate\" of Croatia since its inception in 1938, and the deposing order states that:\n1. He has never lived in Croatian territory\n2. He has never made any significant change in the country\n3. He once rejected the title because of a planned annexation of Dalmatia by Italy.\n\nCroatia now is under full control by the Poglavnik, and marks the first steps towards its full independence."
+  CRO_events.1.op1: "Another king deposed..."
+
   # Traits
   CRO_prominent_independence_leader: "Prominent Independence Leader"
-
-  
+  militaristic: "Militaristic"

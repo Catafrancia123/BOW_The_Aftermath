@@ -22,4 +22,12 @@ leader_traits = {
 		stability_factor = 0.1
 		war_support_factor = 0.05
 	}
+
+	militaristic = { # Are you also a general???
+		random = no
+		war_support_factor = 0.15
+		army_attack_factor = 0.1
+		army_strength_factor = 0.05
+		consumer_goods_factor = -0.1
+	}
 }
